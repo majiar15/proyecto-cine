@@ -16,7 +16,7 @@ namespace proyecto_cine
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Register());
+            Application.Run(new Login());
         }
     }
 }
