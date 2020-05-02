@@ -16,5 +16,17 @@ namespace proyecto_cine
         {
             InitializeComponent();
         }
+
+        
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void loginClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

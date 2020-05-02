@@ -1,0 +1,9 @@
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Form1.resources
