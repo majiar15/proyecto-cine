@@ -21,3 +21,4 @@ C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cin
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
