@@ -66,10 +66,9 @@
             this.gradientLogin1.Controls.Add(this.pictureBox3);
             this.gradientLogin1.Controls.Add(this.pictureBox1);
             this.gradientLogin1.Controls.Add(this.label1);
-            this.gradientLogin1.Enabled = false;
             this.gradientLogin1.Location = new System.Drawing.Point(-8, 0);
             this.gradientLogin1.Name = "gradientLogin1";
-            this.gradientLogin1.Size = new System.Drawing.Size(400, 529);
+            this.gradientLogin1.Size = new System.Drawing.Size(405, 529);
             this.gradientLogin1.TabIndex = 0;
             // 
             // pictureBox4
@@ -203,7 +202,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 529);
             this.Controls.Add(this.gradientLogin1);
-            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
