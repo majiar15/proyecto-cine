@@ -10,23 +10,21 @@ using System.Windows.Forms;
 
 namespace proyecto_cine
 {
-    public partial class Form1 : Form
+    public partial class Register : Form
     {
-        public Form1()
+        public Register()
         {
             InitializeComponent();
         }
 
-        
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void loginClose_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gradientLogin1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
