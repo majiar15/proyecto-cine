@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BunifuAnimatorNS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace proyecto_cine
 {
     public partial class homeCajero : Form
     {
+        private Boolean switchs = true;
         public homeCajero()
         {
             InitializeComponent();
@@ -34,20 +36,38 @@ namespace proyecto_cine
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            if(panelLeft.Width == 155)
+
+            BunifuTransition transition = new BunifuTransition();
+            
+            if (switchs)
             {
-                panelLeft.Visible = false;
-                panelLeft.Width = 65 ;
-                bunifuTransition1.Show(panelLeft);
-                bunifuTransition1.Show(panelCenter);
+                switchs = false;
+                transition.HideSync(panelLeftDynamic, false, BunifuAnimatorNS.Animation.HorizSlide);
+               
+
             }
             else
             {
-                panelLeft.Visible = false;
-                panelLeft.Width = 155;
-                bunifuTransition1.Show(panelLeft);
-                bunifuTransition1.Show(panelCenter);
+                switchs = true;
+               
+                transition.ShowSync(panelLeftDynamic, false, BunifuAnimatorNS.Animation.HorizSlide);
+                
             }
+        }
+
+        private void bunifuFlatButton11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelLeftStatic_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
