@@ -24,3 +24,15 @@ C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cin
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
 D:\c#\proyectoCine\proyecto-Cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
 D:\c#\proyectoCine\proyecto-Cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
+C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
