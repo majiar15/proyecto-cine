@@ -99,7 +99,7 @@
             this.alphaBlendTextBoxContraseña.BackAlpha = 10;
             this.alphaBlendTextBoxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.alphaBlendTextBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaBlendTextBoxContraseña.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBoxContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBoxContraseña.ForeColor = System.Drawing.SystemColors.Info;
             this.alphaBlendTextBoxContraseña.Location = new System.Drawing.Point(76, 346);
             this.alphaBlendTextBoxContraseña.Multiline = true;
@@ -127,7 +127,7 @@
             this.alphaBlendTextBoxUsuario.BackAlpha = 10;
             this.alphaBlendTextBoxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.alphaBlendTextBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaBlendTextBoxUsuario.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBoxUsuario.ForeColor = System.Drawing.SystemColors.Info;
             this.alphaBlendTextBoxUsuario.Location = new System.Drawing.Point(76, 272);
             this.alphaBlendTextBoxUsuario.Multiline = true;

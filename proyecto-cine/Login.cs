@@ -78,11 +78,13 @@ namespace proyecto_cine
         {
             if (checkBoxVerContraseña.Checked)
             {
-                alphaBlendTextBoxContraseña.UseSystemPasswordChar = true;
+                alphaBlendTextBoxContraseña.PasswordChar = '\0';
+                alphaBlendTextBoxContraseña.Focus();
             }
             else
             {
-                alphaBlendTextBoxContraseña.UseSystemPasswordChar = false;
+                alphaBlendTextBoxContraseña.PasswordChar = '*';
+                alphaBlendTextBoxContraseña.Focus();
             }
         }
 

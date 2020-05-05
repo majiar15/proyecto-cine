@@ -37,3 +37,4 @@ C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\pr
 C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
 C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
 C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
