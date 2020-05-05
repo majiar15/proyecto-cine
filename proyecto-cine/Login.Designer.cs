@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.checkBoxVerContraseña = new System.Windows.Forms.CheckBox();
+            this.alphaBlendTextBoxContraseña = new ZBobb.AlphaBlendTextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.alphaBlendTextBoxUsuario = new ZBobb.AlphaBlendTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLoginMinim = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.loginClose = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.alphaBlendTextBoxUsuario = new ZBobb.AlphaBlendTextBox();
-            this.alphaBlendTextBoxContraseña = new ZBobb.AlphaBlendTextBox();
-            this.checkBoxVerContraseña = new System.Windows.Forms.CheckBox();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,64 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(391, 529);
             this.bunifuGradientPanel1.TabIndex = 1;
+            this.bunifuGradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bunifuGradientPanel1_MouseDown);
+            // 
+            // checkBoxVerContraseña
+            // 
+            this.checkBoxVerContraseña.AutoSize = true;
+            this.checkBoxVerContraseña.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxVerContraseña.ForeColor = System.Drawing.Color.White;
+            this.checkBoxVerContraseña.Location = new System.Drawing.Point(79, 387);
+            this.checkBoxVerContraseña.Name = "checkBoxVerContraseña";
+            this.checkBoxVerContraseña.Size = new System.Drawing.Size(99, 17);
+            this.checkBoxVerContraseña.TabIndex = 0;
+            this.checkBoxVerContraseña.Text = "Ver Contraseña";
+            this.checkBoxVerContraseña.UseVisualStyleBackColor = false;
+            this.checkBoxVerContraseña.CheckedChanged += new System.EventHandler(this.checkBoxVerContraseña_CheckedChanged);
+            // 
+            // alphaBlendTextBoxContraseña
+            // 
+            this.alphaBlendTextBoxContraseña.BackAlpha = 10;
+            this.alphaBlendTextBoxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.alphaBlendTextBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.alphaBlendTextBoxContraseña.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBoxContraseña.ForeColor = System.Drawing.SystemColors.Info;
+            this.alphaBlendTextBoxContraseña.Location = new System.Drawing.Point(76, 346);
+            this.alphaBlendTextBoxContraseña.Multiline = true;
+            this.alphaBlendTextBoxContraseña.Name = "alphaBlendTextBoxContraseña";
+            this.alphaBlendTextBoxContraseña.PasswordChar = '*';
+            this.alphaBlendTextBoxContraseña.Size = new System.Drawing.Size(253, 27);
+            this.alphaBlendTextBoxContraseña.TabIndex = 24;
+            this.alphaBlendTextBoxContraseña.Text = "CONTRASEÑA";
+            this.alphaBlendTextBoxContraseña.Enter += new System.EventHandler(this.alphaBlendTextBoxContraseña_Enter);
+            this.alphaBlendTextBoxContraseña.Leave += new System.EventHandler(this.alphaBlendTextBoxContraseña_Leave);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::proyecto_cine.Properties.Resources.iconoUsuario;
+            this.pictureBox5.Location = new System.Drawing.Point(30, 260);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 52);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // alphaBlendTextBoxUsuario
+            // 
+            this.alphaBlendTextBoxUsuario.BackAlpha = 10;
+            this.alphaBlendTextBoxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.alphaBlendTextBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.alphaBlendTextBoxUsuario.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBoxUsuario.ForeColor = System.Drawing.SystemColors.Info;
+            this.alphaBlendTextBoxUsuario.Location = new System.Drawing.Point(76, 272);
+            this.alphaBlendTextBoxUsuario.Multiline = true;
+            this.alphaBlendTextBoxUsuario.Name = "alphaBlendTextBoxUsuario";
+            this.alphaBlendTextBoxUsuario.Size = new System.Drawing.Size(253, 27);
+            this.alphaBlendTextBoxUsuario.TabIndex = 23;
+            this.alphaBlendTextBoxUsuario.Text = "USUARIO";
+            this.alphaBlendTextBoxUsuario.Enter += new System.EventHandler(this.alphaBlendTextBoxUsuario_Enter);
+            this.alphaBlendTextBoxUsuario.Leave += new System.EventHandler(this.alphaBlendTextBoxUsuario_Leave);
             // 
             // pictureBox1
             // 
@@ -152,17 +210,6 @@
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::proyecto_cine.Properties.Resources.iconoUsuario;
-            this.pictureBox5.Location = new System.Drawing.Point(30, 260);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 52);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
@@ -185,52 +232,6 @@
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
             // 
-            // alphaBlendTextBoxUsuario
-            // 
-            this.alphaBlendTextBoxUsuario.BackAlpha = 10;
-            this.alphaBlendTextBoxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.alphaBlendTextBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaBlendTextBoxUsuario.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphaBlendTextBoxUsuario.ForeColor = System.Drawing.SystemColors.Info;
-            this.alphaBlendTextBoxUsuario.Location = new System.Drawing.Point(76, 272);
-            this.alphaBlendTextBoxUsuario.Multiline = true;
-            this.alphaBlendTextBoxUsuario.Name = "alphaBlendTextBoxUsuario";
-            this.alphaBlendTextBoxUsuario.Size = new System.Drawing.Size(253, 27);
-            this.alphaBlendTextBoxUsuario.TabIndex = 23;
-            this.alphaBlendTextBoxUsuario.Text = "USUARIO";
-            this.alphaBlendTextBoxUsuario.Enter += new System.EventHandler(this.alphaBlendTextBoxUsuario_Enter);
-            this.alphaBlendTextBoxUsuario.Leave += new System.EventHandler(this.alphaBlendTextBoxUsuario_Leave);
-            // 
-            // alphaBlendTextBoxContraseña
-            // 
-            this.alphaBlendTextBoxContraseña.BackAlpha = 10;
-            this.alphaBlendTextBoxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.alphaBlendTextBoxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.alphaBlendTextBoxContraseña.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphaBlendTextBoxContraseña.ForeColor = System.Drawing.SystemColors.Info;
-            this.alphaBlendTextBoxContraseña.Location = new System.Drawing.Point(76, 346);
-            this.alphaBlendTextBoxContraseña.Multiline = true;
-            this.alphaBlendTextBoxContraseña.Name = "alphaBlendTextBoxContraseña";
-            this.alphaBlendTextBoxContraseña.PasswordChar = '*';
-            this.alphaBlendTextBoxContraseña.Size = new System.Drawing.Size(253, 27);
-            this.alphaBlendTextBoxContraseña.TabIndex = 24;
-            this.alphaBlendTextBoxContraseña.Text = "CONTRASEÑA";
-            this.alphaBlendTextBoxContraseña.Enter += new System.EventHandler(this.alphaBlendTextBoxContraseña_Enter);
-            this.alphaBlendTextBoxContraseña.Leave += new System.EventHandler(this.alphaBlendTextBoxContraseña_Leave);
-            // 
-            // checkBoxVerContraseña
-            // 
-            this.checkBoxVerContraseña.AutoSize = true;
-            this.checkBoxVerContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.checkBoxVerContraseña.ForeColor = System.Drawing.Color.White;
-            this.checkBoxVerContraseña.Location = new System.Drawing.Point(79, 387);
-            this.checkBoxVerContraseña.Name = "checkBoxVerContraseña";
-            this.checkBoxVerContraseña.Size = new System.Drawing.Size(99, 17);
-            this.checkBoxVerContraseña.TabIndex = 0;
-            this.checkBoxVerContraseña.Text = "Ver Contraseña";
-            this.checkBoxVerContraseña.UseVisualStyleBackColor = false;
-            this.checkBoxVerContraseña.CheckedChanged += new System.EventHandler(this.checkBoxVerContraseña_CheckedChanged);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,12 +244,12 @@
             this.Text = "Form1";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
