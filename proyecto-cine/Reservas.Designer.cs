@@ -124,6 +124,7 @@
             this.reservarBoletoButton.Size = new System.Drawing.Size(220, 99);
             this.reservarBoletoButton.TabIndex = 5;
             this.reservarBoletoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.reservarBoletoButton.Click += new System.EventHandler(this.reservarBoletoButton_Click);
             // 
             // titleReserva
             // 

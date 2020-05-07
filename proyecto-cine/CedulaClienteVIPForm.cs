@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace proyecto_cine
 {
-    public partial class Reservas : Form
+    public partial class CedulaClienteVIPForm : Form
     {
-        public Reservas()
+        public CedulaClienteVIPForm()
         {
             InitializeComponent();
         }
 
-        private void reservarBoletoButton_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
