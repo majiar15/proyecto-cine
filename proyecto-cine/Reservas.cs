@@ -12,15 +12,27 @@ namespace proyecto_cine
 {
     public partial class Reservas : Form
     {
-        public Reservas()
+        homeCajero formParent;
+        public Reservas(homeCajero formParent)
         {
+            this.formParent = formParent;
             InitializeComponent();
         }
 
         private void reservarBoletoButton_Click(object sender, EventArgs e)
         {
-            CedulaClienteVIPForm cedulaCliente = new CedulaClienteVIPForm();
+            CedulaClienteReserva cedulaCliente = new CedulaClienteReserva();
             cedulaCliente.Show();
+        }
+
+        private void cancelarReservaButton_Click(object sender, EventArgs e)
+        {
+            cancelarReserva cancelarReservaForm = new cancelarReserva(this.formParent);
+            this.formParent.OpenFormInPanelCentral(cancelarReservaForm);
+            this.Close();
+
+
+
         }
     }
 }

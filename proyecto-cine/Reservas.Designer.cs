@@ -99,6 +99,7 @@
             this.cancelarReservaButton.Size = new System.Drawing.Size(225, 99);
             this.cancelarReservaButton.TabIndex = 6;
             this.cancelarReservaButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cancelarReservaButton.Click += new System.EventHandler(this.cancelarReservaButton_Click);
             // 
             // reservarBoletoButton
             // 

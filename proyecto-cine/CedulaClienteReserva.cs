@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 
 namespace proyecto_cine
 {
-    public partial class CedulaClienteVIPForm : Form
+    public partial class CedulaClienteReserva : Form
     {
-        public CedulaClienteVIPForm()
+        public CedulaClienteReserva()
         {
             InitializeComponent();
         }
