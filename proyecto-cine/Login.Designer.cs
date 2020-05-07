@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.passwordLoginTextBox = new System.Windows.Forms.TextBox();
             this.userLoginTextBox = new System.Windows.Forms.TextBox();
             this.VerContraseñaCheckBox = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LoginButtonPictureBox = new System.Windows.Forms.PictureBox();
             this.LoginMinim = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.loginClose = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.LoginButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoginButtonPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -55,12 +55,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.LoginButton);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.passwordLoginTextBox);
             this.panel1.Controls.Add(this.userLoginTextBox);
             this.panel1.Controls.Add(this.VerContraseñaCheckBox);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.LoginButtonPictureBox);
             this.panel1.Controls.Add(this.LoginMinim);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.loginClose);
@@ -134,24 +134,12 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::proyecto_cine.Properties.Resources.iconoPrincipal_Login;
-            this.pictureBox1.Location = new System.Drawing.Point(123, 120);
+            this.pictureBox1.Location = new System.Drawing.Point(136, 120);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(118, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            // 
-            // LoginButtonPictureBox
-            // 
-            this.LoginButtonPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.LoginButtonPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginButtonPictureBox.Image = global::proyecto_cine.Properties.Resources.iniciar_session;
-            this.LoginButtonPictureBox.Location = new System.Drawing.Point(71, 437);
-            this.LoginButtonPictureBox.Name = "LoginButtonPictureBox";
-            this.LoginButtonPictureBox.Size = new System.Drawing.Size(220, 78);
-            this.LoginButtonPictureBox.TabIndex = 34;
-            this.LoginButtonPictureBox.TabStop = false;
-            this.LoginButtonPictureBox.Tag = "";
             // 
             // LoginMinim
             // 
@@ -172,7 +160,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(130, 67);
+            this.label1.Location = new System.Drawing.Point(143, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 40);
             this.label1.TabIndex = 26;
@@ -224,6 +212,31 @@
             this.pictureBox7.TabIndex = 32;
             this.pictureBox7.TabStop = false;
             // 
+            // LoginButton
+            // 
+            this.LoginButton.ActiveBorderThickness = 1;
+            this.LoginButton.ActiveCornerRadius = 30;
+            this.LoginButton.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LoginButton.ActiveForecolor = System.Drawing.Color.White;
+            this.LoginButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginButton.BackgroundImage")));
+            this.LoginButton.ButtonText = "Iniciar Session";
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.LoginButton.ForeColor = System.Drawing.Color.Black;
+            this.LoginButton.IdleBorderThickness = 1;
+            this.LoginButton.IdleCornerRadius = 30;
+            this.LoginButton.IdleFillColor = System.Drawing.Color.White;
+            this.LoginButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.Location = new System.Drawing.Point(82, 430);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(5);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(221, 65);
+            this.LoginButton.TabIndex = 39;
+            this.LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,7 +251,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoginButtonPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -255,7 +267,6 @@
         private System.Windows.Forms.CheckBox VerContraseñaCheckBox;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox LoginButtonPictureBox;
         private System.Windows.Forms.PictureBox LoginMinim;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox loginClose;
@@ -263,6 +274,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox passwordLoginTextBox;
+        private Bunifu.Framework.UI.BunifuThinButton2 LoginButton;
     }
 }
 
