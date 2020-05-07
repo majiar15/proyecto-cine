@@ -33,8 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>..\library\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Documents\Diego\Design Dashboard Modern\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,23 +54,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="homeCajero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="homeCajero.Designer.cs">
+      <DependentUpon>homeCajero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientLogin.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="homeCajero.resx">
+      <DependentUpon>homeCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +108,87 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoPrincipal_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoContraseña2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciar-session.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn-Flecha atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn-Flecha siguiente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Boleta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-Buscador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-horario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Peliculas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Reserva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Sala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.peliculas.invert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-reserva-invert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-sala-invert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-ticket-invert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-horario-invert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degradado-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degradado-icon-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marco cine2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon Cerrar sesion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
