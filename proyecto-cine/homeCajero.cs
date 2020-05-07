@@ -14,16 +14,30 @@ namespace proyecto_cine
     public partial class homeCajero : Form
     {
         private Boolean switchs = true;
-        private void OpenFormInPanelCentral(object FormHijo) {
-            if (this.panelCenter.Controls.Count > 0) {
+        /*
+            Documentacion Metodo OpenFormInPanelCentral
+            se pasa el formulario  que se desea mostrar en el panel central
+            si desea volver a la pagina principal no pasen parametros, el asumira null 
+            y entrara en las condicionales correspondientes para colocar la imagen de bienvenidos de fondo
+            
+        */
+        public void OpenFormInPanelCentral(object FormHijo = null) {
+            if (this.panelCenter.Controls.Count > 0 && FormHijo != null) {
                 this.panelCenter.Controls.RemoveAt(0);
+            } else{
+                pictureBox1.Dock = DockStyle.Fill;
+                this.panelCenter.Controls.Add(pictureBox1);
+
+              
             }
-            Form formChild = FormHijo as Form;
-            formChild.TopLevel = false;
-            formChild.Dock = DockStyle.Fill;
-            this.panelCenter.Controls.Add(formChild);
-            this.panelCenter.Tag = formChild;
-            formChild.Show();
+            if (FormHijo != null) {
+                Form formChild = FormHijo as Form;
+                formChild.TopLevel = false;
+                formChild.Dock = DockStyle.Fill;
+                this.panelCenter.Controls.Add(formChild);
+                this.panelCenter.Tag = formChild;
+                formChild.Show();
+            }
         }
         public homeCajero()
         {
@@ -38,6 +52,7 @@ namespace proyecto_cine
         private void closeAppMenu_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void minimizeMenu_Click(object sender, EventArgs e)
@@ -72,7 +87,7 @@ namespace proyecto_cine
 
         private void reservaButtonMenu_Click(object sender, EventArgs e)
         {
-            OpenFormInPanelCentral(new Reservas());
+            OpenFormInPanelCentral(new Reservas(this));
         }
 
         private void PanelTopMenu_Paint(object sender, PaintEventArgs e)
