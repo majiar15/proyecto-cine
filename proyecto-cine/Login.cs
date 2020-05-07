@@ -40,51 +40,51 @@ namespace proyecto_cine
 
 
 
-        private void alphaBlendTextBoxUsuario_Enter(object sender, EventArgs e)
+        private void userLoginTextBox_Enter(object sender, EventArgs e)
         {
-            if (alphaBlendTextBoxUsuario.Text == "USUARIO")
+            if (userLoginTextBox.Text == "USUARIO")
             {
-                alphaBlendTextBoxUsuario.Text = "";
+                userLoginTextBox.Text = "";
             }
         }
 
-        private void alphaBlendTextBoxUsuario_Leave(object sender, EventArgs e)
+        private void userLoginTextBox_Leave(object sender, EventArgs e)
         {
-            if (alphaBlendTextBoxUsuario.Text == "")
+            if (userLoginTextBox.Text == "")
             {
-                alphaBlendTextBoxUsuario.Text = "USUARIO";
+                userLoginTextBox.Text = "USUARIO";
             }
         }
 
-        private void alphaBlendTextBoxContraseña_Enter(object sender, EventArgs e)
+        private void passwordLoginTextBox_Enter(object sender, EventArgs e)
         {
-            if (alphaBlendTextBoxContraseña.Text == "CONTRASEÑA")
+            if (passwordLoginTextBox.Text == "CONTRASEÑA")
             {
-                alphaBlendTextBoxContraseña.Text = "";
+                passwordLoginTextBox.Text = "";
             }
         }
 
-        private void alphaBlendTextBoxContraseña_Leave(object sender, EventArgs e)
+        private void passwordLoginTextBox_Leave(object sender, EventArgs e)
         {
-            if (alphaBlendTextBoxContraseña.Text == "")
+            if (passwordLoginTextBox.Text == "")
             {
-                alphaBlendTextBoxContraseña.Text = "CONTRASEÑA";
+                passwordLoginTextBox.Text = "CONTRASEÑA";
             }
         }
 
 
-        //////// Ver contraseña
-        private void checkBoxVerContraseña_CheckedChanged(object sender, EventArgs e)
+        // Ver contraseña
+        private void VerContraseñaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxVerContraseña.Checked)
+            if (VerContraseñaCheckBox.Checked)
             {
-                alphaBlendTextBoxContraseña.PasswordChar = '\0';
-                alphaBlendTextBoxContraseña.Focus();
+                passwordLoginTextBox.PasswordChar = '\0';
+                passwordLoginTextBox.Focus();
             }
             else
             {
-                alphaBlendTextBoxContraseña.PasswordChar = '*';
-                alphaBlendTextBoxContraseña.Focus();
+                passwordLoginTextBox.PasswordChar = '*';
+                passwordLoginTextBox.Focus();
             }
         }
 
@@ -92,6 +92,16 @@ namespace proyecto_cine
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void loginClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LoginMinim_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
