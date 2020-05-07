@@ -7,21 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace proyecto_cine
 {
     public partial class homeCajero : Form
     {
         private Boolean switchs = true;
+        private void OpenFormInPanelCentral(object FormHijo) {
+            if (this.panelCenter.Controls.Count > 0) {
+                this.panelCenter.Controls.RemoveAt(0);
+            }
+            Form formChild = FormHijo as Form;
+            formChild.TopLevel = false;
+            formChild.Dock = DockStyle.Fill;
+            this.panelCenter.Controls.Add(formChild);
+            this.panelCenter.Tag = formChild;
+            formChild.Show();
+        }
         public homeCajero()
         {
             InitializeComponent();
-            /*btPeliculas.BackColor = Color.FromArgb(115, 115, 115);
-            btHorarios.BackColor = Color.FromArgb(15, 15, 15);
-            btSalas.BackColor = Color.FromArgb(15, 15, 15);
-            btReservas.BackColor = Color.FromArgb(15, 15, 15);
-            btTicket.BackColor = Color.FromArgb(15, 15, 15);*/
+            
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void closeAppMenu_Click(object sender, EventArgs e)
         {
@@ -47,6 +59,20 @@ namespace proyecto_cine
             }
         }
 
+        private void PanelTopMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112,0xf012,0);
+        }
 
+        private void peliculaButtonMenu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void reservaButtonMenu_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanelCentral(new Reservas());
+        }
     }
 }

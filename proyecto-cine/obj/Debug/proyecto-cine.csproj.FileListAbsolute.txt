@@ -38,3 +38,17 @@ C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\pr
 C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
 C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
+D:\c#\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
+D:\c#\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
+D:\c#\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
+D:\c#\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
+D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
