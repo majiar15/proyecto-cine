@@ -143,6 +143,16 @@ namespace proyecto_cine.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_Cerrar_sesion {
+            get {
+                object obj = ResourceManager.GetObject("icon Cerrar sesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_horario {
             get {
                 object obj = ResourceManager.GetObject("icon-horario", resourceCulture);
