@@ -121,6 +121,9 @@
   <data name="Marco cine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Marco cine.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon Cerrar sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon Cerrar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,17 +145,17 @@
   <data name="degradado-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\degradado-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Marco cine2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Marco cine1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icon-Peliculas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Peliculas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-ticket-invert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-ticket-invert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconoUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Marco cine2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Marco cine1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iniciar-session" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iniciar-session.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +214,13 @@
   <data name="Icon-Reserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Reserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon Cerrar sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon Cerrar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Avengers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avengers.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bad boys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bad boys.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Joker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Joker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

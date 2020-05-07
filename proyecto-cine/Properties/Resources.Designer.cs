@@ -63,6 +63,26 @@ namespace proyecto_cine.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Avengers {
+            get {
+                object obj = ResourceManager.GetObject("Avengers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bad_boys {
+            get {
+                object obj = ResourceManager.GetObject("bad boys", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Btn_cerrar {
             get {
                 object obj = ResourceManager.GetObject("Btn cerrar", resourceCulture);
@@ -316,6 +336,16 @@ namespace proyecto_cine.Properties {
         internal static System.Drawing.Bitmap iniciar_session {
             get {
                 object obj = ResourceManager.GetObject("iniciar-session", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Joker {
+            get {
+                object obj = ResourceManager.GetObject("Joker", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

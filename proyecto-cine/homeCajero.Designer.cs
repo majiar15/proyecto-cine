@@ -33,13 +33,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(homeCajero));
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panelCenter = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panelLeftMenu = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.logOutMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.reservaButtonMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.peliculaButtonMenu = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -52,8 +52,8 @@
             this.minimizeMenu = new System.Windows.Forms.PictureBox();
             this.PanelTopMenu = new System.Windows.Forms.Panel();
             this.panelCenter.SuspendLayout();
-            this.panelLeftMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelLeftMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeAppMenu)).BeginInit();
@@ -67,7 +67,6 @@
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransition1.Cursor = null;
             animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
             animation1.MaxTime = 1F;
             animation1.MinTime = 0F;
@@ -93,6 +92,17 @@
             this.panelCenter.Name = "panelCenter";
             this.panelCenter.Size = new System.Drawing.Size(749, 535);
             this.panelCenter.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::proyecto_cine.Properties.Resources.Marco_cine3;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(749, 535);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel22
             // 
@@ -157,18 +167,6 @@
             this.panelLeftMenu.Name = "panelLeftMenu";
             this.panelLeftMenu.Size = new System.Drawing.Size(151, 535);
             this.panelLeftMenu.TabIndex = 17;
-            // 
-            // pictureBox1
-            // 
-            this.bunifuTransition1.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::proyecto_cine.Properties.Resources.Marco_cine3;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(749, 535);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // logOutMenu
             // 
@@ -420,8 +418,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "homeCajero";
             this.panelCenter.ResumeLayout(false);
-            this.panelLeftMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelLeftMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.loginClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeAppMenu)).EndInit();
