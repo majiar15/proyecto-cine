@@ -48,7 +48,7 @@
             this.bunifuFlatButton17 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.peliculaButtonMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.reservaButtonMenu = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.LogOutMenu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.logOutMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelLeftMenu = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelTopMenu.SuspendLayout();
@@ -335,45 +335,45 @@
             this.reservaButtonMenu.Textcolor = System.Drawing.Color.White;
             this.reservaButtonMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // LogOutMenu
+            // logOutMenu
             // 
-            this.LogOutMenu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.LogOutMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.LogOutMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LogOutMenu.BorderRadius = 0;
-            this.LogOutMenu.ButtonText = "Cerrar Sesion";
-            this.LogOutMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.LogOutMenu, BunifuAnimatorNS.DecorationType.None);
-            this.LogOutMenu.DisabledColor = System.Drawing.Color.Gray;
-            this.LogOutMenu.Iconcolor = System.Drawing.Color.Transparent;
-            this.LogOutMenu.Iconimage = global::proyecto_cine.Properties.Resources.icon_Cerrar_sesion;
-            this.LogOutMenu.Iconimage_right = null;
-            this.LogOutMenu.Iconimage_right_Selected = null;
-            this.LogOutMenu.Iconimage_Selected = null;
-            this.LogOutMenu.IconMarginLeft = 0;
-            this.LogOutMenu.IconMarginRight = 0;
-            this.LogOutMenu.IconRightVisible = true;
-            this.LogOutMenu.IconRightZoom = 0D;
-            this.LogOutMenu.IconVisible = true;
-            this.LogOutMenu.IconZoom = 90D;
-            this.LogOutMenu.IsTab = false;
-            this.LogOutMenu.Location = new System.Drawing.Point(11, 456);
-            this.LogOutMenu.Name = "LogOutMenu";
-            this.LogOutMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.LogOutMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.LogOutMenu.OnHoverTextColor = System.Drawing.Color.White;
-            this.LogOutMenu.selected = false;
-            this.LogOutMenu.Size = new System.Drawing.Size(137, 55);
-            this.LogOutMenu.TabIndex = 5;
-            this.LogOutMenu.Text = "Cerrar Sesion";
-            this.LogOutMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LogOutMenu.Textcolor = System.Drawing.Color.White;
-            this.LogOutMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutMenu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.logOutMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.logOutMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logOutMenu.BorderRadius = 0;
+            this.logOutMenu.ButtonText = "Cerrar Sesion";
+            this.logOutMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.logOutMenu, BunifuAnimatorNS.DecorationType.None);
+            this.logOutMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.logOutMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.logOutMenu.Iconimage = global::proyecto_cine.Properties.Resources.icon_Cerrar_sesion;
+            this.logOutMenu.Iconimage_right = null;
+            this.logOutMenu.Iconimage_right_Selected = null;
+            this.logOutMenu.Iconimage_Selected = null;
+            this.logOutMenu.IconMarginLeft = 0;
+            this.logOutMenu.IconMarginRight = 0;
+            this.logOutMenu.IconRightVisible = true;
+            this.logOutMenu.IconRightZoom = 0D;
+            this.logOutMenu.IconVisible = true;
+            this.logOutMenu.IconZoom = 90D;
+            this.logOutMenu.IsTab = false;
+            this.logOutMenu.Location = new System.Drawing.Point(11, 456);
+            this.logOutMenu.Name = "logOutMenu";
+            this.logOutMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.logOutMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.logOutMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.logOutMenu.selected = false;
+            this.logOutMenu.Size = new System.Drawing.Size(137, 55);
+            this.logOutMenu.TabIndex = 5;
+            this.logOutMenu.Text = "Cerrar Sesion";
+            this.logOutMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logOutMenu.Textcolor = System.Drawing.Color.White;
+            this.logOutMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // panelLeftMenu
             // 
             this.panelLeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.panelLeftMenu.Controls.Add(this.LogOutMenu);
+            this.panelLeftMenu.Controls.Add(this.logOutMenu);
             this.panelLeftMenu.Controls.Add(this.reservaButtonMenu);
             this.panelLeftMenu.Controls.Add(this.peliculaButtonMenu);
             this.panelLeftMenu.Controls.Add(this.bunifuFlatButton17);
@@ -446,7 +446,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton17;
         private Bunifu.Framework.UI.BunifuFlatButton peliculaButtonMenu;
         private Bunifu.Framework.UI.BunifuFlatButton reservaButtonMenu;
-        private Bunifu.Framework.UI.BunifuFlatButton LogOutMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton logOutMenu;
         private System.Windows.Forms.Panel panelLeftMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
