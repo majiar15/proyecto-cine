@@ -19,7 +19,8 @@ namespace proyecto_cine
 
         private void reservarBoletoButton_Click(object sender, EventArgs e)
         {
-
+            CedulaClienteVIPForm cedulaCliente = new CedulaClienteVIPForm();
+            cedulaCliente.Show();
         }
     }
 }

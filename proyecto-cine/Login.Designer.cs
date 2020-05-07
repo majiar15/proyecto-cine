@@ -72,6 +72,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 529);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // LoginButton
             // 
@@ -97,6 +98,7 @@
             this.LoginButton.Size = new System.Drawing.Size(221, 65);
             this.LoginButton.TabIndex = 39;
             this.LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // pictureBox5
             // 

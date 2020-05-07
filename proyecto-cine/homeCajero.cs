@@ -74,5 +74,10 @@ namespace proyecto_cine
         {
             OpenFormInPanelCentral(new Reservas());
         }
+
+        private void PanelTopMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
