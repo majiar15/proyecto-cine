@@ -52,12 +52,14 @@ D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResourc
 D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
 D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
 D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
-
 D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CedulaClienteVIPForm.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CedulaClienteVIPForm.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Peliculas.resources
-
 D:\c#\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.cancelarReserva.resources
-
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.cancelarReserva.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CedulaClienteReserva.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Peliculas.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.PagarReserva.resources

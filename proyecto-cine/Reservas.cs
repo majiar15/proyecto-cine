@@ -34,5 +34,13 @@ namespace proyecto_cine
 
 
         }
+
+        private void pagarReservaButtom_Click(object sender, EventArgs e)
+        {
+            PagarReserva pagarReservaForm = new PagarReserva();
+            pagarReservaForm.Show();
+            this.formParent.OpenFormInPanelCentral();
+            this.Close();
+        }
     }
 }

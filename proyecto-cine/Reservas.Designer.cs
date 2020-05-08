@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservas));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.titleReserva = new System.Windows.Forms.Label();
             this.pagarReservaButtom = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cancelarReservaButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.reservarBoletoButton = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.titleReserva = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,16 +49,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(749, 535);
             this.panel1.TabIndex = 0;
-            // 
-            // titleReserva
-            // 
-            this.titleReserva.AutoSize = true;
-            this.titleReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleReserva.Location = new System.Drawing.Point(296, 35);
-            this.titleReserva.Name = "titleReserva";
-            this.titleReserva.Size = new System.Drawing.Size(174, 46);
-            this.titleReserva.TabIndex = 4;
-            this.titleReserva.Text = "Reserva";
             // 
             // pagarReservaButtom
             // 
@@ -84,6 +74,7 @@
             this.pagarReservaButtom.Size = new System.Drawing.Size(220, 99);
             this.pagarReservaButtom.TabIndex = 7;
             this.pagarReservaButtom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pagarReservaButtom.Click += new System.EventHandler(this.pagarReservaButtom_Click);
             // 
             // cancelarReservaButton
             // 
@@ -136,6 +127,16 @@
             this.reservarBoletoButton.TabIndex = 5;
             this.reservarBoletoButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.reservarBoletoButton.Click += new System.EventHandler(this.reservarBoletoButton_Click);
+            // 
+            // titleReserva
+            // 
+            this.titleReserva.AutoSize = true;
+            this.titleReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleReserva.Location = new System.Drawing.Point(296, 35);
+            this.titleReserva.Name = "titleReserva";
+            this.titleReserva.Size = new System.Drawing.Size(174, 46);
+            this.titleReserva.TabIndex = 4;
+            this.titleReserva.Text = "Reserva";
             // 
             // Reservas
             // 

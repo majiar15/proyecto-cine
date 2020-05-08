@@ -81,6 +81,12 @@
     <Compile Include="GradientLogin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="PagarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagarReserva.Designer.cs">
+      <DependentUpon>PagarReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Peliculas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagarReserva.resx">
+      <DependentUpon>PagarReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>
