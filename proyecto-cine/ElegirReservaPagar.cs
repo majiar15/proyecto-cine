@@ -10,31 +10,27 @@ using System.Windows.Forms;
 
 namespace proyecto_cine
 {
-    public partial class cancelarReserva : Form
+    public partial class ElegirReservaPagar : Form
     {
-        //variable del formulario home cajero
         homeCajero homeCajeroParent;
-        public cancelarReserva(homeCajero formParent)
+        public ElegirReservaPagar(homeCajero homeCajero)
         {
-            this.homeCajeroParent = formParent;
+            this.homeCajeroParent = homeCajero;
             InitializeComponent();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
             homeCajeroParent.OpenFormInPanelCentral(new Reservas(homeCajeroParent));
             this.Close();
+        }
 
+        private void PagarReservaButtom1_Click(object sender, EventArgs e)
+        {
+            ConfirmarPagarReserva pagarReservaForm = new ConfirmarPagarReserva();
+            pagarReservaForm.Show();
+            homeCajeroParent.OpenFormInPanelCentral();
+            this.Close();
         }
     }
 }

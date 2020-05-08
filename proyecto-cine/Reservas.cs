@@ -27,8 +27,7 @@ namespace proyecto_cine
 
         private void cancelarReservaButton_Click(object sender, EventArgs e)
         {
-            cancelarReserva cancelarReservaForm = new cancelarReserva(this.formParent);
-            this.formParent.OpenFormInPanelCentral(cancelarReservaForm);
+            this.formParent.OpenFormInPanelCentral(new cancelarReserva(this.formParent));
             this.Close();
 
 
@@ -37,9 +36,7 @@ namespace proyecto_cine
 
         private void pagarReservaButtom_Click(object sender, EventArgs e)
         {
-            PagarReserva pagarReservaForm = new PagarReserva();
-            pagarReservaForm.Show();
-            this.formParent.OpenFormInPanelCentral();
+            this.formParent.OpenFormInPanelCentral(new ElegirReservaPagar(this.formParent));
             this.Close();
         }
     }

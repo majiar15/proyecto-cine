@@ -66,6 +66,12 @@
     <Compile Include="CedulaClienteReserva.Designer.cs">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElegirReservaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElegirReservaPagar.Designer.cs">
+      <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="homeCajero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,14 +84,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradientLogin.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PagarReserva.cs">
+    <Compile Include="ConfirmarPagarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagarReserva.Designer.cs">
-      <DependentUpon>PagarReserva.cs</DependentUpon>
+    <Compile Include="ConfirmarPagarReserva.Designer.cs">
+      <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Peliculas.cs">
       <SubType>Form</SubType>
@@ -118,14 +121,17 @@
     <EmbeddedResource Include="CedulaClienteReserva.resx">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElegirReservaPagar.resx">
+      <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="homeCajero.resx">
       <DependentUpon>homeCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PagarReserva.resx">
-      <DependentUpon>PagarReserva.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmarPagarReserva.resx">
+      <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>

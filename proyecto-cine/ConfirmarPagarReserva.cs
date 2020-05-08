@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace proyecto_cine
 {
-    public partial class PagarReserva : Form
+    public partial class ConfirmarPagarReserva : Form
     {
-        public PagarReserva()
+        public ConfirmarPagarReserva()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace proyecto_cine
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

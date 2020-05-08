@@ -94,5 +94,10 @@ namespace proyecto_cine
         {
 
         }
+
+        private void logOutMenu_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

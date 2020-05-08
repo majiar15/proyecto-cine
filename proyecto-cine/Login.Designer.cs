@@ -141,7 +141,6 @@
             this.userLoginTextBox.TabIndex = 37;
             this.userLoginTextBox.Text = "USUARIO";
             this.userLoginTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.userLoginTextBox.TextChanged += new System.EventHandler(this.userLoginTextBox_Leave);
             this.userLoginTextBox.Enter += new System.EventHandler(this.userLoginTextBox_Enter);
             this.userLoginTextBox.Leave += new System.EventHandler(this.userLoginTextBox_Leave);
             // 

@@ -67,6 +67,7 @@
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransition1.Cursor = null;
             animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
             animation1.MaxTime = 1F;
             animation1.MinTime = 0F;
@@ -202,6 +203,7 @@
             this.logOutMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.logOutMenu.Textcolor = System.Drawing.Color.White;
             this.logOutMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutMenu.Click += new System.EventHandler(this.logOutMenu_Click);
             // 
             // reservaButtonMenu
             // 
