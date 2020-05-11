@@ -133,6 +133,9 @@
   <data name="Icon-Boleta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Boleta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Silla roja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla roja.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Marco cine3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Marco cine2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,6 +147,15 @@
   </data>
   <data name="degradado-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\degradado-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Joker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Joker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Avengers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avengers.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silla naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla naranja.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon-Peliculas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Peliculas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,6 +183,9 @@
   </data>
   <data name="iconoContraseña2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconoContraseña2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bad boys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bad boys.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Btn Minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Btn Minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,13 +229,10 @@
   <data name="Icon-Reserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Reserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Avengers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Avengers.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Silla naranja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla naranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bad boys" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bad boys.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Joker" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Joker.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Silla roja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silla roja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

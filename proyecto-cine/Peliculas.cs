@@ -16,5 +16,23 @@ namespace proyecto_cine
         {
             InitializeComponent();
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            NroBoletas nBoletas = new NroBoletas();
+            nBoletas.Show();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            NroBoletas nBoletas = new NroBoletas();
+            nBoletas.Show();
+        }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            NroBoletas nBoletas = new NroBoletas();
+            nBoletas.Show();
+        }
     }
 }
