@@ -12,26 +12,28 @@ namespace proyecto_cine
 {
     public partial class Peliculas : Form
     {
-        public Peliculas()
+        homeCajero FormParent;
+        public Peliculas(homeCajero parent)
         {
+            this.FormParent = parent;
             InitializeComponent();
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            NroBoletas nBoletas = new NroBoletas();
+            NroBoletas nBoletas = new NroBoletas(FormParent);
             nBoletas.Show();
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            NroBoletas nBoletas = new NroBoletas();
+            NroBoletas nBoletas = new NroBoletas(FormParent);
             nBoletas.Show();
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            NroBoletas nBoletas = new NroBoletas();
+            NroBoletas nBoletas = new NroBoletas(FormParent);
             nBoletas.Show();
         }
     }

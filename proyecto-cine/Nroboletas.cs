@@ -12,8 +12,10 @@ namespace proyecto_cine
 {
     public partial class NroBoletas : Form
     {
-        public NroBoletas()
+        homeCajero FormHome;
+        public NroBoletas(homeCajero parent)
         {
+            this.FormHome = parent;
             InitializeComponent();
         }
 
@@ -29,7 +31,9 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            
+            FormHome.OpenFormInPanelCentral(new SeleccionarSillas(FormHome));
+            this.Close();
         }
+
     }
 }

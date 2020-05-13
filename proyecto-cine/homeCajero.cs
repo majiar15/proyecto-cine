@@ -82,7 +82,7 @@ namespace proyecto_cine
 
         private void peliculaButtonMenu_Click(object sender, EventArgs e)
         {
-            OpenFormInPanelCentral(new Peliculas());
+            OpenFormInPanelCentral(new Peliculas(this));
         }
 
         private void reservaButtonMenu_Click(object sender, EventArgs e)

@@ -2025,6 +2025,7 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(86, 37);
             this.bunifuThinButton22.TabIndex = 167;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
             // SeleccionarSillas
             // 

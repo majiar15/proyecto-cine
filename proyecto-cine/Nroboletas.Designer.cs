@@ -134,7 +134,7 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "¿Cuantas boletas desea?";
             // 
-            // Nroboletas
+            // NroBoletas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,9 +142,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTopCedulaCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Nroboletas";
+            this.Name = "NroBoletas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nroboletas";
             this.panelTopCedulaCliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

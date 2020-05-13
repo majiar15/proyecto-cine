@@ -12,9 +12,17 @@ namespace proyecto_cine
 {
     public partial class SeleccionarSillas : Form
     {
-        public SeleccionarSillas()
+        homeCajero FormParent;
+
+        public SeleccionarSillas(homeCajero parent)
         {
+            FormParent = parent;
             InitializeComponent();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
