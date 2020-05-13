@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyecto-cine", "proyecto-cine\proyecto-cine.csproj", "{8BB3A573-9AF5-4FBB-A55E-F0B4E6C3F689}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "primerParcial", "C:\Users\USER\source\repos\primerParcial\primerParcial\primerParcial.csproj", "{0BA32D59-5B6F-4EEE-A029-D2C7CADEECA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8BB3A573-9AF5-4FBB-A55E-F0B4E6C3F689}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB3A573-9AF5-4FBB-A55E-F0B4E6C3F689}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB3A573-9AF5-4FBB-A55E-F0B4E6C3F689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA32D59-5B6F-4EEE-A029-D2C7CADEECA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA32D59-5B6F-4EEE-A029-D2C7CADEECA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA32D59-5B6F-4EEE-A029-D2C7CADEECA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA32D59-5B6F-4EEE-A029-D2C7CADEECA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

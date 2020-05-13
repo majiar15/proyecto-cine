@@ -80,29 +80,24 @@ namespace proyecto_cine
             SendMessage(this.Handle, 0x112,0xf012,0);
         }
 
-        private void peliculaButtonMenu_Click(object sender, EventArgs e)
-        {
-            OpenFormInPanelCentral(new Peliculas(this));
-        }
-
         private void reservaButtonMenu_Click(object sender, EventArgs e)
         {
             OpenFormInPanelCentral(new Reservas(this));
         }
 
-        private void PanelTopMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void logOutMenu_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void panelLeftMenu_Paint(object sender, PaintEventArgs e)
+        private void ventasButtonMenu_Click(object sender, EventArgs e)
         {
+            OpenFormInPanelCentral(new modificarPeliculas());
+        }
 
+        private void peliculas_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanelCentral(new Peliculas(this));
         }
     }
 }
