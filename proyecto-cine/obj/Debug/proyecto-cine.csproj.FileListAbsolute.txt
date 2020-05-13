@@ -71,4 +71,3 @@ C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cin
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionarSillas.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.NroBoletas.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionarSillas.resources
-D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.modificarPeliculas.resources
