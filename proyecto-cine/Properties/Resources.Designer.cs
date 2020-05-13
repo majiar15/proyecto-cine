@@ -143,6 +143,16 @@ namespace proyecto_cine.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap empleado {
+            get {
+                object obj = ResourceManager.GetObject("empleado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_Boleta {
             get {
                 object obj = ResourceManager.GetObject("Icon-Boleta", resourceCulture);
@@ -193,6 +203,16 @@ namespace proyecto_cine.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_Menu {
+            get {
+                object obj = ResourceManager.GetObject("Icon-Menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_Peliculas {
             get {
                 object obj = ResourceManager.GetObject("Icon-Peliculas", resourceCulture);
@@ -206,6 +226,16 @@ namespace proyecto_cine.Properties {
         internal static System.Drawing.Bitmap icon_peliculas_invert {
             get {
                 object obj = ResourceManager.GetObject("icon-peliculas-invert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_Reporte {
+            get {
+                object obj = ResourceManager.GetObject("Icon-Reporte", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +286,16 @@ namespace proyecto_cine.Properties {
         internal static System.Drawing.Bitmap icon_ticket_invert {
             get {
                 object obj = ResourceManager.GetObject("icon-ticket-invert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconCliente {
+            get {
+                object obj = ResourceManager.GetObject("iconCliente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +396,16 @@ namespace proyecto_cine.Properties {
         internal static System.Drawing.Bitmap linea {
             get {
                 object obj = ResourceManager.GetObject("linea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log {
+            get {
+                object obj = ResourceManager.GetObject("log", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
