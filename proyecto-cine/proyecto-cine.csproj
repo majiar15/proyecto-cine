@@ -66,11 +66,35 @@
     <Compile Include="CedulaClienteReserva.Designer.cs">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeseaEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeseaEliminar.Designer.cs">
+      <DependentUpon>DeseaEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ElegirReservaPagar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElegirReservaPagar.Designer.cs">
       <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminadoCorrectamente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminadoCorrectamente.Designer.cs">
+      <DependentUpon>EliminadoCorrectamente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorAlGuardar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorAlGuardar.Designer.cs">
+      <DependentUpon>ErrorAlGuardar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuardadoConExito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuardadoConExito.Designer.cs">
+      <DependentUpon>GuardadoConExito.cs</DependentUpon>
     </Compile>
     <Compile Include="homeCajero.cs">
       <SubType>Form</SubType>
@@ -90,6 +114,12 @@
     <Compile Include="ConfirmarPagarReserva.Designer.cs">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificacionExitosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificacionExitosa.Designer.cs">
+      <DependentUpon>ModificacionExitosa.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarPelicula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +137,12 @@
     </Compile>
     <Compile Include="Peliculas.Designer.cs">
       <DependentUpon>Peliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionPeliculas.Designer.cs">
+      <DependentUpon>SeleccionPeliculas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,8 +175,20 @@
     <EmbeddedResource Include="CedulaClienteReserva.resx">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeseaEliminar.resx">
+      <DependentUpon>DeseaEliminar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ElegirReservaPagar.resx">
       <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminadoCorrectamente.resx">
+      <DependentUpon>EliminadoCorrectamente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorAlGuardar.resx">
+      <DependentUpon>ErrorAlGuardar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuardadoConExito.resx">
+      <DependentUpon>GuardadoConExito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="homeCajero.resx">
       <DependentUpon>homeCajero.cs</DependentUpon>
@@ -151,6 +199,9 @@
     <EmbeddedResource Include="ConfirmarPagarReserva.resx">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificacionExitosa.resx">
+      <DependentUpon>ModificacionExitosa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarPelicula.resx">
       <DependentUpon>ModificarPelicula.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionPeliculas.resx">
+      <DependentUpon>SeleccionPeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -297,6 +351,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn-correcto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alerta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

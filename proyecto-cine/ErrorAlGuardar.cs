@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace proyecto_cine
 {
-    public partial class Peliculas : Form
+    public partial class ErrorAlGuardar : Form
     {
-        homeCajero formParent;
-        public Peliculas(homeCajero parent)
+        public ErrorAlGuardar()
         {
-            this.formParent = parent;
             InitializeComponent();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Modificar_Click(object sender, EventArgs e)
-        {
-            
-            formParent.OpenFormInPanelCentral(new ModificarPelicula(formParent));
-          
-
+            this.Close();
         }
     }
 }

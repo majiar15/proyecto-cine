@@ -82,7 +82,7 @@ namespace proyecto_cine
 
         private void ventasButtonMenu_Click(object sender, EventArgs e)
         {
-            OpenFormInPanelCentral(new Peliculas(this));
+            OpenFormInPanelCentral(new SeleccionPeliculas(this));
         }
 
         private void reservaButtonMenu_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace proyecto_cine
 
         private void peliculasButtonMenu_Click(object sender, EventArgs e)
         {
-            OpenFormInPanelCentral(new ModificarPelicula());
+            OpenFormInPanelCentral(new Peliculas(this));
         }
     }
 }

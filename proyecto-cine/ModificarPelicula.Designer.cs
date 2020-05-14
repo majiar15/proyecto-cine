@@ -41,8 +41,8 @@
             this.ImageNameTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.examinar = new System.Windows.Forms.Button();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.enviar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,14 +170,6 @@
             this.examinar.UseVisualStyleBackColor = true;
             this.examinar.Click += new System.EventHandler(this.examinar_Click);
             // 
-            // pictureBox
-            // 
-            this.pictureBox.Location = new System.Drawing.Point(515, 61);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(197, 246);
-            this.pictureBox.TabIndex = 11;
-            this.pictureBox.TabStop = false;
-            // 
             // enviar
             // 
             this.enviar.ActiveBorderThickness = 1;
@@ -202,6 +194,15 @@
             this.enviar.Size = new System.Drawing.Size(199, 57);
             this.enviar.TabIndex = 12;
             this.enviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.enviar.Click += new System.EventHandler(this.enviar_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(515, 61);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(197, 246);
+            this.pictureBox.TabIndex = 11;
+            this.pictureBox.TabStop = false;
             // 
             // ModificarPelicula
             // 
