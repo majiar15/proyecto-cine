@@ -109,5 +109,15 @@ namespace proyecto_cine
         {
             OpenFormInPanelCentral(new ModificarPelicula());
         }
+
+        private void clientesButtonMenu_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanelCentral(new Clientes(this));
+        }
+
+        private void cajerosButtonMenu_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanelCentral(new Cajeros(this));
+        }
     }
 }

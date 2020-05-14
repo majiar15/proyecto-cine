@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajeros.Designer.cs">
+      <DependentUpon>Cajeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="cancelarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,24 @@
     </Compile>
     <Compile Include="CedulaClienteReserva.Designer.cs">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCajeros.Designer.cs">
+      <DependentUpon>CrearCajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearClientes.Designer.cs">
+      <DependentUpon>CrearClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="ElegirReservaPagar.cs">
       <SubType>Form</SubType>
@@ -133,11 +157,23 @@
     <Compile Include="SeleccionarSillas.Designer.cs">
       <DependentUpon>SeleccionarSillas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cajeros.resx">
+      <DependentUpon>Cajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cancelarReserva.resx">
       <DependentUpon>cancelarReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CedulaClienteReserva.resx">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearCajeros.resx">
+      <DependentUpon>CrearCajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearClientes.resx">
+      <DependentUpon>CrearClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElegirReservaPagar.resx">
       <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
