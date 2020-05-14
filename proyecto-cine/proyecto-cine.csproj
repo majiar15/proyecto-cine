@@ -90,6 +90,12 @@
     <Compile Include="ConfirmarPagarReserva.Designer.cs">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarPelicula.Designer.cs">
+      <DependentUpon>ModificarPelicula.cs</DependentUpon>
+    </Compile>
     <Compile Include="NroBoletas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmarPagarReserva.resx">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarPelicula.resx">
+      <DependentUpon>ModificarPelicula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NroBoletas.resx">
       <DependentUpon>NroBoletas.cs</DependentUpon>
