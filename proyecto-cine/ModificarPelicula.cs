@@ -12,8 +12,10 @@ namespace proyecto_cine
 {
     public partial class ModificarPelicula : Form
     {
-        public ModificarPelicula()
+        homeCajero formParent;
+        public ModificarPelicula(homeCajero parent)
         {
+            this.formParent = parent;
             InitializeComponent();
         }
 
@@ -39,6 +41,13 @@ namespace proyecto_cine
             
         }
 
+
+
+        private void enviar_Click(object sender, EventArgs e)
+        {
+            formParent.OpenFormInPanelCentral(new Peliculas(formParent));
+            this.Close();
+        }
         private void ModificarPelicula_Load(object sender, EventArgs e)
         {
 

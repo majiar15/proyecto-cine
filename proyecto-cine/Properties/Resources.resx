@@ -163,29 +163,32 @@
   <data name="Avengers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Avengers.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="linea" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\linea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Marco cine2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Marco cine1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Silla naranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Silla naranja.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn-correcto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn-correcto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon-Peliculas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Peliculas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconoUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-ticket-invert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-ticket-invert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Marco cine2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Marco cine1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconoUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iniciar-session" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iniciar-session.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Btn-Flecha atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Btn-Flecha atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Marco cine1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Marco cine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Btn-Flecha siguiente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Btn-Flecha siguiente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +223,11 @@
   <data name="Btn cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Btn cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Marco cine1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Marco cine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="log" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="linea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\linea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +253,7 @@
   <data name="Icon-Reserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon-Reserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="log" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alerta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alerta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

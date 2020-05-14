@@ -10,31 +10,21 @@ using System.Windows.Forms;
 
 namespace proyecto_cine
 {
-    public partial class Peliculas : Form
+    public partial class ModificacionExitosa : Form
     {
-        homeCajero formParent;
-        public Peliculas(homeCajero parent)
+        public ModificacionExitosa()
         {
-            this.formParent = parent;
             InitializeComponent();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void Modificar_Click(object sender, EventArgs e)
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            
-            formParent.OpenFormInPanelCentral(new ModificarPelicula(formParent));
-          
-
-        }
-
-        private void Crear_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
