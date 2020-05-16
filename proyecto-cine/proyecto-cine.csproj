@@ -132,6 +132,12 @@
     <Compile Include="ConfirmarPagarReserva.Designer.cs">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogUsuarios.Designer.cs">
+      <DependentUpon>LogUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificacionExitosa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmarPagarReserva.resx">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogUsuarios.resx">
+      <DependentUpon>LogUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificacionExitosa.resx">
       <DependentUpon>ModificacionExitosa.cs</DependentUpon>

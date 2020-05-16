@@ -119,5 +119,10 @@ namespace proyecto_cine
         {
             OpenFormInPanelCentral(new Cajeros(this));
         }
+
+        private void logButtonMenu_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanelCentral(new LogUsuarios(this));
+        }
     }
 }

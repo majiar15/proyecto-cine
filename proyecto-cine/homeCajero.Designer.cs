@@ -288,6 +288,7 @@
             this.logButtonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.logButtonMenu.Textcolor = System.Drawing.Color.White;
             this.logButtonMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logButtonMenu.Click += new System.EventHandler(this.logButtonMenu_Click);
             // 
             // panel3
             // 
