@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertaCCLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertaCCLog.Designer.cs">
+      <DependentUpon>AlertaCCLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     </Compile>
     <Compile Include="cancelarReserva.Designer.cs">
       <DependentUpon>cancelarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ccLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ccLog.Designer.cs">
+      <DependentUpon>ccLog.cs</DependentUpon>
     </Compile>
     <Compile Include="CedulaClienteReserva.cs">
       <SubType>Form</SubType>
@@ -193,11 +205,17 @@
     <Compile Include="SeleccionarSillas.Designer.cs">
       <DependentUpon>SeleccionarSillas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlertaCCLog.resx">
+      <DependentUpon>AlertaCCLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cajeros.resx">
       <DependentUpon>Cajeros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cancelarReserva.resx">
       <DependentUpon>cancelarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ccLog.resx">
+      <DependentUpon>ccLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CedulaClienteReserva.resx">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
@@ -393,6 +411,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\alerta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
