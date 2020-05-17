@@ -124,5 +124,10 @@ namespace proyecto_cine
         {
             OpenFormInPanelCentral(new LogUsuarios(this));
         }
+
+        private void reportesButtonMenu_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanelCentral(new Reportes(this));
+        }
     }
 }

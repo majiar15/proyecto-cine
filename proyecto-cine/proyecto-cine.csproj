@@ -174,6 +174,30 @@
     <Compile Include="Peliculas.Designer.cs">
       <DependentUpon>Peliculas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCliente.Designer.cs">
+      <DependentUpon>ReporteCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteFecha.Designer.cs">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePelicula.Designer.cs">
+      <DependentUpon>ReportePelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeleccionPeliculas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +288,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCliente.resx">
+      <DependentUpon>ReporteCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFecha.resx">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePelicula.resx">
+      <DependentUpon>ReportePelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeleccionPeliculas.resx">
       <DependentUpon>SeleccionPeliculas.cs</DependentUpon>
