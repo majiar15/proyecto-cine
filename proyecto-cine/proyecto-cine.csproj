@@ -90,6 +90,7 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="conexiondb.cs" />
     <Compile Include="CrearCajeros.cs">
       <SubType>Form</SubType>
     </Compile>

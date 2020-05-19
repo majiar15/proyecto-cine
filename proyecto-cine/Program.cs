@@ -16,6 +16,8 @@ namespace proyecto_cine
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            conexiondb conexion = new conexiondb();
+            conexion.abrir();
             Application.Run(new Login());
         }
     }
