@@ -1,4 +1,7 @@
-﻿namespace proyecto_cine
+﻿using System;
+using System.Windows.Forms;
+
+namespace proyecto_cine
 {
     partial class Cajeros
     {
@@ -33,10 +36,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuTextboxBuscarIdCaje = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.enviar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.seachMenu = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -46,10 +49,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.bunifuTextboxBuscarIdCaje);
             this.panel1.Controls.Add(this.bunifuThinButton25);
             this.panel1.Controls.Add(this.bunifuThinButton24);
             this.panel1.Controls.Add(this.enviar);
-            this.panel1.Controls.Add(this.seachMenu);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -57,6 +60,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(749, 535);
             this.panel1.TabIndex = 0;
+            // 
+            // bunifuTextboxBuscarIdCaje
+            // 
+            this.bunifuTextboxBuscarIdCaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.bunifuTextboxBuscarIdCaje.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.BackgroundImage")));
+            this.bunifuTextboxBuscarIdCaje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextboxBuscarIdCaje.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextboxBuscarIdCaje.ForeColor = System.Drawing.Color.Black;
+            this.bunifuTextboxBuscarIdCaje.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.Icon")));
+            this.bunifuTextboxBuscarIdCaje.Location = new System.Drawing.Point(487, 97);
+            this.bunifuTextboxBuscarIdCaje.Name = "bunifuTextboxBuscarIdCaje";
+            this.bunifuTextboxBuscarIdCaje.Size = new System.Drawing.Size(250, 42);
+            this.bunifuTextboxBuscarIdCaje.TabIndex = 50;
+            this.bunifuTextboxBuscarIdCaje.text = "";
+            this.bunifuTextboxBuscarIdCaje.OnTextChange += new System.EventHandler(this.bunifuTextboxBuscarIdCaje_OnTextChange);
             // 
             // bunifuThinButton25
             // 
@@ -82,7 +100,6 @@
             this.bunifuThinButton25.Size = new System.Drawing.Size(156, 43);
             this.bunifuThinButton25.TabIndex = 48;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
             // 
             // bunifuThinButton24
             // 
@@ -108,7 +125,6 @@
             this.bunifuThinButton24.Size = new System.Drawing.Size(156, 43);
             this.bunifuThinButton24.TabIndex = 47;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
             // enviar
             // 
@@ -135,22 +151,6 @@
             this.enviar.TabIndex = 46;
             this.enviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.enviar.Click += new System.EventHandler(this.enviar_Click);
-            // 
-            // seachMenu
-            // 
-            this.seachMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.seachMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.seachMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("seachMenu.BackgroundImage")));
-            this.seachMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.seachMenu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.seachMenu.ForeColor = System.Drawing.Color.Black;
-            this.seachMenu.Icon = ((System.Drawing.Image)(resources.GetObject("seachMenu.Icon")));
-            this.seachMenu.Location = new System.Drawing.Point(498, 107);
-            this.seachMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.seachMenu.Name = "seachMenu";
-            this.seachMenu.Size = new System.Drawing.Size(230, 45);
-            this.seachMenu.TabIndex = 30;
-            this.seachMenu.text = "Buscar";
             // 
             // dataGridView1
             // 
@@ -223,14 +223,24 @@
 
         }
 
+        private void menuBuscar_OnTextChange(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Bunifu.Framework.UI.BunifuTextbox seachMenu;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private Bunifu.Framework.UI.BunifuThinButton2 enviar;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextboxBuscarIdCaje;
     }
 }

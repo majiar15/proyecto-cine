@@ -12,6 +12,8 @@ namespace proyecto_cine
 {
     public partial class Cajeros : Form
     {
+        cajero cajero = new cajero();
+
         homeCajero formParent;
         public Cajeros(homeCajero formParent)
         {
@@ -23,7 +25,7 @@ namespace proyecto_cine
 
         private void Cajeros_Load(object sender, EventArgs e)
         {
-            cajero cajero = new cajero();
+            
             dataGridView1.DataSource = cajero.MostrarDatos();
         }
 
@@ -41,14 +43,18 @@ namespace proyecto_cine
             this.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+  
 
-        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        private void bunifuTextboxBuscarIdCaje_OnTextChange(object sender, EventArgs e)
         {
-            
+            if (bunifuTextboxBuscarIdCaje.text != "")
+            {
+                dataGridView1.DataSource = cajero.Buscar(bunifuTextboxBuscarIdCaje.text);
+            }
+            else
+            {
+                dataGridView1.DataSource = cajero.MostrarDatos();
+            }
         }
     }
 }

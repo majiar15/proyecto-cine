@@ -27,7 +27,23 @@ namespace proyecto_cine
             return ds.Tables["tabla"];
         }
 
+
+        
+
+        public DataTable Buscar(string id)
+        {
+            conexiondb conexion = new conexiondb();
+            conexion.abrir();
+            SqlCommand cmd = new SqlCommand(string.Format("select * from empleados where id like '%{0}%'", id), conexion.conexion);
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            ad.Fill(ds, "tabla");
+            conexion.cerra();
+            return ds.Tables["tabla"];
+        }
+
         public void crearCajero(int id, int cargo, string nombre, string apellido, string telefono, string email, string contraseña)
+
         {
             try
             {
@@ -54,9 +70,6 @@ namespace proyecto_cine
 
         }
 
-        public void mostrar()
-        {
-
-        }
+        
     }
 }
