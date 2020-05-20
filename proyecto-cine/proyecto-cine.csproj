@@ -60,6 +60,7 @@
     <Compile Include="AlertaCCLog.Designer.cs">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="cajero.cs" />
     <Compile Include="Cajeros.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -10,7 +10,7 @@ namespace proyecto_cine
 {
     class conexiondb
     {
-        string dataConexion = "Data Source=DESKTOP-FVDIRBH;Initial Catalog=cine; Integrated security=true";
+        string dataConexion = "Data Source=DESKTOP-70802HD;Initial Catalog=cine; Integrated security=true";
         public SqlConnection conexion = new SqlConnection();
 
         public conexiondb()
