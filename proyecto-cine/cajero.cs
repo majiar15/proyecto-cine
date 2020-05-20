@@ -11,14 +11,25 @@ namespace proyecto_cine
 {
     class cajero
     {
-        public void buscar()
-        {
+        private DataSet ds;
 
+        public DataTable MostrarDatos()
+        {
+            conexiondb conexion = new conexiondb();
+            conexion.abrir();
+            SqlCommand cmd = new SqlCommand("select * from empleados", conexion.conexion);
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            ad.Fill(ds, "tabla");
+            conexion.cerra();
+            return ds.Tables["tabla"];
         }
 
         public void crearCajero()
         {
-
+                
+       
+           
         }
 
         public void modificar()

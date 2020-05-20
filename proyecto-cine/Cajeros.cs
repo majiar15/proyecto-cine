@@ -23,20 +23,8 @@ namespace proyecto_cine
 
         private void Cajeros_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 14; i++)
-            {
-                dataGridView1.Rows.Add(
-                    new object[]
-                    {
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                    }
-
-                );
-            }
+            cajero cajero = new cajero();
+            dataGridView1.DataSource = cajero.MostrarDatos();
         }
 
         
@@ -51,6 +39,16 @@ namespace proyecto_cine
         {
             this.formParent.OpenFormInPanelCentral(new CrearCajeros(this.formParent));
             this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
