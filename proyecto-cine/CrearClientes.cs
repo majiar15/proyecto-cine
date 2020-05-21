@@ -16,13 +16,13 @@ namespace proyecto_cine
 {
     public partial class CrearClientes : Form
     {
-                
+        string opcion;        
         Clientedb nClientedb;
         homeCajero formParent;
             
-        public CrearClientes(homeCajero formParent)
+        public CrearClientes(homeCajero formParent, string opcion)
         {
-          
+            this.opcion = opcion;
             nClientedb = new Clientedb();
             this.formParent = formParent;
             InitializeComponent();
@@ -40,11 +40,20 @@ namespace proyecto_cine
         private void enviar_Click(object sender, EventArgs e)
         {
 
-            Clientedb nClientedb = new Clientedb();
-            nClientedb.Agregar(Informacion());
-            MessageBox.Show("conectando...");
-
             
+            
+           
+            if(opcion == "modificar")
+            {
+                nClientedb.Modificardb(Informacion());
+            }
+            else
+            {
+                nClientedb.Agregar(Informacion());
+            }
+            this.formParent.OpenFormInPanelCentral(new Clientes(this.formParent));
+            this.Close();
+
 
         }
         private Cliente Informacion()

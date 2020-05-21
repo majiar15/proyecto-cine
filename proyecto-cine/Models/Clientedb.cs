@@ -39,12 +39,12 @@ namespace proyecto_cine.Models
             }
 
         }
-        public void Modificardb(string nombre, string apellido, int cedula, string email, string direccion)
+        public void Modificardb(Cliente nCliente)
         {
             try
             {
                 conexion.abrir();
-                string query = "update cliente set nombre='" + nombre + "',apellidos='" + apellido + "', direccion='" + direccion + "', emai='" + email + "' where id='" + cedula + "'";
+                string query = "update cliente set nombre='" + nCliente.nombre + "',apellidos='" + nCliente.apellidos + "', direccion='" + nCliente.direccion + "', email='" + nCliente.email + "' where id='" + nCliente.cedula + "'";
                 comando = new SqlCommand(query, conexion.conexion);
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Cliente modificado");
@@ -55,12 +55,12 @@ namespace proyecto_cine.Models
             }
         }
 
-        public void Eliminar(Cliente nCliente)
+        public void Eliminar(int id)
         {
             try
             {
                 conexion.abrir();
-                string query = "delete from cliente where id='" + nCliente.cedula + "'";
+                string query = "delete from cliente where id='" + id + "'";
                 comando = new SqlCommand(query, conexion.conexion);
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Cliente se elimino");

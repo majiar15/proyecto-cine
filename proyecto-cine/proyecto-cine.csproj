@@ -91,6 +91,12 @@
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexiondb.cs" />
+    <Compile Include="Confirmarcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmarcs.Designer.cs">
+      <DependentUpon>Confirmarcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="controllers\Cliente.cs" />
     <Compile Include="CrearCajeros.cs">
       <SubType>Form</SubType>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmarcs.resx">
+      <DependentUpon>Confirmarcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearCajeros.resx">
       <DependentUpon>CrearCajeros.cs</DependentUpon>

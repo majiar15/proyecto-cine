@@ -110,3 +110,4 @@ C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.cspr
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmarcs.resources

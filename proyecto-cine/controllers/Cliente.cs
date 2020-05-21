@@ -16,10 +16,10 @@ namespace proyecto_cine.controllers
         public string email { get; set; }
         public string direccion { get; set; }
 
-        public void modificar(string nombre, string apellido, int cedula, string email, string direccion)
-        {
-            cliente.Modificardb(nombre, apellido, Convert.ToInt32(cedula), email, direccion);
-        }
+        //public void modificar(string nombre, string apellido, int cedula, string email, string direccion)
+        //{
+        //    cliente.Modificardb(nombre, apellido, Convert.ToInt32(cedula), email, direccion);
+        //}
     
     }
 }

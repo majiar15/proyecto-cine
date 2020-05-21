@@ -36,32 +36,33 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
-            this.formParent.OpenFormInPanelCentral(new CrearClientes(this.formParent));
+            this.formParent.OpenFormInPanelCentral(new CrearClientes(this.formParent,"crear"));
             this.Close();
         }
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
 
-            this.formParent.OpenFormInPanelCentral(new CrearClientes(this.formParent));
+            
 
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
-                CrearClientes form = new CrearClientes(this.formParent);
+                CrearClientes form = new CrearClientes(this.formParent,"modificar");
                 form.CedulaTextBox.Text = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
                 form.NameTextBox.Text = dataGridView1.CurrentRow.Cells["nombre"].Value.ToString();
                 form.ApellidoTextBox.Text = dataGridView1.CurrentRow.Cells["apellidos"].Value.ToString();
 
                 form.DireccionTextBox.Text = dataGridView1.CurrentRow.Cells["direccion"].Value.ToString();
                 form.EmailTextBox.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
-
+                this.formParent.OpenFormInPanelCentral(form);
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Seleccione una fila por favor");
             }
-            this.Close();
+            
 
         }
 
@@ -83,5 +84,12 @@ namespace proyecto_cine
             
         }
 
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        {
+            
+            id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+            Confirmarcs confirmar = new Confirmarcs(id);
+            confirmar.Show();
+        }
     }
 }

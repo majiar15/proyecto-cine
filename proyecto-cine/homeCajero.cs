@@ -129,5 +129,10 @@ namespace proyecto_cine
         {
             OpenFormInPanelCentral(new Reportes(this));
         }
+
+        private void PanelTopMenu_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
