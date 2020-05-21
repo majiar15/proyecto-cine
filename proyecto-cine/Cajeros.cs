@@ -59,7 +59,13 @@ namespace proyecto_cine
 
         private void btnEliminarCajero_Click(object sender, EventArgs e)
         {
-            if (cajero.Eliminar(bunifuTextboxBuscarIdCaje.text))
+
+            if (bunifuTextboxBuscarIdCaje.text == "")
+            {
+                MessageBox.Show("Ningun Usuario Eliminar");
+            }
+
+            else if (cajero.Eliminar(bunifuTextboxBuscarIdCaje.text)) 
             {
                 EliminadoCorrectamente mensajeEliminar = new EliminadoCorrectamente();
                 mensajeEliminar.ShowDialog();
