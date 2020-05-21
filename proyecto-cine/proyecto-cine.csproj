@@ -91,6 +91,7 @@
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexiondb.cs" />
+    <Compile Include="controllers\Cliente.cs" />
     <Compile Include="CrearCajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +152,7 @@
     <Compile Include="LogUsuarios.Designer.cs">
       <DependentUpon>LogUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Clientedb.cs" />
     <Compile Include="ModificacionExitosa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,5 +454,6 @@
   <ItemGroup>
     <None Include="Resources\log1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

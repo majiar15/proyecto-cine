@@ -5,33 +5,64 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using proyecto_cine.Models;
+
 
 namespace proyecto_cine
 {
     class conexiondb
     {
         string dataConexion = "Data Source=DESKTOP-FVDIRBH;Initial Catalog=cine; Integrated security=true";
-        public SqlConnection conexion = new SqlConnection();
+        SqlConnection conexion;
 
-        public conexiondb()
+        
+
+        public SqlConnection EstablecerConexion()
         {
-            conexion.ConnectionString = dataConexion;
+            this.conexion = new SqlConnection(this.dataConexion);
+            return conexion;
         }
-        public void abrir()
+        
+        
+        public bool ejecutarComando(string strComando)
         {
             try
             {
+                
+                SqlCommand comando = new SqlCommand();
+                comando.CommandText = strComando;
+                comando.Connection = this.EstablecerConexion();
                 conexion.Open();
-                Console.WriteLine("Conexion abierta");
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                return true;
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("Error al Abrir la DB" + ex.Message);
+                return false;
             }
+
         }
-        public void cerra()
+        public DataSet consultarCliente(SqlCommand sqlComando)
         {
-            conexion.Close();
+            DataSet DS = new DataSet();
+            SqlDataAdapter Adaptador = new SqlDataAdapter();
+            try
+            {
+                SqlCommand comando = new SqlCommand();
+                comando = sqlComando;
+                comando.Connection = EstablecerConexion();
+                Adaptador.SelectCommand = comando;
+                conexion.Open();
+                Adaptador.Fill(DS);
+                conexion.Close();
+                return DS;
+            }
+            catch
+            {
+                return DS;
+            }
+            
         }
 
     }
