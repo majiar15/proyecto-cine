@@ -54,7 +54,7 @@ namespace proyecto_cine
             catch (Exception e)
             {
                 Console.WriteLine("Error: " + e.ToString());
-                throw;
+                return ds.Tables["tabla"];
             }
         }
 
