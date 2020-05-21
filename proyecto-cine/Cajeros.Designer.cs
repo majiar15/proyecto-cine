@@ -226,12 +226,12 @@ namespace proyecto_cine
 
         private void menuBuscar_OnTextChange(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            throw new NotImplementedException();
+           
         }
 
         #endregion
