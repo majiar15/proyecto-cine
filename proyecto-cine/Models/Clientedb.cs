@@ -14,30 +14,88 @@ namespace proyecto_cine.Models
     class Clientedb
     {
         conexiondb conexion;
-
+        SqlCommand comando;
+        private DataSet DS;
         public Clientedb()
         {
             conexion = new conexiondb();
         }
 
-        
-        public bool Agregar(Cliente nclientes)
+        public void Agregar(Cliente nclientes)
         {
-                                                                                                             
-            return conexion.ejecutarComando("INSERT INTO cliente (id,nombre,apellidos,email,direccion) VALUES('"+nclientes.cedula+ "','" + nclientes.nombre + "','" + nclientes.apellidos + "','" + nclientes.email + "','" + nclientes.direccion + "')");
+            try
+            {
+
+                conexion.abrir();
+                string query = "INSERT INTO cliente (id,nombre,apellidos,email,direccion) VALUES('" + nclientes.cedula + "','" + nclientes.nombre + "','" + nclientes.apellidos + "','" + nclientes.email + "','" + nclientes.direccion + "')";
+                comando = new SqlCommand(query, conexion.conexion);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Cliente registrado");
+                conexion.cerra();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se inserto los datos" + e.ToString());
+            }
 
         }
-        public DataSet MostrarClientes()
+        public void Modificardb(string nombre, string apellido, int cedula, string email, string direccion)
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * FROM cliente");
-            return conexion.consultarCliente(sentencia);
+            try
+            {
+                conexion.abrir();
+                string query = "update cliente set nombre='" + nombre + "',apellidos='" + apellido + "', direccion='" + direccion + "', emai='" + email + "' where id='" + cedula + "'";
+                comando = new SqlCommand(query, conexion.conexion);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Cliente modificado");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Cliente no se modifico" + e.ToString());
+            }
         }
 
-        public DataSet Buscar(Clientes nCliente)
+        public void Eliminar(Cliente nCliente)
         {
-            SqlCommand sentencias = new SqlCommand("SELECT * FROM cliente WHERE ID like('" + nCliente.id + "%')");
-            return conexion.consultarCliente(sentencias);
+            try
+            {
+                conexion.abrir();
+                string query = "delete from cliente where id='" + nCliente.cedula + "'";
+                comando = new SqlCommand(query, conexion.conexion);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Cliente se elimino");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Cliente no se elimino" + e.ToString());
+            }
         }
+        public DataTable MostrarConsulta()
+        {
+            conexion.abrir();
+            string query = "SELECT * FROM cliente";
+            comando = new SqlCommand(query, conexion.conexion);
+            SqlDataAdapter Adaptar = new SqlDataAdapter();
+            Adaptar.SelectCommand = comando;
+            DS = new DataSet();
+            Adaptar.Fill(DS, "tabla");
+            conexion.cerra();
+            return DS.Tables["Tabla"];
+
+        }
+
+        //public DataTable Buscar(Cliente nCliente)
+        //{
+
+        //    string query = "select * from empleados where id like '%" + nCliente.buscador + "%'";
+        //    comando = new SqlCommand(query, conexion.conexion);
+        //    SqlDataAdapter Adaptar = new SqlDataAdapter();
+        //    Adaptar.SelectCommand = comando;
+        //    DS = new DataSet();
+        //    Adaptar.Fill(DS, "tabla");
+        //    conexion.cerra();
+        //    return DS.Tables["tabla"];
+        //}
     }
 
 

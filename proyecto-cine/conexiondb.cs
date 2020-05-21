@@ -13,57 +13,28 @@ namespace proyecto_cine
     class conexiondb
     {
         string dataConexion = "Data Source=DESKTOP-FVDIRBH;Initial Catalog=cine; Integrated security=true";
-        SqlConnection conexion;
+        public SqlConnection conexion = new SqlConnection();
 
-        
-
-        public SqlConnection EstablecerConexion()
+        public conexiondb()
         {
-            this.conexion = new SqlConnection(this.dataConexion);
-            return conexion;
+            conexion.ConnectionString = dataConexion;
         }
-        
-        
-        public bool ejecutarComando(string strComando)
+
+        public void abrir()
         {
             try
             {
-                
-                SqlCommand comando = new SqlCommand();
-                comando.CommandText = strComando;
-                comando.Connection = this.EstablecerConexion();
                 conexion.Open();
-                comando.ExecuteNonQuery();
-                conexion.Close();
-                return true;
+                Console.WriteLine("Conexion abierta");
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                Console.WriteLine("Error al Abrir la DB" + ex.Message);
             }
-
         }
-        public DataSet consultarCliente(SqlCommand sqlComando)
+        public void cerra()
         {
-            DataSet DS = new DataSet();
-            SqlDataAdapter Adaptador = new SqlDataAdapter();
-            try
-            {
-                SqlCommand comando = new SqlCommand();
-                comando = sqlComando;
-                comando.Connection = EstablecerConexion();
-                Adaptador.SelectCommand = comando;
-                conexion.Open();
-                Adaptador.Fill(DS);
-                conexion.Close();
-                return DS;
-            }
-            catch
-            {
-                return DS;
-            }
-            
+            conexion.Close();
         }
-
     }
 }

@@ -39,10 +39,12 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
-            
+
+            Clientedb nClientedb = new Clientedb();
+            nClientedb.Agregar(Informacion());
             MessageBox.Show("conectando...");
 
-            nClientedb.Agregar(Informacion()); 
+            
 
         }
         private Cliente Informacion()

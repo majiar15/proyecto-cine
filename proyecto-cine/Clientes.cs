@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using proyecto_cine.Models;
-
+using proyecto_cine.controllers;
 namespace proyecto_cine
 {
     public partial class Clientes : Form
     {
+        Cliente Cli;
         Clientedb nCliente;
         homeCajero formParent;
         public int id { get; set; }
@@ -21,7 +22,7 @@ namespace proyecto_cine
 
         public Clientes(homeCajero formParent)
         {
-            
+            Cli = new Cliente();
             nCliente = new Clientedb();
             this.formParent = formParent;
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace proyecto_cine
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = nCliente.MostrarClientes().Tables[0];
+            dataGridView1.DataSource = nCliente.MostrarConsulta();
         }
 
         private void enviar_Click(object sender, EventArgs e)
@@ -41,24 +42,30 @@ namespace proyecto_cine
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
-            
+
             this.formParent.OpenFormInPanelCentral(new CrearClientes(this.formParent));
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                CrearClientes form = new CrearClientes(this.formParent);
+                form.CedulaTextBox.Text = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+                form.NameTextBox.Text = dataGridView1.CurrentRow.Cells["nombre"].Value.ToString();
+                form.ApellidoTextBox.Text = dataGridView1.CurrentRow.Cells["apellidos"].Value.ToString();
+
+                form.DireccionTextBox.Text = dataGridView1.CurrentRow.Cells["direccion"].Value.ToString();
+                form.EmailTextBox.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
             this.Close();
-            
+
         }
 
-        private void Seleccionar(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int indice = e.RowIndex;
-            CrearClientes form = new CrearClientes(this.formParent);
-            form.CedulaTextBox.Text = dataGridView1.Rows[indice].Cells[0].Value.ToString();
-            form.NameTextBox.Text = dataGridView1.Rows[indice].Cells[1].Value.ToString();
-            form.ApellidoTextBox.Text= dataGridView1.Rows[indice].Cells[2].Value.ToString();
-
-            form.EmailTextBox.Text=dataGridView1.Rows[indice].Cells[3].Value.ToString();
-            form.DireccionTextBox.Text= dataGridView1.Rows[indice].Cells[4].Value.ToString();
-            
-        }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
