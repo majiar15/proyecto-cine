@@ -17,14 +17,22 @@ namespace proyecto_cine
         SqlCommand cmd;
         public DataTable MostrarDatos()
         {
+            try
+            {
+                conexion.abrir();
+                cmd = new SqlCommand("select * from empleados", conexion.conexion);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                conexion.cerra();
+                return ds.Tables["tabla"];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e.ToString());
+                return ds.Tables["tabla"];
+            }
             
-            conexion.abrir();
-            cmd = new SqlCommand("select * from empleados", conexion.conexion);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            conexion.cerra();
-            return ds.Tables["tabla"];
         }
 
 
@@ -32,14 +40,22 @@ namespace proyecto_cine
 
         public DataTable Buscar(string id)
         {
-            conexiondb conexion = new conexiondb();
-            conexion.abrir();
-            SqlCommand cmd = new SqlCommand(string.Format("select * from empleados where id like '%{0}%'", id), conexion.conexion);
-            SqlDataAdapter ad = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            ad.Fill(ds, "tabla");
-            conexion.cerra();
-            return ds.Tables["tabla"];
+            try
+            {
+                conexiondb conexion = new conexiondb();
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand(string.Format("select * from empleados where id like '%{0}%'", id), conexion.conexion);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                conexion.cerra();
+                return ds.Tables["tabla"];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e.ToString());
+                throw;
+            }
         }
 
         public void crearCajero(int id, int cargo, string nombre, string apellido, string telefono, string email, string contraseña)
@@ -50,11 +66,14 @@ namespace proyecto_cine
                 conexion.abrir();
                 cmd = new SqlCommand("Insert into empleados (id,cargo_id,nombre,apellidos,telefono,email,contraseña) values (" + id + ","+cargo+",'" + nombre+"', '"+ apellido + "', "+telefono+",'"+email+"','"+contraseña+ "')" , conexion.conexion);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente registrado");
+                GuardadoConExito guardado = new GuardadoConExito();
+                guardado.Show();
             }
             catch (Exception e)
             {
-                MessageBox.Show("No se pudo insertar los datos " + e.ToString()); ;
+                ErrorAlGuardar error = new ErrorAlGuardar();
+                error.Show();
+                Console.WriteLine("No se pudo insertar los datos, error: " + e.ToString()); ;
             }
        
            
@@ -69,12 +88,14 @@ namespace proyecto_cine
                 SqlCommand cmd = new SqlCommand(String.Format("UPDATE empleados set id = " + id + ", cargo_id = " + cargo + ", nombre = '" + nombres + "',apellidos = '" + apellidos + "',telefono = " + telefono + ",email = '" + email + "',contraseña= '" + contraseña + "' where id = " + id + ""), conexion.conexion);
                 cmd.ExecuteNonQuery();
                 conexion.cerra();
-                MessageBox.Show("Cajero actualizado");
+                GuardadoConExito guardado = new GuardadoConExito();
+                guardado.Show();
             }
             catch (Exception e)
             {
-
-                MessageBox.Show("No se pudo actualizar la informacion, error: " + e);
+                ErrorAlGuardar error = new ErrorAlGuardar();
+                error.Show();
+                Console.WriteLine("No se pudo actualizar la informacion, error: " + e);
             }
             
         }
