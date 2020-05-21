@@ -60,20 +60,41 @@ namespace proyecto_cine
            
         }
 
-        public void modificar()
+        public void modificar(int id, int cargo, String nombres, String apellidos, int telefono, String email, String contraseña)
         {
+            try
+            {
+                conexiondb conexion = new conexiondb();
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand(String.Format("UPDATE empleados set id = " + id + ", cargo_id = " + cargo + ", nombre = '" + nombres + "',apellidos = '" + apellidos + "',telefono = " + telefono + ",email = '" + email + "',contraseña= '" + contraseña + "' where id = " + id + ""), conexion.conexion);
+                cmd.ExecuteNonQuery();
+                conexion.cerra();
+                MessageBox.Show("Cajero actualizado");
+            }
+            catch (Exception e)
+            {
 
+                MessageBox.Show("No se pudo actualizar la informacion, error: " + e);
+            }
+            
         }
 
         public bool Eliminar(string id)
         {
-            conexiondb conexion = new conexiondb();
-            conexion.abrir();
-            SqlCommand cmd = new SqlCommand(string.Format("delete from empleados where id = {0}", id), conexion.conexion);
-            int filasafectadas = cmd.ExecuteNonQuery();
-            conexion.cerra();
-            if (filasafectadas > 0) return true;
-            else return false;
+            try
+            {
+                conexiondb conexion = new conexiondb();
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand(string.Format("delete from empleados where id = {0}", id), conexion.conexion);
+                int filasafectadas = cmd.ExecuteNonQuery();
+                conexion.cerra();
+                if (filasafectadas > 0) return true;
+                else return false;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
 

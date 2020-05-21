@@ -93,6 +93,12 @@
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexiondb.cs" />
+    <Compile Include="Confirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmacion.Designer.cs">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearCajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmacion.resx">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearCajeros.resx">
       <DependentUpon>CrearCajeros.cs</DependentUpon>

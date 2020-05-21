@@ -30,9 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearCajeros));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbCargo = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbCedula = new System.Windows.Forms.TextBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.enviar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.tbContraseña = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbTelefono = new System.Windows.Forms.TextBox();
@@ -44,21 +47,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbCedula = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbCargo = new Bunifu.Framework.UI.BunifuDropdown();
+            this.btUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.btUpdate);
             this.panel1.Controls.Add(this.cbCargo);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tbCedula);
             this.panel1.Controls.Add(this.bunifuThinButton21);
             this.panel1.Controls.Add(this.enviar);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.lbTitle);
             this.panel1.Controls.Add(this.tbContraseña);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.tbTelefono);
@@ -75,6 +77,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(749, 535);
             this.panel1.TabIndex = 0;
+            // 
+            // cbCargo
+            // 
+            this.cbCargo.BackColor = System.Drawing.Color.Transparent;
+            this.cbCargo.BorderRadius = 3;
+            this.cbCargo.DisabledColor = System.Drawing.Color.Gray;
+            this.cbCargo.ForeColor = System.Drawing.Color.White;
+            this.cbCargo.Items = new string[] {
+        "",
+        "Administrador",
+        "Cajero"};
+            this.cbCargo.Location = new System.Drawing.Point(389, 431);
+            this.cbCargo.Name = "cbCargo";
+            this.cbCargo.NomalColor = System.Drawing.Color.Black;
+            this.cbCargo.onHoverColor = System.Drawing.Color.Black;
+            this.cbCargo.selectedIndex = -1;
+            this.cbCargo.Size = new System.Drawing.Size(177, 23);
+            this.cbCargo.TabIndex = 65;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(183, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 42);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Cargo :";
+            // 
+            // tbCedula
+            // 
+            this.tbCedula.BackColor = System.Drawing.Color.Black;
+            this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCedula.ForeColor = System.Drawing.Color.White;
+            this.tbCedula.Location = new System.Drawing.Point(389, 374);
+            this.tbCedula.Multiline = true;
+            this.tbCedula.Name = "tbCedula";
+            this.tbCedula.Size = new System.Drawing.Size(177, 23);
+            this.tbCedula.TabIndex = 63;
             // 
             // bunifuThinButton21
             // 
@@ -128,17 +172,17 @@
             this.enviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.enviar.Click += new System.EventHandler(this.enviar_Click);
             // 
-            // label8
+            // lbTitle
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(221, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(307, 46);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "CREAR CAJEROS";
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lbTitle.Font = new System.Drawing.Font("Arial Narrow", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.ForeColor = System.Drawing.Color.Black;
+            this.lbTitle.Location = new System.Drawing.Point(221, 9);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(307, 46);
+            this.lbTitle.TabIndex = 60;
+            this.lbTitle.Text = "CREAR CAJEROS";
             // 
             // tbContraseña
             // 
@@ -272,47 +316,32 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "Nombres :";
             // 
-            // tbCedula
+            // btUpdate
             // 
-            this.tbCedula.BackColor = System.Drawing.Color.Black;
-            this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCedula.ForeColor = System.Drawing.Color.White;
-            this.tbCedula.Location = new System.Drawing.Point(389, 374);
-            this.tbCedula.Multiline = true;
-            this.tbCedula.Name = "tbCedula";
-            this.tbCedula.Size = new System.Drawing.Size(177, 23);
-            this.tbCedula.TabIndex = 63;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(183, 425);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 42);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "Cargo :";
-            // 
-            // cbCargo
-            // 
-            this.cbCargo.BackColor = System.Drawing.Color.Transparent;
-            this.cbCargo.BorderRadius = 3;
-            this.cbCargo.DisabledColor = System.Drawing.Color.Gray;
-            this.cbCargo.ForeColor = System.Drawing.Color.White;
-            this.cbCargo.Items = new string[] {
-        "",
-        "Administrador",
-        "Cajero"};
-            this.cbCargo.Location = new System.Drawing.Point(389, 431);
-            this.cbCargo.Name = "cbCargo";
-            this.cbCargo.NomalColor = System.Drawing.Color.Black;
-            this.cbCargo.onHoverColor = System.Drawing.Color.Black;
-            this.cbCargo.selectedIndex = -1;
-            this.cbCargo.Size = new System.Drawing.Size(177, 23);
-            this.cbCargo.TabIndex = 65;
+            this.btUpdate.ActiveBorderThickness = 1;
+            this.btUpdate.ActiveCornerRadius = 1;
+            this.btUpdate.ActiveFillColor = System.Drawing.Color.White;
+            this.btUpdate.ActiveForecolor = System.Drawing.Color.Black;
+            this.btUpdate.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btUpdate.BackgroundImage")));
+            this.btUpdate.ButtonText = "Actualizar";
+            this.btUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btUpdate.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.ForeColor = System.Drawing.Color.White;
+            this.btUpdate.IdleBorderThickness = 1;
+            this.btUpdate.IdleCornerRadius = 1;
+            this.btUpdate.IdleFillColor = System.Drawing.Color.Black;
+            this.btUpdate.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btUpdate.IdleLineColor = System.Drawing.Color.White;
+            this.btUpdate.Location = new System.Drawing.Point(386, 476);
+            this.btUpdate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(177, 43);
+            this.btUpdate.TabIndex = 66;
+            this.btUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btUpdate.Visible = false;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // CrearCajeros
             // 
@@ -332,22 +361,23 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbTelefono;
-        private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.TextBox tbApellidos;
-        private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbContraseña;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuThinButton2 enviar;
-        private Bunifu.Framework.UI.BunifuDropdown cbCargo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbCedula;
+        public System.Windows.Forms.Label lbTitle;
+        public System.Windows.Forms.TextBox tbTelefono;
+        public System.Windows.Forms.TextBox tbEmail;
+        public System.Windows.Forms.TextBox tbApellidos;
+        public System.Windows.Forms.TextBox tbNombre;
+        public System.Windows.Forms.TextBox tbContraseña;
+        public Bunifu.Framework.UI.BunifuDropdown cbCargo;
+        public System.Windows.Forms.TextBox tbCedula;
+        public Bunifu.Framework.UI.BunifuThinButton2 enviar;
+        public Bunifu.Framework.UI.BunifuThinButton2 btUpdate;
     }
 }

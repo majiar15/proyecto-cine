@@ -148,3 +148,4 @@ C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debu
 C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
 C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
 C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmacion.resources
