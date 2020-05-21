@@ -21,7 +21,7 @@ namespace proyecto_cine.Models
             conexion = new conexiondb();
         }
 
-        public void Agregar(Cliente nclientes)
+        public void Agregar(Cliente nclientes,homeCajero formParent)
         {
             try
             {
@@ -30,16 +30,17 @@ namespace proyecto_cine.Models
                 string query = "INSERT INTO cliente (id,nombre,apellidos,email,direccion) VALUES('" + nclientes.cedula + "','" + nclientes.nombre + "','" + nclientes.apellidos + "','" + nclientes.email + "','" + nclientes.direccion + "')";
                 comando = new SqlCommand(query, conexion.conexion);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Cliente registrado");
+                new GuardadoConExito(formParent).Show();
                 conexion.cerra();
             }
             catch (Exception e)
             {
+                new ErrorAlGuardar().Show();
                 MessageBox.Show("No se inserto los datos" + e.ToString());
             }
 
         }
-        public void Modificardb(Cliente nCliente)
+        public void Modificardb(Cliente nCliente, homeCajero formParent)
         {
             try
             {
@@ -47,15 +48,17 @@ namespace proyecto_cine.Models
                 string query = "update cliente set nombre='" + nCliente.nombre + "',apellidos='" + nCliente.apellidos + "', direccion='" + nCliente.direccion + "', email='" + nCliente.email + "' where id='" + nCliente.cedula + "'";
                 comando = new SqlCommand(query, conexion.conexion);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Cliente modificado");
+                new ModificacionExitosa(formParent).Show();
+                
             }
-            catch (Exception e)
+            catch 
             {
-                MessageBox.Show("Cliente no se modifico" + e.ToString());
+                new ErrorAlGuardar("modificar").Show();
+                //MessageBox.Show("Cliente no se modifico" + e.ToString());
             }
         }
 
-        public void Eliminar(int id)
+        public void Eliminar(int id, homeCajero formParent)
         {
             try
             {
@@ -63,11 +66,12 @@ namespace proyecto_cine.Models
                 string query = "delete from cliente where id='" + id + "'";
                 comando = new SqlCommand(query, conexion.conexion);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Cliente se elimino");
+                new EliminadoCorrectamente(formParent).Show();
             }
-            catch (Exception e)
+            catch 
             {
-                MessageBox.Show("Cliente no se elimino" + e.ToString());
+                new ErrorAlGuardar("eliminar").Show();
+               // MessageBox.Show("Cliente no se elimino" + e.ToString());
             }
         }
         public DataTable MostrarConsulta()

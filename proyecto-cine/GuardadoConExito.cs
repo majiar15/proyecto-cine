@@ -12,13 +12,16 @@ namespace proyecto_cine
 {
     public partial class GuardadoConExito : Form
     {
-        public GuardadoConExito()
+        homeCajero FormParent;
+        public GuardadoConExito(homeCajero FormParent)
         {
+            this.FormParent = FormParent;
             InitializeComponent();
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            FormParent.OpenFormInPanelCentral(new Clientes(FormParent));
             this.Close();
         }
 

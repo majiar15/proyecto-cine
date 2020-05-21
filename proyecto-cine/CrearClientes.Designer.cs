@@ -67,7 +67,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(749, 535);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bunifuThinButton21
             // 
@@ -132,6 +131,7 @@
             this.label6.Size = new System.Drawing.Size(310, 46);
             this.label6.TabIndex = 44;
             this.label6.Text = "CREAR CLIENTES";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // DireccionTextBox
             // 

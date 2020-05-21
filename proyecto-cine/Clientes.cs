@@ -86,10 +86,17 @@ namespace proyecto_cine
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
+            try
+            {
+                id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                Confirmarcs confirmar = new Confirmarcs(formParent, id);
+                confirmar.Show();
+            }
+            catch {
+                new ErrorAlGuardar("eliminar").Show();
+            }
             
-            id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-            Confirmarcs confirmar = new Confirmarcs(id);
-            confirmar.Show();
+           
         }
     }
 }

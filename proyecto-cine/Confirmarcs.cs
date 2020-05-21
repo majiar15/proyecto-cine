@@ -19,9 +19,11 @@ namespace proyecto_cine
         
         Clientedb nCliente;
         int id;
-        public Confirmarcs(int id)
+        homeCajero formParent;
+        public Confirmarcs(homeCajero parent,int id)
         {
             this.id = id;
+            this.formParent = parent;
             
             cli = new Cliente();
             nCliente = new Clientedb();
@@ -36,8 +38,7 @@ namespace proyecto_cine
         private void SIbtn_Click(object sender, EventArgs e)
         {
             
-            nCliente.Eliminar(id);
-            
+            nCliente.Eliminar(id,formParent);
             this.Close();
             
         }

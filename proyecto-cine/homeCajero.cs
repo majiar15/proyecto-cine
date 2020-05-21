@@ -100,11 +100,6 @@ namespace proyecto_cine
             Application.Exit();
         }
 
-        private void panelLeftMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void peliculasButtonMenu_Click(object sender, EventArgs e)
         {
             OpenFormInPanelCentral(new Peliculas(this));
@@ -128,11 +123,6 @@ namespace proyecto_cine
         private void reportesButtonMenu_Click(object sender, EventArgs e)
         {
             OpenFormInPanelCentral(new Reportes(this));
-        }
-
-        private void PanelTopMenu_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

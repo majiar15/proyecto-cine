@@ -25,9 +25,13 @@ namespace proyecto_cine
             this.opcion = opcion;
             nClientedb = new Clientedb();
             this.formParent = formParent;
+            
             InitializeComponent();
-            
-            
+            if (opcion == "modificar")
+            {
+                label6.Text = "MODIFICAR CLIENTES";
+            }
+
         }
 
         private void bunifuThinButton21_Click_1(object sender, EventArgs e)
@@ -45,14 +49,14 @@ namespace proyecto_cine
            
             if(opcion == "modificar")
             {
-                nClientedb.Modificardb(Informacion());
+                nClientedb.Modificardb(Informacion(), formParent);
             }
             else
             {
-                nClientedb.Agregar(Informacion());
+                nClientedb.Agregar(Informacion(), formParent);
             }
-            this.formParent.OpenFormInPanelCentral(new Clientes(this.formParent));
-            this.Close();
+          
+       
 
 
         }
@@ -69,7 +73,7 @@ namespace proyecto_cine
             return nCliente;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

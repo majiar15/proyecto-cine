@@ -12,18 +12,22 @@ namespace proyecto_cine
 {
     public partial class ModificacionExitosa : Form
     {
-        public ModificacionExitosa()
+        homeCajero parent;
+        public ModificacionExitosa(homeCajero parent)
         {
+            this.parent = parent;
             InitializeComponent();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            parent.OpenFormInPanelCentral(new Clientes(parent));
             this.Close();
         }
     }

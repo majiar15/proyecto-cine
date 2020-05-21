@@ -12,8 +12,10 @@ namespace proyecto_cine
 {
     public partial class EliminadoCorrectamente : Form
     {
-        public EliminadoCorrectamente()
+        homeCajero parent;
+        public EliminadoCorrectamente(homeCajero parent)
         {
+            this.parent = parent;
             InitializeComponent();
         }
 
@@ -25,6 +27,7 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            parent.OpenFormInPanelCentral(new Clientes(parent));
             this.Close();
 
         }
