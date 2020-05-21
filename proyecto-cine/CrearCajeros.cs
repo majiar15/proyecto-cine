@@ -38,42 +38,59 @@ namespace proyecto_cine
                 cargo = 2;
             }
 
-            cajero.crearCajero(Convert.ToInt32(tbCedula.Text), cargo, tbNombre.Text, tbApellidos.Text, tbTelefono.Text, tbEmail.Text, tbContraseña.Text);
-            tbNombre.Text = "";
-            tbApellidos.Text = "";
-            tbEmail.Text = "";
-            tbTelefono.Text = "";
-            tbContraseña.Text = "";
-            tbCedula.Text = "";
-            cbCargo.selectedIndex = 0;
+            if(tbCedula.Text == "" || tbNombre.Text == "" || tbApellidos.Text == "" || tbTelefono.Text == "" || tbEmail.Text == "" || tbContraseña.Text == "" || cbCargo.selectedIndex == 0)
+            {
+                MessageBox.Show("Debe ingresar datos validos");
+            }
+            else
+            {
+                cajero.crearCajero(Convert.ToInt32(tbCedula.Text), cargo, tbNombre.Text, tbApellidos.Text, tbTelefono.Text, tbEmail.Text, tbContraseña.Text);
+                tbNombre.Text = "";
+                tbApellidos.Text = "";
+                tbEmail.Text = "";
+                tbTelefono.Text = "";
+                tbContraseña.Text = "";
+                tbCedula.Text = "";
+                cbCargo.selectedIndex = 0;
+            }
+
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            Confirmacion confirmar = new Confirmacion(this.formParent);
-            confirmar.confirmacion = 2;
-
-            int cargo = 0;
-            cajero cajero = new cajero();
-            if (cbCargo.selectedIndex == 1)
+            if (tbCedula.Text == "")
             {
-                cargo = 1;
+                MessageBox.Show("Debe ingresar una cedula valida");
             }
-            else if (cbCargo.selectedIndex == 2)
+            else if (cbCargo.selectedIndex == 0)
             {
-                cargo = 2;
+                MessageBox.Show("Debe seleccionar un cargo valido");
+            }else
+            {
+                Confirmacion confirmar = new Confirmacion(this.formParent);
+                confirmar.confirmacion = 2;
+
+                int cargo = 0;
+                cajero cajero = new cajero();
+                if (cbCargo.selectedIndex == 1)
+                {
+                    cargo = 1;
+                }
+                else if (cbCargo.selectedIndex == 2)
+                {
+                    cargo = 2;
+                }
+
+                confirmar.cedula = int.Parse(tbCedula.Text);
+                confirmar.cargo = cargo;
+                confirmar.nombre = tbNombre.Text;
+                confirmar.apellidos = tbApellidos.Text;
+                confirmar.telefono = int.Parse(tbTelefono.Text);
+                confirmar.email = tbEmail.Text;
+                confirmar.contraseña = tbContraseña.Text;
+
+                confirmar.Show();
             }
-
-            confirmar.cedula = int.Parse(tbCedula.Text);
-            confirmar.cargo = cargo;
-            confirmar.nombre = tbNombre.Text;
-            confirmar.apellidos = tbApellidos.Text;
-            confirmar.telefono = int.Parse(tbTelefono.Text);
-            confirmar.email = tbEmail.Text;
-            confirmar.contraseña = tbContraseña.Text;
-
-            confirmar.Show();
-            
         }
     }
 }
