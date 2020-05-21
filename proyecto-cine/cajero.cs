@@ -49,11 +49,17 @@ namespace proyecto_cine
 
         }
 
-        public void eliminar()
+        public bool Eliminar(string id)
         {
-
+            conexiondb conexion = new conexiondb();
+            conexion.abrir();
+            SqlCommand cmd = new SqlCommand(string.Format("delete from empleados where id = {0}", id), conexion.conexion);
+            int filasafectadas = cmd.ExecuteNonQuery();
+            conexion.cerra();
+            if (filasafectadas > 0) return true;
+            else return false;
         }
 
-        
+
     }
 }

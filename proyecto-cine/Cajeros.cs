@@ -56,5 +56,19 @@ namespace proyecto_cine
                 dataGridView1.DataSource = cajero.MostrarDatos();
             }
         }
+
+        private void btnEliminarCajero_Click(object sender, EventArgs e)
+        {
+            if (cajero.Eliminar(bunifuTextboxBuscarIdCaje.text))
+            {
+                EliminadoCorrectamente mensajeEliminar = new EliminadoCorrectamente();
+                mensajeEliminar.ShowDialog();
+                dataGridView1.DataSource = cajero.MostrarDatos();
+            }
+            else
+            {
+                MessageBox.Show("No se elimino");
+            }
+        }
     }
 }
