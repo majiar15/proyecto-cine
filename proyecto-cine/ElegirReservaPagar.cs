@@ -27,7 +27,7 @@ namespace proyecto_cine
 
         private void PagarReservaButtom1_Click(object sender, EventArgs e)
         {
-            ConfirmarPagarReserva pagarReservaForm = new ConfirmarPagarReserva();
+            ConfirmarPagarReserva pagarReservaForm = new ConfirmarPagarReserva(homeCajeroParent,"PAGAR RESERVA");
             pagarReservaForm.Show();
             homeCajeroParent.OpenFormInPanelCentral();
             this.Close();

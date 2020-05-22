@@ -22,7 +22,10 @@ namespace proyecto_cine
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-
+            new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
+            this.Close();
+            
+            
         }
     }
 }

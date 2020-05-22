@@ -12,9 +12,17 @@ namespace proyecto_cine
 {
     class cajero
     {
+
         private DataSet ds;
         conexiondb conexion = new conexiondb();
         SqlCommand cmd;
+        public homeCajero FormParent;
+
+        public cajero(homeCajero formParent)
+        {
+            FormParent = formParent;
+        }
+
         public DataTable MostrarDatos()
         {
             try
@@ -66,7 +74,7 @@ namespace proyecto_cine
                 conexion.abrir();
                 cmd = new SqlCommand("Insert into empleados (id,cargo_id,nombre,apellidos,telefono,email,contraseña) values (" + id + ","+cargo+",'" + nombre+"', '"+ apellido + "', "+telefono+",'"+email+"','"+contraseña+ "')" , conexion.conexion);
                 cmd.ExecuteNonQuery();
-                GuardadoConExito guardado = new GuardadoConExito();
+                GuardadoConExito guardado = new GuardadoConExito(FormParent,"cajero");
                 guardado.Show();
             }
             catch (Exception e)
@@ -88,7 +96,7 @@ namespace proyecto_cine
                 SqlCommand cmd = new SqlCommand(String.Format("UPDATE empleados set id = " + id + ", cargo_id = " + cargo + ", nombre = '" + nombres + "',apellidos = '" + apellidos + "',telefono = " + telefono + ",email = '" + email + "',contraseña= '" + contraseña + "' where id = " + id + ""), conexion.conexion);
                 cmd.ExecuteNonQuery();
                 conexion.cerra();
-                GuardadoConExito guardado = new GuardadoConExito();
+                GuardadoConExito guardado = new GuardadoConExito(FormParent,"cajero");
                 guardado.Show();
             }
             catch (Exception e)

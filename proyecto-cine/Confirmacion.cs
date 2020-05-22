@@ -36,11 +36,11 @@ namespace proyecto_cine
             if (confirmacion == 1)
             {
                 Cajeros cajero = new Cajeros(this.formParent);
-                cajero micajero = new cajero();
+                cajero micajero = new cajero(formParent);
 
                 if (micajero.Eliminar(id.ToString()))
                 {
-                    EliminadoCorrectamente mensajeEliminar = new EliminadoCorrectamente();
+                    EliminadoCorrectamente mensajeEliminar = new EliminadoCorrectamente(formParent);
                     mensajeEliminar.ShowDialog();
                     cajero.dataGridView1.DataSource = micajero.MostrarDatos();
                     this.Close();
@@ -53,7 +53,7 @@ namespace proyecto_cine
                 formParent.OpenFormInPanelCentral(new Cajeros(this.formParent));
             }else if ( confirmacion == 2)
             {
-                cajero cajero = new cajero();
+                cajero cajero = new cajero(formParent);
                 cajero.modificar(cedula, cargo, nombre, apellidos, telefono, email, contraseña);
                 this.Close();
             }

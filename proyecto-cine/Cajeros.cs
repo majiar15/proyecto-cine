@@ -12,12 +12,13 @@ namespace proyecto_cine
 {
     public partial class Cajeros : Form
     {
-        cajero cajero = new cajero();
+        cajero cajero;
 
         homeCajero formParent;
         public Cajeros(homeCajero formParent)
         {
             this.formParent = formParent;
+            cajero = new cajero(formParent);
             InitializeComponent();
 
         }

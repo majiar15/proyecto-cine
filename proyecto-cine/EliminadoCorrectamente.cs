@@ -12,8 +12,10 @@ namespace proyecto_cine
 {
     public partial class EliminadoCorrectamente : Form
     {
-        public EliminadoCorrectamente()
+        homeCajero Parent;
+        public EliminadoCorrectamente(homeCajero parent)
         {
+            this.Parent = parent;
             InitializeComponent();
         }
 

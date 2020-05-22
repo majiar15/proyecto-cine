@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Peliculas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Crear = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Modificar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.eliminar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Buscador = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuTextboxBuscarIdCaje = new Bunifu.Framework.UI.BunifuTextbox();
+            this.dataGridView23 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,14 +50,6 @@
             this.label1.Size = new System.Drawing.Size(210, 53);
             this.label1.TabIndex = 0;
             this.label1.Text = "Peliculas";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 185);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(531, 326);
-            this.dataGridView1.TabIndex = 1;
             // 
             // Crear
             // 
@@ -135,39 +128,62 @@
             this.eliminar.TabIndex = 5;
             this.eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Buscador
+            // bunifuTextboxBuscarIdCaje
             // 
-            this.Buscador.AutoScroll = true;
-            this.Buscador.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.Buscador.BackColor = System.Drawing.Color.DarkGray;
-            this.Buscador.BorderColorFocused = System.Drawing.Color.Black;
-            this.Buscador.BorderColorIdle = System.Drawing.Color.Black;
-            this.Buscador.BorderColorMouseHover = System.Drawing.Color.Black;
-            this.Buscador.BorderThickness = 3;
-            this.Buscador.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Buscador.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Buscador.isPassword = false;
-            this.Buscador.Location = new System.Drawing.Point(484, 136);
-            this.Buscador.Margin = new System.Windows.Forms.Padding(4, 5, 5, 5);
-            this.Buscador.Name = "Buscador";
-            this.Buscador.Size = new System.Drawing.Size(236, 41);
-            this.Buscador.TabIndex = 6;
-            this.Buscador.Text = "buscar pelicula";
-            this.Buscador.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextboxBuscarIdCaje.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.bunifuTextboxBuscarIdCaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.bunifuTextboxBuscarIdCaje.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.BackgroundImage")));
+            this.bunifuTextboxBuscarIdCaje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextboxBuscarIdCaje.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextboxBuscarIdCaje.ForeColor = System.Drawing.Color.Black;
+            this.bunifuTextboxBuscarIdCaje.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.Icon")));
+            this.bunifuTextboxBuscarIdCaje.Location = new System.Drawing.Point(490, 139);
+            this.bunifuTextboxBuscarIdCaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuTextboxBuscarIdCaje.Name = "bunifuTextboxBuscarIdCaje";
+            this.bunifuTextboxBuscarIdCaje.Size = new System.Drawing.Size(230, 45);
+            this.bunifuTextboxBuscarIdCaje.TabIndex = 53;
+            this.bunifuTextboxBuscarIdCaje.text = "";
             // 
-            // pictureBox1
+            // dataGridView23
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::proyecto_cine.Properties.Resources.icon_Buscador;
-            this.pictureBox1.Location = new System.Drawing.Point(682, 144);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.dataGridView23.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView23.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView23.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.dataGridView23.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView23.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 13.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView23.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView23.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView23.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView23.EnableHeadersVisualStyles = false;
+            this.dataGridView23.GridColor = System.Drawing.Color.Black;
+            this.dataGridView23.Location = new System.Drawing.Point(12, 209);
+            this.dataGridView23.Name = "dataGridView23";
+            this.dataGridView23.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView23.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView23.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView23.Size = new System.Drawing.Size(566, 363);
+            this.dataGridView23.TabIndex = 52;
             // 
             // Peliculas
             // 
@@ -175,19 +191,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(749, 535);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Buscador);
+            this.Controls.Add(this.bunifuTextboxBuscarIdCaje);
+            this.Controls.Add(this.dataGridView23);
             this.Controls.Add(this.eliminar);
             this.Controls.Add(this.Modificar);
             this.Controls.Add(this.Crear);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Peliculas";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "pelicula";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,11 +210,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuThinButton2 Crear;
         private Bunifu.Framework.UI.BunifuThinButton2 Modificar;
         private Bunifu.Framework.UI.BunifuThinButton2 eliminar;
-        private Bunifu.Framework.UI.BunifuMetroTextbox Buscador;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextboxBuscarIdCaje;
+        public System.Windows.Forms.DataGridView dataGridView23;
     }
 }

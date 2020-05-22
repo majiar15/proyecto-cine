@@ -63,16 +63,18 @@ namespace proyecto_cine
             // 
             // bunifuTextboxBuscarIdCaje
             // 
+            this.bunifuTextboxBuscarIdCaje.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.bunifuTextboxBuscarIdCaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.bunifuTextboxBuscarIdCaje.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.BackgroundImage")));
             this.bunifuTextboxBuscarIdCaje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuTextboxBuscarIdCaje.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextboxBuscarIdCaje.ForeColor = System.Drawing.Color.Black;
             this.bunifuTextboxBuscarIdCaje.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.Icon")));
-            this.bunifuTextboxBuscarIdCaje.Location = new System.Drawing.Point(487, 97);
+            this.bunifuTextboxBuscarIdCaje.Location = new System.Drawing.Point(506, 84);
+            this.bunifuTextboxBuscarIdCaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuTextboxBuscarIdCaje.Name = "bunifuTextboxBuscarIdCaje";
-            this.bunifuTextboxBuscarIdCaje.Size = new System.Drawing.Size(250, 42);
-            this.bunifuTextboxBuscarIdCaje.TabIndex = 50;
+            this.bunifuTextboxBuscarIdCaje.Size = new System.Drawing.Size(230, 45);
+            this.bunifuTextboxBuscarIdCaje.TabIndex = 51;
             this.bunifuTextboxBuscarIdCaje.text = "";
             this.bunifuTextboxBuscarIdCaje.OnTextChange += new System.EventHandler(this.bunifuTextboxBuscarIdCaje_OnTextChange);
             // 
@@ -191,7 +193,6 @@ namespace proyecto_cine
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(566, 363);
             this.dataGridView1.TabIndex = 28;
@@ -243,7 +244,7 @@ namespace proyecto_cine
         private Bunifu.Framework.UI.BunifuThinButton2 btnEliminarCajero;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private Bunifu.Framework.UI.BunifuThinButton2 enviar;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextboxBuscarIdCaje;
         public DataGridView dataGridView1;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextboxBuscarIdCaje;
     }
 }

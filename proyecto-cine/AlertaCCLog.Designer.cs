@@ -70,6 +70,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 32);
             this.panel1.TabIndex = 22;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -105,6 +106,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(78, 41);
             this.bunifuThinButton21.TabIndex = 25;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // AlertaCCLog
             // 

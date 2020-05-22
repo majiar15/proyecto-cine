@@ -12,9 +12,14 @@ namespace proyecto_cine
 {
     public partial class ConfirmarPagarReserva : Form
     {
-        public ConfirmarPagarReserva()
+        String option;
+        homeCajero parent;
+        public ConfirmarPagarReserva(homeCajero parent,String option)
         {
+            this.option = option;
+            this.parent = parent;
             InitializeComponent();
+            label2.Text = option;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -29,7 +34,16 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (option == "PAGAR BOLETOS")
+            {
+                
+                parent.OpenFormInPanelCentral();
+                this.Close();
+            }
+            else {
+                this.Close();
+            }
+            
         }
     }
 }

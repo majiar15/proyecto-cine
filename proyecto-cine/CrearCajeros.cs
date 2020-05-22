@@ -28,7 +28,7 @@ namespace proyecto_cine
         private void enviar_Click(object sender, EventArgs e)
         {
             int cargo = 0;
-            cajero cajero = new cajero();
+            cajero cajero = new cajero(formParent);
             if(cbCargo.selectedIndex == 1)
             {
                 cargo = 1;
@@ -71,7 +71,7 @@ namespace proyecto_cine
                 confirmar.confirmacion = 2;
 
                 int cargo = 0;
-                cajero cajero = new cajero();
+                cajero cajero = new cajero(formParent);
                 if (cbCargo.selectedIndex == 1)
                 {
                     cargo = 1;
