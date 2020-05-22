@@ -79,9 +79,17 @@ namespace proyecto_cine
             
         }
         
-        private void seachMenu_OnTextChange(object sender, EventArgs e)
+        private void searchMenu_OnTextChange(object sender, EventArgs e)
         {
-            
+
+            if (searchMenu.text != "")
+            {
+                dataGridView1.DataSource = nCliente.Buscar(searchMenu.text);
+            }
+            else
+            {
+                dataGridView1.DataSource = nCliente.MostrarConsulta();
+            }
         }
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
@@ -98,5 +106,8 @@ namespace proyecto_cine
             
            
         }
+
+
+
     }
 }

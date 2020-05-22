@@ -88,18 +88,20 @@ namespace proyecto_cine.Models
 
         }
 
-        //public DataTable Buscar(Cliente nCliente)
-        //{
-
-        //    string query = "select * from empleados where id like '%" + nCliente.buscador + "%'";
-        //    comando = new SqlCommand(query, conexion.conexion);
-        //    SqlDataAdapter Adaptar = new SqlDataAdapter();
-        //    Adaptar.SelectCommand = comando;
-        //    DS = new DataSet();
-        //    Adaptar.Fill(DS, "tabla");
-        //    conexion.cerra();
-        //    return DS.Tables["tabla"];
-        //}
+        public DataTable Buscar(string nCliente)
+        {
+          
+                string query = "select * from cliente where id like '%" + nCliente + "%'";
+                comando = new SqlCommand(query, conexion.conexion);
+                SqlDataAdapter Adaptar = new SqlDataAdapter();
+                Adaptar.SelectCommand = comando;
+                DS = new DataSet();
+                Adaptar.Fill(DS, "tabla");
+                conexion.cerra();
+                return DS.Tables["tabla"];
+         
+            
+        }
     }
 
 
