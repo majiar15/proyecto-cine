@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace proyecto_cine
 {
-    public partial class Form1 : Form
+    public partial class AlertaCCLog : Form
     {
-        public Form1()
+        public AlertaCCLog()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

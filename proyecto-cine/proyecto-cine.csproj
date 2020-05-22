@@ -42,6 +42,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +55,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertaCCLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertaCCLog.Designer.cs">
+      <DependentUpon>AlertaCCLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cajero.cs" />
+    <Compile Include="Cajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cajeros.Designer.cs">
+      <DependentUpon>Cajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cancelarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cancelarReserva.Designer.cs">
+      <DependentUpon>cancelarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ccLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ccLog.Designer.cs">
+      <DependentUpon>ccLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CedulaClienteReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CedulaClienteReserva.Designer.cs">
+      <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexiondb.cs" />
+
+    <Compile Include="Confirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmacion.Designer.cs">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="Confirmarcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmarcs.Designer.cs">
+      <DependentUpon>Confirmarcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controllers\Cliente.cs" />
+
+    <Compile Include="CrearCajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCajeros.Designer.cs">
+      <DependentUpon>CrearCajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearClientes.Designer.cs">
+      <DependentUpon>CrearClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElegirReservaPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElegirReservaPagar.Designer.cs">
+      <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminadoCorrectamente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminadoCorrectamente.Designer.cs">
+      <DependentUpon>EliminadoCorrectamente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorAlGuardar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorAlGuardar.Designer.cs">
+      <DependentUpon>ErrorAlGuardar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuardadoConExito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuardadoConExito.Designer.cs">
+      <DependentUpon>GuardadoConExito.cs</DependentUpon>
+    </Compile>
     <Compile Include="homeCajero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +157,72 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradientLogin.cs">
-      <SubType>Component</SubType>
+    <Compile Include="ConfirmarPagarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmarPagarReserva.Designer.cs">
+      <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogUsuarios.Designer.cs">
+      <DependentUpon>LogUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Clientedb.cs" />
+    <Compile Include="ModificacionExitosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificacionExitosa.Designer.cs">
+      <DependentUpon>ModificacionExitosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarPelicula.Designer.cs">
+      <DependentUpon>ModificarPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NroBoletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NroBoletas.Designer.cs">
+      <DependentUpon>NroBoletas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Peliculas.Designer.cs">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCliente.Designer.cs">
+      <DependentUpon>ReporteCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteFecha.Designer.cs">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePelicula.Designer.cs">
+      <DependentUpon>ReportePelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionPeliculas.Designer.cs">
+      <DependentUpon>SeleccionPeliculas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,11 +237,100 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservas.Designer.cs">
+      <DependentUpon>Reservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionarSillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionarSillas.Designer.cs">
+      <DependentUpon>SeleccionarSillas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlertaCCLog.resx">
+      <DependentUpon>AlertaCCLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cajeros.resx">
+      <DependentUpon>Cajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cancelarReserva.resx">
+      <DependentUpon>cancelarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ccLog.resx">
+      <DependentUpon>ccLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CedulaClienteReserva.resx">
+      <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Confirmacion.resx">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmarcs.resx">
+      <DependentUpon>Confirmarcs.cs</DependentUpon>
+
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearCajeros.resx">
+      <DependentUpon>CrearCajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearClientes.resx">
+      <DependentUpon>CrearClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElegirReservaPagar.resx">
+      <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminadoCorrectamente.resx">
+      <DependentUpon>EliminadoCorrectamente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorAlGuardar.resx">
+      <DependentUpon>ErrorAlGuardar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuardadoConExito.resx">
+      <DependentUpon>GuardadoConExito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="homeCajero.resx">
       <DependentUpon>homeCajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmarPagarReserva.resx">
+      <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogUsuarios.resx">
+      <DependentUpon>LogUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificacionExitosa.resx">
+      <DependentUpon>ModificacionExitosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarPelicula.resx">
+      <DependentUpon>ModificarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NroBoletas.resx">
+      <DependentUpon>NroBoletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Peliculas.resx">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCliente.resx">
+      <DependentUpon>ReporteCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFecha.resx">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePelicula.resx">
+      <DependentUpon>ReportePelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionPeliculas.resx">
+      <DependentUpon>SeleccionPeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +339,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservas.resx">
+      <DependentUpon>Reservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionarSillas.resx">
+      <DependentUpon>SeleccionarSillas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -190,5 +440,45 @@
   <ItemGroup>
     <None Include="Resources\icon Cerrar sesion.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Avengers.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bad boys.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Joker.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silla naranja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silla roja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconCliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn-correcto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alerta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log1.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

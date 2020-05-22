@@ -1,40 +1,144 @@
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.AlertaCCLog.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Cajeros.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.cancelarReserva.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ccLog.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CedulaClienteReserva.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Clientes.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearCajeros.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearClientes.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ElegirReservaPagar.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.EliminadoCorrectamente.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ErrorAlGuardar.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.GuardadoConExito.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ConfirmarPagarReserva.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.LogUsuarios.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificacionExitosa.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificarPelicula.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.NroBoletas.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Peliculas.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionPeliculas.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionarSillas.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.AlertaCCLog.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Cajeros.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.cancelarReserva.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ccLog.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CedulaClienteReserva.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Clientes.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearCajeros.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearClientes.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ElegirReservaPagar.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.EliminadoCorrectamente.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ErrorAlGuardar.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.GuardadoConExito.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ConfirmarPagarReserva.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.LogUsuarios.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificacionExitosa.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificarPelicula.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.NroBoletas.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Peliculas.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionPeliculas.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionarSillas.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteFecha.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reportes.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReportePelicula.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteCliente.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.AlertaCCLog.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Cajeros.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.cancelarReserva.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ccLog.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CedulaClienteReserva.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Clientes.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearCajeros.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearClientes.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ElegirReservaPagar.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.EliminadoCorrectamente.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ErrorAlGuardar.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.GuardadoConExito.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ConfirmarPagarReserva.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.LogUsuarios.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificacionExitosa.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificarPelicula.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.NroBoletas.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Peliculas.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteCliente.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteFecha.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReportePelicula.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reportes.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionPeliculas.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionarSillas.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.AlertaCCLog.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Cajeros.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.cancelarReserva.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ccLog.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CedulaClienteReserva.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Clientes.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearCajeros.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearClientes.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ElegirReservaPagar.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.EliminadoCorrectamente.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ErrorAlGuardar.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.GuardadoConExito.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ConfirmarPagarReserva.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.LogUsuarios.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificacionExitosa.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ModificarPelicula.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.NroBoletas.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Peliculas.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteCliente.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteFecha.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReportePelicula.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reportes.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionPeliculas.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionarSillas.resources
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
+C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmacion.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmarcs.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmarcs.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteCliente.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteFecha.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReportePelicula.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reportes.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmacion.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
-D:\c#\proyectoCine\proyecto-Cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
-D:\c#\proyectoCine\proyecto-Cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CoreCompileInputs.cache
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\bin\Debug\Bunifu_UI_v1.5.3.dll
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
-C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
-D:\c#\proyectoCine\proyecto-Cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
-D:\c#\proyectoCine\proyecto-Cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe.config
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.exe
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\proyecto-cine.pdb
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
-C:\Users\Jesus Morales\Desktop\Proyecto\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete

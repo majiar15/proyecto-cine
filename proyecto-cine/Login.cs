@@ -103,5 +103,18 @@ namespace proyecto_cine
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            homeCajero home = new homeCajero();
+            this.Hide();
+            home.Show();
+        }
     }
 }

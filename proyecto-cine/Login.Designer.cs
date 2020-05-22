@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LoginButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.passwordLoginTextBox = new System.Windows.Forms.TextBox();
             this.userLoginTextBox = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.LoginButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +72,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 529);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.ActiveBorderThickness = 1;
+            this.LoginButton.ActiveCornerRadius = 30;
+            this.LoginButton.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.LoginButton.ActiveForecolor = System.Drawing.Color.White;
+            this.LoginButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginButton.BackgroundImage")));
+            this.LoginButton.ButtonText = "Iniciar Sesion";
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.LoginButton.ForeColor = System.Drawing.Color.Black;
+            this.LoginButton.IdleBorderThickness = 1;
+            this.LoginButton.IdleCornerRadius = 30;
+            this.LoginButton.IdleFillColor = System.Drawing.Color.White;
+            this.LoginButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.LoginButton.Location = new System.Drawing.Point(82, 430);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(5);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(221, 65);
+            this.LoginButton.TabIndex = 39;
+            this.LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // pictureBox5
             // 
@@ -211,31 +238,6 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 32;
             this.pictureBox7.TabStop = false;
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.ActiveBorderThickness = 1;
-            this.LoginButton.ActiveCornerRadius = 30;
-            this.LoginButton.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.LoginButton.ActiveForecolor = System.Drawing.Color.White;
-            this.LoginButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.LoginButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginButton.BackgroundImage")));
-            this.LoginButton.ButtonText = "Iniciar Session";
-            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.LoginButton.ForeColor = System.Drawing.Color.Black;
-            this.LoginButton.IdleBorderThickness = 1;
-            this.LoginButton.IdleCornerRadius = 30;
-            this.LoginButton.IdleFillColor = System.Drawing.Color.White;
-            this.LoginButton.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.LoginButton.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.LoginButton.Location = new System.Drawing.Point(82, 430);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(5);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(221, 65);
-            this.LoginButton.TabIndex = 39;
-            this.LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Login
             // 

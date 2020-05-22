@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gradientLogin1 = new proyecto_cine.GradientLogin();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +49,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.gradientLogin1.SuspendLayout();
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -64,37 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gradientLogin1
-            // 
-            this.gradientLogin1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(160)))), ((int)(((byte)(73)))));
-            this.gradientLogin1.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(173)))), ((int)(((byte)(131)))));
-            this.gradientLogin1.Controls.Add(this.label7);
-            this.gradientLogin1.Controls.Add(this.pictureBox10);
-            this.gradientLogin1.Controls.Add(this.label9);
-            this.gradientLogin1.Controls.Add(this.pictureBox12);
-            this.gradientLogin1.Controls.Add(this.label6);
-            this.gradientLogin1.Controls.Add(this.pictureBox9);
-            this.gradientLogin1.Controls.Add(this.label5);
-            this.gradientLogin1.Controls.Add(this.pictureBox8);
-            this.gradientLogin1.Controls.Add(this.label8);
-            this.gradientLogin1.Controls.Add(this.label3);
-            this.gradientLogin1.Controls.Add(this.pictureBox11);
-            this.gradientLogin1.Controls.Add(this.label4);
-            this.gradientLogin1.Controls.Add(this.pictureBox7);
-            this.gradientLogin1.Controls.Add(this.pictureBox6);
-            this.gradientLogin1.Controls.Add(this.label2);
-            this.gradientLogin1.Controls.Add(this.pictureBox5);
-            this.gradientLogin1.Controls.Add(this.label1);
-            this.gradientLogin1.Controls.Add(this.pictureBox4);
-            this.gradientLogin1.Controls.Add(this.pictureBox3);
-            this.gradientLogin1.Controls.Add(this.pictureBox2);
-            this.gradientLogin1.Controls.Add(this.pictureBox1);
-            this.gradientLogin1.Location = new System.Drawing.Point(-1, -3);
-            this.gradientLogin1.Name = "gradientLogin1";
-            this.gradientLogin1.Size = new System.Drawing.Size(811, 598);
-            this.gradientLogin1.TabIndex = 0;
-            this.gradientLogin1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientLogin1_Paint);
+            
             // 
             // label6
             // 
@@ -337,12 +306,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 590);
-            this.Controls.Add(this.gradientLogin1);
+            
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
             this.Text = "Register";
-            this.gradientLogin1.ResumeLayout(false);
-            this.gradientLogin1.PerformLayout();
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -361,7 +329,6 @@
 
         #endregion
 
-        private GradientLogin gradientLogin1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
