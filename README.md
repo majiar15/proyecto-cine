@@ -11,7 +11,9 @@
 
 ### metodo OpenInPanelCentral
 
-` public void OpenFormInPanelCentral(object FormHijo = null)`
+```C# 
+public void OpenFormInPanelCentral(object FormHijo = null)
+```
 este metodo pertenecea la clase homeCajero se utiliza para abiri un formulario en el panel central donde originalmente va una imagen de bienvenidos
 
 Formas de utilizar el metodo
