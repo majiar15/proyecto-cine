@@ -54,8 +54,8 @@
             // 
             this.pagarReservaButtom.ActiveBorderThickness = 1;
             this.pagarReservaButtom.ActiveCornerRadius = 30;
-            this.pagarReservaButtom.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(12)))), ((int)(((byte)(204)))));
-            this.pagarReservaButtom.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.pagarReservaButtom.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.pagarReservaButtom.ActiveForecolor = System.Drawing.Color.White;
             this.pagarReservaButtom.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.pagarReservaButtom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.pagarReservaButtom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pagarReservaButtom.BackgroundImage")));
@@ -106,9 +106,9 @@
             // 
             this.reservarBoletoButton.ActiveBorderThickness = 5;
             this.reservarBoletoButton.ActiveCornerRadius = 30;
-            this.reservarBoletoButton.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.reservarBoletoButton.ActiveForecolor = System.Drawing.Color.Black;
-            this.reservarBoletoButton.ActiveLineColor = System.Drawing.Color.Black;
+            this.reservarBoletoButton.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.reservarBoletoButton.ActiveForecolor = System.Drawing.Color.White;
+            this.reservarBoletoButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.reservarBoletoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.reservarBoletoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reservarBoletoButton.BackgroundImage")));
             this.reservarBoletoButton.ButtonText = "Reservar boleto";

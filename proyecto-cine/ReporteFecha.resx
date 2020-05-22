@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pagarReservaButtom.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHwAAAAmCAYAAAAGC/8vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVHhe7ds/TwJBEAXwUeSPIEFBCyXBQg0agyZKjDGU
+        xtiZ+AlMbGxsbGysbWxsbGz8qOM+CMq5Y8/OvuIXjrkFi8fdjbd7Il8jpYyYRfLLLJJfZpH8Movkl1kk
+        v8zi1OeFykNf5ait0muorJTDB4TmDXJBPvstlfs9lY9zO08wi/B0qNJYUlkuxX+A5lct5FUPud3t2rlG
+        Bfw6TjqTD1lfSGnAgbrTVHk/K+ZbeIOwO1WV0kL8BZSmdsjzbfhP4DiyGbY/uL5HgeOazdO4T9Vwer/p
+        zQSObhwNmjWYfEC+r6dhG4GjlUd3Zw0kH3CpvtoK2wgc/79Zg8iXjVp4ReCrlXgn+TNuyBF4ZTHeSU4h
+        cHMH+cTAM8PAM8PAM8PAM4PAef88IwicCxsygsAxb2ruJFfGN9gQ+O22Spk3X9wbrodXBI4Jck6N+oYV
+        MI8HYRuBw3V3Mm9qDaa0oSkfrP1ZAIE58W49Hkzpa4amfLqS9SdwwAQ5O3ZfsPDhefCbcSFweDmeLGRk
+        E5c2nMZxZM+GDYU3Uzi9X26ykUsVGrR+y34gISrMwq8DrTwfRkgD1jXgKSE8LWTlCWaR/DKL5JdZJL/M
+        IvllFsmpkX4DUmdUOcXdL9EAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
