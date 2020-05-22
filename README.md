@@ -1,4 +1,4 @@
-# Proyecto Cine 
+# Proyecto Cine - programacion 2 : Programacion Logica
 
 ## Autores
 * *[Daniel Alfonso Salinas Salinas](https://github.com/danielsalinas70)*
