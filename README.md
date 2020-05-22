@@ -1,4 +1,14 @@
-# Documentacion Proyecto Cine 
+# Proyecto Cine 
+
+## Autores
+* *[Daniel Alfonso Salinas Salinas](https://github.com/danielsalinas70)*
+* *[Diego Andres Esquivia Castro](https://github.com/Dekhas20)*
+* *[Martin Jose Jimenez Aragon](https://github.com/majiar15)*
+* *[Jesus David Morales Cano](https://github.com/jesusmoralescano)*
+
+
+
+
 ### metodo OpenInPanelCentral
 
 ` public void OpenFormInPanelCentral(object FormHijo = null)`
