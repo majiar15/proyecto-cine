@@ -8,22 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using proyecto_cine.Models;
-using proyecto_cine.controllers;
 namespace proyecto_cine
 {
     public partial class Clientes : Form
     {
-        Cliente Cli;
-        Clientedb nCliente;
+        
         homeCajero formParent;
         public int id { get; set; }
         
 
         public Clientes(homeCajero formParent)
         {
-            Cli = new Cliente();
-            nCliente = new Clientedb();
+           
             this.formParent = formParent;
             InitializeComponent();
             
@@ -31,7 +27,7 @@ namespace proyecto_cine
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = nCliente.MostrarConsulta();
+
         }
 
         private void enviar_Click(object sender, EventArgs e)
@@ -82,14 +78,6 @@ namespace proyecto_cine
         private void searchMenu_OnTextChange(object sender, EventArgs e)
         {
 
-            if (searchMenu.text != "")
-            {
-                dataGridView1.DataSource = nCliente.Buscar(searchMenu.text);
-            }
-            else
-            {
-                dataGridView1.DataSource = nCliente.MostrarConsulta();
-            }
         }
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)

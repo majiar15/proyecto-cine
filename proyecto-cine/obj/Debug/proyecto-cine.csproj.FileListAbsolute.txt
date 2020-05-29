@@ -42,6 +42,7 @@ C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cin
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.NroBoletas.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Peliculas.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionPeliculas.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Reservas.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.SeleccionarSillas.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.ReporteFecha.resources
@@ -135,10 +136,10 @@ D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmac
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csprojAssemblyReference.cache
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.homeCajero.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Login.resources
-D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Properties.Resources.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Register.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.GenerateResource.cache
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.exe
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\AlphaBlendTextBox.dll
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.csproj.CopyComplete
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmarcs.resources

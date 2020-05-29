@@ -117,4 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pagarReservaButtom.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANwAAABjCAYAAADwxm4hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALBSURBVHhe7dkxb9VWGMfhAyEJJETQBIaCBAOt0gpBpRJV
+        CDEi1A2JT4DUhaULS5fOLCxdWFj6UU/9FkFu6lNVJfZ/eoZHvvf1uc70k+2T1v582oGQ4RBYx3AIrGM4
+        BNYxHALrGA6BdQyHn3x40tvr494eHvZ2Z7+3q9vTDxqwqbqoPr671tsv3/b2/vG4pzIcljf3e9u/1NuV
+        rfkfAMYuT73sTd28+mbc1WxQdf549PFHowsC/61uVPcOevvjp7N9nflSsR3t9rZ1YX4B4P87nHp6d/Iv
+        wdWdTWywrHq/mwVX72weI2F5u9Pj5Ys7G8HVbmRtkIwWA+dXfb19NH2u4Gors3ZXRguB86tXtee3ps8V
+        XP3/YLQIWM7Ny9Oxgru+Mz8JLOvvDckKbufi/CSwggpueAJYnuAgSHAQJDgIEhwECQ6CBAdBgoMgwUGQ
+        4CBIcBAkOAgSHAQJDoIEB0GCgyDBQZDgIEhwECQ4CBIcBAkOggQHQYKDIMFBkOAgSHAQJDgIEhwECQ6C
+        BAdBgoMgwUGQ4CBIcBAkOAgSHAQJDoIEB0GCgyDBQZDgIEhwECQ4CBIcBAkOggQHQYKDIMFBkOAgSHAQ
+        JDgIEhwECQ6CBAdBgoMgwUGQ4CBIcBAkOAgSHAQJDoIEB0GCgyDBQZDgIKiC27owOAEsr4K7uj04ASyv
+        grt3MDgBLOr6znSs4F7e7W374nwBsJyTG9Oxgnt30tvepfkCYBlXtnr79fvpcwVXfr7d2+40HC0Gvlxt
+        Sj746mNnn4P78KS323vzxcD5HGz39v7xP4Irbx/ZsYQl7U+var89OG3sTHDl9x96O9q1iQLnUY+RdWfb
+        jK2c+fJJPV4++9pGCnyJ2iA5vnb6GLlpNthUddZWZl1gdGHg1M70VPjwsLfXx+OeynAIrGM4BNYxHALr
+        GA6BdQyHwAqe9r8AZ1F9NjLpEh8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="cancelarReservaButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOEAAABjCAYAAABty2epAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALCSURBVHhe7dkxb9VWGMfhAyEJJERAUoYWiQ60ChUCJIgq
+        hBhRxYbUT1CpC0uXLl06s7B0YWHpRz34LQISfGhRde3/8gyPfO/rc53pJ9snrf39pANBwyGwnuEQWM9w
+        CKxnOATWMxwC6xkO33vzuLcXx73dO+zt5n5vl7enHzTgv1Qr1cztK739+n1vrx+NGyvDYfn9Tm/7F3q7
+        tDX/A8CXuzg1tDe19Mt349Zmgyr2wdG7H40uCPw/dUO7ddDbXz+ebe7MlwrwaLe3rXPzCwCbcTg19urk
+        MxHWHVCAsLx6X5xFWO+AHkFhHbvTo+nzm6cirF3Q2oQZLQaWUc29fDh9rghrC7V2cEYLgWXUq99P30yf
+        K8L6X8ZoEbCs6xenY0V4dWd+EljePxuhFeHO+flJYCUV4fAEsA4RQpgIIUyEECZCCBMhhIkQwkQIYSKE
+        MBFCmAghTIQQJkIIEyGEiRDCRAhhIoQwEUKYCCFMhBAmQggTIYSJEMJECGEihDARQpgIIUyEECZCCBMh
+        hIkQwkQIYSKEMBFCmAghTIQQJkIIEyGEiRDCRAhhIoQwEUKYCCFMhBAmQggTIYSJEMJECGEihDARQpgI
+        IUyEECZCCBMhhIkQwkQIYSKEMBFCmAghTIQQJkIIEyGEiRDCRAhhIoQwEUJYRbh1bnACWEdFeHl7cAJY
+        R0V462BwAljc1Z3pWBH+/G1v2+fnC4BlnXw1HSvCVye97V2YLwCWc2mrt99+mD5XhOXZjd52p+FoMbBZ
+        tRl699q79j5E+OZxbzf25ouBzTvY7u31o08iLC8f2imFpe1Pr35/3P3Y3ZkIy5/3ezvatVEDm1aPoHUH
+        PB1gOfPlvXo0ffq1zRrYlNqEOb7y8RH0tNngtCq2tlDrAqMLA/9uZ3qivHfY24vjcWNlOATWMxwC6xkO
+        gfUMh8B6hkNgJU/6W6evmXJ+b8bPAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="reservarBoletoButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANwAAABjCAYAAADwxm4hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALBSURBVHhe7dkxb9VWGMfhAyEJJETQBIaCBAOt0gpBpRJV
+        CDEi1A2JT4DUhaULS5fOLCxdWFj6UU/9FkFu6lNVJfZ/eoZHvvf1uc70k+2T1v582oGQ4RBYx3AIrGM4
+        BNYxHALrGA6BdQyHn3x40tvr494eHvZ2Z7+3q9vTDxqwqbqoPr671tsv3/b2/vG4pzIcljf3e9u/1NuV
+        rfkfAMYuT73sTd28+mbc1WxQdf549PFHowsC/61uVPcOevvjp7N9nflSsR3t9rZ1YX4B4P87nHp6d/Iv
+        wdWdTWywrHq/mwVX72weI2F5u9Pj5Ys7G8HVbmRtkIwWA+dXfb19NH2u4Gors3ZXRguB86tXtee3ps8V
+        XP3/YLQIWM7Ny9Oxgru+Mz8JLOvvDckKbufi/CSwggpueAJYnuAgSHAQJDgIEhwECQ6CBAdBgoMgwUGQ
+        4CBIcBAkOAgSHAQJDoIEB0GCgyDBQZDgIEhwECQ4CBIcBAkOggQHQYKDIMFBkOAgSHAQJDgIEhwECQ6C
+        BAdBgoMgwUGQ4CBIcBAkOAgSHAQJDoIEB0GCgyDBQZDgIEhwECQ4CBIcBAkOggQHQYKDIMFBkOAgSHAQ
+        JDgIEhwECQ6CBAdBgoMgwUGQ4CBIcBAkOAgSHAQJDoIEB0GCgyDBQZDgIKiC27owOAEsr4K7uj04ASyv
+        grt3MDgBLOr6znSs4F7e7W374nwBsJyTG9Oxgnt30tvepfkCYBlXtnr79fvpcwVXfr7d2+40HC0Gvlxt
+        Sj746mNnn4P78KS323vzxcD5HGz39v7xP4Irbx/ZsYQl7U+var89OG3sTHDl9x96O9q1iQLnUY+RdWfb
+        jK2c+fJJPV4++9pGCnyJ2iA5vnb6GLlpNthUddZWZl1gdGHg1M70VPjwsLfXx+OeynAIrGM4BNYxHALr
+        GA6BdQyHwAqe9r8AZ1F9NjLpEh8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHUAAAAnCAYAAAAxQgdAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHSSURBVHhe7ds/TwJBEAXwUeSPIEFBCyXBQg0agyZKjDGU
+        xtiZ+AlMbGxsbGysbWxsbGz8qOM+LqecO9bcbF7xC8fcgomPuxtuF5GviVJizCL5ZhbJN7NIvplF8s0s
+        km9mMfd5ofIwVDnqqgxaKivV8AKhecD/Hhnsd1Tu91Q+zu3MwCzC06FKa0lluRL/AZqvRsikGbK527Wz
+        iwr4BJz0shdZb0jlgQNup63yflbMsPAEgfbqKpWF+A2ovLohs7fxP6HiCGWgPuF6G4WKayhPuX7Vw6n4
+        ZjATKrpcNEXWYPIDGb6ehm2EihYZHZU1kPzApfNqK2wjVHz3sQaRPxuN8IhQV2vxTvJp2ugi1NpivJMc
+        Q6jmDvKLoSaIoSaIoSaIoSaIoSYIofImfmIQKlc0JAahYqLV3EnuTO8OItTbbZUq7yolYbweHhEqZs05
+        l+oflrc8HoRthArX/Wyi1RpM5Ydmd7T2Z+UDJsr7zXgw+dAOzW6+bPQnVMCsOTthf7Di4Xn0m2MhVHg5
+        zlYUsnEqP5xycYTOBgqFJzmcii832TyVGZqiYcdeqR8VZuETgBaZq/TLAwsa8DMY/BzGygzMIvlmFsk3
+        s0i+mUXyzSySYxP9BmDQfrsV2sHWAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
