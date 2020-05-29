@@ -61,7 +61,6 @@
     <Compile Include="AlertaCCLog.Designer.cs">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="cajero.cs" />
     <Compile Include="Cajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +104,6 @@
     <Compile Include="Confirmarcs.Designer.cs">
       <DependentUpon>Confirmarcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="controllers\Cliente.cs" />
     <Compile Include="CrearCajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,7 +164,6 @@
     <Compile Include="LogUsuarios.Designer.cs">
       <DependentUpon>LogUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Clientedb.cs" />
     <Compile Include="ModificacionExitosa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -465,6 +462,9 @@
   <ItemGroup>
     <None Include="Resources\log1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

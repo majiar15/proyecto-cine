@@ -33,30 +33,7 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            if (confirmacion == 1)
-            {
-                Cajeros cajero = new Cajeros(this.formParent);
-                cajero micajero = new cajero(formParent);
-
-                if (micajero.Eliminar(id.ToString()))
-                {
-                    EliminadoCorrectamente mensajeEliminar = new EliminadoCorrectamente(formParent);
-                    mensajeEliminar.ShowDialog();
-                    cajero.dataGridView1.DataSource = micajero.MostrarDatos();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo eliminar");
-                    this.Close();
-                }
-                formParent.OpenFormInPanelCentral(new Cajeros(this.formParent));
-            }else if ( confirmacion == 2)
-            {
-                cajero cajero = new cajero(formParent);
-                cajero.modificar(cedula, cargo, nombre, apellidos, telefono, email, contraseña);
-                this.Close();
-            }
+         
 
         }
 

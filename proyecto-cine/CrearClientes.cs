@@ -8,22 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using proyecto_cine.Models;
-using proyecto_cine.controllers;
 
 
 namespace proyecto_cine
 {
     public partial class CrearClientes : Form
     {
-        string opcion;        
-        Clientedb nClientedb;
+  
         homeCajero formParent;
             
         public CrearClientes(homeCajero formParent, string opcion)
         {
-            this.opcion = opcion;
-            nClientedb = new Clientedb();
+
             this.formParent = formParent;
             
             InitializeComponent();
@@ -44,33 +40,6 @@ namespace proyecto_cine
         private void enviar_Click(object sender, EventArgs e)
         {
 
-            
-            
-           
-            if(opcion == "modificar")
-            {
-                nClientedb.Modificardb(Informacion(), formParent);
-            }
-            else
-            {
-                nClientedb.Agregar(Informacion(), formParent);
-            }
-          
-       
-
-
-        }
-        private Cliente Informacion()
-        {
-            Cliente nCliente = new Cliente();
-            nCliente.nombre = NameTextBox.Text;
-            nCliente.apellidos = ApellidoTextBox.Text;
-            int cedulaN = 0; int.TryParse(CedulaTextBox.Text, out cedulaN);
-            nCliente.cedula = cedulaN;
-            nCliente.email = EmailTextBox.Text;
-            nCliente.direccion = DireccionTextBox.Text;
-
-            return nCliente;
         }
 
         private void label6_Click(object sender, EventArgs e)

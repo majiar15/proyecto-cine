@@ -5,7 +5,6 @@ using System.Text;
 using System.Data;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using proyecto_cine.Models;
 
 
 namespace proyecto_cine
