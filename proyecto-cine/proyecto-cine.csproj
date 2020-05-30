@@ -55,167 +55,167 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="vistas\AlertaCCLog.cs">
+    <Compile Include="controller\CajeroController.cs" />
+    <Compile Include="model\usuario\AdministradorModel.cs" />
+    <Compile Include="model\usuario\CajeroModel.cs" />
+    <Compile Include="model\usuario\ClienteModel.cs" />
+    <Compile Include="model\usuario\EmpleadoModel.cs" />
+    <Compile Include="model\usuario\UsuarioModel.cs" />
+    <Compile Include="views\alertas\AlertaCCLog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\AlertaCCLog.Designer.cs">
+    <Compile Include="views\alertas\AlertaCCLog.Designer.cs">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Cajeros.cs">
+    <Compile Include="views\cajero\Cajeros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Cajeros.Designer.cs">
+    <Compile Include="views\cajero\Cajeros.Designer.cs">
       <DependentUpon>Cajeros.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\cancelarReserva.cs">
+    <Compile Include="views\ventas y reservas\cancelarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\cancelarReserva.Designer.cs">
+    <Compile Include="views\ventas y reservas\cancelarReserva.Designer.cs">
       <DependentUpon>cancelarReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ccLog.cs">
+    <Compile Include="views\alertas\ccLog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ccLog.Designer.cs">
+    <Compile Include="views\alertas\ccLog.Designer.cs">
       <DependentUpon>ccLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\CedulaClienteReserva.cs">
+    <Compile Include="views\ventas y reservas\CedulaClienteReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\CedulaClienteReserva.Designer.cs">
+    <Compile Include="views\ventas y reservas\CedulaClienteReserva.Designer.cs">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Clientes.cs">
+    <Compile Include="views\cliente\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Clientes.Designer.cs">
+    <Compile Include="views\cliente\Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="conexiondb.cs" />
-    <Compile Include="vistas\Confirmacion.cs">
+    <Compile Include="views\alertas\Confirmacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Confirmacion.Designer.cs">
+    <Compile Include="views\alertas\Confirmacion.Designer.cs">
       <DependentUpon>Confirmacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Confirmarcs.cs">
+    <Compile Include="views\cajero\CrearCajeros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Confirmarcs.Designer.cs">
-      <DependentUpon>Confirmarcs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\CrearCajeros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\CrearCajeros.Designer.cs">
+    <Compile Include="views\cajero\CrearCajeros.Designer.cs">
       <DependentUpon>CrearCajeros.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\CrearClientes.cs">
+    <Compile Include="views\cliente\CrearClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\CrearClientes.Designer.cs">
+    <Compile Include="views\cliente\CrearClientes.Designer.cs">
       <DependentUpon>CrearClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ElegirReservaPagar.cs">
+    <Compile Include="views\ventas y reservas\ElegirReservaPagar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ElegirReservaPagar.Designer.cs">
+    <Compile Include="views\ventas y reservas\ElegirReservaPagar.Designer.cs">
       <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\EliminadoCorrectamente.cs">
+    <Compile Include="views\alertas\EliminadoCorrectamente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\EliminadoCorrectamente.Designer.cs">
+    <Compile Include="views\alertas\EliminadoCorrectamente.Designer.cs">
       <DependentUpon>EliminadoCorrectamente.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ErrorAlGuardar.cs">
+    <Compile Include="views\alertas\ErrorAlGuardar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ErrorAlGuardar.Designer.cs">
+    <Compile Include="views\alertas\ErrorAlGuardar.Designer.cs">
       <DependentUpon>ErrorAlGuardar.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\GuardadoConExito.cs">
+    <Compile Include="views\alertas\GuardadoConExito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\GuardadoConExito.Designer.cs">
+    <Compile Include="views\alertas\GuardadoConExito.Designer.cs">
       <DependentUpon>GuardadoConExito.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\homeCajero.cs">
+    <Compile Include="views\homeCajero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\homeCajero.Designer.cs">
+    <Compile Include="views\homeCajero.Designer.cs">
       <DependentUpon>homeCajero.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Login.cs">
+    <Compile Include="views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Login.Designer.cs">
+    <Compile Include="views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ConfirmarPagarReserva.cs">
+    <Compile Include="views\ventas y reservas\ConfirmarPagarReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ConfirmarPagarReserva.Designer.cs">
+    <Compile Include="views\ventas y reservas\ConfirmarPagarReserva.Designer.cs">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\LogUsuarios.cs">
+    <Compile Include="views\LogUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\LogUsuarios.Designer.cs">
+    <Compile Include="views\LogUsuarios.Designer.cs">
       <DependentUpon>LogUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ModificacionExitosa.cs">
+    <Compile Include="views\alertas\ModificacionExitosa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ModificacionExitosa.Designer.cs">
+    <Compile Include="views\alertas\ModificacionExitosa.Designer.cs">
       <DependentUpon>ModificacionExitosa.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ModificarPelicula.cs">
+    <Compile Include="views\peliculas\ModificarPelicula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ModificarPelicula.Designer.cs">
+    <Compile Include="views\peliculas\ModificarPelicula.Designer.cs">
       <DependentUpon>ModificarPelicula.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\NroBoletas.cs">
+    <Compile Include="views\ventas y reservas\NroBoletas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\NroBoletas.Designer.cs">
+    <Compile Include="views\ventas y reservas\NroBoletas.Designer.cs">
       <DependentUpon>NroBoletas.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Peliculas.cs">
+    <Compile Include="views\peliculas\Peliculas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Peliculas.Designer.cs">
+    <Compile Include="views\peliculas\Peliculas.Designer.cs">
       <DependentUpon>Peliculas.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ReporteCliente.cs">
+    <Compile Include="views\reportes\ReporteCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ReporteCliente.Designer.cs">
+    <Compile Include="views\reportes\ReporteCliente.Designer.cs">
       <DependentUpon>ReporteCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ReporteFecha.cs">
+    <Compile Include="views\reportes\ReporteFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ReporteFecha.Designer.cs">
+    <Compile Include="views\reportes\ReporteFecha.Designer.cs">
       <DependentUpon>ReporteFecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\ReportePelicula.cs">
+    <Compile Include="views\reportes\ReportePelicula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\ReportePelicula.Designer.cs">
+    <Compile Include="views\reportes\ReportePelicula.Designer.cs">
       <DependentUpon>ReportePelicula.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Reportes.cs">
+    <Compile Include="views\reportes\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Reportes.Designer.cs">
+    <Compile Include="views\reportes\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\SeleccionPeliculas.cs">
+    <Compile Include="views\peliculas\SeleccionPeliculas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\SeleccionPeliculas.Designer.cs">
+    <Compile Include="views\peliculas\SeleccionPeliculas.Designer.cs">
       <DependentUpon>SeleccionPeliculas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -225,97 +225,94 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Reservas.cs">
+    <Compile Include="views\ventas y reservas\Reservas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\Reservas.Designer.cs">
+    <Compile Include="views\ventas y reservas\Reservas.Designer.cs">
       <DependentUpon>Reservas.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\SeleccionarSillas.cs">
+    <Compile Include="views\ventas y reservas\SeleccionarSillas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\SeleccionarSillas.Designer.cs">
+    <Compile Include="views\ventas y reservas\SeleccionarSillas.Designer.cs">
       <DependentUpon>SeleccionarSillas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vistas\AlertaCCLog.resx">
+    <EmbeddedResource Include="views\alertas\AlertaCCLog.resx">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Cajeros.resx">
+    <EmbeddedResource Include="views\cajero\Cajeros.resx">
       <DependentUpon>Cajeros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\cancelarReserva.resx">
+    <EmbeddedResource Include="views\ventas y reservas\cancelarReserva.resx">
       <DependentUpon>cancelarReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ccLog.resx">
+    <EmbeddedResource Include="views\alertas\ccLog.resx">
       <DependentUpon>ccLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\CedulaClienteReserva.resx">
+    <EmbeddedResource Include="views\ventas y reservas\CedulaClienteReserva.resx">
       <DependentUpon>CedulaClienteReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Clientes.resx">
+    <EmbeddedResource Include="views\cliente\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Confirmacion.resx">
+    <EmbeddedResource Include="views\alertas\Confirmacion.resx">
       <DependentUpon>Confirmacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Confirmarcs.resx">
-      <DependentUpon>Confirmarcs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\CrearCajeros.resx">
+    <EmbeddedResource Include="views\cajero\CrearCajeros.resx">
       <DependentUpon>CrearCajeros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\CrearClientes.resx">
+    <EmbeddedResource Include="views\cliente\CrearClientes.resx">
       <DependentUpon>CrearClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ElegirReservaPagar.resx">
+    <EmbeddedResource Include="views\ventas y reservas\ElegirReservaPagar.resx">
       <DependentUpon>ElegirReservaPagar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\EliminadoCorrectamente.resx">
+    <EmbeddedResource Include="views\alertas\EliminadoCorrectamente.resx">
       <DependentUpon>EliminadoCorrectamente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ErrorAlGuardar.resx">
+    <EmbeddedResource Include="views\alertas\ErrorAlGuardar.resx">
       <DependentUpon>ErrorAlGuardar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\GuardadoConExito.resx">
+    <EmbeddedResource Include="views\alertas\GuardadoConExito.resx">
       <DependentUpon>GuardadoConExito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\homeCajero.resx">
+    <EmbeddedResource Include="views\homeCajero.resx">
       <DependentUpon>homeCajero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Login.resx">
+    <EmbeddedResource Include="views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ConfirmarPagarReserva.resx">
+    <EmbeddedResource Include="views\ventas y reservas\ConfirmarPagarReserva.resx">
       <DependentUpon>ConfirmarPagarReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\LogUsuarios.resx">
+    <EmbeddedResource Include="views\LogUsuarios.resx">
       <DependentUpon>LogUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ModificacionExitosa.resx">
+    <EmbeddedResource Include="views\alertas\ModificacionExitosa.resx">
       <DependentUpon>ModificacionExitosa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ModificarPelicula.resx">
+    <EmbeddedResource Include="views\peliculas\ModificarPelicula.resx">
       <DependentUpon>ModificarPelicula.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\NroBoletas.resx">
+    <EmbeddedResource Include="views\ventas y reservas\NroBoletas.resx">
       <DependentUpon>NroBoletas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Peliculas.resx">
+    <EmbeddedResource Include="views\peliculas\Peliculas.resx">
       <DependentUpon>Peliculas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ReporteCliente.resx">
+    <EmbeddedResource Include="views\reportes\ReporteCliente.resx">
       <DependentUpon>ReporteCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ReporteFecha.resx">
+    <EmbeddedResource Include="views\reportes\ReporteFecha.resx">
       <DependentUpon>ReporteFecha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\ReportePelicula.resx">
+    <EmbeddedResource Include="views\reportes\ReportePelicula.resx">
       <DependentUpon>ReportePelicula.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Reportes.resx">
+    <EmbeddedResource Include="views\reportes\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\SeleccionPeliculas.resx">
+    <EmbeddedResource Include="views\peliculas\SeleccionPeliculas.resx">
       <DependentUpon>SeleccionPeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -323,10 +320,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Reservas.resx">
+    <EmbeddedResource Include="views\ventas y reservas\Reservas.resx">
       <DependentUpon>Reservas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vistas\SeleccionarSillas.resx">
+    <EmbeddedResource Include="views\ventas y reservas\SeleccionarSillas.resx">
       <DependentUpon>SeleccionarSillas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -462,9 +459,6 @@
   <ItemGroup>
     <None Include="Resources\log1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controllers\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

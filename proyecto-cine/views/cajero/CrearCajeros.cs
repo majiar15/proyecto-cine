@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_cine.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,13 @@ namespace proyecto_cine
                 MessageBox.Show("Debe seleccionar un cargo valido");
             }else
             {
+                string nombre = tbNombre.Text;
+                string apllido = tbApellidos.Text;
+
+                CajeroController controller = new CajeroController();
+
+                //controller.crear(nombre, apllido);
+
 
             }
         }
