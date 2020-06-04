@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.enviar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnCrearCliente = new Bunifu.Framework.UI.BunifuThinButton2();
             this.searchMenu = new Bunifu.Framework.UI.BunifuTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -49,7 +49,7 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.bunifuThinButton25);
             this.panel1.Controls.Add(this.bunifuThinButton24);
-            this.panel1.Controls.Add(this.enviar);
+            this.panel1.Controls.Add(this.btnCrearCliente);
             this.panel1.Controls.Add(this.searchMenu);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -62,35 +62,35 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial Narrow", 13.25F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 13.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(12, 160);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Size = new System.Drawing.Size(566, 363);
             this.dataGridView1.TabIndex = 52;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -147,31 +147,31 @@
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
-            // enviar
+            // btnCrearCliente
             // 
-            this.enviar.ActiveBorderThickness = 1;
-            this.enviar.ActiveCornerRadius = 1;
-            this.enviar.ActiveFillColor = System.Drawing.Color.White;
-            this.enviar.ActiveForecolor = System.Drawing.Color.Black;
-            this.enviar.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.enviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.enviar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enviar.BackgroundImage")));
-            this.enviar.ButtonText = "Crear";
-            this.enviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.enviar.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enviar.ForeColor = System.Drawing.Color.White;
-            this.enviar.IdleBorderThickness = 1;
-            this.enviar.IdleCornerRadius = 1;
-            this.enviar.IdleFillColor = System.Drawing.Color.Black;
-            this.enviar.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.enviar.IdleLineColor = System.Drawing.Color.White;
-            this.enviar.Location = new System.Drawing.Point(587, 249);
-            this.enviar.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.enviar.Name = "enviar";
-            this.enviar.Size = new System.Drawing.Size(156, 43);
-            this.enviar.TabIndex = 49;
-            this.enviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.enviar.Click += new System.EventHandler(this.enviar_Click);
+            this.btnCrearCliente.ActiveBorderThickness = 1;
+            this.btnCrearCliente.ActiveCornerRadius = 1;
+            this.btnCrearCliente.ActiveFillColor = System.Drawing.Color.White;
+            this.btnCrearCliente.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnCrearCliente.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btnCrearCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btnCrearCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCrearCliente.BackgroundImage")));
+            this.btnCrearCliente.ButtonText = "Crear";
+            this.btnCrearCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrearCliente.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCrearCliente.IdleBorderThickness = 1;
+            this.btnCrearCliente.IdleCornerRadius = 1;
+            this.btnCrearCliente.IdleFillColor = System.Drawing.Color.Black;
+            this.btnCrearCliente.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btnCrearCliente.IdleLineColor = System.Drawing.Color.White;
+            this.btnCrearCliente.Location = new System.Drawing.Point(587, 249);
+            this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnCrearCliente.Name = "btnCrearCliente";
+            this.btnCrearCliente.Size = new System.Drawing.Size(156, 43);
+            this.btnCrearCliente.TabIndex = 49;
+            this.btnCrearCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCrearCliente.Click += new System.EventHandler(this.enviar_Click);
             // 
             // searchMenu
             // 
@@ -226,7 +226,7 @@
         private Bunifu.Framework.UI.BunifuTextbox searchMenu;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton25;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
-        private Bunifu.Framework.UI.BunifuThinButton2 enviar;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnCrearCliente;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
