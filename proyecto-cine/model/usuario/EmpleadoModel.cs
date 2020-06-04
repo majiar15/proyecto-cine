@@ -9,10 +9,10 @@ namespace proyecto_cine.Model.usuario
 {
     abstract class EmpleadoModel : UsuarioModel
         {
-            int telefono;
+            long telefono;
             string contraseña;
 
-            public int Telefono { get => telefono; set => telefono = value; }
+            public long Telefono { get => telefono; set => telefono = value; }
             public string Contraseña { get => contraseña; set => contraseña = value; }
 
             protected abstract void Vender();

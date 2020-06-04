@@ -14,6 +14,7 @@ namespace proyecto_cine
     public partial class CrearCajeros : Form
     {
         homeCajero formParent;
+        CajeroController cajero = new CajeroController();
         public CrearCajeros(homeCajero formParent)
         {
             this.formParent = formParent;
@@ -28,7 +29,16 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
-            
+            int cargo = 0;
+            if (cbCargo.selectedIndex == 1)
+            {
+                cargo = 1;
+            }
+            else if (cbCargo.selectedIndex == 2)
+            {
+                cargo = 2;
+            }
+            cajero.crearCajero(long.Parse(tbCedula.Text), cargo, tbNombre.Text, tbApellidos.Text, long.Parse(tbTelefono.Text), tbEmail.Text, tbContraseña.Text);
 
         }
 

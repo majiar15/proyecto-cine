@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_cine.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,8 @@ namespace proyecto_cine
 
         private void Cajeros_Load(object sender, EventArgs e)
         {
-            
+            CajeroController cajero = new CajeroController();
+            dataGridView1.DataSource = cajero.consultarCajero();
         }
 
         

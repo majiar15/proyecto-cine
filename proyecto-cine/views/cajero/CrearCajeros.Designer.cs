@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearCajeros));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbCargo = new Bunifu.Framework.UI.BunifuDropdown();
             this.label6 = new System.Windows.Forms.Label();
             this.tbCedula = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(749, 535);
             this.panel1.TabIndex = 0;
+            // 
+            // btUpdate
+            // 
+            this.btUpdate.ActiveBorderThickness = 1;
+            this.btUpdate.ActiveCornerRadius = 1;
+            this.btUpdate.ActiveFillColor = System.Drawing.Color.White;
+            this.btUpdate.ActiveForecolor = System.Drawing.Color.Black;
+            this.btUpdate.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btUpdate.BackgroundImage")));
+            this.btUpdate.ButtonText = "Actualizar";
+            this.btUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btUpdate.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.ForeColor = System.Drawing.Color.White;
+            this.btUpdate.IdleBorderThickness = 1;
+            this.btUpdate.IdleCornerRadius = 1;
+            this.btUpdate.IdleFillColor = System.Drawing.Color.Black;
+            this.btUpdate.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.btUpdate.IdleLineColor = System.Drawing.Color.White;
+            this.btUpdate.Location = new System.Drawing.Point(386, 476);
+            this.btUpdate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(177, 43);
+            this.btUpdate.TabIndex = 66;
+            this.btUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btUpdate.Visible = false;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // cbCargo
             // 
@@ -315,33 +342,6 @@
             this.label1.Size = new System.Drawing.Size(162, 42);
             this.label1.TabIndex = 44;
             this.label1.Text = "Nombres :";
-            // 
-            // btUpdate
-            // 
-            this.btUpdate.ActiveBorderThickness = 1;
-            this.btUpdate.ActiveCornerRadius = 1;
-            this.btUpdate.ActiveFillColor = System.Drawing.Color.White;
-            this.btUpdate.ActiveForecolor = System.Drawing.Color.Black;
-            this.btUpdate.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.btUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.btUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btUpdate.BackgroundImage")));
-            this.btUpdate.ButtonText = "Actualizar";
-            this.btUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btUpdate.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUpdate.ForeColor = System.Drawing.Color.White;
-            this.btUpdate.IdleBorderThickness = 1;
-            this.btUpdate.IdleCornerRadius = 1;
-            this.btUpdate.IdleFillColor = System.Drawing.Color.Black;
-            this.btUpdate.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.btUpdate.IdleLineColor = System.Drawing.Color.White;
-            this.btUpdate.Location = new System.Drawing.Point(386, 476);
-            this.btUpdate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(177, 43);
-            this.btUpdate.TabIndex = 66;
-            this.btUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btUpdate.Visible = false;
-            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // CrearCajeros
             // 

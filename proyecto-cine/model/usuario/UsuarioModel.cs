@@ -9,11 +9,11 @@ namespace proyecto_cine.Model.usuario
     abstract class UsuarioModel : conexiondb
     {
         private string nombre, apellidos, email;
-        private int id;
+        private long id;
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellidos { get => apellidos; set => apellidos = value; }
         public string Email { get => email; set => email = value; }
-        public int Id { get => id; set => id = value; }
+        public long Id { get => id; set => id = value; }
     }
 }

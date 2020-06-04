@@ -1,6 +1,7 @@
 ﻿using proyecto_cine.Model.usuario;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,20 +11,25 @@ namespace proyecto_cine.controller
 {
     class CajeroController
     {
-        
-        public CajeroController() {
-        
+
+        public CajeroController()
+        {
         }
 
-        public void crear(string nombre, string apellidos, string email, string contraseña, int telefono) {
-            CajeroModel cajero = new CajeroModel(nombre, apellidos, email, contraseña, telefono, "cajero");
+        public void crearCajero(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña) {
+            CajeroModel cajero = new CajeroModel(id, cargo ,nombre, apellido, telefono, email, contraseña);
 
             cajero.conexion.Open();
 
-            //cajero.crearCajero();
+            cajero.crearCajero(id, cargo, nombre, apellido, telefono, email, contraseña);
 
-            homeCajero home = new homeCajero();
-            home.Show();
+        }
+
+        public DataTable consultarCajero()
+        {
+            CajeroModel cajero = new CajeroModel(1,1,"nombre","apellido", 11, "","");
+            return cajero.consultarCajero();
+            
         }
     }
 }
