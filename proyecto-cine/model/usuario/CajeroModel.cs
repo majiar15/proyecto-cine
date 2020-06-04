@@ -25,6 +25,7 @@ namespace proyecto_cine.Model.usuario
             this.Telefono = telefono;
             this.Cargo = cargo;
         }
+
         public void crearCajero(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña) {
             try
             {
@@ -44,14 +45,56 @@ namespace proyecto_cine.Model.usuario
             }
 
         }
-        private void eliminarCajero() { }
+
+
+        public bool eliminarCajero(string id)
+        {
+            try
+            {
+                conexiondb conexion = new conexiondb();
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand(string.Format("delete from empleados where id = {0}", id), conexion.conexion);
+                int filasafectadas = cmd.ExecuteNonQuery();
+                conexion.cerra();
+                if (filasafectadas > 0) return true;
+                else return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+
         private void actualizarCajero() { }
+
+
         public DataTable consultarCajero() 
         {
             try
             {
                 conexion.abrir();
                 cmd = new SqlCommand("select * from empleados", conexion.conexion);
+                SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                ad.Fill(ds, "tabla");
+                conexion.cerra();
+                return ds.Tables["tabla"];
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e.ToString());
+                return ds.Tables["tabla"];
+            }
+        }
+
+        public DataTable Buscar(string id)
+        {
+            try
+            {
+                conexiondb conexion = new conexiondb();
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand(string.Format("select * from empleados where id like '%{0}%'", id), conexion.conexion);
                 SqlDataAdapter ad = new SqlDataAdapter(cmd);
                 ds = new DataSet();
                 ad.Fill(ds, "tabla");

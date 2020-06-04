@@ -39,18 +39,38 @@ namespace proyecto_cine
             this.Close();
         }
 
+        /// BUSCAR CAJERO
         private void bunifuTextboxBuscarIdCaje_OnTextChange(object sender, EventArgs e)
         {
-
+            CajeroController cajeroBus = new CajeroController();
+            if (bunifuTextboxBuscarIdCaje.text != "")
+            {
+                dataGridView1.DataSource = cajeroBus.BuscarCajero(bunifuTextboxBuscarIdCaje.text);
+            }
+            else
+            {
+                dataGridView1.DataSource = cajeroBus.consultarCajero();
+            }
         }
 
+        // ELIMINAR CAJERO
         private void btnEliminarCajero_Click(object sender, EventArgs e)
         {
+            CajeroController eliminar = new CajeroController();
             Confirmacion confirmar = new Confirmacion(this.formParent);
-            confirmar.id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-            confirmar.confirmacion = 1;
-            confirmar.Show();
-            
+
+
+            if (eliminar.EliminarCajero(bunifuTextboxBuscarIdCaje.text))
+            {
+                
+                confirmar.id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                confirmar.confirmacion = 1;
+                confirmar.Show();
+            }
+
+
+
+
 
         }
 

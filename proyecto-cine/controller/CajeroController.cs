@@ -31,5 +31,17 @@ namespace proyecto_cine.controller
             return cajero.consultarCajero();
             
         }
+
+        public DataTable BuscarCajero(string id)
+        {
+            CajeroModel cajeroBus = new CajeroModel(1, 1, "", "", 1, "", "");
+            return cajeroBus.Buscar(id);
+        }
+
+        public bool EliminarCajero(string id)
+        {
+            CajeroModel eliminarCaje = new CajeroModel(1, 1, "", "", 1, "", "");
+            return eliminarCaje.eliminarCajero(id);
+        }
     }
 }
