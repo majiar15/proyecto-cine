@@ -49,6 +49,8 @@ namespace proyecto_cine
                 form.NameTextBox.Text = dataGridView1.CurrentRow.Cells["nombre"].Value.ToString();
                 form.ApellidoTextBox.Text = dataGridView1.CurrentRow.Cells["apellidos"].Value.ToString();
 
+                form.ApellidoTextBox.Text = dataGridView1.CurrentRow.Cells["descuento"].Value.ToString();
+
                 form.DireccionTextBox.Text = dataGridView1.CurrentRow.Cells["direccion"].Value.ToString();
                 form.EmailTextBox.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
                 this.formParent.OpenFormInPanelCentral(form);

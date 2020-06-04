@@ -49,6 +49,8 @@ namespace proyecto_cine
                 DireccionTextBox.Text,
                 20                 
             );
+
+            
         }
 
         private void label6_Click(object sender, EventArgs e)

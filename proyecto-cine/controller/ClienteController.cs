@@ -25,8 +25,8 @@ namespace proyecto_cine.controller
                 ClienteModel cliente = new ClienteModel(id, nombre, apellidos, email, direccion, descueento);
                 cliente.crearCliente();
                 
-                GuardadoConExito succes = new GuardadoConExito(formParent, "crear");
-                
+                GuardadoConExito succes = new GuardadoConExito(formParent, "cliente");
+                succes.Show();
 
             }
             else {
