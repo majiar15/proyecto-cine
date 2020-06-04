@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using proyecto_cine.controller;
 
 
 namespace proyecto_cine
@@ -16,12 +17,12 @@ namespace proyecto_cine
     {
   
         homeCajero formParent;
-            
+        ClienteController clienteController;
         public CrearClientes(homeCajero formParent, string opcion)
         {
 
             this.formParent = formParent;
-            
+            this.clienteController = new ClienteController(formParent);
             InitializeComponent();
             if (opcion == "modificar")
             {
@@ -39,7 +40,15 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
-
+            
+            clienteController.crear(
+                int.Parse(CedulaTextBox.Text),
+                NameTextBox.Text,
+                ApellidoTextBox.Text,
+                EmailTextBox.Text,
+                DireccionTextBox.Text,
+                20                 
+            );
         }
 
         private void label6_Click(object sender, EventArgs e)
