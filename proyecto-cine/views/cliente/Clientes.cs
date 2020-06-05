@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using proyecto_cine.controller;
 namespace proyecto_cine
 {
     public partial class Clientes : Form
@@ -27,7 +28,8 @@ namespace proyecto_cine
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-
+            ClienteController controlardor = new ClienteController(formParent);
+            dataGridView1.DataSource = controlardor.mostrarTabla();
         }
 
         private void enviar_Click(object sender, EventArgs e)

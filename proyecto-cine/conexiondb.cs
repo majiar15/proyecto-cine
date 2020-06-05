@@ -27,12 +27,10 @@ namespace proyecto_cine
             try
             {
                 conexion.Open();
-                MessageBox.Show("test");
                 Console.WriteLine("Conexion abierta");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("test : "+ ex.Message);
                 Console.WriteLine("Error al Abrir la DB" + ex.Message);
             }
         }

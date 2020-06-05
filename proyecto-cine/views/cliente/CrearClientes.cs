@@ -42,12 +42,12 @@ namespace proyecto_cine
         {
             
             clienteController.crear(
-                int.Parse(CedulaTextBox.Text),
-                NameTextBox.Text,
-                ApellidoTextBox.Text,
-                EmailTextBox.Text,
-                DireccionTextBox.Text,
-                20                 
+                    int.Parse(CedulaTextBox.Text),
+                    NameTextBox.Text,
+                    ApellidoTextBox.Text,
+                    EmailTextBox.Text,
+                    DireccionTextBox.Text.ToString(),
+                    20                 
             );
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,8 @@ namespace proyecto_cine.controller
             if (nombre.Length != 0 && apellidos.Length != 0 && email.Length != 0 && direccion.Length != 0)
             {
                 //instanciamos modelo con datos del textBox
-                ClienteModel cliente = new ClienteModel(id, nombre, apellidos, email, direccion, descueento);
-                cliente.crearCliente();
+                ClienteModel modelo = new ClienteModel(id, nombre, apellidos, email, direccion, descueento);
+                modelo.crearCliente();
                 
                 GuardadoConExito succes = new GuardadoConExito(formParent, "crear");
                 
@@ -34,9 +35,13 @@ namespace proyecto_cine.controller
                 err.Show();
             }
 
-
-
-
         }
+
+        public DataTable mostrarTabla() {
+            ClienteModel modelo = new ClienteModel(0,"","","","",0);
+            return modelo.consultarCliente();  
+        }
+
+        
     }
 }

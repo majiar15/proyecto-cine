@@ -36,7 +36,7 @@ namespace proyecto_cine.Model.usuario
             try
             {
                 conexion.abrir();
-                string query = "insert into cliente values ('" + Id + "','" + Nombre + "','" + Apellidos + "','" + descuento + "','" + direccion + "','" + Email + "');";
+                string query = "insert into cliente values (" + Id + ",'" + Nombre + "','" + Apellidos + "','" + Email + "'," + descuento + ",'" + direccion + "');";
                 comando = new SqlCommand(query, conexion.conexion);
                 comando.ExecuteNonQuery();
                 conexion.cerra();
