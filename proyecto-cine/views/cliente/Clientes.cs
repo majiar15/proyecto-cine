@@ -79,7 +79,25 @@ namespace proyecto_cine
         
         private void searchMenu_OnTextChange(object sender, EventArgs e)
         {
+            ClienteController controlardor = new ClienteController(formParent);
+            if (searchMenu.text != "")
+            {
+                try
+                {
+                    int.Parse(searchMenu.text);
+                    dataGridView1.DataSource = controlardor.buscarCliente(searchMenu.text);
+                }
+                catch {
+                    searchMenu.text = "";
+                    MessageBox.Show("ingrese solo numeros de cedulas");
+                }
 
+                
+            }
+            else
+            {
+                dataGridView1.DataSource = controlardor.mostrarTabla();
+            }
         }
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
