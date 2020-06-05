@@ -30,16 +30,15 @@ namespace proyecto_cine.Model.usuario
 
         }
 
-        public void crearCajero(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña) {
+        public void crearCajero() {
             try
             {
                 conexion.abrir();
-                cmd = new SqlCommand("Insert into empleados (id,cargo_id,nombre,apellidos,telefono,email,contraseña) values (" + id + "," + cargo + ",'" + nombre + "', '" + apellido + "', " + telefono + ",'" + email + "','" + contraseña + "')", conexion.conexion);
+                cmd = new SqlCommand("Insert into empleados (id,cargo_id,nombre,apellidos,telefono,email,contraseña) values (" + Id + "," + Cargo + ",'" + Nombre + "', '" + Apellidos + "', " + Telefono + ",'" + Email + "','" + Contraseña + "')", conexion.conexion);
                 cmd.ExecuteNonQuery();
                 conexion.cerra();
 
-                GuardadoConExito guardado = new GuardadoConExito(new homeCajero(), "cajero");
-                guardado.Show();
+                
             }
             catch (Exception e)
             {
@@ -70,13 +69,13 @@ namespace proyecto_cine.Model.usuario
         }
 
 
-        public void actualizarCajero(long id, int cargo, string nombres, string apellidos, long telefono, string email, string contraseña)
+        public void actualizarCajero()
         {
             try
             {
                 conexiondb conexion = new conexiondb();
                 conexion.abrir();
-                SqlCommand cmd = new SqlCommand(String.Format("UPDATE empleados set id = " + id + ", cargo_id = " + cargo + ", nombre = '" + nombres + "',apellidos = '" + apellidos + "',telefono = " + telefono + ",email = '" + email + "',contraseña= '" + contraseña + "' where id = " + id + ""), conexion.conexion);
+                SqlCommand cmd = new SqlCommand(String.Format("UPDATE empleados set id = " + Id + ", cargo_id = " + Cargo + ", nombre = '" + Nombre + "',apellidos = '" + Apellidos + "',telefono = " + Telefono + ",email = '" + Email + "',contraseña= '" + Contraseña + "' where id = " + Id + ""), conexion.conexion);
                 cmd.ExecuteNonQuery();
                 conexion.cerra();
             }

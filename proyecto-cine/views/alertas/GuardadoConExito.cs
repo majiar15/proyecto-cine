@@ -12,12 +12,12 @@ namespace proyecto_cine
 {
     public partial class GuardadoConExito : Form
     {
-        homeCajero formParent;
+        homeCajero Parent;
         string option;
-        public GuardadoConExito(homeCajero formParent,String option)
+        public GuardadoConExito(homeCajero Parent, String option)
         {
             this.option = option;
-            this.formParent = formParent;
+            this.Parent = Parent;
             InitializeComponent();
         }
 
@@ -25,10 +25,10 @@ namespace proyecto_cine
         {
             if (option == "cajero")
             {
-                this.formParent.OpenFormInPanelCentral(new Cajeros(this.formParent));
+                this.Parent.OpenFormInPanelCentral(new Cajeros(this.Parent));
             }
             else if (option == "cliente") {
-                this.formParent.OpenFormInPanelCentral(new Clientes(this.formParent));
+                this.Parent.OpenFormInPanelCentral(new Clientes(this.Parent));
             }
                 this.Close();
         }

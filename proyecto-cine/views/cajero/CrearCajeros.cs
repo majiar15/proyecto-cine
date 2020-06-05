@@ -14,7 +14,7 @@ namespace proyecto_cine
     public partial class CrearCajeros : Form
     {
         homeCajero formParent;
-        CajeroController cajero = new CajeroController();
+        
         public CrearCajeros(homeCajero formParent)
         {
             this.formParent = formParent;
@@ -30,6 +30,8 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
+            CajeroController cajero = new CajeroController();
+
             int cargo = 0;
             if (cbCargo.selectedIndex == 1)
             {
@@ -45,6 +47,8 @@ namespace proyecto_cine
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
+            CajeroController cajero = new CajeroController();
+
             if (tbCedula.Text == "")
             {
                 MessageBox.Show("Debe ingresar una cedula valida");

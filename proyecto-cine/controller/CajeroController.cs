@@ -21,7 +21,9 @@ namespace proyecto_cine.controller
 
             cajeroModel.conexion.Open();
 
-            cajeroModel.crearCajero(id, cargo, nombre, apellido, telefono, email, contraseña);
+            cajeroModel.crearCajero();
+            GuardadoConExito guardado = new GuardadoConExito(new homeCajero(), "cajero");
+            guardado.Show();
 
         }
 
@@ -47,7 +49,7 @@ namespace proyecto_cine.controller
         public void Actualizar(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña)
         {
             CajeroModel cajero = new CajeroModel(id, cargo, nombre, apellido, telefono, email, contraseña);
-            cajero.actualizarCajero(id, cargo, nombre, apellido, telefono, email, contraseña);
+            cajero.actualizarCajero();
         }
     }
 }
