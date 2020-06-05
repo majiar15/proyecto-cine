@@ -59,18 +59,7 @@ namespace proyecto_cine
             CajeroController eliminar = new CajeroController();
             Confirmacion confirmar = new Confirmacion(this.formParent);
 
-
-            if (eliminar.EliminarCajero(bunifuTextboxBuscarIdCaje.text))
-            {
-                
-                confirmar.id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-                confirmar.confirmacion = 1;
-                confirmar.Show();
-            }
-
-
-
-
+            eliminar.EliminarCajero((dataGridView1.CurrentRow.Cells["id"].Value.ToString()));
 
         }
 

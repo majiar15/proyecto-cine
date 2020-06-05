@@ -25,6 +25,10 @@ namespace proyecto_cine.Model.usuario
             this.Telefono = telefono;
             this.Cargo = cargo;
         }
+        public CajeroModel()
+        {
+
+        }
 
         public void crearCajero(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña) {
             try
@@ -66,7 +70,23 @@ namespace proyecto_cine.Model.usuario
         }
 
 
-        private void actualizarCajero() { }
+        public void actualizarCajero(long id, int cargo, string nombres, string apellidos, long telefono, string email, string contraseña)
+        {
+            try
+            {
+                conexiondb conexion = new conexiondb();
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand(String.Format("UPDATE empleados set id = " + id + ", cargo_id = " + cargo + ", nombre = '" + nombres + "',apellidos = '" + apellidos + "',telefono = " + telefono + ",email = '" + email + "',contraseña= '" + contraseña + "' where id = " + id + ""), conexion.conexion);
+                cmd.ExecuteNonQuery();
+                conexion.cerra();
+            }
+            catch (Exception e)
+            {
+                ErrorAlGuardar error = new ErrorAlGuardar();
+                error.Show();
+                Console.WriteLine("No se pudo actualizar la informacion, error: " + e);
+            }
+        }
 
 
         public DataTable consultarCajero() 

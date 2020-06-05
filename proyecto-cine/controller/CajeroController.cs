@@ -5,43 +5,49 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace proyecto_cine.controller
 {
     class CajeroController
     {
-
         public CajeroController()
         {
+            
         }
 
         public void crearCajero(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña) {
-            CajeroModel cajero = new CajeroModel(id, cargo ,nombre, apellido, telefono, email, contraseña);
+            CajeroModel cajeroModel = new CajeroModel(id, cargo ,nombre, apellido, telefono, email, contraseña);
 
-            cajero.conexion.Open();
+            cajeroModel.conexion.Open();
 
-            cajero.crearCajero(id, cargo, nombre, apellido, telefono, email, contraseña);
+            cajeroModel.crearCajero(id, cargo, nombre, apellido, telefono, email, contraseña);
 
         }
 
         public DataTable consultarCajero()
         {
-            CajeroModel cajero = new CajeroModel(1,1,"nombre","apellido", 11, "","");
+            CajeroModel cajero = new CajeroModel();
             return cajero.consultarCajero();
             
         }
 
         public DataTable BuscarCajero(string id)
         {
-            CajeroModel cajeroBus = new CajeroModel(1, 1, "", "", 1, "", "");
+            CajeroModel cajeroBus = new CajeroModel();
             return cajeroBus.Buscar(id);
         }
 
         public bool EliminarCajero(string id)
         {
-            CajeroModel eliminarCaje = new CajeroModel(1, 1, "", "", 1, "", "");
+            CajeroModel eliminarCaje = new CajeroModel();
             return eliminarCaje.eliminarCajero(id);
+        }
+
+        public void Actualizar(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña)
+        {
+            CajeroModel cajero = new CajeroModel(id, cargo, nombre, apellido, telefono, email, contraseña);
+            cajero.actualizarCajero(id, cargo, nombre, apellido, telefono, email, contraseña);
         }
     }
 }

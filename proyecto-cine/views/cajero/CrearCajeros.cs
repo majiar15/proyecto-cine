@@ -21,6 +21,7 @@ namespace proyecto_cine
             InitializeComponent();
         }
 
+
         private void bunifuThinButton21_Click_1(object sender, EventArgs e)
         {
             this.formParent.OpenFormInPanelCentral(new Cajeros(this.formParent));
@@ -51,17 +52,21 @@ namespace proyecto_cine
             else if (cbCargo.selectedIndex == 0)
             {
                 MessageBox.Show("Debe seleccionar un cargo valido");
-            }else
-            {
-                string nombre = tbNombre.Text;
-                string apllido = tbApellidos.Text;
-
-                CajeroController controller = new CajeroController();
-
-                //controller.crear(nombre, apllido);
-
-
             }
+
+            int cargo = 0;
+            if (cbCargo.selectedIndex == 1)
+            {
+                cargo = 1;
+            }
+            else if (cbCargo.selectedIndex == 2)
+            {
+                cargo = 2;
+            }
+
+            cajero.Actualizar(long.Parse(tbCedula.Text), cargo, tbNombre.Text, tbApellidos.Text, long.Parse(tbTelefono.Text), tbEmail.Text, tbContraseña.Text);
+            
         }
+        
     }
 }
