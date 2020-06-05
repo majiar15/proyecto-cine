@@ -8,15 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using proyecto_cine.controller;
 
 namespace proyecto_cine
 {
     public partial class Confirmacion : Form
     {
         homeCajero formParent;
-        public Confirmacion(homeCajero formParent)
+        public Confirmacion(homeCajero formParent, int id =0)
         {
             this.formParent = formParent;
+            this.id = id;
             InitializeComponent();
 
         }
@@ -33,7 +35,18 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-         
+            if (id == 0)
+            {
+
+            }
+            else
+            {
+                ClienteController controller = new ClienteController(formParent);
+                controller.eliminar(id);
+                formParent.OpenFormInPanelCentral(new Clientes(formParent));
+                this.Close();
+            }
+            
 
         }
 
@@ -46,5 +59,6 @@ namespace proyecto_cine
         {
             this.Close();
         }
+
     }
 }

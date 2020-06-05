@@ -41,6 +41,7 @@ namespace proyecto_cine
         private void enviar_Click(object sender, EventArgs e)
         {
             
+            
             clienteController.crear(
                     int.Parse(CedulaTextBox.Text),
                     NameTextBox.Text,

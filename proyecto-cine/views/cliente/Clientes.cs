@@ -87,10 +87,27 @@ namespace proyecto_cine
         private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
 
-                id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-                ClienteController controller = new ClienteController(formParent);
-                controller.eliminar(id);
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
 
+                try
+                {
+                    id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                    ClienteController controller = new ClienteController(formParent);
+                    controller.confirmarEliminacion(id);
+
+                }
+                catch
+                {
+                    new ErrorAlGuardar("eliminar").Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
+
+            
             
            
         }

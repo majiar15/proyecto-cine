@@ -42,19 +42,17 @@ namespace proyecto_cine.controller
             return modelo.consultarCliente();  
         }
 
+        public void confirmarEliminacion(int id) {
+
+            new Confirmacion(formParent, id).Show();
+
+        }
         public void eliminar(int id) {
-            try
-            {
                 ClienteModel modelo = new ClienteModel(id);
                 modelo.eliminarCliente();
-                //Confirmacion confirmar = new Confirmacion(formParent, id);
-                //confirmar.Show();
-            }
-            catch
-            {
-                new ErrorAlGuardar("eliminar").Show();
-            }
+                formParent.OpenFormInPanelCentral(new Clientes(formParent));
         }
+        
     }       
 }
 
