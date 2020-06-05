@@ -15,12 +15,12 @@ namespace proyecto_cine
 {
     public partial class CrearClientes : Form
     {
-  
+        string opcion;
         homeCajero formParent;
         ClienteController clienteController;
         public CrearClientes(homeCajero formParent, string opcion)
         {
-
+            this.opcion = opcion;
             this.formParent = formParent;
             this.clienteController = new ClienteController(formParent);
             InitializeComponent();
@@ -41,15 +41,30 @@ namespace proyecto_cine
         private void enviar_Click(object sender, EventArgs e)
         {
             
-            clienteController.crear(
+            if(opcion == "crear")
+            {
+                clienteController.crear(
                     int.Parse(CedulaTextBox.Text),
                     NameTextBox.Text,
                     ApellidoTextBox.Text,
                     EmailTextBox.Text,
                     DireccionTextBox.Text.ToString(),
-                    20                 
+                    20
             );
-
+            }
+            else
+            {
+                clienteController.modificar(
+                    int.Parse(CedulaTextBox.Text),
+                    NameTextBox.Text,
+                    ApellidoTextBox.Text,
+                    EmailTextBox.Text,
+                    DireccionTextBox.Text.ToString(),
+                    20
+                    );
+            }
+            
+            
             
         }
 

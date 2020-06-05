@@ -36,6 +36,25 @@ namespace proyecto_cine.controller
             }
 
         }
+        public void modificar(int id, string nombre, string apellidos, string email, string direccion, int descueento)
+        {
+            if (nombre.Length != 0 && apellidos.Length != 0 && email.Length != 0 && direccion.Length != 0)
+            {
+                //instanciamos modelo con datos del textBox
+                ClienteModel modelo = new ClienteModel(id, nombre, apellidos, email, direccion, descueento);
+                modelo.actualizarCliente();
+
+                GuardadoConExito succes = new GuardadoConExito(formParent, "cliente");
+                succes.Show();
+
+            }
+            else
+            {
+                ErrorAlGuardar err = new ErrorAlGuardar();
+                err.Show();
+            }
+
+        }
 
         public DataTable mostrarTabla() {
             ClienteModel modelo = new ClienteModel();
