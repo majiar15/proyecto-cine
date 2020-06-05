@@ -19,7 +19,7 @@ namespace proyecto_cine.Model.usuario
         SqlCommand comando;
         DataSet DS;
       
-        public ClienteModel(int cedula, string nombre, string apellidos, string email, string direccion, int descuento) {
+        public ClienteModel(int cedula =0, string nombre = "", string apellidos = "", string email = "", string direccion = "", int descuento = 0) {
             this.Id = cedula;
             this.Nombre = nombre;
             this.Apellidos = apellidos;

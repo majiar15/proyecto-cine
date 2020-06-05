@@ -38,8 +38,12 @@ namespace proyecto_cine.controller
         }
 
         public DataTable mostrarTabla() {
-            ClienteModel modelo = new ClienteModel(0,"","","","",0);
+            ClienteModel modelo = new ClienteModel();
             return modelo.consultarCliente();  
+        }
+
+        public void eliminar() {
+            ClienteModel modelo = new ClienteModel();
         }
 
         

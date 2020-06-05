@@ -89,6 +89,8 @@ namespace proyecto_cine
             try
             {
                 id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                ClienteController controller = new ClienteController(formParent);
+                
                 //Confirmarcs confirmar = new Confirmarcs(formParent, id);
                 //confirmar.Show();
             }
