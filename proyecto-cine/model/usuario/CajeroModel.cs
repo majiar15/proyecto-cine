@@ -50,7 +50,7 @@ namespace proyecto_cine.Model.usuario
         }
 
 
-        public bool eliminarCajero(string id)
+        public bool eliminarCajero(int id)
         {
             try
             {

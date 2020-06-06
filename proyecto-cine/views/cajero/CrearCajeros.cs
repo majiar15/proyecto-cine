@@ -30,7 +30,7 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
-            CajeroController cajero = new CajeroController();
+            CajeroController cajero = new CajeroController(formParent);
 
             int cargo = 0;
             if (cbCargo.selectedIndex == 1)
@@ -47,7 +47,7 @@ namespace proyecto_cine
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            CajeroController cajero = new CajeroController();
+            CajeroController cajero = new CajeroController(formParent);
 
             if (tbCedula.Text == "")
             {

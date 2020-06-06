@@ -36,8 +36,10 @@ namespace proyecto_cine
                 formParent.OpenFormInPanelCentral(new Clientes(formParent));
                 this.Close();
             }
-            else
+            else if (opcion == "eliminarCajero")
             {
+                CajeroController controller = new CajeroController(formParent);
+                controller.EliminarCajero(id);
             }
             
 

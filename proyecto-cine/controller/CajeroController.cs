@@ -11,9 +11,10 @@ namespace proyecto_cine.controller
 {
     class CajeroController
     {
-        public CajeroController()
+        homeCajero formParent;
+        public CajeroController(homeCajero formParent)
         {
-            
+            this.formParent = formParent;
         }
 
         public void crearCajero(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña) {
@@ -22,7 +23,7 @@ namespace proyecto_cine.controller
             cajeroModel.conexion.Open();
 
             cajeroModel.crearCajero();
-            GuardadoConExito guardado = new GuardadoConExito(new homeCajero(), "cajero");
+            GuardadoConExito guardado = new GuardadoConExito(formParent, "cajero");
             guardado.Show();
 
         }
@@ -40,16 +41,24 @@ namespace proyecto_cine.controller
             return cajeroBus.Buscar(id);
         }
 
-        public bool EliminarCajero(string id)
+        public void EliminarCajero(int id)
         {
-            CajeroModel eliminarCaje = new CajeroModel();
-            return eliminarCaje.eliminarCajero(id);
+            CajeroModel modelo = new CajeroModel();
+            modelo.eliminarCajero(id);
+            formParent.OpenFormInPanelCentral(new Cajeros(formParent));
         }
 
         public void Actualizar(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña)
         {
             CajeroModel cajero = new CajeroModel(id, cargo, nombre, apellido, telefono, email, contraseña);
             cajero.actualizarCajero();
+        }
+
+        public void confirmarEliminacion(int id)
+        {
+
+            new Confirmacion(formParent, id, "eliminarCajero").Show();
+
         }
     }
 }
