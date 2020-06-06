@@ -60,19 +60,25 @@ namespace proyecto_cine.controller
 
         public void confirmarEliminacion(int id) {
 
-            new Confirmacion(formParent, id).Show();
+            new Confirmacion(formParent, id, "eliminarCliente").Show();
 
         }
+
+
         public void eliminar(int id) {
                 ClienteModel modelo = new ClienteModel(id);
                 modelo.eliminarCliente();
                 formParent.OpenFormInPanelCentral(new Clientes(formParent));
         }
+
+
         public DataTable mostrarTabla()
         {
             ClienteModel modelo = new ClienteModel();
             return modelo.consultarCliente();
         }
+
+
         public DataTable buscarCliente(string buscar) {
             
                int id = int.Parse(buscar);

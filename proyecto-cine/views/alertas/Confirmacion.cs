@@ -15,36 +15,29 @@ namespace proyecto_cine
     public partial class Confirmacion : Form
     {
         homeCajero formParent;
-        public Confirmacion(homeCajero formParent, int id =0)
+        public int id;
+        public string opcion;
+        public Confirmacion(homeCajero formParent, int id,string opcion)
         {
             this.formParent = formParent;
             this.id = id;
+            this.opcion = opcion;
             InitializeComponent();
 
         }
 
-        public int id;
-        public int confirmacion;
-        public int cedula;
-        public int cargo;
-        public String nombre;
-        public String apellidos;
-        public int telefono;
-        public String email;
-        public String contraseña;
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            if (id == 0)
-            {
-
-            }
-            else
+            if (opcion == "eliminarCliente")
             {
                 ClienteController controller = new ClienteController(formParent);
                 controller.eliminar(id);
                 formParent.OpenFormInPanelCentral(new Clientes(formParent));
                 this.Close();
+            }
+            else
+            {
             }
             
 
