@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using proyecto_cine.controller;
 namespace proyecto_cine
 {
     public partial class Clientes : Form
@@ -27,7 +28,8 @@ namespace proyecto_cine
 
         private void Clientes_Load(object sender, EventArgs e)
         {
-
+            ClienteController controlardor = new ClienteController(formParent);
+            dataGridView1.DataSource = controlardor.mostrarTabla();
         }
 
         private void enviar_Click(object sender, EventArgs e)
@@ -77,20 +79,51 @@ namespace proyecto_cine
         
         private void searchMenu_OnTextChange(object sender, EventArgs e)
         {
+            ClienteController controlardor = new ClienteController(formParent);
+            if (searchMenu.text != "")
+            {
+                try
+                {
+                    int.Parse(searchMenu.text);
+                    dataGridView1.DataSource = controlardor.buscarCliente(searchMenu.text);
+                }
+                catch {
+                    searchMenu.text = "";
+                    MessageBox.Show("ingrese solo numeros de cedulas");
+                }
 
+                
+            }
+            else
+            {
+                dataGridView1.DataSource = controlardor.mostrarTabla();
+            }
         }
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
         {
-            try
+
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-                //Confirmarcs confirmar = new Confirmarcs(formParent, id);
-                //confirmar.Show();
+
+                try
+                {
+                    id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                    ClienteController controller = new ClienteController(formParent);
+                    controller.confirmarEliminacion(id);
+
+                }
+                catch
+                {
+                    new ErrorAlGuardar("eliminar").Show();
+                }
             }
-            catch {
-                new ErrorAlGuardar("eliminar").Show();
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
             }
+
+            
             
            
         }

@@ -57,7 +57,7 @@ namespace proyecto_cine
         private void btnEliminarCajero_Click(object sender, EventArgs e)
         {
             CajeroController eliminar = new CajeroController();
-            Confirmacion confirmar = new Confirmacion(this.formParent);
+            //Confirmacion confirmar = new Confirmacion(this.formParent);
 
             eliminar.EliminarCajero((dataGridView1.CurrentRow.Cells["id"].Value.ToString()));
 
@@ -65,28 +65,7 @@ namespace proyecto_cine
 
         private void bunifuThinButton24_Click_1(object sender, EventArgs e)
         {
-            CrearCajeros modificar = new CrearCajeros(this.formParent);
-            modificar.lbTitle.Text = "MODIFICAR CAJEROS";
-            modificar.lbTitle.Location = new Point(182, 9);
 
-            modificar.tbNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
-            modificar.tbApellidos.Text = dataGridView1.CurrentRow.Cells["Apellidos"].Value.ToString();
-            modificar.tbEmail.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
-            modificar.tbTelefono.Text = dataGridView1.CurrentRow.Cells["telefono"].Value.ToString();
-            modificar.tbContraseña.Text = dataGridView1.CurrentRow.Cells["contraseña"].Value.ToString();
-            modificar.tbCedula.Text = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
-            int cargo = int.Parse(dataGridView1.CurrentRow.Cells["cargo_id"].Value.ToString());
-            if(cargo == 1)
-            {
-                modificar.cbCargo.selectedIndex = 1;
-            }else if(cargo == 2){
-                modificar.cbCargo.selectedIndex = 2;
-            }
-            modificar.btUpdate.Visible = true;
-            modificar.enviar.Visible = false;
-
-            this.formParent.OpenFormInPanelCentral(modificar);
-            this.Close();
         }
     }
 }

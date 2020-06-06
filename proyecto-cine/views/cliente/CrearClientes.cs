@@ -8,20 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using proyecto_cine.controller;
 
 
 namespace proyecto_cine
 {
     public partial class CrearClientes : Form
     {
-  
+        string opcion;
         homeCajero formParent;
-            
+        ClienteController clienteController;
         public CrearClientes(homeCajero formParent, string opcion)
         {
-
+            this.opcion = opcion;
             this.formParent = formParent;
-            
+            this.clienteController = new ClienteController(formParent);
             InitializeComponent();
             if (opcion == "modificar")
             {
@@ -39,7 +40,32 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
-
+            
+            if(opcion == "crear")
+            {
+                clienteController.crear(
+                    int.Parse(CedulaTextBox.Text),
+                    NameTextBox.Text,
+                    ApellidoTextBox.Text,
+                    EmailTextBox.Text,
+                    DireccionTextBox.Text.ToString(),
+                    20
+            );
+            }
+            else
+            {
+                clienteController.modificar(
+                    int.Parse(CedulaTextBox.Text),
+                    NameTextBox.Text,
+                    ApellidoTextBox.Text,
+                    EmailTextBox.Text,
+                    DireccionTextBox.Text.ToString(),
+                    20
+                    );
+            }
+            
+            
+            
         }
 
         private void label6_Click(object sender, EventArgs e)
