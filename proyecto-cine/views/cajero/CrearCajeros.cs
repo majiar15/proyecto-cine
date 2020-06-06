@@ -69,8 +69,9 @@ namespace proyecto_cine
             }
 
             cajero.Actualizar(long.Parse(tbCedula.Text), cargo, tbNombre.Text, tbApellidos.Text, long.Parse(tbTelefono.Text), tbEmail.Text, tbContraseña.Text);
-            
+
+
         }
-        
+
     }
 }

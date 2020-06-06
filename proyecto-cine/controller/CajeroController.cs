@@ -45,20 +45,23 @@ namespace proyecto_cine.controller
         {
             CajeroModel modelo = new CajeroModel();
             modelo.eliminarCajero(id);
-            formParent.OpenFormInPanelCentral(new Cajeros(formParent));
+            
         }
 
         public void Actualizar(long id, int cargo, string nombre, string apellido, long telefono, string email, string contraseña)
         {
             CajeroModel cajero = new CajeroModel(id, cargo, nombre, apellido, telefono, email, contraseña);
             cajero.actualizarCajero();
+
+            ModificacionExitosa modificar = new ModificacionExitosa(formParent, "Cajeros");
+            modificar.Show();
+
         }
 
         public void confirmarEliminacion(int id)
         {
-
             new Confirmacion(formParent, id, "eliminarCajero").Show();
-
         }
+
     }
 }

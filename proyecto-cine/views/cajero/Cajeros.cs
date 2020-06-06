@@ -58,10 +58,6 @@ namespace proyecto_cine
         // ELIMINAR CAJERO
         private void btnEliminarCajero_Click(object sender, EventArgs e)
         {
-            //CajeroController eliminar = new CajeroController(formParent);
-
-            //eliminar.EliminarCajero((dataGridView1.CurrentRow.Cells["id"].Value.ToString()));
-
             if (dataGridView1.SelectedRows.Count > 0)
             {
 

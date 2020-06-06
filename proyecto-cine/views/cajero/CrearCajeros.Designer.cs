@@ -33,40 +33,40 @@
             this.btUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cbCargo = new Bunifu.Framework.UI.BunifuDropdown();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbCedula = new System.Windows.Forms.TextBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.enviar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lbTitle = new System.Windows.Forms.Label();
-            this.tbContraseña = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbTelefono = new System.Windows.Forms.TextBox();
-            this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbApellidos = new System.Windows.Forms.TextBox();
-            this.tbNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.tbApellidos = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbTelefono = new System.Windows.Forms.TextBox();
+            this.tbContraseña = new System.Windows.Forms.TextBox();
+            this.tbCedula = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.btUpdate);
-            this.panel1.Controls.Add(this.cbCargo);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tbCedula);
-            this.panel1.Controls.Add(this.bunifuThinButton21);
-            this.panel1.Controls.Add(this.enviar);
-            this.panel1.Controls.Add(this.lbTitle);
             this.panel1.Controls.Add(this.tbContraseña);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.tbTelefono);
             this.panel1.Controls.Add(this.tbEmail);
             this.panel1.Controls.Add(this.tbApellidos);
             this.panel1.Controls.Add(this.tbNombre);
+            this.panel1.Controls.Add(this.btUpdate);
+            this.panel1.Controls.Add(this.cbCargo);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.bunifuThinButton21);
+            this.panel1.Controls.Add(this.enviar);
+            this.panel1.Controls.Add(this.lbTitle);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -135,18 +135,6 @@
             this.label6.TabIndex = 64;
             this.label6.Text = "Cargo :";
             // 
-            // tbCedula
-            // 
-            this.tbCedula.BackColor = System.Drawing.Color.Black;
-            this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCedula.ForeColor = System.Drawing.Color.White;
-            this.tbCedula.Location = new System.Drawing.Point(389, 374);
-            this.tbCedula.Multiline = true;
-            this.tbCedula.Name = "tbCedula";
-            this.tbCedula.Size = new System.Drawing.Size(177, 23);
-            this.tbCedula.TabIndex = 63;
-            // 
             // bunifuThinButton21
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
@@ -211,18 +199,6 @@
             this.lbTitle.TabIndex = 60;
             this.lbTitle.Text = "CREAR CAJEROS";
             // 
-            // tbContraseña
-            // 
-            this.tbContraseña.BackColor = System.Drawing.Color.Black;
-            this.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbContraseña.ForeColor = System.Drawing.Color.White;
-            this.tbContraseña.Location = new System.Drawing.Point(389, 317);
-            this.tbContraseña.Multiline = true;
-            this.tbContraseña.Name = "tbContraseña";
-            this.tbContraseña.Size = new System.Drawing.Size(177, 23);
-            this.tbContraseña.TabIndex = 59;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -234,54 +210,6 @@
             this.label7.Size = new System.Drawing.Size(196, 42);
             this.label7.TabIndex = 58;
             this.label7.Text = "Contraseña :";
-            // 
-            // tbTelefono
-            // 
-            this.tbTelefono.BackColor = System.Drawing.Color.Black;
-            this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTelefono.ForeColor = System.Drawing.Color.White;
-            this.tbTelefono.Location = new System.Drawing.Point(389, 260);
-            this.tbTelefono.Multiline = true;
-            this.tbTelefono.Name = "tbTelefono";
-            this.tbTelefono.Size = new System.Drawing.Size(177, 23);
-            this.tbTelefono.TabIndex = 55;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.BackColor = System.Drawing.Color.Black;
-            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.ForeColor = System.Drawing.Color.White;
-            this.tbEmail.Location = new System.Drawing.Point(389, 203);
-            this.tbEmail.Multiline = true;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(177, 23);
-            this.tbEmail.TabIndex = 54;
-            // 
-            // tbApellidos
-            // 
-            this.tbApellidos.BackColor = System.Drawing.Color.Black;
-            this.tbApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApellidos.ForeColor = System.Drawing.Color.White;
-            this.tbApellidos.Location = new System.Drawing.Point(389, 146);
-            this.tbApellidos.Multiline = true;
-            this.tbApellidos.Name = "tbApellidos";
-            this.tbApellidos.Size = new System.Drawing.Size(177, 23);
-            this.tbApellidos.TabIndex = 52;
-            // 
-            // tbNombre
-            // 
-            this.tbNombre.BackColor = System.Drawing.Color.Black;
-            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombre.ForeColor = System.Drawing.Color.White;
-            this.tbNombre.Location = new System.Drawing.Point(389, 89);
-            this.tbNombre.Multiline = true;
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(177, 23);
-            this.tbNombre.TabIndex = 51;
             // 
             // label5
             // 
@@ -343,6 +271,78 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "Nombres :";
             // 
+            // tbNombre
+            // 
+            this.tbNombre.BackColor = System.Drawing.Color.Black;
+            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombre.ForeColor = System.Drawing.Color.White;
+            this.tbNombre.Location = new System.Drawing.Point(389, 88);
+            this.tbNombre.Multiline = true;
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(177, 23);
+            this.tbNombre.TabIndex = 67;
+            // 
+            // tbApellidos
+            // 
+            this.tbApellidos.BackColor = System.Drawing.Color.Black;
+            this.tbApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbApellidos.ForeColor = System.Drawing.Color.White;
+            this.tbApellidos.Location = new System.Drawing.Point(389, 146);
+            this.tbApellidos.Multiline = true;
+            this.tbApellidos.Name = "tbApellidos";
+            this.tbApellidos.Size = new System.Drawing.Size(177, 23);
+            this.tbApellidos.TabIndex = 68;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BackColor = System.Drawing.Color.Black;
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.Color.White;
+            this.tbEmail.Location = new System.Drawing.Point(389, 204);
+            this.tbEmail.Multiline = true;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(177, 23);
+            this.tbEmail.TabIndex = 69;
+            // 
+            // tbTelefono
+            // 
+            this.tbTelefono.BackColor = System.Drawing.Color.Black;
+            this.tbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTelefono.ForeColor = System.Drawing.Color.White;
+            this.tbTelefono.Location = new System.Drawing.Point(389, 262);
+            this.tbTelefono.Multiline = true;
+            this.tbTelefono.Name = "tbTelefono";
+            this.tbTelefono.Size = new System.Drawing.Size(177, 23);
+            this.tbTelefono.TabIndex = 70;
+            // 
+            // tbContraseña
+            // 
+            this.tbContraseña.BackColor = System.Drawing.Color.Black;
+            this.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContraseña.ForeColor = System.Drawing.Color.White;
+            this.tbContraseña.Location = new System.Drawing.Point(389, 320);
+            this.tbContraseña.Multiline = true;
+            this.tbContraseña.Name = "tbContraseña";
+            this.tbContraseña.Size = new System.Drawing.Size(177, 23);
+            this.tbContraseña.TabIndex = 71;
+            // 
+            // tbCedula
+            // 
+            this.tbCedula.BackColor = System.Drawing.Color.Black;
+            this.tbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCedula.ForeColor = System.Drawing.Color.White;
+            this.tbCedula.Location = new System.Drawing.Point(389, 378);
+            this.tbCedula.Multiline = true;
+            this.tbCedula.Name = "tbCedula";
+            this.tbCedula.Size = new System.Drawing.Size(177, 23);
+            this.tbCedula.TabIndex = 72;
+            // 
             // CrearCajeros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,14 +370,14 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label lbTitle;
+        public Bunifu.Framework.UI.BunifuDropdown cbCargo;
+        public Bunifu.Framework.UI.BunifuThinButton2 enviar;
+        public Bunifu.Framework.UI.BunifuThinButton2 btUpdate;
+        public System.Windows.Forms.TextBox tbCedula;
+        public System.Windows.Forms.TextBox tbContraseña;
         public System.Windows.Forms.TextBox tbTelefono;
         public System.Windows.Forms.TextBox tbEmail;
         public System.Windows.Forms.TextBox tbApellidos;
         public System.Windows.Forms.TextBox tbNombre;
-        public System.Windows.Forms.TextBox tbContraseña;
-        public Bunifu.Framework.UI.BunifuDropdown cbCargo;
-        public System.Windows.Forms.TextBox tbCedula;
-        public Bunifu.Framework.UI.BunifuThinButton2 enviar;
-        public Bunifu.Framework.UI.BunifuThinButton2 btUpdate;
     }
 }
