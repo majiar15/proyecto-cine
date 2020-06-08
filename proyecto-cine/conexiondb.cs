@@ -13,7 +13,7 @@ namespace proyecto_cine
     class conexiondb
     {
 
-        string dataConexion = "Data Source=DESKTOP-7O8O2HD\\SQLEXPRESS;Initial Catalog=cine2; Integrated security=true";
+        string dataConexion = "Data Source=DESKTOP-7O8O2HD\\SQLEXPRESS;Initial Catalog=cine4; Integrated security=true";
 
         public SqlConnection conexion = new SqlConnection();
 

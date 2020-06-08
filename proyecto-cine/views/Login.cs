@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices; ////// Hacemos mover el formulario
+using System.Data.SqlClient;
 
 
 namespace proyecto_cine
@@ -115,6 +116,24 @@ namespace proyecto_cine
             homeCajero home = new homeCajero();
             this.Hide();
             home.Show();
+
+            conexiondb conexion = new conexiondb();
+            SqlCommand cmd;
+            DateTime fecha = DateTime.Today;
+            string horaInicio = DateTime.Now.ToString("HH:mm:ss");
+            try
+            {
+                conexion.abrir();
+                cmd = new SqlCommand("Insert into logueos (empleado_id,fecha,hora_incio) values (" + long.Parse(userLoginTextBox.Text) + ",'" + fecha.ToShortDateString() + "', '" + horaInicio + "')", conexion.conexion);
+                cmd.ExecuteNonQuery();
+                conexion.cerra();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+            }
         }
     }
 }
