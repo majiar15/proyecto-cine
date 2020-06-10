@@ -57,6 +57,8 @@
   <ItemGroup>
     <Compile Include="controller\CajeroController.cs" />
     <Compile Include="controller\ClienteController.cs" />
+    <Compile Include="controller\PeliculaController.cs" />
+    <Compile Include="model\pelicula\peliculaModel.cs" />
     <Compile Include="model\usuario\AdministradorModel.cs" />
     <Compile Include="model\usuario\CajeroModel.cs" />
     <Compile Include="model\usuario\ClienteModel.cs" />

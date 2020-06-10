@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using proyecto_cine.controller;
 
 namespace proyecto_cine
 {
@@ -34,7 +35,8 @@ namespace proyecto_cine
 
         private void Crear_Click(object sender, EventArgs e)
         {
-
+            this.formParent.OpenFormInPanelCentral(new ModificarPelicula(this.formParent, "crear"));
+            this.Close();
         }
     }
 }

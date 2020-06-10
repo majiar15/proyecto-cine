@@ -29,6 +29,9 @@ namespace proyecto_cine
             }
             else if (option == "cliente") {
                 this.Parent.OpenFormInPanelCentral(new Clientes(this.Parent));
+            } else if (option == "pelicula") {
+                this.Parent.OpenFormInPanelCentral(new Peliculas(this.Parent));
+            
             }
                 this.Close();
         }
