@@ -69,7 +69,12 @@ namespace proyecto_cine
             if (opcion == "crear") {
                 PeliculaController controller = new PeliculaController(formParent);
                 controller.crear(nombre,categoria,descripcion,duracion, imaage,foto);
-                
+
+            }
+            else
+            {
+                PeliculaController controller = new PeliculaController(formParent);
+                controller.modificar(nombre, categoria, descripcion, duracion, imaage, foto);
             }
 
             formParent.OpenFormInPanelCentral(new Peliculas(formParent));                      

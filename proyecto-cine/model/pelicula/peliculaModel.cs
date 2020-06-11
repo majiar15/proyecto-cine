@@ -20,8 +20,9 @@ namespace proyecto_cine.model.pelicula
         conexiondb conexion = new conexiondb();
         SqlCommand comando;
         DataSet DS;
+        DataRow DR;
 
-        public peliculaModel(string nombre, string categoria, string descripcion, string duracion, string imagen_nombre, byte[] foto= null)
+        public peliculaModel(string nombre = "", string categoria = "", string descripcion = "", string duracion = "", string imagen_nombre = "", byte[] foto= null)
         {
             this.nombre = nombre;
             this.categoria = categoria;
@@ -31,9 +32,7 @@ namespace proyecto_cine.model.pelicula
             this.foto = foto;
         }
 
-        public peliculaModel()
-        {
-        }
+        
 
         public void crearPelicula() {
             try
@@ -80,7 +79,7 @@ namespace proyecto_cine.model.pelicula
         public DataTable consultarPelicula()
         {
             conexion.abrir();
-            string query = "SELECT * FROM peliculas;";
+            string query = "SELECT nombre, categoria, descripcion, duracion, imagen_nombre FROM peliculas;";
             comando = new SqlCommand(query, conexion.conexion);
             SqlDataAdapter Adaptar = new SqlDataAdapter();
             Adaptar.SelectCommand = comando;
@@ -91,6 +90,27 @@ namespace proyecto_cine.model.pelicula
 
         }
 
+
+
+
+        public void consultaImagen(PictureBox imagen)
+        {
+            conexion.abrir();
+            string query = "SELECT imagen FROM peliculas WHERE nombre='"+nombre+"';";
+            comando = new SqlCommand(query, conexion.conexion);
+            SqlDataAdapter Adaptar = new SqlDataAdapter();
+            Adaptar.SelectCommand = comando;
+            DS = new DataSet();
+            Adaptar.Fill(DS, "imagen");
+            byte[] datos = new byte[0];
+            DR = DS.Tables["imagen"].Rows[0];
+            datos = (byte[])DR["imagen"];
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(datos);
+            imagen.Image = System.Drawing.Bitmap.FromStream(ms);
+            conexion.cerra();
+            
+
+        }
 
     }
 }

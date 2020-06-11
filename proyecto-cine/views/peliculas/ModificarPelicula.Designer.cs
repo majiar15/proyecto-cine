@@ -241,14 +241,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox DuracionTextBox;
-        private System.Windows.Forms.TextBox CategoriaTextBox;
-        private System.Windows.Forms.TextBox DescripcionTextBox;
-        private System.Windows.Forms.TextBox ImageNameTextBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button examinar;
         private System.Windows.Forms.PictureBox pictureBox;
         private Bunifu.Framework.UI.BunifuThinButton2 enviar;
+        public System.Windows.Forms.TextBox NameTextBox;
+        public System.Windows.Forms.TextBox DuracionTextBox;
+        public System.Windows.Forms.TextBox CategoriaTextBox;
+        public System.Windows.Forms.TextBox DescripcionTextBox;
+        public System.Windows.Forms.TextBox ImageNameTextBox;
     }
 }
