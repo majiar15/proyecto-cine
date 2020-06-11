@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,7 @@ namespace proyecto_cine
         string categoria;
         string descripcion;
         string imaage;
-        public ModificarPelicula(homeCajero parent,string opcion)
+        public ModificarPelicula(homeCajero parent, string opcion)
         {
             this.formParent = parent;
             this.opcion = opcion;
@@ -30,7 +32,7 @@ namespace proyecto_cine
         private void examinar_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.PNG;*.GIF;*.JPEG)|*.PNG;*.GIF;*.JPEG;|All files (*.*)|*.*";
+            open.Filter = "Image Files(*.PNG;*.GIF;*.JPG;*.JPEG)|*.PNG;*.GIF;*.JPG;*.JPEG;|All files (*.*)|*.*";
             open.Title = "Seleccionar imagen";
             open.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
             if (open.ShowDialog() == DialogResult.OK) {
@@ -43,28 +45,34 @@ namespace proyecto_cine
                     MessageBox.Show("elija un tipo de imagen valido");
                     open.ShowDialog();
                 }
-                
+
             }
             open.Dispose();
-            
+
         }
 
 
 
         private void enviar_Click(object sender, EventArgs e)
         {
-             nombre = NameTextBox.Text;
+            MemoryStream ms = new MemoryStream(); 
+            pictureBox.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] foto = ms.ToArray();
+            nombre = NameTextBox.Text;
              duracion = DuracionTextBox.Text;
              categoria = CategoriaTextBox.Text;
              descripcion = DescripcionTextBox.Text;
              imaage = ImageNameTextBox.Text;
+            
 
 
             if (opcion == "crear") {
                 PeliculaController controller = new PeliculaController(formParent);
-                controller.crear(nombre,categoria,descripcion,duracion, imaage);
+                controller.crear(nombre,categoria,descripcion,duracion, imaage,foto);
+                
             }
-            formParent.OpenFormInPanelCentral(new Peliculas(formParent));
+
+            formParent.OpenFormInPanelCentral(new Peliculas(formParent));                      
             this.Close();
         }
         private void ModificarPelicula_Load(object sender, EventArgs e)

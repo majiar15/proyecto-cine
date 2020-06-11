@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -15,26 +16,37 @@ namespace proyecto_cine.model.pelicula
         private string descripcion;
         private string duracion;
         private string imagen_nombre;
+        private byte[] foto;
         conexiondb conexion = new conexiondb();
         SqlCommand comando;
+        DataSet DS;
 
-        public peliculaModel(string nombre, string categoria, string descripcion, string duracion, string imagen_nombre)
+        public peliculaModel(string nombre, string categoria, string descripcion, string duracion, string imagen_nombre, byte[] foto= null)
         {
             this.nombre = nombre;
             this.categoria = categoria;
             this.descripcion = descripcion;
             this.imagen_nombre = imagen_nombre;
             this.duracion = duracion;
+            this.foto = foto;
+        }
+
+        public peliculaModel()
+        {
         }
 
         public void crearPelicula() {
             try
             {
                 conexion.abrir();
-                string query = "insert into pelicula (id,nombre,categoria,descripcion,duracion,imagen_nombre) values (NULL,'" + nombre + "','" + categoria+ "','" + descripcion + "'," + duracion + "'" +"'," + imagen_nombre+"');";
+                string query = "INSERT INTO peliculas (nombre,categoria,descripcion,duracion,imagen_nombre,imagen) VALUES ('" + nombre + "','" + categoria + "','" + descripcion + "','" + duracion + "','" + imagen_nombre + "',@imagen);";
                 comando = new SqlCommand(query, conexion.conexion);
+                //comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("imagen", foto);
                 comando.ExecuteNonQuery();
+                MessageBox.Show("Guardado con exito");
                 conexion.cerra();
+                
             }
             catch (Exception e)
             {
@@ -44,17 +56,40 @@ namespace proyecto_cine.model.pelicula
         }
         public void actualizarPelicula()
         {
+            try
+            {
+                conexion.abrir();
+                string query = "UPDATE peliculas  SET nombre='" + nombre + "',categoria='" + categoria + "',descripcion='" + descripcion + "',duracion='" + duracion + "',imagen_nombre'" + imagen_nombre + "',imagen=@imagen);";
+                comando = new SqlCommand(query, conexion.conexion);
+                //comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("imagen", foto);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Guardado con exito");
+                conexion.cerra();
 
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se inserto los datos" + e.ToString());
+            }
         }
         public void eliminarPelicula()
         {
 
         }
-        public void consultarPeliculas()
+        public DataTable consultarPelicula()
         {
+            conexion.abrir();
+            string query = "SELECT * FROM peliculas;";
+            comando = new SqlCommand(query, conexion.conexion);
+            SqlDataAdapter Adaptar = new SqlDataAdapter();
+            Adaptar.SelectCommand = comando;
+            DS = new DataSet();
+            Adaptar.Fill(DS, "tabla");
+            conexion.cerra();
+            return DS.Tables["tabla"];
 
         }
-
 
 
     }

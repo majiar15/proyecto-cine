@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using proyecto_cine.controller;
 
 namespace proyecto_cine
@@ -19,6 +20,11 @@ namespace proyecto_cine
             this.formParent = parent;
             InitializeComponent();
         }
+        private void Peliculas_Load(object sender, EventArgs e)
+        {
+            PeliculaController controlador = new PeliculaController(formParent);
+            dataGridView23.DataSource = controlador.mostrarTabla();
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -28,7 +34,7 @@ namespace proyecto_cine
         private void Modificar_Click(object sender, EventArgs e)
         {
             
-            formParent.OpenFormInPanelCentral(new ModificarPelicula(formParent));
+            formParent.OpenFormInPanelCentral(new ModificarPelicula(formParent,""));
           
 
         }
@@ -38,5 +44,7 @@ namespace proyecto_cine
             this.formParent.OpenFormInPanelCentral(new ModificarPelicula(this.formParent, "crear"));
             this.Close();
         }
+
+        
     }
 }
