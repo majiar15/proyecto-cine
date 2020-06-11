@@ -15,6 +15,8 @@ namespace proyecto_cine
     public partial class Peliculas : Form
     {
         homeCajero formParent;
+        DataTable dataTable;
+
         public Peliculas(homeCajero parent)
         {
             this.formParent = parent;
@@ -33,8 +35,33 @@ namespace proyecto_cine
 
         private void Modificar_Click(object sender, EventArgs e)
         {
+
+            if (dataGridView23.SelectedRows.Count > 0)
+            {
+                string id = dataGridView23.CurrentRow.Cells["id"].Value.ToString();
+                ModificarPelicula form = new ModificarPelicula(this.formParent, "modificar");
+                
+                form.NameTextBox.Text = dataGridView23.CurrentRow.Cells["nombre"].Value.ToString();
+                form.DuracionTextBox.Text = dataGridView23.CurrentRow.Cells["duracion"].Value.ToString();
+                form.CategoriaTextBox.Text = dataGridView23.CurrentRow.Cells["categoria"].Value.ToString();
+                form.DescripcionTextBox.Text = dataGridView23.CurrentRow.Cells["descripcion"].Value.ToString();
+
+                
+                PeliculaController pelicula = new PeliculaController(formParent);
+                form.id = id;
+                //byte[] foto = (byte[])dataGridView23.CurrentRow.Cells["imagen"];
+                this.formParent.OpenFormInPanelCentral(form);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
+
+
+
+
             
-            formParent.OpenFormInPanelCentral(new ModificarPelicula(formParent,""));
           
 
         }

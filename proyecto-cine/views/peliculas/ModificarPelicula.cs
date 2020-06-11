@@ -16,16 +16,18 @@ namespace proyecto_cine
     public partial class ModificarPelicula : Form
     {
         homeCajero formParent;
-        string opcion;
-        string nombre;
-        string duracion;
-        string categoria;
-        string descripcion;
-        string imaage;
+        public string id;
+        public string opcion;
+        public string nombre;
+        public string duracion;
+        public string categoria;
+        public string descripcion;
+        public string imaage;
         public ModificarPelicula(homeCajero parent, string opcion)
         {
             this.formParent = parent;
             this.opcion = opcion;
+
             InitializeComponent();
         }
 
@@ -55,10 +57,8 @@ namespace proyecto_cine
 
         private void enviar_Click(object sender, EventArgs e)
         {
-            MemoryStream ms = new MemoryStream(); 
-            pictureBox.Image.Save(ms, ImageFormat.Jpeg);
-            byte[] foto = ms.ToArray();
-            nombre = NameTextBox.Text;
+            
+             nombre = NameTextBox.Text;
              duracion = DuracionTextBox.Text;
              categoria = CategoriaTextBox.Text;
              descripcion = DescripcionTextBox.Text;
@@ -67,9 +67,18 @@ namespace proyecto_cine
 
 
             if (opcion == "crear") {
+                MemoryStream ms = new MemoryStream();
+                pictureBox.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] foto = ms.ToArray();
+
                 PeliculaController controller = new PeliculaController(formParent);
                 controller.crear(nombre,categoria,descripcion,duracion, imaage,foto);
-                
+
+            }
+            else
+            {
+                PeliculaController controller = new PeliculaController(formParent);
+                controller.modificar(id,nombre, categoria, descripcion, duracion);
             }
 
             formParent.OpenFormInPanelCentral(new Peliculas(formParent));                      

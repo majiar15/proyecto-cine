@@ -11,6 +11,8 @@ namespace proyecto_cine.model.pelicula
 {
     class peliculaModel 
     {
+
+        public int  id;
         private string nombre;
         private string categoria;
         private string descripcion;
@@ -20,8 +22,9 @@ namespace proyecto_cine.model.pelicula
         conexiondb conexion = new conexiondb();
         SqlCommand comando;
         DataSet DS;
+        DataRow DR;
 
-        public peliculaModel(string nombre, string categoria, string descripcion, string duracion, string imagen_nombre, byte[] foto= null)
+        public peliculaModel(string nombre = "", string categoria = "", string descripcion = "", string duracion = "", string imagen_nombre = "", byte[] foto= null)
         {
             this.nombre = nombre;
             this.categoria = categoria;
@@ -31,9 +34,7 @@ namespace proyecto_cine.model.pelicula
             this.foto = foto;
         }
 
-        public peliculaModel()
-        {
-        }
+        
 
         public void crearPelicula() {
             try
@@ -54,12 +55,13 @@ namespace proyecto_cine.model.pelicula
             }
 
         }
-        public void actualizarPelicula()
+        public void actualizarPelicula(int id)
         {
             try
             {
                 conexion.abrir();
-                string query = "UPDATE peliculas  SET nombre='" + nombre + "',categoria='" + categoria + "',descripcion='" + descripcion + "',duracion='" + duracion + "',imagen_nombre'" + imagen_nombre + "',imagen=@imagen);";
+                
+                string query = "UPDATE peliculas  SET nombre='" + nombre + "',categoria='" + categoria + "',descripcion='" + descripcion + "',duracion='" + duracion + "',imagen=@imagen) where id = "+id+";";
                 comando = new SqlCommand(query, conexion.conexion);
                 //comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("imagen", foto);
@@ -91,7 +93,7 @@ namespace proyecto_cine.model.pelicula
         public DataTable consultarPelicula()
         {
             conexion.abrir();
-            string query = "SELECT * FROM peliculas;";
+            string query = "SELECT id,nombre, categoria, descripcion, duracion FROM peliculas;";
             comando = new SqlCommand(query, conexion.conexion);
             SqlDataAdapter Adaptar = new SqlDataAdapter();
             Adaptar.SelectCommand = comando;
@@ -114,6 +116,27 @@ namespace proyecto_cine.model.pelicula
             return DS.Tables["tabla"];
         }
 
+
+
+
+        public void consultaImagen(PictureBox imagen)
+        {
+            conexion.abrir();
+            string query = "SELECT imagen FROM peliculas WHERE nombre='"+nombre+"';";
+            comando = new SqlCommand(query, conexion.conexion);
+            SqlDataAdapter Adaptar = new SqlDataAdapter();
+            Adaptar.SelectCommand = comando;
+            DS = new DataSet();
+            Adaptar.Fill(DS, "imagen");
+            byte[] datos = new byte[0];
+            DR = DS.Tables["imagen"].Rows[0];
+            datos = (byte[])DR["imagen"];
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(datos);
+            imagen.Image = System.Drawing.Bitmap.FromStream(ms);
+            conexion.cerra();
+            
+
+        }
 
     }
 }
