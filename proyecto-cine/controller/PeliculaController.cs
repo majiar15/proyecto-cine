@@ -64,6 +64,30 @@ namespace proyecto_cine.controller
                 err.Show();
             }
         }
+        public void confirmarEliminacion(int id)
+        {
+
+            new Confirmacion(formParent, id, "eliminarPelicula").Show();
+
+        }
+        public void eliminar(int id) {
+
+            peliculaModel modelo = new peliculaModel();
+            modelo.eliminarPelicula(id);
+            formParent.OpenFormInPanelCentral(new Peliculas(formParent));
+
+        }
+        public DataTable buscarPelicula(string buscar)
+        {
+
+            
+            peliculaModel modelo = new peliculaModel();
+
+
+            return modelo.buscar(buscar);
+
+        }
+
     }
 }
 

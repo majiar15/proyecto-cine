@@ -73,9 +73,20 @@ namespace proyecto_cine.model.pelicula
                 MessageBox.Show("No se inserto los datos" + e.ToString());
             }
         }
-        public void eliminarPelicula()
+        public void eliminarPelicula(int id)
         {
-
+            try
+            {
+                conexion.abrir();
+                string query = "DELETE FROM peliculas WHERE id='" + id + "';";
+                comando = new SqlCommand(query, conexion.conexion);
+                comando.ExecuteNonQuery();
+                conexion.cerra();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se elimino la pelicula" + e.ToString());
+            }
         }
         public DataTable consultarPelicula()
         {
@@ -89,6 +100,18 @@ namespace proyecto_cine.model.pelicula
             conexion.cerra();
             return DS.Tables["tabla"];
 
+        }
+        public DataTable buscar(string buscar)
+        {
+            
+            string query = "select * from peliculas where nombre like '%" + buscar + "%'";
+            comando = new SqlCommand(query, conexion.conexion);
+            SqlDataAdapter Adaptar = new SqlDataAdapter();
+            Adaptar.SelectCommand = comando;
+            DS = new DataSet();
+            Adaptar.Fill(DS, "tabla");
+            conexion.cerra();
+            return DS.Tables["tabla"];
         }
 
 

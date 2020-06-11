@@ -36,8 +36,12 @@ namespace proyecto_cine
                 formParent.OpenFormInPanelCentral(new Clientes(formParent));
                 this.Close();
             }
-            else
+            else if (opcion == "eliminarPelicula")
             {
+                PeliculaController controller = new PeliculaController(formParent);
+                controller.eliminar(id);
+                formParent.OpenFormInPanelCentral(new Peliculas(formParent));
+                this.Close();
             }
             
 

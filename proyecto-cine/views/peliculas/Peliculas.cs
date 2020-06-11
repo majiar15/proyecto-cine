@@ -45,6 +45,45 @@ namespace proyecto_cine
             this.Close();
         }
 
-        
+        private void eliminar_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            if (dataGridView23.SelectedRows.Count > 0)
+            {
+
+                try
+                {
+                    id = int.Parse(dataGridView23.CurrentRow.Cells["id"].Value.ToString());
+                    PeliculaController controller = new PeliculaController(formParent);
+                    controller.confirmarEliminacion(id);
+
+                }
+                catch
+                {
+                    new ErrorAlGuardar("eliminar").Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
+
+        }
+
+
+
+        private void searchMenu_OnTextChange(object sender, EventArgs e)
+        {
+            PeliculaController controlardor = new PeliculaController(formParent);
+            if (searchMenu.text != "")
+            {
+                dataGridView23.DataSource = controlardor.buscarPelicula(searchMenu.text);
+            }
+            else
+            {
+                dataGridView23.DataSource = controlardor.mostrarTabla();
+            }
+        }
     }
 }

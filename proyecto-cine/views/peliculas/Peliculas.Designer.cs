@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Peliculas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.Crear = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Modificar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.eliminar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuTextboxBuscarIdCaje = new Bunifu.Framework.UI.BunifuTextbox();
+            this.searchMenu = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridView23 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             this.SuspendLayout();
@@ -127,22 +127,24 @@
             this.eliminar.Size = new System.Drawing.Size(156, 43);
             this.eliminar.TabIndex = 5;
             this.eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
             // 
-            // bunifuTextboxBuscarIdCaje
+            // searchMenu
             // 
-            this.bunifuTextboxBuscarIdCaje.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.bunifuTextboxBuscarIdCaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.bunifuTextboxBuscarIdCaje.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.BackgroundImage")));
-            this.bunifuTextboxBuscarIdCaje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextboxBuscarIdCaje.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextboxBuscarIdCaje.ForeColor = System.Drawing.Color.Black;
-            this.bunifuTextboxBuscarIdCaje.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxBuscarIdCaje.Icon")));
-            this.bunifuTextboxBuscarIdCaje.Location = new System.Drawing.Point(506, 84);
-            this.bunifuTextboxBuscarIdCaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuTextboxBuscarIdCaje.Name = "bunifuTextboxBuscarIdCaje";
-            this.bunifuTextboxBuscarIdCaje.Size = new System.Drawing.Size(230, 45);
-            this.bunifuTextboxBuscarIdCaje.TabIndex = 53;
-            this.bunifuTextboxBuscarIdCaje.text = "";
+            this.searchMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.searchMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.searchMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchMenu.BackgroundImage")));
+            this.searchMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.searchMenu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchMenu.ForeColor = System.Drawing.Color.Black;
+            this.searchMenu.Icon = ((System.Drawing.Image)(resources.GetObject("searchMenu.Icon")));
+            this.searchMenu.Location = new System.Drawing.Point(506, 84);
+            this.searchMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchMenu.Name = "searchMenu";
+            this.searchMenu.Size = new System.Drawing.Size(230, 45);
+            this.searchMenu.TabIndex = 53;
+            this.searchMenu.text = "";
+            this.searchMenu.OnTextChange += new System.EventHandler(this.searchMenu_OnTextChange);
             // 
             // dataGridView23
             // 
@@ -151,36 +153,36 @@
             this.dataGridView23.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.dataGridView23.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView23.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Arial Narrow", 13.25F);
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView23.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 13.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView23.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView23.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView23.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView23.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView23.EnableHeadersVisualStyles = false;
             this.dataGridView23.GridColor = System.Drawing.Color.Black;
             this.dataGridView23.Location = new System.Drawing.Point(12, 209);
             this.dataGridView23.Name = "dataGridView23";
             this.dataGridView23.ReadOnly = true;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView23.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView23.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView23.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView23.Size = new System.Drawing.Size(566, 363);
             this.dataGridView23.TabIndex = 52;
@@ -191,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(749, 535);
-            this.Controls.Add(this.bunifuTextboxBuscarIdCaje);
+            this.Controls.Add(this.searchMenu);
             this.Controls.Add(this.dataGridView23);
             this.Controls.Add(this.eliminar);
             this.Controls.Add(this.Modificar);
@@ -214,7 +216,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 Crear;
         private Bunifu.Framework.UI.BunifuThinButton2 Modificar;
         private Bunifu.Framework.UI.BunifuThinButton2 eliminar;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextboxBuscarIdCaje;
+        private Bunifu.Framework.UI.BunifuTextbox searchMenu;
         public System.Windows.Forms.DataGridView dataGridView23;
     }
 }
