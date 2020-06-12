@@ -51,7 +51,7 @@ namespace proyecto_cine
             {
                 conexiondb conexion = new conexiondb();
                 conexion.abrir();
-                SqlCommand cmd = new SqlCommand(string.Format("select * from logueos where empleado_id like '%{0}%'", buscadorLogueos.text), conexion.conexion);
+                SqlCommand cmd = new SqlCommand(string.Format("select * from logueos where empleado_id like '%{0}%' order by id desc", buscadorLogueos.text), conexion.conexion);
                 SqlDataAdapter ad = new SqlDataAdapter(cmd);
                 ds = new DataSet();
                 ad.Fill(ds, "tabla");
