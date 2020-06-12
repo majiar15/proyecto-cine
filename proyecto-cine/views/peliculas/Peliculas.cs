@@ -49,7 +49,7 @@ namespace proyecto_cine
                 
                 PeliculaController pelicula = new PeliculaController(formParent);
                 form.id = id;
-                //byte[] foto = (byte[])dataGridView23.CurrentRow.Cells["imagen"];
+                
                 this.formParent.OpenFormInPanelCentral(form);
                 this.Close();
             }

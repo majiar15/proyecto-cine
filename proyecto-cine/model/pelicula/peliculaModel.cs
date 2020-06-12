@@ -34,8 +34,22 @@ namespace proyecto_cine.model.pelicula
             this.foto = foto;
         }
 
-        
 
+        public string[] getPeliculaPorId(int id) {
+            this.id = id;
+            conexion.abrir();
+            string query = "SELECT * FROM peliculas WHERE id =" + id;
+            comando = new SqlCommand(query, conexion.conexion);
+            SqlDataReader lector = comando.ExecuteReader();
+            string[] result = new string[6];
+            Console.WriteLine(lector.GetValue(0).ToString());
+            for (int i = 0; i < 7; i++) {
+                result[i] = lector.GetValue(i).ToString();
+            }
+            
+            conexion.cerra();
+            return result;
+        }
         public void crearPelicula() {
             try
             {

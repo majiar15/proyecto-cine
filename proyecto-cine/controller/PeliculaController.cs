@@ -18,6 +18,11 @@ namespace proyecto_cine.controller
             this.formParent = formParent;
         }
 
+        public string[] getPeliculaPorId(int id ) {
+            peliculaModel model = new peliculaModel();
+            return model.getPeliculaPorId(id);
+        }
+
         public void crear(string nombre, string categoria, string descripcion, string duracion, string imagen_nombre, byte[] foto)
         {
             //validamos si se los datos son correctos

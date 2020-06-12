@@ -23,6 +23,7 @@ namespace proyecto_cine
         public string categoria;
         public string descripcion;
         public string imaage;
+        string[] sql;
         public ModificarPelicula(homeCajero parent, string opcion)
         {
             this.formParent = parent;
@@ -86,7 +87,16 @@ namespace proyecto_cine
         }
         private void ModificarPelicula_Load(object sender, EventArgs e)
         {
+            if(opcion == "modificar")
+            {
+                PeliculaController controller = new PeliculaController(formParent);
+                sql = controller.getPeliculaPorId(int.Parse(id));
 
+                NameTextBox.Text  = sql[1];
+                DuracionTextBox.Text = sql[2];
+                CategoriaTextBox.Text = sql[3];
+                DescripcionTextBox.Text = sql[4];
+            }
         }
     }
 }
