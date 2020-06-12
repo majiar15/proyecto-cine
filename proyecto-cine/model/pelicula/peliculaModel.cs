@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,20 +37,27 @@ namespace proyecto_cine.model.pelicula
         }
 
 
-        public string[] getPeliculaPorId(int id) {
+        public Image getPeliculaPorId(int id) {
             this.id = id;
             conexion.abrir();
             string query = "SELECT * FROM peliculas WHERE id =" + id;
             comando = new SqlCommand(query, conexion.conexion);
-            SqlDataReader lector = comando.ExecuteReader();
-            string[] result = new string[6];
-            Console.WriteLine(lector.GetValue(0).ToString());
-            for (int i = 0; i < 7; i++) {
-                result[i] = lector.GetValue(i).ToString();
-            }
-            
-            conexion.cerra();
-            return result;
+            SqlDataAdapter dp = new SqlDataAdapter(comando);
+            DataSet ds = new DataSet("peliculas");
+            byte[] misDatos = new byte[0];
+            dp.Fill(ds, "peliculas");
+            DataRow myRow = ds.Tables["peliculas"].Rows[0];
+            misDatos = (byte[])myRow["imagen"];
+            MemoryStream ms = new MemoryStream(misDatos);
+            //SqlDataReader lector = comando.ExecuteReader();
+            //string[] result = new string[6];
+            //Console.WriteLine(lector.GetValue(0).ToString());
+            //for (int i = 0; i < 7; i++) {
+            //    result[i] = lector.GetValue(i).ToString();
+            //}
+
+            //conexion.cerra();
+            return Image.FromStream(ms);
         }
         public void crearPelicula() {
             try

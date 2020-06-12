@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace proyecto_cine.controller
             this.formParent = formParent;
         }
 
-        public string[] getPeliculaPorId(int id ) {
+        public Image getPeliculaPorId(int id ) {
             peliculaModel model = new peliculaModel();
             return model.getPeliculaPorId(id);
         }
