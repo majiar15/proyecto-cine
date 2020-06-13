@@ -49,7 +49,7 @@ namespace proyecto_cine
                 
                 PeliculaController pelicula = new PeliculaController(formParent);
                 form.id = id;
-                
+
                 this.formParent.OpenFormInPanelCentral(form);
                 this.Close();
             }
@@ -105,7 +105,16 @@ namespace proyecto_cine
             PeliculaController controlardor = new PeliculaController(formParent);
             if (searchMenu.text != "")
             {
-                dataGridView23.DataSource = controlardor.buscarPelicula(searchMenu.text);
+                try
+                {
+                    dataGridView23.DataSource = controlardor.buscarPelicula(searchMenu.text);
+                }
+                catch
+                {
+                    searchMenu.text = "";
+                    MessageBox.Show("INGRESE SOLO EL ID DE LA PELICULA");
+                }
+  
             }
             else
             {

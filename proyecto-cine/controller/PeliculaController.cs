@@ -24,13 +24,13 @@ namespace proyecto_cine.controller
             return model.getPeliculaPorId(id);
         }
 
-        public void crear(string nombre, string categoria, string descripcion, string duracion, string imagen_nombre, byte[] foto)
+        public void crear(string nombre, string categoria, string descripcion, string duracion, byte[] foto)
         {
             //validamos si se los datos son correctos
-            if (nombre.Length != 0 && categoria.Length != 0 && descripcion.Length != 0 && duracion.Length != 0 && imagen_nombre.Length != 0 && foto.Length != 0)
+            if (nombre.Length != 0 && categoria.Length != 0 && descripcion.Length != 0 && duracion.Length != 0 && foto.Length != 0)
             {
                 //instanciamos modelo con datos del textBox
-                peliculaModel modelo = new peliculaModel(nombre, categoria, descripcion, duracion, imagen_nombre, foto);
+                peliculaModel modelo = new peliculaModel(nombre, categoria, descripcion, duracion, foto);
 
                 modelo.crearPelicula();
 
@@ -50,17 +50,17 @@ namespace proyecto_cine.controller
             peliculaModel modelo = new peliculaModel();
             return modelo.consultarPelicula();
         }
-        public void modificar(string id,string nombre, string categoria, string descripcion, string duracion)
+        public void modificar(string id,string nombre, string categoria, string descripcion, string duracion, byte[] foto)
         {
             //validamos si se los datos son correctos
-            if (nombre.Length != 0 && nombre.Length != 0 && categoria.Length != 0 && descripcion.Length != 0 && duracion.Length != 0)
+            if (nombre.Length != 0 && nombre.Length != 0 && categoria.Length != 0 && descripcion.Length != 0 && duracion.Length != 0 && foto.Length != 0)
             {
                 //instanciamos modelo con datos del textBox
-                peliculaModel modelo = new peliculaModel(nombre, categoria, descripcion, duracion);
-
+                peliculaModel modelo = new peliculaModel(nombre, categoria, descripcion, duracion, foto);
+                
                 modelo.actualizarPelicula(int.Parse(id));
 
-                GuardadoConExito succes = new GuardadoConExito(formParent, "pelicula");
+                ModificacionExitosa succes = new ModificacionExitosa(formParent,"modificarPelicula");
                 succes.Show();
 
             }
@@ -89,8 +89,8 @@ namespace proyecto_cine.controller
             
             peliculaModel modelo = new peliculaModel();
 
-
-            return modelo.buscar(buscar);
+            
+            return modelo.buscar(int.Parse(buscar));
 
         }
 

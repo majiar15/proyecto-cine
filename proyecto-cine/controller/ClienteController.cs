@@ -44,7 +44,7 @@ namespace proyecto_cine.controller
                 ClienteModel modelo = new ClienteModel(id, nombre, apellidos, email, direccion, descueento);
                 modelo.actualizarCliente();
 
-                ModificacionExitosa succes = new ModificacionExitosa(formParent);
+                ModificacionExitosa succes = new ModificacionExitosa(formParent,"modificarCliente");
                 succes.Show();
 
             }

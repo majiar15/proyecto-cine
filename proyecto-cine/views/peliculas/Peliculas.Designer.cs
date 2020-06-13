@@ -172,7 +172,7 @@
             this.dataGridView23.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView23.EnableHeadersVisualStyles = false;
             this.dataGridView23.GridColor = System.Drawing.Color.Black;
-            this.dataGridView23.Location = new System.Drawing.Point(12, 209);
+            this.dataGridView23.Location = new System.Drawing.Point(12, 160);
             this.dataGridView23.Name = "dataGridView23";
             this.dataGridView23.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

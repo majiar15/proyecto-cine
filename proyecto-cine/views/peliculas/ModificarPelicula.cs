@@ -22,7 +22,7 @@ namespace proyecto_cine
         public string duracion;
         public string categoria;
         public string descripcion;
-        public string imaage;
+        
         string[] sql;
         public ModificarPelicula(homeCajero parent, string opcion)
         {
@@ -30,6 +30,10 @@ namespace proyecto_cine
             this.opcion = opcion;
 
             InitializeComponent();
+            if(opcion == "modificar")
+            {
+                labelTitulo.Text = "MODIFICAR PELICULAS";
+            }
         }
 
         private void examinar_Click(object sender, EventArgs e)
@@ -39,7 +43,7 @@ namespace proyecto_cine
             open.Title = "Seleccionar imagen";
             open.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
             if (open.ShowDialog() == DialogResult.OK) {
-                ImageNameTextBox.Text = open.FileName;
+                
                 try
                 {
                     pictureBox.Image = Image.FromFile(open.FileName);
@@ -63,7 +67,7 @@ namespace proyecto_cine
              duracion = DuracionTextBox.Text;
              categoria = CategoriaTextBox.Text;
              descripcion = DescripcionTextBox.Text;
-             imaage = ImageNameTextBox.Text;
+             
             
 
 
@@ -73,17 +77,20 @@ namespace proyecto_cine
                 byte[] foto = ms.ToArray();
 
                 PeliculaController controller = new PeliculaController(formParent);
-                controller.crear(nombre,categoria,descripcion,duracion, imaage,foto);
+                controller.crear(nombre,categoria,descripcion,duracion,foto);
 
             }
             else
             {
+                MemoryStream ms = new MemoryStream();
+                pictureBox.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] foto = ms.ToArray();
                 PeliculaController controller = new PeliculaController(formParent);
-                controller.modificar(id,nombre, categoria, descripcion, duracion);
+                controller.modificar(id,nombre, categoria, descripcion, duracion, foto);
             }
 
-            formParent.OpenFormInPanelCentral(new Peliculas(formParent));                      
-            this.Close();
+            //formParent.OpenFormInPanelCentral(new Peliculas(formParent));                      
+            //this.Close();
         }
         private void ModificarPelicula_Load(object sender, EventArgs e)
         {
@@ -97,7 +104,14 @@ namespace proyecto_cine
                 //CategoriaTextBox.Text = sql[3];
                 //DescripcionTextBox.Text = sql[4];
                 pictureBox.Image = controller.getPeliculaPorId(int.Parse(id));
+
             }
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            this.formParent.OpenFormInPanelCentral(new Peliculas(formParent));
+            this.Close();
         }
     }
 }

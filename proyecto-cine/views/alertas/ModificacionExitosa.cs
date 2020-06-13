@@ -13,8 +13,10 @@ namespace proyecto_cine
     public partial class ModificacionExitosa : Form
     {
         homeCajero parent;
-        public ModificacionExitosa(homeCajero parent)
+        public string opcion;
+        public ModificacionExitosa(homeCajero parent, string opcion)
         {
+            this.opcion = opcion;
             this.parent = parent;
             InitializeComponent();
         }
@@ -27,8 +29,22 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            parent.OpenFormInPanelCentral(new Clientes(parent));
-            this.Close();
+            switch (opcion)
+            {
+                case "modificarCliente":
+                    parent.OpenFormInPanelCentral(new Clientes(parent));
+                    this.Close();
+                    break;
+                case "modificarPelicula":
+                    parent.OpenFormInPanelCentral(new Peliculas(parent));
+                    this.Close();
+                    break;
+                default:
+                    parent.OpenFormInPanelCentral(new homeCajero());
+                    break;
+
+            }
+            
         }
     }
 }
