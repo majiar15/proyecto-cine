@@ -36,5 +36,10 @@ namespace proyecto_cine
         {
 
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
