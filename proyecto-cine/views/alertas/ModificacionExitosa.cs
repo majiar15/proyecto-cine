@@ -40,12 +40,12 @@ namespace proyecto_cine
                     parent.OpenFormInPanelCentral(new Peliculas(parent));
                     this.Close();
                     break;
-                case "cajeros":
+                case "modificarCajero":
                     parent.OpenFormInPanelCentral(new Cajeros(parent));
-                this.Close();
-                break;
+                    this.Close();
+                    break;
                 default:
-                    parent.OpenFormInPanelCentral(new homeCajero());
+                    MessageBox.Show("Error");
                     break;
 
             }

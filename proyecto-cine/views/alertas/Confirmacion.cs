@@ -41,6 +41,7 @@ namespace proyecto_cine
                 PeliculaController controller = new PeliculaController(formParent);
                 controller.eliminar(id);
                 formParent.OpenFormInPanelCentral(new Peliculas(formParent));
+                this.Close();
             }
             else if (opcion == "eliminarCajero")
             {

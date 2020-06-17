@@ -25,7 +25,7 @@ namespace proyecto_cine
         {
             if (option == "cajero")
             {
-                this.Parent.OpenFormInPanelCentral(new Cajeros(this.Parent));
+                this.Parent.OpenFormInPanelCentral(new Cajeros(Parent));
             }
             else if (option == "cliente") {
                 this.Parent.OpenFormInPanelCentral(new Clientes(this.Parent));

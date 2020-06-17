@@ -53,7 +53,7 @@ namespace proyecto_cine.controller
             CajeroModel cajero = new CajeroModel(id, cargo, nombre, apellido, telefono, email, contraseña);
             cajero.actualizarCajero();
 
-            ModificacionExitosa modificar = new ModificacionExitosa(formParent, "Cajeros");
+            ModificacionExitosa modificar = new ModificacionExitosa(formParent, "modificarCajero");
             modificar.Show();
 
         }
