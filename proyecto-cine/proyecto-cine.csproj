@@ -177,6 +177,12 @@
     <Compile Include="views\peliculas\ModificarPelicula.Designer.cs">
       <DependentUpon>ModificarPelicula.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\ventas y reservas\Funciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ventas y reservas\Funciones.Designer.cs">
+      <DependentUpon>Funciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\ventas y reservas\NroBoletas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\peliculas\ModificarPelicula.resx">
       <DependentUpon>ModificarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ventas y reservas\Funciones.resx">
+      <DependentUpon>Funciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\ventas y reservas\NroBoletas.resx">
       <DependentUpon>NroBoletas.cs</DependentUpon>
@@ -460,6 +469,8 @@
   <ItemGroup>
     <None Include="Resources\log1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Silla negra.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

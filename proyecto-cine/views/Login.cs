@@ -98,6 +98,7 @@ namespace proyecto_cine
         private void loginClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void LoginMinim_Click(object sender, EventArgs e)
@@ -113,10 +114,43 @@ namespace proyecto_cine
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            homeCajero home = new homeCajero();
-            this.Hide();
-            home.Show();
+            //if(userLoginTextBox.Text != "USUARIO")
+            //{
+            VerificarLog();
+            //}
 
+
+        }
+
+        private void VerificarLog()
+        {
+            //try
+            //{
+            //conexiondb conexion = new conexiondb();
+            //conexion.abrir();
+            //SqlCommand cmd = new SqlCommand("select id, contraseña from empleados where id = '" + userLoginTextBox.Text + "' and contraseña = '" + passwordLoginTextBox.Text + "'", conexion.conexion);
+            //SqlDataReader dr = cmd.ExecuteReader();
+            //    if (dr.Read())
+                //{
+                    homeCajero home = new homeCajero();
+                    this.Hide();
+                    home.Show();
+                    //RegistroLog();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Usuario incorrecto");
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e);
+            //}
+
+        }
+
+        public void RegistroLog()
+        {
             conexiondb conexion = new conexiondb();
             SqlCommand cmd;
             DateTime fecha = DateTime.Today;

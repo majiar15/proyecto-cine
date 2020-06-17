@@ -152,3 +152,4 @@ C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cin
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cine.pdb
 C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmacion.resources
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmacion.resources
+C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.ventas_y_reservas.Funciones.resources
