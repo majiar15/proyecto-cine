@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_cine.views.ventas_y_reservas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,8 +22,7 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            NroBoletas nBoletas = new NroBoletas(FormParent);
-            nBoletas.Show();
+            FormParent.OpenFormInPanelCentral(new Funciones(FormParent, 1));
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)

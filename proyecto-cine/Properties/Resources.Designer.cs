@@ -513,6 +513,16 @@ namespace proyecto_cine.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Silla_negra {
+            get {
+                object obj = ResourceManager.GetObject("Silla negra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Silla_roja {
             get {
                 object obj = ResourceManager.GetObject("Silla roja", resourceCulture);

@@ -17,7 +17,7 @@ namespace proyecto_cine
         homeCajero formParent;
         public int id;
         public string opcion;
-        public Confirmacion(homeCajero formParent, int id,string opcion)
+        public Confirmacion(homeCajero formParent, int id ,string opcion)
         {
             this.formParent = formParent;
             this.id = id;
@@ -41,6 +41,12 @@ namespace proyecto_cine
                 PeliculaController controller = new PeliculaController(formParent);
                 controller.eliminar(id);
                 formParent.OpenFormInPanelCentral(new Peliculas(formParent));
+            }
+            else if (opcion == "eliminarCajero")
+            {
+                CajeroController controller = new CajeroController(formParent);
+                controller.EliminarCajero(id);
+                formParent.OpenFormInPanelCentral(new Cajeros(formParent));
                 this.Close();
             }
             

@@ -16,6 +16,8 @@ namespace proyecto_cine
       
 
         homeCajero formParent;
+        public int id { get; set; }
+
         public Cajeros(homeCajero formParent)
         {
             this.formParent = formParent;
@@ -27,7 +29,7 @@ namespace proyecto_cine
 
         private void Cajeros_Load(object sender, EventArgs e)
         {
-            CajeroController cajero = new CajeroController();
+            CajeroController cajero = new CajeroController(formParent);
             dataGridView1.DataSource = cajero.consultarCajero();
         }
 
@@ -42,7 +44,7 @@ namespace proyecto_cine
         /// BUSCAR CAJERO
         private void bunifuTextboxBuscarIdCaje_OnTextChange(object sender, EventArgs e)
         {
-            CajeroController cajeroBus = new CajeroController();
+            CajeroController cajeroBus = new CajeroController(formParent);
             if (bunifuTextboxBuscarIdCaje.text != "")
             {
                 dataGridView1.DataSource = cajeroBus.BuscarCajero(bunifuTextboxBuscarIdCaje.text);
@@ -56,16 +58,54 @@ namespace proyecto_cine
         // ELIMINAR CAJERO
         private void btnEliminarCajero_Click(object sender, EventArgs e)
         {
-            CajeroController eliminar = new CajeroController();
-            //Confirmacion confirmar = new Confirmacion(this.formParent);
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
 
-            eliminar.EliminarCajero((dataGridView1.CurrentRow.Cells["id"].Value.ToString()));
+                try
+                {
+                    id = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                    CajeroController controller = new CajeroController(formParent);
+                    controller.confirmarEliminacion(id);
+
+                }
+                catch
+                {
+                    new ErrorAlGuardar("eliminar").Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
 
         }
 
         private void bunifuThinButton24_Click_1(object sender, EventArgs e)
         {
+            CrearCajeros modificar = new CrearCajeros(this.formParent);
+            modificar.lbTitle.Text = "MODIFICAR CAJEROS";
+            modificar.lbTitle.Location = new Point(182, 9);
 
+            modificar.tbNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+            modificar.tbApellidos.Text = dataGridView1.CurrentRow.Cells["Apellidos"].Value.ToString();
+            modificar.tbEmail.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
+            modificar.tbTelefono.Text = dataGridView1.CurrentRow.Cells["telefono"].Value.ToString();
+            modificar.tbContraseña.Text = dataGridView1.CurrentRow.Cells["contraseña"].Value.ToString();
+            modificar.tbCedula.Text = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+            int cargo = int.Parse(dataGridView1.CurrentRow.Cells["cargo_id"].Value.ToString());
+            if (cargo == 1)
+            {
+                modificar.cbCargo.selectedIndex = 1;
+            }
+            else if (cargo == 2)
+            {
+                modificar.cbCargo.selectedIndex = 2;
+            }
+            modificar.btUpdate.Visible = true;
+            modificar.enviar.Visible = false;
+
+            this.formParent.OpenFormInPanelCentral(modificar);
+            this.Close();
         }
     }
 }

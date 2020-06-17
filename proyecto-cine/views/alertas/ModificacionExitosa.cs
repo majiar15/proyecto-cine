@@ -18,6 +18,7 @@ namespace proyecto_cine
         {
             this.opcion = opcion;
             this.parent = parent;
+            this.opcion = opcion;
             InitializeComponent();
         }
 
@@ -39,6 +40,10 @@ namespace proyecto_cine
                     parent.OpenFormInPanelCentral(new Peliculas(parent));
                     this.Close();
                     break;
+                case "cajeros":
+                    parent.OpenFormInPanelCentral(new Cajeros(parent));
+                this.Close();
+                break;
                 default:
                     parent.OpenFormInPanelCentral(new homeCajero());
                     break;

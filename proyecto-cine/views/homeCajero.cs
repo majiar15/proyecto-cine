@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace proyecto_cine
 {
@@ -52,6 +53,26 @@ namespace proyecto_cine
         private void closeAppMenu_Click(object sender, EventArgs e)
         {
             this.Close();
+
+            conexiondb conexion = new conexiondb();
+            SqlCommand cmd;
+            string horaSalida = DateTime.Now.ToString("HH:mm:ss");
+
+
+            try
+            {
+                conexion.abrir();
+                cmd = new SqlCommand("update logueos set hora_salida = '" + horaSalida + "' where id = (select top 1 id from logueos order by id desc)", conexion.conexion);
+                cmd.ExecuteNonQuery();
+                conexion.cerra();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+            }
+
             Application.Exit();
         }
 
@@ -97,7 +118,28 @@ namespace proyecto_cine
 
         private void logOutMenu_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login log = new Login();
+            this.Hide();
+            log.Show();
+
+            conexiondb conexion = new conexiondb();
+            SqlCommand cmd;
+            string horaSalida = DateTime.Now.ToString("HH:mm:ss");
+            
+
+            try
+            {
+                conexion.abrir();
+                cmd = new SqlCommand("update logueos set hora_salida = '" + horaSalida + "' where id = (select top 1 id from logueos order by id desc)", conexion.conexion);
+                cmd.ExecuteNonQuery();
+                conexion.cerra();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+            }
         }
 
         private void peliculasButtonMenu_Click(object sender, EventArgs e)

@@ -50,7 +50,7 @@ namespace proyecto_cine.Model.usuario
         }
 
 
-        public bool eliminarCajero(string id)
+        public bool eliminarCajero(int id)
         {
             try
             {
@@ -62,9 +62,10 @@ namespace proyecto_cine.Model.usuario
                 if (filasafectadas > 0) return true;
                 else return false;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
+                System.Windows.Forms.MessageBox.Show(e.ToString());
             }
         }
 
