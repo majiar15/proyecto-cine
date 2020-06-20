@@ -119,7 +119,6 @@ namespace proyecto_cine
             VerificarLog();
             //}
 
-
         }
 
         private void VerificarLog()

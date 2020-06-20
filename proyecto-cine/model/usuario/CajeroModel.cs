@@ -94,7 +94,7 @@ namespace proyecto_cine.Model.usuario
             try
             {
                 conexion.abrir();
-                cmd = new SqlCommand("select * from empleados", conexion.conexion);
+                cmd = new SqlCommand("select e.id, c.cargo, e.nombre, e.apellidos, e.telefono, e.email, e.contraseña from empleados e, cargo c where e.cargo_id = c.id", conexion.conexion);
                 SqlDataAdapter ad = new SqlDataAdapter(cmd);
                 ds = new DataSet();
                 ad.Fill(ds, "tabla");

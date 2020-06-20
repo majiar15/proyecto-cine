@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="controller\CajeroController.cs" />
     <Compile Include="controller\ClienteController.cs" />
+    <Compile Include="CrearFuncion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearFuncion.Designer.cs">
+      <DependentUpon>CrearFuncion.cs</DependentUpon>
+    </Compile>
     <Compile Include="model\usuario\AdministradorModel.cs" />
     <Compile Include="model\usuario\CajeroModel.cs" />
     <Compile Include="model\usuario\ClienteModel.cs" />
@@ -244,6 +250,9 @@
     <Compile Include="views\ventas y reservas\SeleccionarSillas.Designer.cs">
       <DependentUpon>SeleccionarSillas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrearFuncion.resx">
+      <DependentUpon>CrearFuncion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\alertas\AlertaCCLog.resx">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </EmbeddedResource>

@@ -198,6 +198,7 @@
             this.pictureBox128 = new System.Windows.Forms.PictureBox();
             this.pictureBox129 = new System.Windows.Forms.PictureBox();
             this.pictureBox130 = new System.Windows.Forms.PictureBox();
+            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -720,7 +721,7 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(649, 490);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(649, 455);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(86, 37);
@@ -824,6 +825,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 173;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox7
             // 
@@ -835,6 +837,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 172;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox8
             // 
@@ -846,6 +849,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 171;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox9
             // 
@@ -857,6 +861,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 170;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox10
             // 
@@ -868,6 +873,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 169;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox11
             // 
@@ -1539,28 +1545,31 @@
             this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox66.TabIndex = 233;
             this.pictureBox66.TabStop = false;
+            this.pictureBox66.Click += new System.EventHandler(this.pictureBox66_Click);
             // 
             // pictureBox67
             // 
             this.pictureBox67.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox67.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox67.Location = new System.Drawing.Point(491, 30);
+            this.pictureBox67.Location = new System.Drawing.Point(527, 30);
             this.pictureBox67.Name = "pictureBox67";
             this.pictureBox67.Size = new System.Drawing.Size(26, 30);
             this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox67.TabIndex = 232;
             this.pictureBox67.TabStop = false;
+            this.pictureBox67.Click += new System.EventHandler(this.pictureBox67_Click);
             // 
             // pictureBox68
             // 
             this.pictureBox68.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox68.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox68.Location = new System.Drawing.Point(527, 30);
+            this.pictureBox68.Location = new System.Drawing.Point(491, 30);
             this.pictureBox68.Name = "pictureBox68";
             this.pictureBox68.Size = new System.Drawing.Size(26, 30);
             this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox68.TabIndex = 231;
             this.pictureBox68.TabStop = false;
+            this.pictureBox68.Click += new System.EventHandler(this.pictureBox68_Click);
             // 
             // pictureBox69
             // 
@@ -1572,6 +1581,7 @@
             this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox69.TabIndex = 230;
             this.pictureBox69.TabStop = false;
+            this.pictureBox69.Click += new System.EventHandler(this.pictureBox69_Click);
             // 
             // pictureBox70
             // 
@@ -1583,6 +1593,7 @@
             this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox70.TabIndex = 229;
             this.pictureBox70.TabStop = false;
+            this.pictureBox70.Click += new System.EventHandler(this.pictureBox70_Click);
             // 
             // pictureBox71
             // 
@@ -1594,28 +1605,31 @@
             this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox71.TabIndex = 238;
             this.pictureBox71.TabStop = false;
+            this.pictureBox71.Click += new System.EventHandler(this.pictureBox71_Click);
             // 
             // pictureBox72
             // 
             this.pictureBox72.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox72.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox72.Location = new System.Drawing.Point(491, 66);
+            this.pictureBox72.Location = new System.Drawing.Point(527, 66);
             this.pictureBox72.Name = "pictureBox72";
             this.pictureBox72.Size = new System.Drawing.Size(26, 30);
             this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox72.TabIndex = 237;
             this.pictureBox72.TabStop = false;
+            this.pictureBox72.Click += new System.EventHandler(this.pictureBox72_Click);
             // 
             // pictureBox73
             // 
             this.pictureBox73.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox73.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox73.Location = new System.Drawing.Point(527, 66);
+            this.pictureBox73.Location = new System.Drawing.Point(491, 66);
             this.pictureBox73.Name = "pictureBox73";
             this.pictureBox73.Size = new System.Drawing.Size(26, 30);
             this.pictureBox73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox73.TabIndex = 236;
             this.pictureBox73.TabStop = false;
+            this.pictureBox73.Click += new System.EventHandler(this.pictureBox73_Click);
             // 
             // pictureBox74
             // 
@@ -1627,6 +1641,7 @@
             this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox74.TabIndex = 235;
             this.pictureBox74.TabStop = false;
+            this.pictureBox74.Click += new System.EventHandler(this.pictureBox74_Click);
             // 
             // pictureBox75
             // 
@@ -1638,6 +1653,7 @@
             this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox75.TabIndex = 234;
             this.pictureBox75.TabStop = false;
+            this.pictureBox75.Click += new System.EventHandler(this.pictureBox75_Click);
             // 
             // pictureBox76
             // 
@@ -1649,28 +1665,31 @@
             this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox76.TabIndex = 243;
             this.pictureBox76.TabStop = false;
+            this.pictureBox76.Click += new System.EventHandler(this.pictureBox76_Click);
             // 
             // pictureBox77
             // 
             this.pictureBox77.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox77.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox77.Location = new System.Drawing.Point(491, 102);
+            this.pictureBox77.Location = new System.Drawing.Point(527, 102);
             this.pictureBox77.Name = "pictureBox77";
             this.pictureBox77.Size = new System.Drawing.Size(26, 30);
             this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox77.TabIndex = 242;
             this.pictureBox77.TabStop = false;
+            this.pictureBox77.Click += new System.EventHandler(this.pictureBox77_Click);
             // 
             // pictureBox78
             // 
             this.pictureBox78.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox78.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox78.Location = new System.Drawing.Point(527, 102);
+            this.pictureBox78.Location = new System.Drawing.Point(491, 102);
             this.pictureBox78.Name = "pictureBox78";
             this.pictureBox78.Size = new System.Drawing.Size(26, 30);
             this.pictureBox78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox78.TabIndex = 241;
             this.pictureBox78.TabStop = false;
+            this.pictureBox78.Click += new System.EventHandler(this.pictureBox78_Click);
             // 
             // pictureBox79
             // 
@@ -1682,6 +1701,7 @@
             this.pictureBox79.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox79.TabIndex = 240;
             this.pictureBox79.TabStop = false;
+            this.pictureBox79.Click += new System.EventHandler(this.pictureBox79_Click);
             // 
             // pictureBox80
             // 
@@ -1693,6 +1713,7 @@
             this.pictureBox80.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox80.TabIndex = 239;
             this.pictureBox80.TabStop = false;
+            this.pictureBox80.Click += new System.EventHandler(this.pictureBox80_Click);
             // 
             // pictureBox81
             // 
@@ -1704,28 +1725,31 @@
             this.pictureBox81.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox81.TabIndex = 248;
             this.pictureBox81.TabStop = false;
+            this.pictureBox81.Click += new System.EventHandler(this.pictureBox81_Click);
             // 
             // pictureBox82
             // 
             this.pictureBox82.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox82.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox82.Location = new System.Drawing.Point(491, 138);
+            this.pictureBox82.Location = new System.Drawing.Point(527, 138);
             this.pictureBox82.Name = "pictureBox82";
             this.pictureBox82.Size = new System.Drawing.Size(26, 30);
             this.pictureBox82.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox82.TabIndex = 247;
             this.pictureBox82.TabStop = false;
+            this.pictureBox82.Click += new System.EventHandler(this.pictureBox82_Click);
             // 
             // pictureBox83
             // 
             this.pictureBox83.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox83.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox83.Location = new System.Drawing.Point(527, 138);
+            this.pictureBox83.Location = new System.Drawing.Point(491, 138);
             this.pictureBox83.Name = "pictureBox83";
             this.pictureBox83.Size = new System.Drawing.Size(26, 30);
             this.pictureBox83.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox83.TabIndex = 246;
             this.pictureBox83.TabStop = false;
+            this.pictureBox83.Click += new System.EventHandler(this.pictureBox83_Click);
             // 
             // pictureBox84
             // 
@@ -1737,6 +1761,7 @@
             this.pictureBox84.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox84.TabIndex = 245;
             this.pictureBox84.TabStop = false;
+            this.pictureBox84.Click += new System.EventHandler(this.pictureBox84_Click);
             // 
             // pictureBox85
             // 
@@ -1748,6 +1773,7 @@
             this.pictureBox85.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox85.TabIndex = 244;
             this.pictureBox85.TabStop = false;
+            this.pictureBox85.Click += new System.EventHandler(this.pictureBox85_Click);
             // 
             // pictureBox86
             // 
@@ -1759,28 +1785,31 @@
             this.pictureBox86.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox86.TabIndex = 253;
             this.pictureBox86.TabStop = false;
+            this.pictureBox86.Click += new System.EventHandler(this.pictureBox86_Click);
             // 
             // pictureBox87
             // 
             this.pictureBox87.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox87.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox87.Location = new System.Drawing.Point(491, 174);
+            this.pictureBox87.Location = new System.Drawing.Point(527, 174);
             this.pictureBox87.Name = "pictureBox87";
             this.pictureBox87.Size = new System.Drawing.Size(26, 30);
             this.pictureBox87.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox87.TabIndex = 252;
             this.pictureBox87.TabStop = false;
+            this.pictureBox87.Click += new System.EventHandler(this.pictureBox87_Click);
             // 
             // pictureBox88
             // 
             this.pictureBox88.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox88.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox88.Location = new System.Drawing.Point(527, 174);
+            this.pictureBox88.Location = new System.Drawing.Point(491, 174);
             this.pictureBox88.Name = "pictureBox88";
             this.pictureBox88.Size = new System.Drawing.Size(26, 30);
             this.pictureBox88.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox88.TabIndex = 251;
             this.pictureBox88.TabStop = false;
+            this.pictureBox88.Click += new System.EventHandler(this.pictureBox88_Click);
             // 
             // pictureBox89
             // 
@@ -1792,6 +1821,7 @@
             this.pictureBox89.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox89.TabIndex = 250;
             this.pictureBox89.TabStop = false;
+            this.pictureBox89.Click += new System.EventHandler(this.pictureBox89_Click);
             // 
             // pictureBox90
             // 
@@ -1803,6 +1833,7 @@
             this.pictureBox90.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox90.TabIndex = 249;
             this.pictureBox90.TabStop = false;
+            this.pictureBox90.Click += new System.EventHandler(this.pictureBox90_Click);
             // 
             // pictureBox91
             // 
@@ -1814,28 +1845,31 @@
             this.pictureBox91.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox91.TabIndex = 258;
             this.pictureBox91.TabStop = false;
+            this.pictureBox91.Click += new System.EventHandler(this.pictureBox91_Click);
             // 
             // pictureBox92
             // 
             this.pictureBox92.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox92.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox92.Location = new System.Drawing.Point(491, 210);
+            this.pictureBox92.Location = new System.Drawing.Point(527, 210);
             this.pictureBox92.Name = "pictureBox92";
             this.pictureBox92.Size = new System.Drawing.Size(26, 30);
             this.pictureBox92.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox92.TabIndex = 257;
             this.pictureBox92.TabStop = false;
+            this.pictureBox92.Click += new System.EventHandler(this.pictureBox92_Click);
             // 
             // pictureBox93
             // 
             this.pictureBox93.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox93.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox93.Location = new System.Drawing.Point(527, 210);
+            this.pictureBox93.Location = new System.Drawing.Point(491, 210);
             this.pictureBox93.Name = "pictureBox93";
             this.pictureBox93.Size = new System.Drawing.Size(26, 30);
             this.pictureBox93.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox93.TabIndex = 256;
             this.pictureBox93.TabStop = false;
+            this.pictureBox93.Click += new System.EventHandler(this.pictureBox93_Click);
             // 
             // pictureBox94
             // 
@@ -1847,6 +1881,7 @@
             this.pictureBox94.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox94.TabIndex = 255;
             this.pictureBox94.TabStop = false;
+            this.pictureBox94.Click += new System.EventHandler(this.pictureBox94_Click);
             // 
             // pictureBox95
             // 
@@ -1858,6 +1893,7 @@
             this.pictureBox95.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox95.TabIndex = 254;
             this.pictureBox95.TabStop = false;
+            this.pictureBox95.Click += new System.EventHandler(this.pictureBox95_Click);
             // 
             // pictureBox96
             // 
@@ -1869,28 +1905,31 @@
             this.pictureBox96.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox96.TabIndex = 263;
             this.pictureBox96.TabStop = false;
+            this.pictureBox96.Click += new System.EventHandler(this.pictureBox96_Click);
             // 
             // pictureBox97
             // 
             this.pictureBox97.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox97.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox97.Location = new System.Drawing.Point(491, 246);
+            this.pictureBox97.Location = new System.Drawing.Point(527, 246);
             this.pictureBox97.Name = "pictureBox97";
             this.pictureBox97.Size = new System.Drawing.Size(26, 30);
             this.pictureBox97.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox97.TabIndex = 262;
             this.pictureBox97.TabStop = false;
+            this.pictureBox97.Click += new System.EventHandler(this.pictureBox97_Click);
             // 
             // pictureBox98
             // 
             this.pictureBox98.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox98.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox98.Location = new System.Drawing.Point(527, 246);
+            this.pictureBox98.Location = new System.Drawing.Point(491, 246);
             this.pictureBox98.Name = "pictureBox98";
             this.pictureBox98.Size = new System.Drawing.Size(26, 30);
             this.pictureBox98.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox98.TabIndex = 261;
             this.pictureBox98.TabStop = false;
+            this.pictureBox98.Click += new System.EventHandler(this.pictureBox98_Click);
             // 
             // pictureBox99
             // 
@@ -1902,6 +1941,7 @@
             this.pictureBox99.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox99.TabIndex = 260;
             this.pictureBox99.TabStop = false;
+            this.pictureBox99.Click += new System.EventHandler(this.pictureBox99_Click);
             // 
             // pictureBox100
             // 
@@ -1913,6 +1953,7 @@
             this.pictureBox100.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox100.TabIndex = 259;
             this.pictureBox100.TabStop = false;
+            this.pictureBox100.Click += new System.EventHandler(this.pictureBox100_Click);
             // 
             // pictureBox101
             // 
@@ -1924,28 +1965,31 @@
             this.pictureBox101.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox101.TabIndex = 268;
             this.pictureBox101.TabStop = false;
+            this.pictureBox101.Click += new System.EventHandler(this.pictureBox101_Click);
             // 
             // pictureBox102
             // 
             this.pictureBox102.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox102.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox102.Location = new System.Drawing.Point(491, 282);
+            this.pictureBox102.Location = new System.Drawing.Point(527, 282);
             this.pictureBox102.Name = "pictureBox102";
             this.pictureBox102.Size = new System.Drawing.Size(26, 30);
             this.pictureBox102.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox102.TabIndex = 267;
             this.pictureBox102.TabStop = false;
+            this.pictureBox102.Click += new System.EventHandler(this.pictureBox102_Click);
             // 
             // pictureBox103
             // 
             this.pictureBox103.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox103.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox103.Location = new System.Drawing.Point(527, 282);
+            this.pictureBox103.Location = new System.Drawing.Point(491, 282);
             this.pictureBox103.Name = "pictureBox103";
             this.pictureBox103.Size = new System.Drawing.Size(26, 30);
             this.pictureBox103.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox103.TabIndex = 266;
             this.pictureBox103.TabStop = false;
+            this.pictureBox103.Click += new System.EventHandler(this.pictureBox103_Click);
             // 
             // pictureBox104
             // 
@@ -1957,6 +2001,7 @@
             this.pictureBox104.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox104.TabIndex = 265;
             this.pictureBox104.TabStop = false;
+            this.pictureBox104.Click += new System.EventHandler(this.pictureBox104_Click);
             // 
             // pictureBox105
             // 
@@ -1968,6 +2013,7 @@
             this.pictureBox105.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox105.TabIndex = 264;
             this.pictureBox105.TabStop = false;
+            this.pictureBox105.Click += new System.EventHandler(this.pictureBox105_Click);
             // 
             // pictureBox106
             // 
@@ -1979,28 +2025,31 @@
             this.pictureBox106.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox106.TabIndex = 273;
             this.pictureBox106.TabStop = false;
+            this.pictureBox106.Click += new System.EventHandler(this.pictureBox106_Click);
             // 
             // pictureBox107
             // 
             this.pictureBox107.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox107.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox107.Location = new System.Drawing.Point(491, 318);
+            this.pictureBox107.Location = new System.Drawing.Point(527, 318);
             this.pictureBox107.Name = "pictureBox107";
             this.pictureBox107.Size = new System.Drawing.Size(26, 30);
             this.pictureBox107.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox107.TabIndex = 272;
             this.pictureBox107.TabStop = false;
+            this.pictureBox107.Click += new System.EventHandler(this.pictureBox107_Click);
             // 
             // pictureBox108
             // 
             this.pictureBox108.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox108.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox108.Location = new System.Drawing.Point(527, 318);
+            this.pictureBox108.Location = new System.Drawing.Point(491, 318);
             this.pictureBox108.Name = "pictureBox108";
             this.pictureBox108.Size = new System.Drawing.Size(26, 30);
             this.pictureBox108.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox108.TabIndex = 271;
             this.pictureBox108.TabStop = false;
+            this.pictureBox108.Click += new System.EventHandler(this.pictureBox108_Click);
             // 
             // pictureBox109
             // 
@@ -2012,6 +2061,7 @@
             this.pictureBox109.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox109.TabIndex = 270;
             this.pictureBox109.TabStop = false;
+            this.pictureBox109.Click += new System.EventHandler(this.pictureBox109_Click);
             // 
             // pictureBox110
             // 
@@ -2023,6 +2073,7 @@
             this.pictureBox110.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox110.TabIndex = 269;
             this.pictureBox110.TabStop = false;
+            this.pictureBox110.Click += new System.EventHandler(this.pictureBox110_Click);
             // 
             // pictureBox111
             // 
@@ -2034,28 +2085,31 @@
             this.pictureBox111.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox111.TabIndex = 278;
             this.pictureBox111.TabStop = false;
+            this.pictureBox111.Click += new System.EventHandler(this.pictureBox111_Click);
             // 
             // pictureBox112
             // 
             this.pictureBox112.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox112.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox112.Location = new System.Drawing.Point(491, 354);
+            this.pictureBox112.Location = new System.Drawing.Point(527, 354);
             this.pictureBox112.Name = "pictureBox112";
             this.pictureBox112.Size = new System.Drawing.Size(26, 30);
             this.pictureBox112.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox112.TabIndex = 277;
             this.pictureBox112.TabStop = false;
+            this.pictureBox112.Click += new System.EventHandler(this.pictureBox112_Click);
             // 
             // pictureBox113
             // 
             this.pictureBox113.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox113.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox113.Location = new System.Drawing.Point(527, 354);
+            this.pictureBox113.Location = new System.Drawing.Point(491, 354);
             this.pictureBox113.Name = "pictureBox113";
             this.pictureBox113.Size = new System.Drawing.Size(26, 30);
             this.pictureBox113.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox113.TabIndex = 276;
             this.pictureBox113.TabStop = false;
+            this.pictureBox113.Click += new System.EventHandler(this.pictureBox113_Click);
             // 
             // pictureBox114
             // 
@@ -2067,6 +2121,7 @@
             this.pictureBox114.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox114.TabIndex = 275;
             this.pictureBox114.TabStop = false;
+            this.pictureBox114.Click += new System.EventHandler(this.pictureBox114_Click);
             // 
             // pictureBox115
             // 
@@ -2078,6 +2133,7 @@
             this.pictureBox115.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox115.TabIndex = 274;
             this.pictureBox115.TabStop = false;
+            this.pictureBox115.Click += new System.EventHandler(this.pictureBox115_Click);
             // 
             // pictureBox116
             // 
@@ -2089,28 +2145,31 @@
             this.pictureBox116.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox116.TabIndex = 283;
             this.pictureBox116.TabStop = false;
+            this.pictureBox116.Click += new System.EventHandler(this.pictureBox116_Click);
             // 
             // pictureBox117
             // 
             this.pictureBox117.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox117.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox117.Location = new System.Drawing.Point(491, 390);
+            this.pictureBox117.Location = new System.Drawing.Point(527, 390);
             this.pictureBox117.Name = "pictureBox117";
             this.pictureBox117.Size = new System.Drawing.Size(26, 30);
             this.pictureBox117.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox117.TabIndex = 282;
             this.pictureBox117.TabStop = false;
+            this.pictureBox117.Click += new System.EventHandler(this.pictureBox117_Click);
             // 
             // pictureBox118
             // 
             this.pictureBox118.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox118.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox118.Location = new System.Drawing.Point(527, 390);
+            this.pictureBox118.Location = new System.Drawing.Point(491, 390);
             this.pictureBox118.Name = "pictureBox118";
             this.pictureBox118.Size = new System.Drawing.Size(26, 30);
             this.pictureBox118.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox118.TabIndex = 281;
             this.pictureBox118.TabStop = false;
+            this.pictureBox118.Click += new System.EventHandler(this.pictureBox118_Click);
             // 
             // pictureBox119
             // 
@@ -2122,6 +2181,7 @@
             this.pictureBox119.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox119.TabIndex = 280;
             this.pictureBox119.TabStop = false;
+            this.pictureBox119.Click += new System.EventHandler(this.pictureBox119_Click);
             // 
             // pictureBox120
             // 
@@ -2133,6 +2193,7 @@
             this.pictureBox120.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox120.TabIndex = 279;
             this.pictureBox120.TabStop = false;
+            this.pictureBox120.Click += new System.EventHandler(this.pictureBox120_Click);
             // 
             // pictureBox121
             // 
@@ -2144,28 +2205,31 @@
             this.pictureBox121.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox121.TabIndex = 288;
             this.pictureBox121.TabStop = false;
+            this.pictureBox121.Click += new System.EventHandler(this.pictureBox121_Click);
             // 
             // pictureBox122
             // 
             this.pictureBox122.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox122.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox122.Location = new System.Drawing.Point(491, 426);
+            this.pictureBox122.Location = new System.Drawing.Point(527, 426);
             this.pictureBox122.Name = "pictureBox122";
             this.pictureBox122.Size = new System.Drawing.Size(26, 30);
             this.pictureBox122.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox122.TabIndex = 287;
             this.pictureBox122.TabStop = false;
+            this.pictureBox122.Click += new System.EventHandler(this.pictureBox122_Click);
             // 
             // pictureBox123
             // 
             this.pictureBox123.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox123.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox123.Location = new System.Drawing.Point(527, 426);
+            this.pictureBox123.Location = new System.Drawing.Point(491, 426);
             this.pictureBox123.Name = "pictureBox123";
             this.pictureBox123.Size = new System.Drawing.Size(26, 30);
             this.pictureBox123.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox123.TabIndex = 286;
             this.pictureBox123.TabStop = false;
+            this.pictureBox123.Click += new System.EventHandler(this.pictureBox123_Click);
             // 
             // pictureBox124
             // 
@@ -2177,6 +2241,7 @@
             this.pictureBox124.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox124.TabIndex = 285;
             this.pictureBox124.TabStop = false;
+            this.pictureBox124.Click += new System.EventHandler(this.pictureBox124_Click);
             // 
             // pictureBox125
             // 
@@ -2188,6 +2253,7 @@
             this.pictureBox125.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox125.TabIndex = 284;
             this.pictureBox125.TabStop = false;
+            this.pictureBox125.Click += new System.EventHandler(this.pictureBox125_Click);
             // 
             // pictureBox126
             // 
@@ -2199,28 +2265,31 @@
             this.pictureBox126.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox126.TabIndex = 293;
             this.pictureBox126.TabStop = false;
+            this.pictureBox126.Click += new System.EventHandler(this.pictureBox126_Click);
             // 
             // pictureBox127
             // 
             this.pictureBox127.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox127.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox127.Location = new System.Drawing.Point(491, 462);
+            this.pictureBox127.Location = new System.Drawing.Point(527, 462);
             this.pictureBox127.Name = "pictureBox127";
             this.pictureBox127.Size = new System.Drawing.Size(26, 30);
             this.pictureBox127.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox127.TabIndex = 292;
             this.pictureBox127.TabStop = false;
+            this.pictureBox127.Click += new System.EventHandler(this.pictureBox127_Click);
             // 
             // pictureBox128
             // 
             this.pictureBox128.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox128.Image = global::proyecto_cine.Properties.Resources.Silla_naranja1;
-            this.pictureBox128.Location = new System.Drawing.Point(527, 462);
+            this.pictureBox128.Location = new System.Drawing.Point(491, 462);
             this.pictureBox128.Name = "pictureBox128";
             this.pictureBox128.Size = new System.Drawing.Size(26, 30);
             this.pictureBox128.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox128.TabIndex = 291;
             this.pictureBox128.TabStop = false;
+            this.pictureBox128.Click += new System.EventHandler(this.pictureBox128_Click);
             // 
             // pictureBox129
             // 
@@ -2232,6 +2301,7 @@
             this.pictureBox129.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox129.TabIndex = 290;
             this.pictureBox129.TabStop = false;
+            this.pictureBox129.Click += new System.EventHandler(this.pictureBox129_Click);
             // 
             // pictureBox130
             // 
@@ -2243,6 +2313,33 @@
             this.pictureBox130.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox130.TabIndex = 289;
             this.pictureBox130.TabStop = false;
+            this.pictureBox130.Click += new System.EventHandler(this.pictureBox130_Click);
+            // 
+            // bunifuThinButton23
+            // 
+            this.bunifuThinButton23.ActiveBorderThickness = 1;
+            this.bunifuThinButton23.ActiveCornerRadius = 20;
+            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.Black;
+            this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
+            this.bunifuThinButton23.ButtonText = "Reservar";
+            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton23.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton23.IdleBorderThickness = 1;
+            this.bunifuThinButton23.IdleCornerRadius = 20;
+            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Black;
+            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Black;
+            this.bunifuThinButton23.Location = new System.Drawing.Point(649, 490);
+            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton23.Name = "bunifuThinButton23";
+            this.bunifuThinButton23.Size = new System.Drawing.Size(86, 37);
+            this.bunifuThinButton23.TabIndex = 294;
+            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // SeleccionarSillas
             // 
@@ -2250,6 +2347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(749, 535);
+            this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.pictureBox126);
             this.Controls.Add(this.pictureBox127);
             this.Controls.Add(this.pictureBox128);
@@ -2730,5 +2828,6 @@
         private System.Windows.Forms.PictureBox pictureBox128;
         private System.Windows.Forms.PictureBox pictureBox129;
         private System.Windows.Forms.PictureBox pictureBox130;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
     }
 }

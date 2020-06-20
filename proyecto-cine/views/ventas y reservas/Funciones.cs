@@ -35,7 +35,7 @@ namespace proyecto_cine.views.ventas_y_reservas
             try
             {
                 conexion.abrir();
-                cmd = new SqlCommand("select horario, tipo, valor_entrada from funcion where pelicula_id = '" + IdPelicula + "'", conexion.conexion);
+                cmd = new SqlCommand("select id, fecha, hora, tipo, valor_entrada from funcion where fecha > (select dateadd(day,-1,SYSDATETIME())) and pelicula_id = "+ IdPelicula +" order by fecha asc", conexion.conexion);
                 SqlDataAdapter ad = new SqlDataAdapter(cmd);
                 ds = new DataSet();
                 ad.Fill(ds, "tabla");
@@ -51,7 +51,9 @@ namespace proyecto_cine.views.ventas_y_reservas
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            FormParent.OpenFormInPanelCentral(new SeleccionarSillas(FormParent));
+            SeleccionarSillas seleccionar = new SeleccionarSillas(FormParent);
+            seleccionar.idFuncion = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+            FormParent.OpenFormInPanelCentral(seleccionar);
         }
     }
 }
