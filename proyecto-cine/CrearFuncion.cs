@@ -14,9 +14,11 @@ namespace proyecto_cine
     public partial class CrearFuncion : Form
     {
         homeCajero formParent;
-        public CrearFuncion(homeCajero parent)
+        int idPelicula;
+        public CrearFuncion(homeCajero parent, int idPelicula)
         {
             this.formParent = parent;
+            this.idPelicula = idPelicula;
             InitializeComponent();
         }
 
@@ -30,10 +32,11 @@ namespace proyecto_cine
             try
             {
                 conexion.abrir();
-                cmd = new SqlCommand("Insert into funcion (sala_id, pelicula_id, fecha, hora, tipo, valor_entrada) values (" + tbSala.Text + " , 1, '" + fechaFuncion.ToString("yyyy-MM-dd") + "', '" + tbHora.Text + "', '" + tbTipo.Text + "', " + tbValor.Text + ")", conexion.conexion);
+                cmd = new SqlCommand("Insert into funcion (sala_id, pelicula_id, fecha, hora, tipo, valor_entrada) values (" + tbSala.Text + " , "+idPelicula+", '" + fechaFuncion.ToString("yyyy-MM-dd") + "', '" + tbHora.Text + "', '" + tbTipo.Text + "', " + tbValor.Text + ")", conexion.conexion);
                 cmd.ExecuteNonQuery();
                 conexion.cerra();
-
+                GuardadoConExito guardado = new GuardadoConExito(formParent, "pelicula");
+                guardado.Show();
 
             }
             catch (Exception ex)
