@@ -5,8 +5,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +21,11 @@ namespace proyecto_cine
         List<string> list = new List<string>();
         string[] sillasSeleccinadadas;
         public int idFuncion;
+        public string pelicula;
+        public string sala;
+        public int precio;
+        public DateTime fechaFuncion;
+        int contadorSillas;
 
         public SeleccionarSillas(homeCajero parent)
         {
@@ -28,20 +35,57 @@ namespace proyecto_cine
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            conexiondb conexion = new conexiondb();
-            SqlCommand cmd;
-
-            sillasSeleccinadadas = list.ToArray();
-            for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+            if (contadorSillas != 0)
             {
-                //MessageBox.Show(sillasSeleccinadadas[i]);
+                conexiondb conexion = new conexiondb();
+                SqlCommand cmd;
 
+                sillasSeleccinadadas = list.ToArray();
+                for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+                {
+                    //MessageBox.Show(sillasSeleccinadadas[i]);
+
+
+                    try
+                    {
+                        DateTime fecha = DateTime.Today;
+                        conexion.abrir();
+                        cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion) values (" + idFuncion + " , 'vendido', '" + sillasSeleccinadadas[i] + "')", conexion.conexion);
+                        cmd.ExecuteNonQuery();
+                        conexion.cerra();
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        ErrorAlGuardar error = new ErrorAlGuardar();
+                        error.Show();
+                        MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+                    }
+                }
+                //new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
+                //this.Close();
+
+                SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
+                recargar.idFuncion = idFuncion;
+                FormParent.OpenFormInPanelCentral(recargar);
+
+                //Imprimir
+
+                PrintDocument printer = new PrintDocument();
+                PrinterSettings ps = new PrinterSettings();
+                printer.PrinterSettings = ps;
+                printer.PrintPage += imprimir;
+                if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                    printDocument1.Print();
+
+                //Registrar compra
 
                 try
                 {
                     DateTime fecha = DateTime.Today;
                     conexion.abrir();
-                    cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion) values (" + idFuncion + " , 'vendido', '" + sillasSeleccinadadas[i] + "')", conexion.conexion);
+                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, fecha, valor_total) values ("+idFuncion+" , "+sillasSeleccinadadas.Length+", '" + fecha.ToString("yyyy-MM-dd") + "', "+(sillasSeleccinadadas.Length * precio)+")", conexion.conexion);
                     cmd.ExecuteNonQuery();
                     conexion.cerra();
 
@@ -54,14 +98,44 @@ namespace proyecto_cine
                     MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
                 }
             }
-            //new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
-            //this.Close();
+            else MessageBox.Show("Seleccione las sillas porfavor");
+        }
 
-            SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
-            recargar.idFuncion = idFuncion;
-            FormParent.OpenFormInPanelCentral(recargar);
+        private void imprimir(object sender, PrintPageEventArgs printer)
+        {
+            string sillas = "";
+            for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+            {
+                sillas += "-" + sillasSeleccinadadas[i];
+            }
+            DateTime fecha = DateTime.Today;
+            string hora = DateTime.Now.ToString("HH:mm:ss");
+            Font font= new Font("Arial", 14);
+            Font font2 = new Font("Arial", 10);
+            int ancho = 300;
+            int y = 20;
 
+            sillas += "-";
 
+            printer.Graphics.DrawString("CineProject", font2, Brushes.Black, new RectangleF(100, y += 20, ancho, 20));
+            printer.Graphics.DrawString("NIT 890900085-1", font2, Brushes.Black, new RectangleF(90, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Cra 43 # 76 - 58", font2, Brushes.Black, new RectangleF(90, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Branquilla - Colombia", font2, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Tel: 3016542389 - 3205142 ", font2, Brushes.Black, new RectangleF(55, y += 20, ancho, 20));
+            printer.Graphics.DrawString("------------------------------------------------------", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Factura No:  2015214365 ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Boleto de entrada de cine", font, Brushes.Black, new RectangleF(30, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Pelicula: " + ""+pelicula+"", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Fecha función: " + ""+ fechaFuncion.ToString("dd-MM-yyyy") + "", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Sala: " + "" + sala + "", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Sillas: "+ sillas +"" , font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Valor Total: " + ""+precio * sillasSeleccinadadas.Length+"", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Punto de venta:  ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("CineProject Barranquilla ", font, Brushes.Black, new RectangleF(20, y += 20, ancho, 20));
+            printer.Graphics.DrawString("-------------------------------------------------------", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString(""+ fecha.ToShortDateString()+" "+hora+" ", font2, Brushes.Black, new RectangleF(75, y += 20, ancho, 20));
+            printer.Graphics.DrawString("www.cineproject.com.co", font2, Brushes.Black, new RectangleF(65, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Res. Dian No: 321024569870", font2, Brushes.Black, new RectangleF(50, y += 20, ancho, 20));
         }
 
         public bool consultarSillas(PictureBox picture, string posicion)
@@ -91,12 +165,23 @@ namespace proyecto_cine
             
         }
 
+        bool repetida;
         public void EscogerSilla(PictureBox picture, string posicion)
         {
+            
             if (consultarSillas(picture, posicion) == false)
             {
                 picture.Image = proyecto_cine.Properties.Resources.Silla_roja1;
-                list.Add(posicion);
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (list[i] == posicion)
+                        repetida = true;
+                }
+                if (repetida == false)
+                {
+                    list.Add(posicion);
+                    contadorSillas += 1;
+                }
             }
         }
 
@@ -279,12 +364,12 @@ namespace proyecto_cine
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            EscogerSilla(pictureBox8, "L2");
+            EscogerSilla(pictureBox8, "L3");
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            EscogerSilla(pictureBox7, "L3");
+            EscogerSilla(pictureBox7, "L2");
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -924,5 +1009,7 @@ namespace proyecto_cine
             recargar.idFuncion = idFuncion;
             FormParent.OpenFormInPanelCentral(recargar);
         }
+
+        
     } 
 }

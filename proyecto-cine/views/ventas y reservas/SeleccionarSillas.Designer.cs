@@ -199,6 +199,8 @@
             this.pictureBox129 = new System.Windows.Forms.PictureBox();
             this.pictureBox130 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -2341,6 +2343,21 @@
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimir);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // SeleccionarSillas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2829,5 +2846,7 @@
         private System.Windows.Forms.PictureBox pictureBox129;
         private System.Windows.Forms.PictureBox pictureBox130;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

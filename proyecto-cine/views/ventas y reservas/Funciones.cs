@@ -15,11 +15,13 @@ namespace proyecto_cine.views.ventas_y_reservas
     {
         homeCajero FormParent;
         int IdPelicula;
-        public Funciones(homeCajero parent, int idPelicula)
+        string pelicula;
+        public Funciones(homeCajero parent, int idPelicula, string pelicula)
         {
             this.FormParent = parent;
             InitializeComponent();
             this.IdPelicula = idPelicula;
+            this.pelicula = pelicula;
         }
         private DataSet ds;
         conexiondb conexion = new conexiondb();
@@ -35,7 +37,7 @@ namespace proyecto_cine.views.ventas_y_reservas
             try
             {
                 conexion.abrir();
-                cmd = new SqlCommand("select id, fecha, hora, tipo, valor_entrada from funcion where fecha > (select dateadd(day,-1,SYSDATETIME())) and pelicula_id = "+ IdPelicula +" order by fecha asc", conexion.conexion);
+                cmd = new SqlCommand("select id, sala_id, fecha, hora, tipo, valor_entrada from funcion where fecha > (select dateadd(day,-1,SYSDATETIME())) and pelicula_id = "+ IdPelicula +" order by fecha asc", conexion.conexion);
                 SqlDataAdapter ad = new SqlDataAdapter(cmd);
                 ds = new DataSet();
                 ad.Fill(ds, "tabla");
@@ -53,6 +55,10 @@ namespace proyecto_cine.views.ventas_y_reservas
         {
             SeleccionarSillas seleccionar = new SeleccionarSillas(FormParent);
             seleccionar.idFuncion = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+            seleccionar.pelicula = pelicula;
+            seleccionar.sala = dataGridView1.CurrentRow.Cells["sala_id"].Value.ToString();
+            seleccionar.precio = int.Parse(dataGridView1.CurrentRow.Cells["valor_entrada"].Value.ToString());
+            seleccionar.fechaFuncion = DateTime.Parse(dataGridView1.CurrentRow.Cells["fecha"].Value.ToString());
             FormParent.OpenFormInPanelCentral(seleccionar);
         }
     }
