@@ -121,5 +121,10 @@ namespace proyecto_cine
                 dataGridView23.DataSource = controlardor.mostrarTabla();
             }
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            formParent.OpenFormInPanelCentral(new CrearFuncion(formParent));
+        }
     }
 }

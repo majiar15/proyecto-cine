@@ -5,8 +5,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +20,12 @@ namespace proyecto_cine
         homeCajero FormParent;
         List<string> list = new List<string>();
         string[] sillasSeleccinadadas;
+        public int idFuncion;
+        public string pelicula;
+        public string sala;
+        public int precio;
+        public DateTime fechaFuncion;
+        int contadorSillas;
 
         public SeleccionarSillas(homeCajero parent)
         {
@@ -27,19 +35,57 @@ namespace proyecto_cine
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            conexiondb conexion = new conexiondb();
-            SqlCommand cmd;
-
-            sillasSeleccinadadas = list.ToArray();
-            for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+            if (contadorSillas != 0)
             {
-                MessageBox.Show(sillasSeleccinadadas[i]);
+                conexiondb conexion = new conexiondb();
+                SqlCommand cmd;
 
+                sillasSeleccinadadas = list.ToArray();
+                for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+                {
+                    //MessageBox.Show(sillasSeleccinadadas[i]);
+
+
+                    try
+                    {
+                        DateTime fecha = DateTime.Today;
+                        conexion.abrir();
+                        cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion) values (" + idFuncion + " , 'vendido', '" + sillasSeleccinadadas[i] + "')", conexion.conexion);
+                        cmd.ExecuteNonQuery();
+                        conexion.cerra();
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        ErrorAlGuardar error = new ErrorAlGuardar();
+                        error.Show();
+                        MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+                    }
+                }
+                //new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
+                //this.Close();
+
+                SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
+                recargar.idFuncion = idFuncion;
+                FormParent.OpenFormInPanelCentral(recargar);
+
+                //Imprimir
+
+                PrintDocument printer = new PrintDocument();
+                PrinterSettings ps = new PrinterSettings();
+                printer.PrinterSettings = ps;
+                printer.PrintPage += imprimir;
+                if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                    printDocument1.Print();
+
+                //Registrar compra
 
                 try
                 {
+                    DateTime fecha = DateTime.Today;
                     conexion.abrir();
-                    cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion) values (1 , 'vendido', '" + sillasSeleccinadadas[i] + "')", conexion.conexion);
+                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, fecha, valor_total) values ("+idFuncion+" , "+sillasSeleccinadadas.Length+", '" + fecha.ToString("yyyy-MM-dd") + "', "+(sillasSeleccinadadas.Length * precio)+")", conexion.conexion);
                     cmd.ExecuteNonQuery();
                     conexion.cerra();
 
@@ -52,41 +98,90 @@ namespace proyecto_cine
                     MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
                 }
             }
-            //new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
-            //this.Close();
+            else MessageBox.Show("Seleccione las sillas porfavor");
+        }
 
+        private void imprimir(object sender, PrintPageEventArgs printer)
+        {
+            string sillas = "";
+            for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+            {
+                sillas += "-" + sillasSeleccinadadas[i];
+            }
+            DateTime fecha = DateTime.Today;
+            string hora = DateTime.Now.ToString("HH:mm:ss");
+            Font font= new Font("Arial", 14);
+            Font font2 = new Font("Arial", 10);
+            int ancho = 300;
+            int y = 20;
 
+            sillas += "-";
+
+            printer.Graphics.DrawString("CineProject", font2, Brushes.Black, new RectangleF(100, y += 20, ancho, 20));
+            printer.Graphics.DrawString("NIT 890900085-1", font2, Brushes.Black, new RectangleF(90, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Cra 43 # 76 - 58", font2, Brushes.Black, new RectangleF(90, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Branquilla - Colombia", font2, Brushes.Black, new RectangleF(70, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Tel: 3016542389 - 3205142 ", font2, Brushes.Black, new RectangleF(55, y += 20, ancho, 20));
+            printer.Graphics.DrawString("------------------------------------------------------", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Factura No:  2015214365 ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Boleto de entrada de cine", font, Brushes.Black, new RectangleF(30, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Pelicula: " + ""+pelicula+"", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Fecha función: " + ""+ fechaFuncion.ToString("dd-MM-yyyy") + "", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Sala: " + "" + sala + "", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Sillas: "+ sillas +"" , font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Valor Total: " + ""+precio * sillasSeleccinadadas.Length+"", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Punto de venta:  ", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString("CineProject Barranquilla ", font, Brushes.Black, new RectangleF(20, y += 20, ancho, 20));
+            printer.Graphics.DrawString("-------------------------------------------------------", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            printer.Graphics.DrawString(""+ fecha.ToShortDateString()+" "+hora+" ", font2, Brushes.Black, new RectangleF(75, y += 20, ancho, 20));
+            printer.Graphics.DrawString("www.cineproject.com.co", font2, Brushes.Black, new RectangleF(65, y += 20, ancho, 20));
+            printer.Graphics.DrawString("Res. Dian No: 321024569870", font2, Brushes.Black, new RectangleF(50, y += 20, ancho, 20));
         }
 
         public bool consultarSillas(PictureBox picture, string posicion)
         {
             conexiondb conexion = new conexiondb();
+            conexion.abrir();
             try
             {
-                conexion.abrir();
-                SqlCommand cmd = new SqlCommand("select * from asientos where funcion_id = '1' and posicion = '" + posicion + "'", conexion.conexion);
+                
+                SqlCommand cmd = new SqlCommand("select * from asientos where funcion_id = "+idFuncion+" and posicion = '" + posicion + "'", conexion.conexion);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     picture.Image = proyecto_cine.Properties.Resources.Silla_negra;
+                    conexion.cerra();
                     return true;
                 }
+                conexion.cerra();
                 return false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                conexion.cerra();
                 return false;
             }
-            conexion.cerra();
+            
         }
 
+        bool repetida;
         public void EscogerSilla(PictureBox picture, string posicion)
         {
+            
             if (consultarSillas(picture, posicion) == false)
             {
                 picture.Image = proyecto_cine.Properties.Resources.Silla_roja1;
-                list.Add(posicion);
+                for (int i = 0; i < list.Count; i++)
+                {
+                    if (list[i] == posicion)
+                        repetida = true;
+                }
+                if (repetida == false)
+                {
+                    list.Add(posicion);
+                    contadorSillas += 1;
+                }
             }
         }
 
@@ -104,60 +199,124 @@ namespace proyecto_cine
             consultarSillas(pictureBox6, "L4");
             consultarSillas(pictureBox15, "K0");
             consultarSillas(pictureBox14, "K1");
-            consultarSillas(pictureBox13, "K2");
-            consultarSillas(pictureBox12, "K3");
+            consultarSillas(pictureBox12, "K2");
+            consultarSillas(pictureBox13, "K3");
             consultarSillas(pictureBox11, "K4");
             consultarSillas(pictureBox20, "j0");
             consultarSillas(pictureBox19, "j1");
-            consultarSillas(pictureBox18, "j2");
-            consultarSillas(pictureBox17, "j3");
+            consultarSillas(pictureBox17, "j2");
+            consultarSillas(pictureBox18, "j3");
             consultarSillas(pictureBox16, "j4");
             consultarSillas(pictureBox25, "I0");
             consultarSillas(pictureBox24, "I1");
-            consultarSillas(pictureBox23, "I2");
-            consultarSillas(pictureBox22, "I3");
+            consultarSillas(pictureBox22, "I2");
+            consultarSillas(pictureBox23, "I3");
             consultarSillas(pictureBox21, "I4");
             consultarSillas(pictureBox30, "H0");
             consultarSillas(pictureBox29, "H1");
-            consultarSillas(pictureBox28, "H2");
-            consultarSillas(pictureBox27, "H3");
+            consultarSillas(pictureBox27, "H2");
+            consultarSillas(pictureBox28, "H3");
             consultarSillas(pictureBox26, "H4");
             consultarSillas(pictureBox35, "G0");
             consultarSillas(pictureBox34, "G1");
-            consultarSillas(pictureBox33, "G2");
-            consultarSillas(pictureBox32, "G3");
+            consultarSillas(pictureBox32, "G2");
+            consultarSillas(pictureBox33, "G3");
             consultarSillas(pictureBox31, "G4");
             consultarSillas(pictureBox40, "F0");
             consultarSillas(pictureBox39, "F1");
-            consultarSillas(pictureBox38, "F2");
-            consultarSillas(pictureBox37, "F3");
+            consultarSillas(pictureBox37, "F2");
+            consultarSillas(pictureBox38, "F3");
             consultarSillas(pictureBox36, "F4");
             consultarSillas(pictureBox45, "E0");
             consultarSillas(pictureBox44, "E1");
-            consultarSillas(pictureBox43, "E2");
-            consultarSillas(pictureBox42, "E3");
+            consultarSillas(pictureBox42, "E2");
+            consultarSillas(pictureBox43, "E3");
             consultarSillas(pictureBox41, "E4");
             consultarSillas(pictureBox50, "D0");
             consultarSillas(pictureBox49, "D1");
-            consultarSillas(pictureBox48, "D2");
-            consultarSillas(pictureBox47, "D3");
+            consultarSillas(pictureBox47, "D2");
+            consultarSillas(pictureBox48, "D3");
             consultarSillas(pictureBox46, "D4");
             consultarSillas(pictureBox55, "C0");
             consultarSillas(pictureBox54, "C1");
-            consultarSillas(pictureBox53, "C2");
-            consultarSillas(pictureBox52, "C3");
+            consultarSillas(pictureBox52, "C2");
+            consultarSillas(pictureBox53, "C3");
             consultarSillas(pictureBox51, "C4");
             consultarSillas(pictureBox60, "B0");
             consultarSillas(pictureBox59, "B1");
-            consultarSillas(pictureBox58, "B2");
-            consultarSillas(pictureBox57, "B3");
+            consultarSillas(pictureBox57, "B2");
+            consultarSillas(pictureBox58, "B3");
             consultarSillas(pictureBox56, "B4");
             consultarSillas(pictureBox65, "A0");
             consultarSillas(pictureBox64, "A1");
-            consultarSillas(pictureBox63, "A2");
-            consultarSillas(pictureBox62, "A3");
+            consultarSillas(pictureBox62, "A2");
+            consultarSillas(pictureBox63, "A3");
             consultarSillas(pictureBox61, "A4");
-           
+            consultarSillas(pictureBox70, "M5");
+            consultarSillas(pictureBox69, "M6");
+            consultarSillas(pictureBox68, "M7");
+            consultarSillas(pictureBox67, "M8");
+            consultarSillas(pictureBox66, "M9");
+            consultarSillas(pictureBox75, "L5");
+            consultarSillas(pictureBox74, "L6");
+            consultarSillas(pictureBox73, "L7");
+            consultarSillas(pictureBox72, "L8");
+            consultarSillas(pictureBox71, "L9");
+            consultarSillas(pictureBox80, "K5");
+            consultarSillas(pictureBox79, "K6");
+            consultarSillas(pictureBox78, "K7");
+            consultarSillas(pictureBox77, "K8");
+            consultarSillas(pictureBox76, "K9");
+            consultarSillas(pictureBox85, "J5");
+            consultarSillas(pictureBox84, "J6");
+            consultarSillas(pictureBox83, "J7");
+            consultarSillas(pictureBox82, "J8");
+            consultarSillas(pictureBox81, "J9");
+            consultarSillas(pictureBox90, "I5");
+            consultarSillas(pictureBox89, "I6");
+            consultarSillas(pictureBox88, "I7");
+            consultarSillas(pictureBox87, "I8");
+            consultarSillas(pictureBox86, "I9");
+            consultarSillas(pictureBox95, "H5");
+            consultarSillas(pictureBox94, "H6");
+            consultarSillas(pictureBox93, "H7");
+            consultarSillas(pictureBox92, "H8");
+            consultarSillas(pictureBox91, "H9");
+            consultarSillas(pictureBox100, "G5");
+            consultarSillas(pictureBox99, "G6");
+            consultarSillas(pictureBox98, "G7");
+            consultarSillas(pictureBox97, "G8");
+            consultarSillas(pictureBox96, "G9");
+            consultarSillas(pictureBox105, "F5");
+            consultarSillas(pictureBox104, "F6");
+            consultarSillas(pictureBox103, "F7");
+            consultarSillas(pictureBox102, "F8");
+            consultarSillas(pictureBox101, "F9");
+            consultarSillas(pictureBox110, "E5");
+            consultarSillas(pictureBox109, "E6");
+            consultarSillas(pictureBox108, "E7");
+            consultarSillas(pictureBox107, "E8");
+            consultarSillas(pictureBox106, "E9");
+            consultarSillas(pictureBox115, "D5");
+            consultarSillas(pictureBox114, "D6");
+            consultarSillas(pictureBox113, "D7");
+            consultarSillas(pictureBox112, "D8");
+            consultarSillas(pictureBox111, "D9");
+            consultarSillas(pictureBox120, "C5");
+            consultarSillas(pictureBox119, "C6");
+            consultarSillas(pictureBox118, "C7");
+            consultarSillas(pictureBox117, "C8");
+            consultarSillas(pictureBox116, "C9");
+            consultarSillas(pictureBox125, "B5");
+            consultarSillas(pictureBox124, "B6");
+            consultarSillas(pictureBox123, "B7");
+            consultarSillas(pictureBox122, "B8");
+            consultarSillas(pictureBox121, "B9");
+            consultarSillas(pictureBox130, "A5");
+            consultarSillas(pictureBox129, "A6");
+            consultarSillas(pictureBox128, "A7");
+            consultarSillas(pictureBox127, "A8");
+            consultarSillas(pictureBox126, "A9");
 
         }
 
@@ -168,7 +327,9 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            FormParent.OpenFormInPanelCentral(new SeleccionarSillas(FormParent));
+            SeleccionarSillas CancelarSeleccion = new SeleccionarSillas(FormParent);
+            CancelarSeleccion.idFuncion = idFuncion;
+            FormParent.OpenFormInPanelCentral(CancelarSeleccion);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -203,12 +364,12 @@ namespace proyecto_cine
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            EscogerSilla(pictureBox8, "L2");
+            EscogerSilla(pictureBox8, "L3");
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            EscogerSilla(pictureBox7, "L3");
+            EscogerSilla(pictureBox7, "L2");
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -228,17 +389,17 @@ namespace proyecto_cine
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            EscogerSilla(pictureBox12, "k2");
+            EscogerSilla(pictureBox12, "K2");
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            EscogerSilla(pictureBox13, "k3");
+            EscogerSilla(pictureBox13, "K3");
         }
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            EscogerSilla(pictureBox11, "k4");
+            EscogerSilla(pictureBox11, "K4");
         }
 
         private void pictureBox20_Click(object sender, EventArgs e)
@@ -490,5 +651,365 @@ namespace proyecto_cine
         {
             EscogerSilla(pictureBox61, "A4");
         }
+
+        private void pictureBox70_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox70, "M5");
+        }
+
+        private void pictureBox69_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox69, "M6");
+        }
+
+        private void pictureBox68_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox68, "M7");
+        }
+
+        private void pictureBox67_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox67, "M8");
+        }
+
+        private void pictureBox66_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox66, "M9");
+        }
+
+        private void pictureBox75_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox75, "L5");
+        }
+
+        private void pictureBox74_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox74, "L6");
+        }
+
+        private void pictureBox73_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox73, "L7");
+        }
+
+        private void pictureBox72_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox72, "L8");
+        }
+
+        private void pictureBox71_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox71, "L9");
+        }
+
+        private void pictureBox80_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox80, "K5");
+        }
+
+        private void pictureBox79_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox79, "K6");
+        }
+
+        private void pictureBox78_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox78, "K7");
+        }
+
+        private void pictureBox77_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox77, "K8");
+        }
+
+        private void pictureBox76_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox76, "K9");
+        }
+
+        private void pictureBox85_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox85, "J5");
+        }
+
+        private void pictureBox84_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox84, "J6");
+        }
+
+        private void pictureBox83_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox83, "J7");
+        }
+
+        private void pictureBox82_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox82, "J8");
+        }
+
+        private void pictureBox81_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox81, "J9");
+        }
+
+        private void pictureBox90_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox90, "I5");
+        }
+
+        private void pictureBox89_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox89, "I6");
+        }
+
+        private void pictureBox88_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox88, "I7");
+        }
+
+        private void pictureBox87_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox87, "I8");
+        }
+
+        private void pictureBox86_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox86, "I9");
+        }
+
+        private void pictureBox95_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox95, "H5");
+        }
+
+        private void pictureBox94_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox94, "H6");
+        }
+
+        private void pictureBox93_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox93, "H7");
+        }
+
+        private void pictureBox92_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox92, "H8");
+        }
+
+        private void pictureBox91_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox91, "H9");
+        }
+
+        private void pictureBox100_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox100, "G5");
+        }
+
+        private void pictureBox99_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox99, "G6");
+        }
+
+        private void pictureBox98_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox98, "G7");
+        }
+
+        private void pictureBox97_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox97, "G8");
+        }
+
+        private void pictureBox96_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox96, "G9");
+        }
+
+        private void pictureBox105_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox105, "F5");
+        }
+
+        private void pictureBox104_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox104, "F6");
+        }
+
+        private void pictureBox103_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox103, "F7");
+        }
+
+        private void pictureBox102_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox102, "F8");
+        }
+
+        private void pictureBox101_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox101, "F9");
+        }
+
+        private void pictureBox110_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox110, "E5");
+        }
+
+        private void pictureBox109_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox109, "E6");
+        }
+
+        private void pictureBox108_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox108, "E7");
+        }
+
+        private void pictureBox107_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox107, "E8");
+        }
+
+        private void pictureBox106_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox106, "E9");
+        }
+
+        private void pictureBox115_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox115, "D5");
+        }
+
+        private void pictureBox114_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox114, "D6");
+        }
+
+        private void pictureBox113_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox113, "D7");
+        }
+
+        private void pictureBox112_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox112, "D8");
+        }
+
+        private void pictureBox111_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox111, "D9");
+        }
+
+        private void pictureBox120_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox120, "C5");
+        }
+
+        private void pictureBox119_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox119, "C6");
+        }
+
+        private void pictureBox118_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox118, "C7");
+        }
+
+        private void pictureBox117_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox117, "C8");
+        }
+
+        private void pictureBox116_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox116, "C9");
+        }
+
+        private void pictureBox125_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox125, "B5");
+        }
+
+        private void pictureBox124_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox124, "B6");
+        }
+
+        private void pictureBox123_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox123, "B7");
+        }
+
+        private void pictureBox122_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox122, "B8");
+        }
+
+        private void pictureBox121_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox121, "B9");
+        }
+
+        private void pictureBox130_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox130, "A5");
+        }
+
+        private void pictureBox129_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox129, "A6");
+        }
+
+        private void pictureBox128_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox128, "A7");
+        }
+
+        private void pictureBox127_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox127, "A8");
+        }
+
+        private void pictureBox126_Click(object sender, EventArgs e)
+        {
+            EscogerSilla(pictureBox126, "A9");
+        }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            conexiondb conexion = new conexiondb();
+            SqlCommand cmd;
+
+            sillasSeleccinadadas = list.ToArray();
+            for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+            {
+                //MessageBox.Show(sillasSeleccinadadas[i]);
+
+
+                try
+                {
+                    conexion.abrir();
+                    cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion) values (" + idFuncion + " , 'reservado', '" + sillasSeleccinadadas[i] + "')", conexion.conexion);
+                    cmd.ExecuteNonQuery();
+                    conexion.cerra();
+
+
+                }
+                catch (Exception ex)
+                {
+                    ErrorAlGuardar error = new ErrorAlGuardar();
+                    error.Show();
+                    MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+                }
+            }
+
+            SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
+            recargar.idFuncion = idFuncion;
+            FormParent.OpenFormInPanelCentral(recargar);
+        }
+
+        
     } 
 }

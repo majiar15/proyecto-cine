@@ -114,11 +114,10 @@ namespace proyecto_cine
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //if(userLoginTextBox.Text != "USUARIO")
+            //if (userLoginTextBox.Text != "USUARIO")
             //{
             VerificarLog();
             //}
-
 
         }
 
@@ -126,16 +125,16 @@ namespace proyecto_cine
         {
             //try
             //{
-            //conexiondb conexion = new conexiondb();
-            //conexion.abrir();
-            //SqlCommand cmd = new SqlCommand("select id, contraseña from empleados where id = '" + userLoginTextBox.Text + "' and contraseña = '" + passwordLoginTextBox.Text + "'", conexion.conexion);
-            //SqlDataReader dr = cmd.ExecuteReader();
-            //    if (dr.Read())
+                //conexiondb conexion = new conexiondb();
+                //conexion.abrir();
+                //SqlCommand cmd = new SqlCommand("select id, contraseña from empleados where id = '" + userLoginTextBox.Text + "' and contraseña = '" + passwordLoginTextBox.Text + "'", conexion.conexion);
+                //SqlDataReader dr = cmd.ExecuteReader();
+                //if (dr.Read())
                 //{
                     homeCajero home = new homeCajero();
                     this.Hide();
                     home.Show();
-                    //RegistroLog();
+            //        RegistroLog();
             //    }
             //    else
             //    {

@@ -22,7 +22,7 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            FormParent.OpenFormInPanelCentral(new Funciones(FormParent, 1));
+            FormParent.OpenFormInPanelCentral(new Funciones(FormParent, 2, "Avengers"));
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)

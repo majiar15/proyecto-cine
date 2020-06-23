@@ -38,6 +38,7 @@
             this.eliminar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.searchMenu = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridView23 = new System.Windows.Forms.DataGridView();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +96,7 @@
             this.Modificar.IdleFillColor = System.Drawing.Color.Black;
             this.Modificar.IdleForecolor = System.Drawing.Color.White;
             this.Modificar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.Modificar.Location = new System.Drawing.Point(587, 325);
+            this.Modificar.Location = new System.Drawing.Point(594, 324);
             this.Modificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Modificar.Name = "Modificar";
             this.Modificar.Size = new System.Drawing.Size(156, 43);
@@ -121,7 +122,7 @@
             this.eliminar.IdleFillColor = System.Drawing.Color.Black;
             this.eliminar.IdleForecolor = System.Drawing.Color.White;
             this.eliminar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.eliminar.Location = new System.Drawing.Point(587, 401);
+            this.eliminar.Location = new System.Drawing.Point(594, 397);
             this.eliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.eliminar.Name = "eliminar";
             this.eliminar.Size = new System.Drawing.Size(156, 43);
@@ -187,6 +188,32 @@
             this.dataGridView23.Size = new System.Drawing.Size(566, 363);
             this.dataGridView23.TabIndex = 52;
             // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 1;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Crear Funcion";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 1;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Black;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(594, 470);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(126, 49);
+            this.bunifuThinButton21.TabIndex = 54;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
+            // 
             // Peliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +221,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(749, 535);
             this.Controls.Add(this.searchMenu);
+            this.Controls.Add(this.bunifuThinButton21);
+            
             this.Controls.Add(this.dataGridView23);
             this.Controls.Add(this.eliminar);
             this.Controls.Add(this.Modificar);
@@ -218,5 +247,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 eliminar;
         private Bunifu.Framework.UI.BunifuTextbox searchMenu;
         public System.Windows.Forms.DataGridView dataGridView23;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }
