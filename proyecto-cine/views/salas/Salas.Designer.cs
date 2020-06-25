@@ -210,12 +210,11 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuTextbox searchMenu;
         public System.Windows.Forms.DataGridView dataGridView;
         private Bunifu.Framework.UI.BunifuThinButton2 eliminar;
         private Bunifu.Framework.UI.BunifuThinButton2 Modificar;
         private Bunifu.Framework.UI.BunifuThinButton2 Crear;
         private System.Windows.Forms.Label label1;
+        public Bunifu.Framework.UI.BunifuTextbox searchMenu;
     }
 }

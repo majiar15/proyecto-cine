@@ -90,8 +90,9 @@ namespace proyecto_cine.controller
 
             SalaModel modelo = new SalaModel();
 
-
-            return modelo.buscar(buscar);
+            
+            
+            return modelo.buscar(int.Parse(buscar));
 
         }
 

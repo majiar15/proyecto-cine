@@ -160,3 +160,5 @@ D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearFunc
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.ventas_y_reservas.Funciones.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.crearSala.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.Salas.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.crearSala.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.Salas.resources

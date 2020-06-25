@@ -93,9 +93,11 @@ namespace proyecto_cine.model.sala
         }
 
 
-        public DataTable buscar(string busqueda)
+        public DataTable buscar(int busqueda)
         {
-            string query = "select id,nombre, sala_id from sala where nombre like %'" + busqueda + "'%";
+
+            conexion.abrir();
+            string query = "select id,nombre, sede_id from sala where id like '%" + busqueda+ "%'";
             comando = new SqlCommand(query, conexion.conexion);
             SqlDataAdapter Adaptar = new SqlDataAdapter();
             Adaptar.SelectCommand = comando;

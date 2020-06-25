@@ -100,6 +100,7 @@ namespace proyecto_cine.views.salas
                 }
                 catch
                 {
+                    
                     searchMenu.text = "";
                     MessageBox.Show("INGRESE SOLO EL ID DE LA PELICULA");
                 }
