@@ -223,3 +223,5 @@ C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\pt\Microsoft.Repor
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.alertas.AlertReporteFecha.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReporteFecha.MostrarReporteFecha.resources

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using proyecto_cine.views.alertas;
 
 namespace proyecto_cine
 {
@@ -27,7 +28,9 @@ namespace proyecto_cine
 
         private void cancelarReservaButton_Click(object sender, EventArgs e)
         {
-            formParent.OpenFormInPanelCentral(new ReporteFecha(formParent));
+            //formParent.OpenFormInPanelCentral(new ReporteFecha(formParent));
+            AlertReporteFecha reporte = new AlertReporteFecha();
+            reporte.Show();
         }
 
         private void pagarReservaButtom_Click(object sender, EventArgs e)

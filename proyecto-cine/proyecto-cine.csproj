@@ -76,6 +76,7 @@
     <Compile Include="controller\CajeroController.cs" />
     <Compile Include="controller\ClienteController.cs" />
     <Compile Include="controller\PeliculaController.cs" />
+    <Compile Include="controller\ReporteFecha.cs" />
     <Compile Include="controller\SalaController.cs" />
     <Compile Include="model\pelicula\peliculaModel.cs" />
     <Compile Include="CrearFuncion.cs">
@@ -97,11 +98,28 @@
     <Compile Include="views\alertas\AlertaCCLog.Designer.cs">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\alertas\AlertReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\alertas\AlertReporteFecha.Designer.cs">
+      <DependentUpon>AlertReporteFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\cajero\Cajeros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\cajero\Cajeros.Designer.cs">
       <DependentUpon>Cajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reportes\ReporteFecha\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="views\reportes\ReporteFecha\MostrarReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\reportes\ReporteFecha\MostrarReporteFecha.Designer.cs">
+      <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="views\reportes\ReportePelicula\ReportView.cs">
       <SubType>Form</SubType>
@@ -297,8 +315,15 @@
     <EmbeddedResource Include="views\alertas\AlertaCCLog.resx">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\alertas\AlertReporteFecha.resx">
+      <DependentUpon>AlertReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\cajero\Cajeros.resx">
       <DependentUpon>Cajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reportes\ReporteFecha\InterfazReporte.rdlc" />
+    <EmbeddedResource Include="views\reportes\ReporteFecha\MostrarReporteFecha.resx">
+      <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\reportes\ReportePelicula\Report1.rdlc" />
     <EmbeddedResource Include="views\reportes\ReportePelicula\ReportView.resx">
@@ -406,6 +431,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="views\reportes\ReporteFecha\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="views\reportes\ReporteFecha\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="views\reportes\ReporteFecha\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -551,5 +587,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

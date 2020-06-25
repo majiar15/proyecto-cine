@@ -75,6 +75,7 @@
             this.pagarReservaButtom.Size = new System.Drawing.Size(124, 38);
             this.pagarReservaButtom.TabIndex = 11;
             this.pagarReservaButtom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pagarReservaButtom.Click += new System.EventHandler(this.pagarReservaButtom_Click);
             // 
             // ReporteFecha
             // 

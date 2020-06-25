@@ -18,5 +18,10 @@ namespace proyecto_cine
             this.formParent = formParent;
             InitializeComponent();
         }
+
+        private void pagarReservaButtom_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
