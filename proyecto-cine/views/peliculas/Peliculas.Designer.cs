@@ -99,7 +99,7 @@
             this.Modificar.Location = new System.Drawing.Point(594, 324);
             this.Modificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Modificar.Name = "Modificar";
-            this.Modificar.Size = new System.Drawing.Size(156, 43);
+            this.Modificar.Size = new System.Drawing.Size(149, 43);
             this.Modificar.TabIndex = 4;
             this.Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
@@ -125,7 +125,7 @@
             this.eliminar.Location = new System.Drawing.Point(594, 397);
             this.eliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.eliminar.Name = "eliminar";
-            this.eliminar.Size = new System.Drawing.Size(156, 43);
+            this.eliminar.Size = new System.Drawing.Size(149, 43);
             this.eliminar.TabIndex = 5;
             this.eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
@@ -222,7 +222,6 @@
             this.ClientSize = new System.Drawing.Size(749, 535);
             this.Controls.Add(this.searchMenu);
             this.Controls.Add(this.bunifuThinButton21);
-            
             this.Controls.Add(this.dataGridView23);
             this.Controls.Add(this.eliminar);
             this.Controls.Add(this.Modificar);

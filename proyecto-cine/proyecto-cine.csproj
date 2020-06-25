@@ -58,6 +58,7 @@
     <Compile Include="controller\CajeroController.cs" />
     <Compile Include="controller\ClienteController.cs" />
     <Compile Include="controller\PeliculaController.cs" />
+    <Compile Include="controller\SalaController.cs" />
     <Compile Include="model\pelicula\peliculaModel.cs" />
     <Compile Include="CrearFuncion.cs">
       <SubType>Form</SubType>
@@ -65,6 +66,7 @@
     <Compile Include="CrearFuncion.Designer.cs">
       <DependentUpon>CrearFuncion.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\sala\SalaModel.cs" />
     <Compile Include="model\usuario\AdministradorModel.cs" />
     <Compile Include="model\usuario\CajeroModel.cs" />
     <Compile Include="model\usuario\ClienteModel.cs" />
@@ -81,6 +83,18 @@
     </Compile>
     <Compile Include="views\cajero\Cajeros.Designer.cs">
       <DependentUpon>Cajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\salas\crearSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\salas\crearSala.Designer.cs">
+      <DependentUpon>crearSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\salas\Salas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\salas\Salas.Designer.cs">
+      <DependentUpon>Salas.cs</DependentUpon>
     </Compile>
     <Compile Include="views\ventas y reservas\cancelarReserva.cs">
       <SubType>Form</SubType>
@@ -260,6 +274,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\cajero\Cajeros.resx">
       <DependentUpon>Cajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\salas\crearSala.resx">
+      <DependentUpon>crearSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\salas\Salas.resx">
+      <DependentUpon>Salas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\ventas y reservas\cancelarReserva.resx">
       <DependentUpon>cancelarReserva.cs</DependentUpon>
@@ -483,5 +503,9 @@
   <ItemGroup>
     <None Include="Resources\Silla negra.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puerta.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

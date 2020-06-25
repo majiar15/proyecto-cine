@@ -153,11 +153,10 @@ C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto-cin
 C:\Users\Jesus Morales\Desktop\ProyectoPeli\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmacion.resources
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.Confirmacion.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.ventas_y_reservas.Funciones.resources
-
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.ventas_y_reservas.Funciones.resources
-
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearFuncion.resources
-
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearFuncion.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.CrearFuncion.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.ventas_y_reservas.Funciones.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.crearSala.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.Salas.resources

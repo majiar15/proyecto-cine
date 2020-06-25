@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_cine.views.salas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,10 @@ namespace proyecto_cine
                     break;
                 case "modificarCajero":
                     parent.OpenFormInPanelCentral(new Cajeros(parent));
+                    this.Close();
+                    break;
+                case "modificarSala":
+                    parent.OpenFormInPanelCentral(new Salas(parent));
                     this.Close();
                     break;
                 default:
