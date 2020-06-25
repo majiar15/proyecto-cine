@@ -27,6 +27,7 @@ namespace proyecto_cine
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            Parent.OpenFormInPanelCentral(new Reservas(Parent));
             this.Close();
 
         }

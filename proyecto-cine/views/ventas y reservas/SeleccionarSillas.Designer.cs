@@ -809,7 +809,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(3, 490);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(13, 455);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(86, 37);
@@ -2335,7 +2335,7 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(649, 490);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(649, 426);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(86, 37);
@@ -2718,7 +2718,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -2845,8 +2844,9 @@
         private System.Windows.Forms.PictureBox pictureBox128;
         private System.Windows.Forms.PictureBox pictureBox129;
         private System.Windows.Forms.PictureBox pictureBox130;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
     }
 }

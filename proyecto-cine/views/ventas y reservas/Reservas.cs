@@ -21,14 +21,14 @@ namespace proyecto_cine
 
         private void reservarBoletoButton_Click(object sender, EventArgs e)
         {
-            CedulaClienteReserva cedulaCliente = new CedulaClienteReserva();
+            CedulaClienteReserva cedulaCliente = new CedulaClienteReserva(formParent, "crear");
             cedulaCliente.Show();
         }
 
         private void cancelarReservaButton_Click(object sender, EventArgs e)
         {
-            this.formParent.OpenFormInPanelCentral(new cancelarReserva(this.formParent));
-            this.Close();
+            CedulaClienteReserva cedula = new CedulaClienteReserva(formParent, "cancelar");
+            cedula.Show(); ;
 
 
 

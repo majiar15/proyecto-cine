@@ -134,7 +134,7 @@ namespace proyecto_cine
                     homeCajero home = new homeCajero();
                     this.Hide();
                     home.Show();
-            //        RegistroLog();
+                    //RegistroLog();
             //    }
             //    else
             //    {

@@ -24,8 +24,10 @@ namespace proyecto_cine
         public string pelicula;
         public string sala;
         public int precio;
+        public long cedulaCliente;
         public DateTime fechaFuncion;
         int contadorSillas;
+        public string opcion;
 
         public SeleccionarSillas(homeCajero parent)
         {
@@ -68,6 +70,7 @@ namespace proyecto_cine
 
                 SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
                 recargar.idFuncion = idFuncion;
+                recargar.bunifuThinButton23.Visible = false;
                 FormParent.OpenFormInPanelCentral(recargar);
 
                 //Imprimir
@@ -979,19 +982,59 @@ namespace proyecto_cine
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            conexiondb conexion = new conexiondb();
-            SqlCommand cmd;
-
-            sillasSeleccinadadas = list.ToArray();
-            for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+            if (contadorSillas != 0)
             {
-                //MessageBox.Show(sillasSeleccinadadas[i]);
+                conexiondb conexion = new conexiondb();
+                SqlCommand cmd;
+
+                sillasSeleccinadadas = list.ToArray();
+                for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+                {
+                    //MessageBox.Show(sillasSeleccinadadas[i]);
 
 
+                    try
+                    {
+                        DateTime fecha = DateTime.Today;
+                        conexion.abrir();
+                        cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion, cliente_id) values (" + idFuncion + " , 'Reservado', '" + sillasSeleccinadadas[i] + "', "+cedulaCliente+")", conexion.conexion);
+                        cmd.ExecuteNonQuery();
+                        conexion.cerra();
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        ErrorAlGuardar error = new ErrorAlGuardar();
+                        error.Show();
+                        MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+                    }
+                }
+                //new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
+                //this.Close();
+
+                SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
+                recargar.idFuncion = idFuncion;
+                recargar.bunifuThinButton22.Visible = false;
+                FormParent.OpenFormInPanelCentral(recargar);
+
+                //Imprimir
+
+                //PrintDocument printer = new PrintDocument();
+                //PrinterSettings ps = new PrinterSettings();
+                //printer.PrinterSettings = ps;
+                //printer.PrintPage += imprimir;
+                //if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                //    printDocument1.Print();
+
+                //Registrar reserva
+                Random rnd = new Random();
+                int id = rnd.Next(1, 10000);
                 try
                 {
+                    DateTime fecha = DateTime.Today;
                     conexion.abrir();
-                    cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion) values (" + idFuncion + " , 'reservado', '" + sillasSeleccinadadas[i] + "')", conexion.conexion);
+                    cmd = new SqlCommand("Insert into reserva (id, cliente_id, estado, funcion_id) values ("+id+" , " + cedulaCliente + ", 'SinPagar' , "+idFuncion+")", conexion.conexion);
                     cmd.ExecuteNonQuery();
                     conexion.cerra();
 
@@ -1004,12 +1047,9 @@ namespace proyecto_cine
                     MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
                 }
             }
-
-            SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
-            recargar.idFuncion = idFuncion;
-            FormParent.OpenFormInPanelCentral(recargar);
+            else MessageBox.Show("Seleccione las sillas porfavor");
         }
 
-        
+
     } 
 }

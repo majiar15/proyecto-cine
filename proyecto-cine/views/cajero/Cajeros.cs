@@ -92,12 +92,12 @@ namespace proyecto_cine
             modificar.tbTelefono.Text = dataGridView1.CurrentRow.Cells["telefono"].Value.ToString();
             modificar.tbContraseña.Text = dataGridView1.CurrentRow.Cells["contraseña"].Value.ToString();
             modificar.tbCedula.Text = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
-            int cargo = int.Parse(dataGridView1.CurrentRow.Cells["cargo_id"].Value.ToString());
-            if (cargo == 1)
+            string cargo = dataGridView1.CurrentRow.Cells["cargo"].Value.ToString();
+            if (cargo == "Administrador")
             {
                 modificar.cbCargo.selectedIndex = 1;
             }
-            else if (cargo == 2)
+            else if (cargo == "Cajero")
             {
                 modificar.cbCargo.selectedIndex = 2;
             }

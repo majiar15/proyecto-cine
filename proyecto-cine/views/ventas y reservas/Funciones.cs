@@ -16,6 +16,8 @@ namespace proyecto_cine.views.ventas_y_reservas
         homeCajero FormParent;
         int IdPelicula;
         string pelicula;
+        public long cedulaCliente;
+        public string opcion;
         public Funciones(homeCajero parent, int idPelicula, string pelicula)
         {
             this.FormParent = parent;
@@ -54,11 +56,18 @@ namespace proyecto_cine.views.ventas_y_reservas
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
             SeleccionarSillas seleccionar = new SeleccionarSillas(FormParent);
+            seleccionar.cedulaCliente = cedulaCliente;
             seleccionar.idFuncion = int.Parse(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
             seleccionar.pelicula = pelicula;
             seleccionar.sala = dataGridView1.CurrentRow.Cells["sala_id"].Value.ToString();
             seleccionar.precio = int.Parse(dataGridView1.CurrentRow.Cells["valor_entrada"].Value.ToString());
             seleccionar.fechaFuncion = DateTime.Parse(dataGridView1.CurrentRow.Cells["fecha"].Value.ToString());
+            if (opcion == "reserva")
+            {
+                seleccionar.bunifuThinButton22.Visible = false;
+            }else seleccionar.bunifuThinButton23.Visible = false;
+
+
             FormParent.OpenFormInPanelCentral(seleccionar);
         }
     }
