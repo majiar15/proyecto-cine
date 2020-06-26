@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cedulaTexbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -86,13 +86,14 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(78, 41);
             this.bunifuThinButton21.TabIndex = 27;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // textBox1
+            // cedulaTexbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 20);
-            this.textBox1.TabIndex = 26;
+            this.cedulaTexbox.Location = new System.Drawing.Point(56, 118);
+            this.cedulaTexbox.Name = "cedulaTexbox";
+            this.cedulaTexbox.Size = new System.Drawing.Size(262, 20);
+            this.cedulaTexbox.TabIndex = 26;
             // 
             // label1
             // 
@@ -141,7 +142,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cedulaTexbox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -160,7 +161,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cedulaTexbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

@@ -164,7 +164,6 @@ C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.view
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.Salas.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.crearSala.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.salas.Salas.resources
-C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportView.resources
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\RdlCompile.cache
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\RdlCompile.compiled
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\bin\Debug\SqlServerTypes\x64\msvcr120.dll
@@ -353,3 +352,5 @@ D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.rep
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportView.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportePelicula.mostrarReportePelicula.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportePelicula.mostrarReportePelicula.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportePelicula.mostrarReportePelicula.resources
+C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReporteCliente.MostrarReporteClientecs.resources

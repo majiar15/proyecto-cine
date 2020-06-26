@@ -28,7 +28,7 @@ namespace proyecto_cine
             mostrarReportePelicula reporteForm = new mostrarReportePelicula();
             string nombre = nombrePelicula.Text;
             reporteForm.nombrePelicula = nombre;
-            reporteForm.Show();
+            reporteForm.ShowDialog();
             this.Close();
 
         }

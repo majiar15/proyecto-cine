@@ -166,6 +166,7 @@ namespace proyecto_cine
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                
             }
 
         }

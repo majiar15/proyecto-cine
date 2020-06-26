@@ -110,6 +110,17 @@
     <Compile Include="views\cajero\Cajeros.Designer.cs">
       <DependentUpon>Cajeros.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\reportes\ReporteCliente\DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="views\reportes\ReporteCliente\MostrarReporteClientecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\reportes\ReporteCliente\MostrarReporteClientecs.Designer.cs">
+      <DependentUpon>MostrarReporteClientecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\reportes\ReporteFecha\DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +131,11 @@
     </Compile>
     <Compile Include="views\reportes\ReporteFecha\MostrarReporteFecha.Designer.cs">
       <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reportes\ReportePelicula\DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="views\reportes\ReportePelicula\mostrarReportePelicula.cs">
       <SubType>Form</SubType>
@@ -321,10 +337,15 @@
     <EmbeddedResource Include="views\cajero\Cajeros.resx">
       <DependentUpon>Cajeros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\reportes\ReporteCliente\infReportCliente.rdlc" />
+    <EmbeddedResource Include="views\reportes\ReporteCliente\MostrarReporteClientecs.resx">
+      <DependentUpon>MostrarReporteClientecs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\reportes\ReporteFecha\InterfazReporte.rdlc" />
     <EmbeddedResource Include="views\reportes\ReporteFecha\MostrarReporteFecha.resx">
       <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\reportes\ReportePelicula\InfReportPelicula.rdlc" />
     <EmbeddedResource Include="views\reportes\ReportePelicula\mostrarReportePelicula.resx">
       <DependentUpon>mostrarReportePelicula.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +451,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="views\reportes\ReporteCliente\DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="views\reportes\ReporteCliente\DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="views\reportes\ReporteCliente\DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
     <None Include="views\reportes\ReporteFecha\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
@@ -440,6 +472,17 @@
     </None>
     <None Include="views\reportes\ReporteFecha\DataSet.xss">
       <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="views\reportes\ReportePelicula\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="views\reportes\ReportePelicula\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="views\reportes\ReportePelicula\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
