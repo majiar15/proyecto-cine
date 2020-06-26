@@ -114,37 +114,59 @@ namespace proyecto_cine
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //if (userLoginTextBox.Text != "USUARIO")
-            //{
-            VerificarLog();
-            //}
+            if (userLoginTextBox.Text != "USUARIO")
+            {
+                VerificarLog();
+            }
 
         }
 
         private void VerificarLog()
         {
-            //try
-            //{
-                //conexiondb conexion = new conexiondb();
-                //conexion.abrir();
-                //SqlCommand cmd = new SqlCommand("select id, contraseña from empleados where id = '" + userLoginTextBox.Text + "' and contraseña = '" + passwordLoginTextBox.Text + "'", conexion.conexion);
-                //SqlDataReader dr = cmd.ExecuteReader();
-                //if (dr.Read())
-                //{
-                    homeCajero home = new homeCajero();
-                    this.Hide();
-                    home.Show();
-                    //RegistroLog();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Usuario incorrecto");
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e);
-            //}
+            try
+            {
+                conexiondb conexion = new conexiondb();
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand("select id, cargo_id, contraseña from empleados where id = '" + userLoginTextBox.Text + "' and contraseña = '" + passwordLoginTextBox.Text + "'", conexion.conexion);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    if (dr.GetValue(1).ToString() == "1")
+                    {
+                        homeCajero home = new homeCajero();
+                        this.Hide();
+                        home.Show();
+                        RegistroLog();
+                    }else if(dr.GetValue(1).ToString() == "2")
+                    {
+                        homeCajero home = new homeCajero();
+                        home.peliculasButtonMenu.Visible = false;
+                        home.salasButtomMenu.Visible = false;
+                        home.clientesButtonMenu.Visible = false;
+                        home.cajerosButtonMenu.Visible = false;
+                        home.reportesButtonMenu.Visible = false;
+                        home.logButtonMenu.Visible = false;
+                        home.panel1.Visible = false;
+                        home.panel2.Visible = false;
+                        home.panel3.Visible = false;
+                        home.panel4.Visible = false;
+                        home.panel6.Visible = false;
+                        home.panel7.Visible = false;
+                        this.Hide();
+                        home.Show();
+                        RegistroLog();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario incorrecto");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
 
         }
 

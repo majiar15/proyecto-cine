@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservas));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pagarReservaButtom = new Bunifu.Framework.UI.BunifuThinButton2();
             this.cancelarReservaButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.reservarBoletoButton = new Bunifu.Framework.UI.BunifuThinButton2();
             this.titleReserva = new System.Windows.Forms.Label();
@@ -40,7 +39,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.pagarReservaButtom);
             this.panel1.Controls.Add(this.cancelarReservaButton);
             this.panel1.Controls.Add(this.reservarBoletoButton);
             this.panel1.Controls.Add(this.titleReserva);
@@ -49,32 +47,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(812, 644);
             this.panel1.TabIndex = 0;
-            // 
-            // pagarReservaButtom
-            // 
-            this.pagarReservaButtom.ActiveBorderThickness = 1;
-            this.pagarReservaButtom.ActiveCornerRadius = 30;
-            this.pagarReservaButtom.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.pagarReservaButtom.ActiveForecolor = System.Drawing.Color.White;
-            this.pagarReservaButtom.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.pagarReservaButtom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.pagarReservaButtom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pagarReservaButtom.BackgroundImage")));
-            this.pagarReservaButtom.ButtonText = "Pagar Reserva";
-            this.pagarReservaButtom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pagarReservaButtom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pagarReservaButtom.ForeColor = System.Drawing.Color.SeaGreen;
-            this.pagarReservaButtom.IdleBorderThickness = 1;
-            this.pagarReservaButtom.IdleCornerRadius = 20;
-            this.pagarReservaButtom.IdleFillColor = System.Drawing.Color.Black;
-            this.pagarReservaButtom.IdleForecolor = System.Drawing.Color.WhiteSmoke;
-            this.pagarReservaButtom.IdleLineColor = System.Drawing.Color.Black;
-            this.pagarReservaButtom.Location = new System.Drawing.Point(532, 264);
-            this.pagarReservaButtom.Margin = new System.Windows.Forms.Padding(11);
-            this.pagarReservaButtom.Name = "pagarReservaButtom";
-            this.pagarReservaButtom.Size = new System.Drawing.Size(220, 99);
-            this.pagarReservaButtom.TabIndex = 7;
-            this.pagarReservaButtom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pagarReservaButtom.Click += new System.EventHandler(this.pagarReservaButtom_Click);
             // 
             // cancelarReservaButton
             // 
@@ -94,7 +66,7 @@
             this.cancelarReservaButton.IdleFillColor = System.Drawing.Color.Black;
             this.cancelarReservaButton.IdleForecolor = System.Drawing.Color.WhiteSmoke;
             this.cancelarReservaButton.IdleLineColor = System.Drawing.Color.Black;
-            this.cancelarReservaButton.Location = new System.Drawing.Point(285, 264);
+            this.cancelarReservaButton.Location = new System.Drawing.Point(449, 264);
             this.cancelarReservaButton.Margin = new System.Windows.Forms.Padding(11);
             this.cancelarReservaButton.Name = "cancelarReservaButton";
             this.cancelarReservaButton.Size = new System.Drawing.Size(225, 99);
@@ -120,7 +92,7 @@
             this.reservarBoletoButton.IdleFillColor = System.Drawing.Color.Black;
             this.reservarBoletoButton.IdleForecolor = System.Drawing.Color.WhiteSmoke;
             this.reservarBoletoButton.IdleLineColor = System.Drawing.Color.Black;
-            this.reservarBoletoButton.Location = new System.Drawing.Point(43, 264);
+            this.reservarBoletoButton.Location = new System.Drawing.Point(145, 264);
             this.reservarBoletoButton.Margin = new System.Windows.Forms.Padding(11);
             this.reservarBoletoButton.Name = "reservarBoletoButton";
             this.reservarBoletoButton.Size = new System.Drawing.Size(220, 99);
@@ -156,7 +128,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuThinButton2 pagarReservaButtom;
         private Bunifu.Framework.UI.BunifuThinButton2 cancelarReservaButton;
         private Bunifu.Framework.UI.BunifuThinButton2 reservarBoletoButton;
         private System.Windows.Forms.Label titleReserva;

@@ -128,5 +128,12 @@ namespace proyecto_cine
             CrearFuncion funcion = new CrearFuncion(formParent, idPelicula);
             formParent.OpenFormInPanelCentral(funcion);
         }
+
+        private void bunifuThinButton21_Click_1(object sender, EventArgs e)
+        {
+            int idPelicula = int.Parse(dataGridView23.CurrentRow.Cells["id"].Value.ToString());
+            CrearFuncion funcion = new CrearFuncion(formParent, idPelicula);
+            formParent.OpenFormInPanelCentral(funcion);
+        }
     }
 }

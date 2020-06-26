@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(homeCajero));
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panelCenter = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panelLeftMenu = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.salasButtomMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.peliculasButtonMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -62,6 +60,7 @@
             this.closeAppMenu = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.loginClose = new System.Windows.Forms.PictureBox();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.panelCenter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelLeftMenu.SuspendLayout();
@@ -77,22 +76,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation4;
             // 
             // panelCenter
             // 
@@ -126,15 +125,6 @@
             this.panel22.Size = new System.Drawing.Size(4, 64);
             this.panel22.TabIndex = 0;
             // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Silver;
-            this.bunifuTransition1.SetDecoration(this.panel20, BunifuAnimatorNS.DecorationType.None);
-            this.panel20.Location = new System.Drawing.Point(3, 80);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(4, 64);
-            this.panel20.TabIndex = 1;
-            // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.Silver;
@@ -166,8 +156,7 @@
             // 
             this.panelLeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.panelLeftMenu.Controls.Add(this.panel7);
-            this.panelLeftMenu.Controls.Add(this.bunifuFlatButton1);
-            this.panelLeftMenu.Controls.Add(this.panel5);
+            this.panelLeftMenu.Controls.Add(this.salasButtomMenu);
             this.panelLeftMenu.Controls.Add(this.panel6);
             this.panelLeftMenu.Controls.Add(this.peliculasButtonMenu);
             this.panelLeftMenu.Controls.Add(this.panel4);
@@ -197,55 +186,46 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.Silver;
             this.bunifuTransition1.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
-            this.panel7.Location = new System.Drawing.Point(2, 219);
+            this.panel7.Location = new System.Drawing.Point(3, 221);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(4, 60);
             this.panel7.TabIndex = 27;
             // 
-            // bunifuFlatButton1
+            // salasButtomMenu
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Salas";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::proyecto_cine.Properties.Resources.puerta;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(12, 221);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(138, 55);
-            this.bunifuFlatButton1.TabIndex = 26;
-            this.bunifuFlatButton1.Text = "Salas";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.bunifuTransition1.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
-            this.panel5.Location = new System.Drawing.Point(3, 152);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(4, 64);
-            this.panel5.TabIndex = 24;
+            this.salasButtomMenu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.salasButtomMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.salasButtomMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.salasButtomMenu.BorderRadius = 0;
+            this.salasButtomMenu.ButtonText = "Salas";
+            this.salasButtomMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.salasButtomMenu, BunifuAnimatorNS.DecorationType.None);
+            this.salasButtomMenu.DisabledColor = System.Drawing.Color.Gray;
+            this.salasButtomMenu.Iconcolor = System.Drawing.Color.Transparent;
+            this.salasButtomMenu.Iconimage = global::proyecto_cine.Properties.Resources.puerta;
+            this.salasButtomMenu.Iconimage_right = null;
+            this.salasButtomMenu.Iconimage_right_Selected = null;
+            this.salasButtomMenu.Iconimage_Selected = null;
+            this.salasButtomMenu.IconMarginLeft = 0;
+            this.salasButtomMenu.IconMarginRight = 0;
+            this.salasButtomMenu.IconRightVisible = true;
+            this.salasButtomMenu.IconRightZoom = 0D;
+            this.salasButtomMenu.IconVisible = true;
+            this.salasButtomMenu.IconZoom = 90D;
+            this.salasButtomMenu.IsTab = false;
+            this.salasButtomMenu.Location = new System.Drawing.Point(12, 221);
+            this.salasButtomMenu.Name = "salasButtomMenu";
+            this.salasButtomMenu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.salasButtomMenu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.salasButtomMenu.OnHoverTextColor = System.Drawing.Color.White;
+            this.salasButtomMenu.selected = false;
+            this.salasButtomMenu.Size = new System.Drawing.Size(138, 55);
+            this.salasButtomMenu.TabIndex = 26;
+            this.salasButtomMenu.Text = "Salas";
+            this.salasButtomMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salasButtomMenu.Textcolor = System.Drawing.Color.White;
+            this.salasButtomMenu.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salasButtomMenu.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // panel6
             // 
@@ -656,6 +636,15 @@
             this.loginClose.TabIndex = 23;
             this.loginClose.TabStop = false;
             // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Silver;
+            this.bunifuTransition1.SetDecoration(this.panel20, BunifuAnimatorNS.DecorationType.None);
+            this.panel20.Location = new System.Drawing.Point(3, 80);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(4, 64);
+            this.panel20.TabIndex = 1;
+            // 
             // homeCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,13 +675,11 @@
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private System.Windows.Forms.Panel panelCenter;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private Bunifu.Framework.UI.BunifuFlatButton ventasButtonMenu;
         private Bunifu.Framework.UI.BunifuFlatButton reservaButtonMenu;
-        private Bunifu.Framework.UI.BunifuFlatButton logOutMenu;
         private System.Windows.Forms.Panel panelLeftMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox loginClose;
@@ -701,18 +688,19 @@
         private System.Windows.Forms.PictureBox showHideMenu;
         private System.Windows.Forms.PictureBox minimizeMenu;
         private System.Windows.Forms.Panel PanelTopMenu;
-        private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuFlatButton clientesButtonMenu;
-        private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuFlatButton cajerosButtonMenu;
-        private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuFlatButton reportesButtonMenu;
-        private System.Windows.Forms.Panel panel4;
-        private Bunifu.Framework.UI.BunifuFlatButton logButtonMenu;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private Bunifu.Framework.UI.BunifuFlatButton peliculasButtonMenu;
-        private System.Windows.Forms.Panel panel7;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        public Bunifu.Framework.UI.BunifuFlatButton clientesButtonMenu;
+        public Bunifu.Framework.UI.BunifuFlatButton cajerosButtonMenu;
+        public Bunifu.Framework.UI.BunifuFlatButton reportesButtonMenu;
+        public Bunifu.Framework.UI.BunifuFlatButton logButtonMenu;
+        public Bunifu.Framework.UI.BunifuFlatButton peliculasButtonMenu;
+        public Bunifu.Framework.UI.BunifuFlatButton salasButtomMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton logOutMenu;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel20;
+        public System.Windows.Forms.Panel panel6;
     }
 }

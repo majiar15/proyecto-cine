@@ -74,6 +74,22 @@ namespace proyecto_cine
                 {
                     Console.WriteLine(ex.ToString());
                 }
+
+                //Cancelar ticket
+
+                try
+                {
+                    conexiondb conexion = new conexiondb();
+                    conexion.abrir();
+                    SqlCommand cmd = new SqlCommand(string.Format("delete from ticket where funcion_id = {0} and cliente_id = {1}", funcionId, id), conexion.conexion);
+                    int filasafectadas = cmd.ExecuteNonQuery();
+                    conexion.cerra();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
             }
             else
             {

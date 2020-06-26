@@ -342,7 +342,6 @@
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 130;
             this.label1.Text = "0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -353,7 +352,6 @@
             this.label2.Size = new System.Drawing.Size(14, 13);
             this.label2.TabIndex = 131;
             this.label2.Text = "1";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -364,7 +362,6 @@
             this.label3.Size = new System.Drawing.Size(14, 13);
             this.label3.TabIndex = 133;
             this.label3.Text = "3";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -375,7 +372,6 @@
             this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 132;
             this.label4.Text = "2";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -386,7 +382,6 @@
             this.label5.Size = new System.Drawing.Size(14, 13);
             this.label5.TabIndex = 134;
             this.label5.Text = "4";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -397,7 +392,6 @@
             this.label6.Size = new System.Drawing.Size(17, 13);
             this.label6.TabIndex = 135;
             this.label6.Text = "M";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -408,7 +402,6 @@
             this.label7.Size = new System.Drawing.Size(14, 13);
             this.label7.TabIndex = 136;
             this.label7.Text = "L";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -419,7 +412,6 @@
             this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 138;
             this.label8.Text = "J";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -430,7 +422,6 @@
             this.label9.Size = new System.Drawing.Size(15, 13);
             this.label9.TabIndex = 137;
             this.label9.Text = "K";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -441,7 +432,6 @@
             this.label10.Size = new System.Drawing.Size(14, 13);
             this.label10.TabIndex = 142;
             this.label10.Text = "F";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -452,7 +442,6 @@
             this.label11.Size = new System.Drawing.Size(16, 13);
             this.label11.TabIndex = 141;
             this.label11.Text = "G";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -463,7 +452,6 @@
             this.label12.Size = new System.Drawing.Size(16, 13);
             this.label12.TabIndex = 140;
             this.label12.Text = "H";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -474,7 +462,6 @@
             this.label13.Size = new System.Drawing.Size(11, 13);
             this.label13.TabIndex = 139;
             this.label13.Text = "I";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -485,7 +472,6 @@
             this.label14.Size = new System.Drawing.Size(15, 13);
             this.label14.TabIndex = 146;
             this.label14.Text = "B";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -496,7 +482,6 @@
             this.label15.Size = new System.Drawing.Size(15, 13);
             this.label15.TabIndex = 145;
             this.label15.Text = "C";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -507,7 +492,6 @@
             this.label16.Size = new System.Drawing.Size(16, 13);
             this.label16.TabIndex = 144;
             this.label16.Text = "D";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -518,7 +502,6 @@
             this.label17.Size = new System.Drawing.Size(15, 13);
             this.label17.TabIndex = 143;
             this.label17.Text = "E";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -529,7 +512,6 @@
             this.label18.Size = new System.Drawing.Size(15, 13);
             this.label18.TabIndex = 147;
             this.label18.Text = "A";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label19
             // 
@@ -540,7 +522,6 @@
             this.label19.Size = new System.Drawing.Size(14, 13);
             this.label19.TabIndex = 152;
             this.label19.Text = "9";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -551,7 +532,6 @@
             this.label20.Size = new System.Drawing.Size(14, 13);
             this.label20.TabIndex = 151;
             this.label20.Text = "8";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 
@@ -562,7 +542,6 @@
             this.label21.Size = new System.Drawing.Size(14, 13);
             this.label21.TabIndex = 150;
             this.label21.Text = "7";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label22
             // 
@@ -573,7 +552,6 @@
             this.label22.Size = new System.Drawing.Size(14, 13);
             this.label22.TabIndex = 149;
             this.label22.Text = "6";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label23
             // 
@@ -584,7 +562,6 @@
             this.label23.Size = new System.Drawing.Size(14, 13);
             this.label23.TabIndex = 148;
             this.label23.Text = "5";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label24
             // 
@@ -595,7 +572,6 @@
             this.label24.Size = new System.Drawing.Size(15, 13);
             this.label24.TabIndex = 165;
             this.label24.Text = "A";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // label25
             // 
@@ -606,7 +582,6 @@
             this.label25.Size = new System.Drawing.Size(15, 13);
             this.label25.TabIndex = 164;
             this.label25.Text = "B";
-            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label26
             // 
@@ -617,7 +592,6 @@
             this.label26.Size = new System.Drawing.Size(15, 13);
             this.label26.TabIndex = 163;
             this.label26.Text = "C";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // label27
             // 
@@ -628,7 +602,6 @@
             this.label27.Size = new System.Drawing.Size(16, 13);
             this.label27.TabIndex = 162;
             this.label27.Text = "D";
-            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label28
             // 
@@ -639,7 +612,6 @@
             this.label28.Size = new System.Drawing.Size(15, 13);
             this.label28.TabIndex = 161;
             this.label28.Text = "E";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -650,7 +622,6 @@
             this.label29.Size = new System.Drawing.Size(14, 13);
             this.label29.TabIndex = 160;
             this.label29.Text = "F";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -661,7 +632,6 @@
             this.label30.Size = new System.Drawing.Size(16, 13);
             this.label30.TabIndex = 159;
             this.label30.Text = "G";
-            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // label31
             // 
@@ -672,7 +642,6 @@
             this.label31.Size = new System.Drawing.Size(16, 13);
             this.label31.TabIndex = 158;
             this.label31.Text = "H";
-            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // label32
             // 
@@ -683,7 +652,6 @@
             this.label32.Size = new System.Drawing.Size(11, 13);
             this.label32.TabIndex = 157;
             this.label32.Text = "I";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label33
             // 
@@ -694,7 +662,6 @@
             this.label33.Size = new System.Drawing.Size(13, 13);
             this.label33.TabIndex = 156;
             this.label33.Text = "J";
-            this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
             // label34
             // 
@@ -705,7 +672,6 @@
             this.label34.Size = new System.Drawing.Size(15, 13);
             this.label34.TabIndex = 155;
             this.label34.Text = "K";
-            this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
             // label35
             // 
@@ -716,7 +682,6 @@
             this.label35.Size = new System.Drawing.Size(14, 13);
             this.label35.TabIndex = 154;
             this.label35.Text = "L";
-            this.label35.Click += new System.EventHandler(this.label35_Click);
             // 
             // label36
             // 
@@ -727,7 +692,6 @@
             this.label36.Size = new System.Drawing.Size(17, 13);
             this.label36.TabIndex = 153;
             this.label36.Text = "M";
-            this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
             // bunifuSeparator1
             // 
@@ -2372,7 +2336,7 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(682, 479);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(682, 508);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(86, 37);

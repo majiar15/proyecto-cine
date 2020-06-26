@@ -31,10 +31,5 @@ namespace proyecto_cine
             cedula.Show(); ;
         }
 
-        private void pagarReservaButtom_Click(object sender, EventArgs e)
-        {
-            CedulaClienteReserva cedula = new CedulaClienteReserva(formParent, "pagar");
-            cedula.Show(); ;
-        }
     }
 }

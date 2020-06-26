@@ -103,6 +103,92 @@ namespace proyecto_cine
             else MessageBox.Show("Seleccione las sillas porfavor");
         }
 
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            if (contadorSillas != 0)
+            {
+                conexiondb conexion = new conexiondb();
+                SqlCommand cmd;
+
+                sillasSeleccinadadas = list.ToArray();
+                for (int i = 0; i < sillasSeleccinadadas.Length; i++)
+                {
+                    //MessageBox.Show(sillasSeleccinadadas[i]);
+
+
+                    try
+                    {
+                        DateTime fecha = DateTime.Today;
+                        conexion.abrir();
+                        cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion, cliente_id) values (" + idFuncion + " , 'Reservado', '" + sillasSeleccinadadas[i] + "', " + cedulaCliente + ")", conexion.conexion);
+                        cmd.ExecuteNonQuery();
+                        conexion.cerra();
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        ErrorAlGuardar error = new ErrorAlGuardar();
+                        error.Show();
+                        MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+                    }
+                }
+
+                //Imprimir
+
+                PrintDocument printer = new PrintDocument();
+                PrinterSettings ps = new PrinterSettings();
+                printer.PrinterSettings = ps;
+                printer.PrintPage += imprimir;
+                if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                    printDocument1.Print();
+
+                //Registrar reserva
+                Random rnd = new Random();
+                int id = rnd.Next(1, 10000);
+                try
+                {
+                    DateTime fecha = DateTime.Today;
+                    conexion.abrir();
+                    cmd = new SqlCommand("Insert into reserva (id, cliente_id, estado, funcion_id) values (" + id + " , " + cedulaCliente + ", 'SinPagar' , " + idFuncion + ")", conexion.conexion);
+                    cmd.ExecuteNonQuery();
+                    conexion.cerra();
+
+
+                }
+                catch (Exception ex)
+                {
+                    ErrorAlGuardar error = new ErrorAlGuardar();
+                    error.Show();
+                    MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+                }
+
+
+                //Registrar compra
+
+                try
+                {
+                    DateTime fecha = DateTime.Today;
+                    conexion.abrir();
+                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, cliente_id, fecha, valor_total) values (" + idFuncion + " , " + sillasSeleccinadadas.Length + ","+cedulaCliente+" , '" + fecha.ToString("yyyy-MM-dd") + "', " + (sillasSeleccinadadas.Length * precio) + ")", conexion.conexion);
+                    cmd.ExecuteNonQuery();
+                    conexion.cerra();
+
+
+                }
+                catch (Exception ex)
+                {
+                    ErrorAlGuardar error = new ErrorAlGuardar();
+                    error.Show();
+                    MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
+                }
+
+                MessageBox.Show("Reserva realizada correctamente");
+                FormParent.OpenFormInPanelCentral(new Reservas(FormParent));
+            }
+            else MessageBox.Show("Seleccione las sillas porfavor");
+        }
+
         private void imprimir(object sender, PrintPageEventArgs printer)
         {
             string sillas = "";
@@ -979,259 +1065,12 @@ namespace proyecto_cine
             EscogerSilla(pictureBox126, "A9");
         }
 
-        private void bunifuThinButton23_Click(object sender, EventArgs e)
-        {
-            if (contadorSillas != 0)
-            {
-                conexiondb conexion = new conexiondb();
-                SqlCommand cmd;
-
-                sillasSeleccinadadas = list.ToArray();
-                for (int i = 0; i < sillasSeleccinadadas.Length; i++)
-                {
-                    //MessageBox.Show(sillasSeleccinadadas[i]);
-
-
-                    try
-                    {
-                        DateTime fecha = DateTime.Today;
-                        conexion.abrir();
-                        cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion, cliente_id) values (" + idFuncion + " , 'Reservado', '" + sillasSeleccinadadas[i] + "', "+cedulaCliente+")", conexion.conexion);
-                        cmd.ExecuteNonQuery();
-                        conexion.cerra();
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        ErrorAlGuardar error = new ErrorAlGuardar();
-                        error.Show();
-                        MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
-                    }
-                }
-                //new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
-                //this.Close();
-
-                SeleccionarSillas recargar = new SeleccionarSillas(FormParent);
-                recargar.idFuncion = idFuncion;
-                recargar.bunifuThinButton22.Visible = false;
-                FormParent.OpenFormInPanelCentral(recargar);
-
-                //Imprimir
-
-                //PrintDocument printer = new PrintDocument();
-                //PrinterSettings ps = new PrinterSettings();
-                //printer.PrinterSettings = ps;
-                //printer.PrintPage += imprimir;
-                //if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
-                //    printDocument1.Print();
-
-                //Registrar reserva
-                Random rnd = new Random();
-                int id = rnd.Next(1, 10000);
-                try
-                {
-                    DateTime fecha = DateTime.Today;
-                    conexion.abrir();
-                    cmd = new SqlCommand("Insert into reserva (id, cliente_id, estado, funcion_id) values ("+id+" , " + cedulaCliente + ", 'SinPagar' , "+idFuncion+")", conexion.conexion);
-                    cmd.ExecuteNonQuery();
-                    conexion.cerra();
-
-
-                }
-                catch (Exception ex)
-                {
-                    ErrorAlGuardar error = new ErrorAlGuardar();
-                    error.Show();
-                    MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
-                }
-            }
-            else MessageBox.Show("Seleccione las sillas porfavor");
-        }
+        
 
         private void bunifuSeparator1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label35_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     } 
 }
