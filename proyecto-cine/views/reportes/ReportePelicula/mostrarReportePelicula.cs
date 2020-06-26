@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace proyecto_cine.views.reportes
+namespace proyecto_cine.views.reportes.ReportePelicula
 {
-    public partial class ReportView : Form
+    public partial class mostrarReportePelicula : Form
+      
     {
-        public ReportView()
+        public string nombrePelicula;
+
+        public mostrarReportePelicula()
         {
             InitializeComponent();
         }
 
-        private void ReportView_Load(object sender, EventArgs e)
+        private void mostrarReportePelicula_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();

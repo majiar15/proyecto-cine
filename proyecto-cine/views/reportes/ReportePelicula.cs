@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_cine.views.reportes.ReportePelicula;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,16 @@ namespace proyecto_cine
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            mostrarReportePelicula reporteForm = new mostrarReportePelicula();
+            string nombre = nombrePelicula.Text;
+            reporteForm.nombrePelicula = nombre;
+            reporteForm.Show();
+            this.Close();
+
         }
     }
 }
