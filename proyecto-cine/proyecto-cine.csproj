@@ -121,11 +121,11 @@
     <Compile Include="views\reportes\ReporteFecha\MostrarReporteFecha.Designer.cs">
       <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\reportes\ReportePelicula\ReportView.cs">
+    <Compile Include="views\reportes\ReportePelicula\mostrarReportePelicula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\reportes\ReportePelicula\ReportView.Designer.cs">
-      <DependentUpon>ReportView.cs</DependentUpon>
+    <Compile Include="views\reportes\ReportePelicula\mostrarReportePelicula.Designer.cs">
+      <DependentUpon>mostrarReportePelicula.cs</DependentUpon>
     </Compile>
     <Compile Include="views\salas\crearSala.cs">
       <SubType>Form</SubType>
@@ -325,9 +325,8 @@
     <EmbeddedResource Include="views\reportes\ReporteFecha\MostrarReporteFecha.resx">
       <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\reportes\ReportePelicula\Report1.rdlc" />
-    <EmbeddedResource Include="views\reportes\ReportePelicula\ReportView.resx">
-      <DependentUpon>ReportView.cs</DependentUpon>
+    <EmbeddedResource Include="views\reportes\ReportePelicula\mostrarReportePelicula.resx">
+      <DependentUpon>mostrarReportePelicula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\salas\crearSala.resx">
       <DependentUpon>crearSala.cs</DependentUpon>

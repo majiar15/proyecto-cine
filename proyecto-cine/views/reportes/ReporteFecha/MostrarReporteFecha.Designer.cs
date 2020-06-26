@@ -30,18 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reporteFechaTableAdapter1 = new proyecto_cine.views.reportes.ReporteFecha.DataSet1TableAdapters.reporteFechaTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSet1 = new proyecto_cine.views.reportes.ReporteFecha.DataSet1();
             this.reporteFechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet1 = new proyecto_cine.views.reportes.ReporteFecha.DataSet1();
+            this.reporteFechaTableAdapter1 = new proyecto_cine.views.reportes.ReporteFecha.DataSet1TableAdapters.reporteFechaTableAdapter();
             this.reporteFechaTableAdapter = new proyecto_cine.views.reportes.ReporteFecha.DataSet1TableAdapters.reporteFechaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteFechaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reporteFechaTableAdapter1
-            // 
-            this.reporteFechaTableAdapter1.ClearBeforeFill = true;
             // 
             // reportViewer1
             // 
@@ -56,31 +52,35 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // reporteFechaBindingSource
             // 
             this.reporteFechaBindingSource.DataMember = "reporteFecha";
             this.reporteFechaBindingSource.DataSource = this.DataSet1;
             // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reporteFechaTableAdapter1
+            // 
+            this.reporteFechaTableAdapter1.ClearBeforeFill = true;
+            // 
             // reporteFechaTableAdapter
             // 
             this.reporteFechaTableAdapter.ClearBeforeFill = true;
             // 
-            // ReporteFecha
+            // MostrarReporteFecha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ReporteFecha";
+            this.Name = "MostrarReporteFecha";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ReporteFecha_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reporteFechaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

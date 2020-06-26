@@ -116,7 +116,7 @@ namespace proyecto_cine
         {
             //if (userLoginTextBox.Text != "USUARIO")
             //{
-            VerificarLog();
+              VerificarLog();
             //}
 
         }
@@ -125,16 +125,18 @@ namespace proyecto_cine
         {
             //try
             //{
-                //conexiondb conexion = new conexiondb();
-                //conexion.abrir();
-                //SqlCommand cmd = new SqlCommand("select id, contraseña from empleados where id = '" + userLoginTextBox.Text + "' and contraseña = '" + passwordLoginTextBox.Text + "'", conexion.conexion);
-                //SqlDataReader dr = cmd.ExecuteReader();
-                //if (dr.Read())
-                //{
+            //    conexiondb conexion = new conexiondb();
+            //    conexion.abrir();
+            //    SqlCommand cmd = new SqlCommand("select id, contraseña from empleados where id = '" + userLoginTextBox.Text + "' and contraseña = '" + passwordLoginTextBox.Text + "'", conexion.conexion);
+            //    SqlDataReader dr = cmd.ExecuteReader();
+            //    if (dr.Read())
+            //    {
+            //        int id = int.Parse(String.Format("{0}", dr[0]));
                     homeCajero home = new homeCajero();
+                    //home.userLog = id;
                     this.Hide();
                     home.Show();
-                    //RegistroLog();
+            //        RegistroLog();
             //    }
             //    else
             //    {

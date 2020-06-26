@@ -1,6 +1,6 @@
-﻿namespace proyecto_cine.views.reportes
+﻿namespace proyecto_cine.views.reportes.ReportePelicula
 {
-    partial class ReportView
+    partial class mostrarReportePelicula
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,22 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_cine.views.reportes.ReportePelicula.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "proyecto_cine.views.reportes.ReporteFecha.InterfazReporte.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(773, 446);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ReportView
+            // mostrarReportePelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 446);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ReportView";
-            this.Text = "ReportView";
-            this.Load += new System.EventHandler(this.ReportView_Load);
+            this.Name = "mostrarReportePelicula";
+            this.Text = "mostrarReportePelicula";
+            this.Load += new System.EventHandler(this.mostrarReportePelicula_Load);
             this.ResumeLayout(false);
 
         }
