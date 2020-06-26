@@ -68,9 +68,6 @@ namespace proyecto_cine
                 //new ConfirmarPagarReserva(FormParent, "PAGAR BOLETOS").Show();
                 //this.Close();
 
-                MessageBox.Show("Compra realizada correctamente");
-                FormParent.OpenFormInPanelCentral(new SeleccionPeliculas(FormParent));
-
 
                 //Imprimir
 
@@ -81,13 +78,15 @@ namespace proyecto_cine
                 if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
                     printDocument1.Print();
 
+                
+
                 //Registrar compra
 
                 try
                 {
                     DateTime fecha = DateTime.Today;
                     conexion.abrir();
-                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, fecha, valor_total) values ("+idFuncion+" , "+sillasSeleccinadadas.Length+", '" + fecha.ToString("yyyy-MM-dd") + "', "+(sillasSeleccinadadas.Length * precio)+")", conexion.conexion);
+                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, vendedor_id ,fecha, valor_total) values ("+idFuncion+" , "+sillasSeleccinadadas.Length+" ,"+FormParent.userLog+" , '" + fecha.ToString("yyyy-MM-dd") + "', "+(sillasSeleccinadadas.Length * precio)+")", conexion.conexion);
                     cmd.ExecuteNonQuery();
                     conexion.cerra();
 
@@ -99,6 +98,9 @@ namespace proyecto_cine
                     error.Show();
                     MessageBox.Show("No se pudo insertar los datos, error: " + ex.ToString()); ;
                 }
+
+                MessageBox.Show("Compra realizada correctamente");
+                FormParent.OpenFormInPanelCentral(new SeleccionPeliculas(FormParent));
             }
             else MessageBox.Show("Seleccione las sillas porfavor");
         }
@@ -150,7 +152,7 @@ namespace proyecto_cine
                 {
                     DateTime fecha = DateTime.Today;
                     conexion.abrir();
-                    cmd = new SqlCommand("Insert into reserva (id, cliente_id, estado, funcion_id) values (" + id + " , " + cedulaCliente + ", 'SinPagar' , " + idFuncion + ")", conexion.conexion);
+                    cmd = new SqlCommand("Insert into reserva (cliente_id, estado, funcion_id) values (" + cedulaCliente + ", 'SinPagar' , " + idFuncion + ")", conexion.conexion);
                     cmd.ExecuteNonQuery();
                     conexion.cerra();
 
@@ -170,7 +172,7 @@ namespace proyecto_cine
                 {
                     DateTime fecha = DateTime.Today;
                     conexion.abrir();
-                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, cliente_id, fecha, valor_total) values (" + idFuncion + " , " + sillasSeleccinadadas.Length + ","+cedulaCliente+" , '" + fecha.ToString("yyyy-MM-dd") + "', " + (sillasSeleccinadadas.Length * precio) + ")", conexion.conexion);
+                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, cliente_id,vendedor_id , fecha, valor_total) values (" + idFuncion + " , " + sillasSeleccinadadas.Length + ","+cedulaCliente+" , "+FormParent.userLog+",'" + fecha.ToString("yyyy-MM-dd") + "', " + (sillasSeleccinadadas.Length * precio) + ")", conexion.conexion);
                     cmd.ExecuteNonQuery();
                     conexion.cerra();
 

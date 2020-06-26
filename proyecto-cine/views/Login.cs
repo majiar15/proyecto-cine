@@ -134,6 +134,7 @@ namespace proyecto_cine
                     if (dr.GetValue(1).ToString() == "1")
                     {
                         homeCajero home = new homeCajero();
+                        home.userLog = long.Parse(dr.GetValue(0).ToString());
                         this.Hide();
                         home.Show();
                         RegistroLog();

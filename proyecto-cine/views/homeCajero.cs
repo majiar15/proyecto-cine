@@ -16,7 +16,7 @@ namespace proyecto_cine
     public partial class homeCajero : Form
     {
         private bool switchs = true;
-        public int userLog;
+        public long userLog;
         /*
             Documentacion Metodo OpenFormInPanelCentral
             se pasa el formulario  que se desea mostrar en el panel central
