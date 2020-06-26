@@ -6,9 +6,6 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.00271cm</Width>
-            </TablixColumn>
-            <TablixColumn>
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
@@ -18,7 +15,10 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97625cm</Width>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -34,7 +34,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cedula Empleado</Value>
+                              <Value>vendedor id</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -64,7 +64,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nombre</Value>
+                              <Value>nombre</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -94,7 +94,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Apellidos</Value>
+                              <Value>apellidos</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -124,7 +124,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fecha</Value>
+                              <Value>fecha</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -154,7 +154,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Valor de Entradas</Value>
+                              <Value>valor total</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -302,21 +302,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="valor_entrada">
+                    <Textbox Name="valor_total">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!valor_entrada.Value</Value>
+                              <Value>=Fields!valor_total.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>valor_entrada</rd:DefaultName>
+                      <rd:DefaultName>valor_total</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -354,10 +354,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.2987cm</Top>
-        <Left>1.58432cm</Left>
+        <Top>2.66912cm</Top>
+        <Left>2.06058cm</Left>
         <Height>1.2cm</Height>
-        <Width>13.47896cm</Width>
+        <Width>12.5cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -372,21 +372,17 @@
             <TextRuns>
               <TextRun>
                 <Value>REPORTE POR FECHA</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontSize>17pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>0.60537cm</Top>
-        <Left>4.58703cm</Left>
-        <Height>0.97042cm</Height>
-        <Width>6.97146cm</Width>
+        <Top>0.89641cm</Top>
+        <Left>5.12974cm</Left>
+        <Height>0.81167cm</Height>
+        <Width>5.3575cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -399,7 +395,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.76042in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -420,7 +416,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>797d81b1-d566-422d-99c7-145df18146ba</rd:DataSourceID>
+      <rd:DataSourceID>ef47b68c-5540-4fd8-b047-892093839ba5</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -446,14 +442,14 @@
           <DataField>fecha</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="valor_entrada">
-          <DataField>valor_entrada</DataField>
+        <Field Name="valor_total">
+          <DataField>valor_total</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\views\reportes\DataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\views\reportes\ReporteFecha\DataSet.xsd</rd:SchemaPath>
         <rd:TableName>reporteFecha</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -462,5 +458,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>971b6b0a-399e-4dc6-9bbf-a5da321ad966</rd:ReportID>
+  <rd:ReportID>e999c35c-bc3b-4263-861e-60e021fb1c5a</rd:ReportID>
 </Report>

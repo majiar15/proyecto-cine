@@ -25,6 +25,7 @@ namespace proyecto_cine.views.reportes.ReporteFecha
 
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
