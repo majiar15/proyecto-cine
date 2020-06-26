@@ -39,6 +39,24 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Documents\Diego\Design Dashboard Modern\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +76,7 @@
     <Compile Include="controller\CajeroController.cs" />
     <Compile Include="controller\ClienteController.cs" />
     <Compile Include="controller\PeliculaController.cs" />
+    <Compile Include="controller\ReporteFecha.cs" />
     <Compile Include="controller\SalaController.cs" />
     <Compile Include="model\pelicula\peliculaModel.cs" />
     <Compile Include="CrearFuncion.cs">
@@ -72,17 +91,41 @@
     <Compile Include="model\usuario\ClienteModel.cs" />
     <Compile Include="model\usuario\EmpleadoModel.cs" />
     <Compile Include="model\usuario\UsuarioModel.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="views\alertas\AlertaCCLog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\alertas\AlertaCCLog.Designer.cs">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\alertas\AlertReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\alertas\AlertReporteFecha.Designer.cs">
+      <DependentUpon>AlertReporteFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\cajero\Cajeros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\cajero\Cajeros.Designer.cs">
       <DependentUpon>Cajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reportes\ReporteFecha\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="views\reportes\ReporteFecha\MostrarReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\reportes\ReporteFecha\MostrarReporteFecha.Designer.cs">
+      <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\reportes\ReportePelicula\ReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\reportes\ReportePelicula\ReportView.Designer.cs">
+      <DependentUpon>ReportView.cs</DependentUpon>
     </Compile>
     <Compile Include="views\salas\crearSala.cs">
       <SubType>Form</SubType>
@@ -272,8 +315,19 @@
     <EmbeddedResource Include="views\alertas\AlertaCCLog.resx">
       <DependentUpon>AlertaCCLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\alertas\AlertReporteFecha.resx">
+      <DependentUpon>AlertReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\cajero\Cajeros.resx">
       <DependentUpon>Cajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reportes\ReporteFecha\InterfazReporte.rdlc" />
+    <EmbeddedResource Include="views\reportes\ReporteFecha\MostrarReporteFecha.resx">
+      <DependentUpon>MostrarReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\reportes\ReportePelicula\Report1.rdlc" />
+    <EmbeddedResource Include="views\reportes\ReportePelicula\ReportView.resx">
+      <DependentUpon>ReportView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\salas\crearSala.resx">
       <DependentUpon>crearSala.cs</DependentUpon>
@@ -367,6 +421,7 @@
     <EmbeddedResource Include="views\ventas y reservas\SeleccionarSillas.resx">
       <DependentUpon>SeleccionarSillas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -376,6 +431,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="views\reportes\ReporteFecha\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="views\reportes\ReporteFecha\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="views\reportes\ReporteFecha\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -505,6 +571,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\puerta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
