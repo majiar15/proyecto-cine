@@ -304,8 +304,8 @@ namespace proyecto_cine
             consultarSillas(pictureBox5, "M4");
             consultarSillas(pictureBox10, "L0");
             consultarSillas(pictureBox9, "L1");
-            consultarSillas(pictureBox8, "L2");
-            consultarSillas(pictureBox7, "L3");
+            consultarSillas(pictureBox7, "L2");
+            consultarSillas(pictureBox8, "L3");
             consultarSillas(pictureBox6, "L4");
             consultarSillas(pictureBox15, "K0");
             consultarSillas(pictureBox14, "K1");
