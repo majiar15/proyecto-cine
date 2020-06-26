@@ -372,17 +372,20 @@
             <TextRuns>
               <TextRun>
                 <Value>REPORTE POR FECHA</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>0.89641cm</Top>
-        <Left>5.12974cm</Left>
+        <Top>1.16099cm</Top>
+        <Left>4.01725cm</Left>
         <Height>0.81167cm</Height>
-        <Width>5.3575cm</Width>
+        <Width>8.04333cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -396,10 +399,60 @@
       </Textbox>
     </ReportItems>
     <Height>2in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>Solid</Style>
+        <Width>4pt</Width>
+      </Border>
+    </Style>
   </Body>
   <Width>6.5in</Width>
   <Page>
+    <PageHeader>
+      <Height>2.55474cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>CINE PROJECT</Value>
+                  <Style>
+                    <FontSize>24pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>1.29328cm</Top>
+          <Left>4.89162cm</Left>
+          <Height>1.26146cm</Height>
+          <Width>7.16896cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>LimeGreen</BackgroundColor>
+      </Style>
+    </PageHeader>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
