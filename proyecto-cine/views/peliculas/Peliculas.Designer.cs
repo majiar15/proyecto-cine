@@ -70,7 +70,7 @@
             this.Crear.IdleFillColor = System.Drawing.Color.Black;
             this.Crear.IdleForecolor = System.Drawing.Color.White;
             this.Crear.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.Crear.Location = new System.Drawing.Point(587, 249);
+            this.Crear.Location = new System.Drawing.Point(616, 269);
             this.Crear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Crear.Name = "Crear";
             this.Crear.Size = new System.Drawing.Size(156, 43);
@@ -96,10 +96,10 @@
             this.Modificar.IdleFillColor = System.Drawing.Color.Black;
             this.Modificar.IdleForecolor = System.Drawing.Color.White;
             this.Modificar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.Modificar.Location = new System.Drawing.Point(594, 324);
+            this.Modificar.Location = new System.Drawing.Point(623, 344);
             this.Modificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Modificar.Name = "Modificar";
-            this.Modificar.Size = new System.Drawing.Size(156, 43);
+            this.Modificar.Size = new System.Drawing.Size(149, 43);
             this.Modificar.TabIndex = 4;
             this.Modificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Modificar.Click += new System.EventHandler(this.Modificar_Click);
@@ -122,10 +122,10 @@
             this.eliminar.IdleFillColor = System.Drawing.Color.Black;
             this.eliminar.IdleForecolor = System.Drawing.Color.White;
             this.eliminar.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.eliminar.Location = new System.Drawing.Point(594, 397);
+            this.eliminar.Location = new System.Drawing.Point(623, 417);
             this.eliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.eliminar.Name = "eliminar";
-            this.eliminar.Size = new System.Drawing.Size(156, 43);
+            this.eliminar.Size = new System.Drawing.Size(149, 43);
             this.eliminar.TabIndex = 5;
             this.eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
@@ -173,7 +173,7 @@
             this.dataGridView23.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView23.EnableHeadersVisualStyles = false;
             this.dataGridView23.GridColor = System.Drawing.Color.Black;
-            this.dataGridView23.Location = new System.Drawing.Point(12, 160);
+            this.dataGridView23.Location = new System.Drawing.Point(12, 206);
             this.dataGridView23.Name = "dataGridView23";
             this.dataGridView23.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -206,7 +206,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(594, 470);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(623, 490);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(126, 49);
@@ -219,10 +219,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(749, 535);
+            this.ClientSize = new System.Drawing.Size(812, 644);
             this.Controls.Add(this.searchMenu);
             this.Controls.Add(this.bunifuThinButton21);
-            
             this.Controls.Add(this.dataGridView23);
             this.Controls.Add(this.eliminar);
             this.Controls.Add(this.Modificar);

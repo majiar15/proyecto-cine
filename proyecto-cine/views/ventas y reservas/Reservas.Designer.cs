@@ -47,7 +47,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(749, 535);
+            this.panel1.Size = new System.Drawing.Size(812, 644);
             this.panel1.TabIndex = 0;
             // 
             // pagarReservaButtom
@@ -68,7 +68,7 @@
             this.pagarReservaButtom.IdleFillColor = System.Drawing.Color.Black;
             this.pagarReservaButtom.IdleForecolor = System.Drawing.Color.WhiteSmoke;
             this.pagarReservaButtom.IdleLineColor = System.Drawing.Color.Black;
-            this.pagarReservaButtom.Location = new System.Drawing.Point(509, 162);
+            this.pagarReservaButtom.Location = new System.Drawing.Point(532, 264);
             this.pagarReservaButtom.Margin = new System.Windows.Forms.Padding(11);
             this.pagarReservaButtom.Name = "pagarReservaButtom";
             this.pagarReservaButtom.Size = new System.Drawing.Size(220, 99);
@@ -94,7 +94,7 @@
             this.cancelarReservaButton.IdleFillColor = System.Drawing.Color.Black;
             this.cancelarReservaButton.IdleForecolor = System.Drawing.Color.WhiteSmoke;
             this.cancelarReservaButton.IdleLineColor = System.Drawing.Color.Black;
-            this.cancelarReservaButton.Location = new System.Drawing.Point(262, 162);
+            this.cancelarReservaButton.Location = new System.Drawing.Point(285, 264);
             this.cancelarReservaButton.Margin = new System.Windows.Forms.Padding(11);
             this.cancelarReservaButton.Name = "cancelarReservaButton";
             this.cancelarReservaButton.Size = new System.Drawing.Size(225, 99);
@@ -120,7 +120,7 @@
             this.reservarBoletoButton.IdleFillColor = System.Drawing.Color.Black;
             this.reservarBoletoButton.IdleForecolor = System.Drawing.Color.WhiteSmoke;
             this.reservarBoletoButton.IdleLineColor = System.Drawing.Color.Black;
-            this.reservarBoletoButton.Location = new System.Drawing.Point(20, 162);
+            this.reservarBoletoButton.Location = new System.Drawing.Point(43, 264);
             this.reservarBoletoButton.Margin = new System.Windows.Forms.Padding(11);
             this.reservarBoletoButton.Name = "reservarBoletoButton";
             this.reservarBoletoButton.Size = new System.Drawing.Size(220, 99);
@@ -132,7 +132,7 @@
             // 
             this.titleReserva.AutoSize = true;
             this.titleReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleReserva.Location = new System.Drawing.Point(296, 35);
+            this.titleReserva.Location = new System.Drawing.Point(316, 86);
             this.titleReserva.Name = "titleReserva";
             this.titleReserva.Size = new System.Drawing.Size(174, 46);
             this.titleReserva.TabIndex = 4;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 535);
+            this.ClientSize = new System.Drawing.Size(812, 644);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reservas";

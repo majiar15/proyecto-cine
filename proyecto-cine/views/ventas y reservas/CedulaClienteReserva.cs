@@ -97,6 +97,26 @@ namespace proyecto_cine
                 }
 
 
+            }else if(opcion == "pagar")
+            {
+                try
+                {
+                    conexion.abrir();
+                    cmd = new SqlCommand("select id, cliente_id, estado, funcion_id from reserva where cliente_id = " + tbCedula.Text + " and estado = 'SinPagar'", conexion.conexion);
+                    SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                    ds = new DataSet();
+                    ad.Fill(ds, "tabla");
+                    conexion.cerra();
+                    ElegirReservaPagar pagar = new ElegirReservaPagar(formParent);
+                    pagar.dataGridView1.DataSource = ds.Tables["tabla"];
+                    pagar.cedula_id = int.Parse(tbCedula.Text);
+                    formParent.OpenFormInPanelCentral(pagar);
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.ToString());
+                }
             }
         
         }

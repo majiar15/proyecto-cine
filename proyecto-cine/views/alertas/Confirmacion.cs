@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using proyecto_cine.controller;
+using proyecto_cine.views.salas;
 
 namespace proyecto_cine
 {
@@ -50,7 +51,16 @@ namespace proyecto_cine
                 formParent.OpenFormInPanelCentral(new Cajeros(formParent));
                 this.Close();
             }
+            else if (opcion == "eliminarSala")
+            {
+                SalaController controller = new SalaController(formParent);
+                controller.eliminar(id);
+                formParent.OpenFormInPanelCentral(new Salas(formParent));
+                this.Close();
+            }
             
+
+
 
         }
 

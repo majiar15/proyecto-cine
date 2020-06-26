@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proyecto_cine.views.salas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,11 +28,17 @@ namespace proyecto_cine
             {
                 this.Parent.OpenFormInPanelCentral(new Cajeros(Parent));
             }
-            else if (option == "cliente") {
+            else if (option == "cliente")
+            {
                 this.Parent.OpenFormInPanelCentral(new Clientes(this.Parent));
-            } else if (option == "pelicula") {
+            }
+            else if (option == "pelicula")
+            {
                 this.Parent.OpenFormInPanelCentral(new Peliculas(this.Parent));
-            
+
+            }
+            else if (option == "sala") {
+                this.Parent.OpenFormInPanelCentral(new Salas(this.Parent));
             }
                 this.Close();
         }

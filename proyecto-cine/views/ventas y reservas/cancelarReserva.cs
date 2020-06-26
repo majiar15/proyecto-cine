@@ -38,14 +38,16 @@ namespace proyecto_cine
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
-            {
-                long  id = int.Parse(dataGridView1.CurrentRow.Cells["cliente_id"].Value.ToString());
+            { 
+                //Cancelar asientos
+
+                long id = int.Parse(dataGridView1.CurrentRow.Cells["cliente_id"].Value.ToString());
                 int funcionId = int.Parse(dataGridView1.CurrentRow.Cells["funcion_id"].Value.ToString());
                 try
                 {
                     conexiondb conexion = new conexiondb();
                     conexion.abrir();
-                    SqlCommand cmd = new SqlCommand(string.Format("delete from asientos where cliente_id = {0} and funcion_id = {1}" , id, funcionId), conexion.conexion);
+                    SqlCommand cmd = new SqlCommand(string.Format("delete from asientos where cliente_id = {0} and funcion_id = {1}", id, funcionId), conexion.conexion);
                     int filasafectadas = cmd.ExecuteNonQuery();
                     conexion.cerra();
 
@@ -56,13 +58,30 @@ namespace proyecto_cine
                 {
                     System.Windows.Forms.MessageBox.Show(ex.ToString());
                 }
-                }
-                else
-                {
-                    MessageBox.Show("Seleccione una fila por favor");
-                }
 
+                //Cancelar reserva
+
+                try
+                {
+                    conexiondb conexion = new conexiondb();
+                    conexion.abrir();
+                    SqlCommand cmd = new SqlCommand(string.Format("update reserva set estado = 'cancelada' where cliente_id = {0} and funcion_id = {1}", id, funcionId), conexion.conexion);
+                    int filasafectadas = cmd.ExecuteNonQuery();
+                    conexion.cerra();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
         }
+
+        
 
         private void cancelarReserva_Load(object sender, EventArgs e)
         {

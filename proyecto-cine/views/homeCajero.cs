@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
+using proyecto_cine.views.salas;
 
 namespace proyecto_cine
 {
@@ -165,6 +166,12 @@ namespace proyecto_cine
         private void reportesButtonMenu_Click(object sender, EventArgs e)
         {
             OpenFormInPanelCentral(new Reportes(this));
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            OpenFormInPanelCentral(new Salas(this));
+
         }
     }
 }

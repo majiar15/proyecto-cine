@@ -29,15 +29,12 @@ namespace proyecto_cine
         {
             CedulaClienteReserva cedula = new CedulaClienteReserva(formParent, "cancelar");
             cedula.Show(); ;
-
-
-
         }
 
         private void pagarReservaButtom_Click(object sender, EventArgs e)
         {
-            this.formParent.OpenFormInPanelCentral(new ElegirReservaPagar(this.formParent));
-            this.Close();
+            CedulaClienteReserva cedula = new CedulaClienteReserva(formParent, "pagar");
+            cedula.Show(); ;
         }
     }
 }

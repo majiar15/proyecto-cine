@@ -55,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(749, 535);
+            this.panel1.Size = new System.Drawing.Size(812, 644);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -81,7 +81,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 160);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 193);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
@@ -113,7 +113,7 @@
             this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.Location = new System.Drawing.Point(587, 401);
+            this.bunifuThinButton25.Location = new System.Drawing.Point(608, 458);
             this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.bunifuThinButton25.Name = "bunifuThinButton25";
             this.bunifuThinButton25.Size = new System.Drawing.Size(156, 43);
@@ -139,7 +139,7 @@
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(587, 325);
+            this.bunifuThinButton24.Location = new System.Drawing.Point(608, 382);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
             this.bunifuThinButton24.Size = new System.Drawing.Size(156, 43);
@@ -165,7 +165,7 @@
             this.btnCrearCliente.IdleFillColor = System.Drawing.Color.Black;
             this.btnCrearCliente.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.btnCrearCliente.IdleLineColor = System.Drawing.Color.White;
-            this.btnCrearCliente.Location = new System.Drawing.Point(587, 249);
+            this.btnCrearCliente.Location = new System.Drawing.Point(608, 306);
             this.btnCrearCliente.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnCrearCliente.Name = "btnCrearCliente";
             this.btnCrearCliente.Size = new System.Drawing.Size(156, 43);
@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 535);
+            this.ClientSize = new System.Drawing.Size(812, 644);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clientes";

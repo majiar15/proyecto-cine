@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(749, 535);
+            this.ClientSize = new System.Drawing.Size(812, 644);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.titleReserva);
