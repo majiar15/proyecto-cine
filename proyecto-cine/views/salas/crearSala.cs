@@ -25,6 +25,10 @@ namespace proyecto_cine.views.salas
             this.formParent = formParent;
             this.opcion = opcion;
             InitializeComponent();
+            if (opcion == "modificar")
+            {
+                labelTitulo.Text = "MODIFICAR SALA";
+            }
         }
 
         private void crearSala_Load(object sender, EventArgs e)
@@ -35,6 +39,11 @@ namespace proyecto_cine.views.salas
         private void labelTitulo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            this.formParent.OpenFormInPanelCentral(new Salas(formParent));
         }
 
         private void enviar_Click(object sender, EventArgs e)

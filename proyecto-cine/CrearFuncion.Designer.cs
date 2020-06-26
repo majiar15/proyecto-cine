@@ -43,12 +43,14 @@
             this.tbHora = new System.Windows.Forms.TextBox();
             this.tbSala = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -69,50 +71,50 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(253, 337);
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(230, 399);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 24);
+            this.label5.Size = new System.Drawing.Size(112, 42);
             this.label5.TabIndex = 173;
             this.label5.Text = "Fecha:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(253, 286);
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(230, 319);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 24);
+            this.label4.Size = new System.Drawing.Size(101, 42);
             this.label4.TabIndex = 172;
             this.label4.Text = "Valor:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(253, 241);
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(232, 259);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 24);
+            this.label3.Size = new System.Drawing.Size(90, 42);
             this.label3.TabIndex = 171;
             this.label3.Text = "Tipo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(253, 197);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(230, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 24);
+            this.label2.Size = new System.Drawing.Size(94, 42);
             this.label2.TabIndex = 170;
             this.label2.Text = "Hora:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(253, 151);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 27F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(234, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 24);
+            this.label1.Size = new System.Drawing.Size(88, 42);
             this.label1.TabIndex = 169;
             this.label1.Text = "Sala:";
             // 
@@ -134,10 +136,10 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(360, 494);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(289, 491);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(86, 37);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(199, 57);
             this.bunifuThinButton22.TabIndex = 168;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
@@ -146,7 +148,7 @@
             // 
             this.fecha.CustomFormat = "yyyy-MM-dd";
             this.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fecha.Location = new System.Drawing.Point(341, 341);
+            this.fecha.Location = new System.Drawing.Point(341, 416);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(177, 20);
             this.fecha.TabIndex = 73;
@@ -157,7 +159,7 @@
             this.tbValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbValor.ForeColor = System.Drawing.Color.White;
-            this.tbValor.Location = new System.Drawing.Point(341, 289);
+            this.tbValor.Location = new System.Drawing.Point(341, 337);
             this.tbValor.Multiline = true;
             this.tbValor.Name = "tbValor";
             this.tbValor.Size = new System.Drawing.Size(177, 23);
@@ -169,7 +171,7 @@
             this.tbTipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTipo.ForeColor = System.Drawing.Color.White;
-            this.tbTipo.Location = new System.Drawing.Point(341, 243);
+            this.tbTipo.Location = new System.Drawing.Point(341, 277);
             this.tbTipo.Multiline = true;
             this.tbTipo.Name = "tbTipo";
             this.tbTipo.Size = new System.Drawing.Size(177, 23);
@@ -181,7 +183,7 @@
             this.tbHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbHora.ForeColor = System.Drawing.Color.White;
-            this.tbHora.Location = new System.Drawing.Point(341, 197);
+            this.tbHora.Location = new System.Drawing.Point(341, 215);
             this.tbHora.Multiline = true;
             this.tbHora.Name = "tbHora";
             this.tbHora.Size = new System.Drawing.Size(177, 23);
@@ -203,6 +205,18 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(258, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(306, 57);
+            this.label6.TabIndex = 174;
+            this.label6.Text = "CREAR SALAS";
             // 
             // CrearFuncion
             // 
@@ -234,5 +248,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker fecha;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
