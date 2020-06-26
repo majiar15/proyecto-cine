@@ -348,9 +348,12 @@ D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\zh-CHS\Microsoft.Report
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.alertas.AlertReporteFecha.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReporteFecha.MostrarReporteFecha.resources
-D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportView.resources
 D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportePelicula.mostrarReportePelicula.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportePelicula.mostrarReportePelicula.resources
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReportePelicula.mostrarReportePelicula.resources
 C:\Users\DANIEL\Desktop\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReporteCliente.MostrarReporteClientecs.resources
 C:\Users\usuario\source\repos\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReporteCliente.MostrarReporteClientecs.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.reportes.ReporteCliente.MostrarReporteClientecs.resources
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\RdlCompile.cache
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\RdlCompile.compiled
+D:\c#\proyectoCine\proyecto-cine\proyecto-cine\obj\Debug\proyecto_cine.views.alertas.esVip.resources

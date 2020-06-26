@@ -98,11 +98,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 79);
+            this.label1.Location = new System.Drawing.Point(182, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(393, 53);
+            this.label1.Size = new System.Drawing.Size(458, 53);
             this.label1.TabIndex = 169;
-            this.label1.Text = "Escoga la función";
+            this.label1.Text = "seleccione la función";
             // 
             // bunifuThinButton22
             // 
@@ -113,7 +113,7 @@
             this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Black;
             this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(159)))), ((int)(((byte)(60)))));
             this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "comprar";
+            this.bunifuThinButton22.ButtonText = "elejir funcion";
             this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton22.ForeColor = System.Drawing.Color.White;
@@ -122,10 +122,10 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Black;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(366, 511);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(355, 511);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(86, 37);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(123, 46);
             this.bunifuThinButton22.TabIndex = 168;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);

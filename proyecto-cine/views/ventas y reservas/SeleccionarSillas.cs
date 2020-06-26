@@ -33,6 +33,13 @@ namespace proyecto_cine
         {
             FormParent = parent;
             InitializeComponent();
+            if (opcion == "reserva")
+            {
+                bunifuThinButton22.Visible = false;
+            }
+            else {
+                bunifuThinButton23.Visible = false;
+            }
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -50,6 +57,7 @@ namespace proyecto_cine
 
                     try
                     {
+                        
                         DateTime fecha = DateTime.Today;
                         conexion.abrir();
                         cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion) values (" + idFuncion + " , 'vendido', '" + sillasSeleccinadadas[i] + "')", conexion.conexion);
@@ -84,9 +92,20 @@ namespace proyecto_cine
 
                 try
                 {
+                    
                     DateTime fecha = DateTime.Today;
                     conexion.abrir();
-                    cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, vendedor_id ,fecha, valor_total) values ("+idFuncion+" , "+sillasSeleccinadadas.Length+" ,"+FormParent.userLog+" , '" + fecha.ToString("yyyy-MM-dd") + "', "+(sillasSeleccinadadas.Length * precio)+")", conexion.conexion);
+                   
+                    if (cedulaCliente == 0)
+                    {
+                        cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos, vendedor_id ,fecha, valor_total) values (" + idFuncion + " , " + sillasSeleccinadadas.Length + " ," + FormParent.userLog + " , '" + fecha.ToString("yyyy-MM-dd") + "', " + (sillasSeleccinadadas.Length * precio) + ")", conexion.conexion);
+                        
+                    }
+                    else {
+                        cmd = new SqlCommand("Insert into ticket (funcion_id ,no_asientos,cliente_id, vendedor_id ,fecha, valor_total) values (" + idFuncion + " , " + sillasSeleccinadadas.Length + " ," + cedulaCliente + " , " + FormParent.userLog + " , '" + fecha.ToString("yyyy-MM-dd") + "', " + (sillasSeleccinadadas.Length * precio) + ")", conexion.conexion);
+                    }
+
+                    
                     cmd.ExecuteNonQuery();
                     conexion.cerra();
 
@@ -122,6 +141,7 @@ namespace proyecto_cine
                     {
                         DateTime fecha = DateTime.Today;
                         conexion.abrir();
+                        
                         cmd = new SqlCommand("Insert into asientos (funcion_id,estado,posicion, cliente_id) values (" + idFuncion + " , 'Reservado', '" + sillasSeleccinadadas[i] + "', " + cedulaCliente + ")", conexion.conexion);
                         cmd.ExecuteNonQuery();
                         conexion.cerra();

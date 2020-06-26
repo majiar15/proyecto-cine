@@ -104,6 +104,12 @@
     <Compile Include="views\alertas\AlertReporteFecha.Designer.cs">
       <DependentUpon>AlertReporteFecha.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\alertas\esVip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\alertas\esVip.Designer.cs">
+      <DependentUpon>esVip.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\cajero\Cajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\alertas\AlertReporteFecha.resx">
       <DependentUpon>AlertReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\alertas\esVip.resx">
+      <DependentUpon>esVip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\cajero\Cajeros.resx">
       <DependentUpon>Cajeros.cs</DependentUpon>
